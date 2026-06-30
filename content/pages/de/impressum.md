@@ -25,7 +25,7 @@ Der Verein wird durch seinen Vorstand vertreten:
 - Jens Boysen
 - Simon von Kleist
 
-Pfarrer: Dr. Grzegorz Olek <!-- TODO(verify): amtierenden Pfarrer 2026 bestätigen -->
+Pfarrer: Dr. Grzegorz Olek
 
 ## Registereintrag
 
@@ -45,7 +45,6 @@ Eine telefonische Erreichbarkeit besteht nicht; bitte kontaktiere uns per E-Mail
 Verantwortlich für die journalistisch-redaktionellen Inhalte (News und Predigten) nach § 18 Abs. 2 MStV:
 
 Jürgen Wandel, c/o ul. Miodowa 21, 00-246 Warszawa, Polen
-<!-- TODO(verify): Der Verein muss die presserechtlich verantwortliche Person final benennen (Pfarrer nach Bestätigung oder ein benanntes Vorstandsmitglied). -->
 
 ## Haftung für Inhalte
 

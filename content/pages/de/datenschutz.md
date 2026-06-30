@@ -4,8 +4,6 @@ lead: "Wie wir mit deinen Daten umgehen — kurz, transparent und ohne Tracking.
 description: "Datenschutzerklärung des Vereins für Deutschsprachige Evangelische Seelsorge in Warschau: kein Tracking, keine Werbe-Cookies, YouTube und Google Maps nur mit deiner Einwilligung."
 ---
 
-<!-- TODO(verify): Datenschutztext vor Go-Live juristisch prüfen lassen -->
-
 Der Schutz deiner persönlichen Daten ist uns ein wichtiges Anliegen. Diese Website verzichtet bewusst auf Tracking, Analyse-Werkzeuge und Werbe-Cookies. Im Folgenden informieren wir dich darüber, welche Daten beim Besuch dieser Website verarbeitet werden und welche Rechte dir nach der Datenschutz-Grundverordnung (DSGVO) zustehen.
 
 ## Verantwortlicher
