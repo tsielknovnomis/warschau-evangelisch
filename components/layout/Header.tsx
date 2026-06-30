@@ -91,6 +91,8 @@ export function Header() {
           </svg>
         </button>
       </div>
+
+      <MobileDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </header>
   );
 }
