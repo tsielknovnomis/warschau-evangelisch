@@ -18,6 +18,12 @@ Relaunch von https://warschau-evangelisch.de/ — komplett neu gebaut & modernis
 ## Autonomie-Auftrag
 Moritz ist abwesend und hat **autonomes Durcharbeiten** autorisiert ("mach einfach alles"): Spec → Plan → Build → Mockups. Offene Fakten in [OPEN_ITEMS.md](OPEN_ITEMS.md) mit `TODO(verify)` markieren, mit Arbeitsannahmen weiterbauen.
 
+## Recently Done (30.06.2026) — Storyline-Homepage
+- **Design final abgestimmt** mit Moritz: clean & hell, Aubergine #480048 nur als Akzent (nicht großflächig), warmes Pergament-BG, Fraunces + Spectral. Mehrere Iterationen (zu krass → entsättigt → falsch verstanden → original Aubergine als Akzent).
+- **Homepage als warme Storyline** (kein harter Funnel): Hero (immersiver Altar V1, „Schön, dass du hier bist." + CTA „Zu den Gottesdiensten") → Willkommen → Gemeindeleben → Geschichte (Warschau-Panorama) → Gottesdienst-Einladung → WhatsApp → Aktuelles → Predigten → Spendenblock → Wegweiser. Ton nahbar, „du", einladend statt drängend.
+- **Ansprechpartner** auf /ueber-uns verschoben. **Mobile NextServiceBar** = einzeiliger Lauftext (Marquee bei Overflow).
+- Hero-Varianten via Workflow generiert & abgestimmt (V1 gewählt). WhatsApp-Link in site-config (Platzhalter, TODO verify).
+
 ## Recently Done (30.06.2026) — Redesign
 - **Design komplett überarbeitet** nach Feedback ("top notch, individueller, besser als alt"): neue Ästhetik **„Sakrales Editorial"** — warmes Pergament + Aubergine + Antikgold (Coral raus), **Fraunces** (Display) + **Spectral** (Body), Papierkörnung, Gold-Haarlinien.
 - **Hero neu**: Altar-Bild im Kirchen-Rundbogen + Strahlenkranz + Page-Load-Animation.
