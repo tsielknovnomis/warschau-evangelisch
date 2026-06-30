@@ -9,9 +9,9 @@
   --bg: #f6f1e7;          /* warm parchment */
   --surface: #fffdf8;     /* card surface, slightly warm */
   --parchment-deep: #ece1cf; /* deeper bands */
-  --ink: #2a1622;         /* dark warm aubergine-brown text */
-  --muted: #715f68;       /* warm muted text */
-  --line: #e2d6c1;        /* warm hairline */
+  --ink: #25131e;         /* dark warm aubergine-brown text */
+  --muted: #574651;       /* warm muted text — darker for contrast */
+  --line: #d8c9b0;        /* warm hairline */
 
   /* brand aubergine */
   --aubergine-deep: #2c0a29;
@@ -52,53 +52,58 @@
   --font-body: var(--font-body);
 }
 
-html {
-  color-scheme: light;
-}
+/*
+  Base element styles live in @layer base so Tailwind utility classes
+  (text-white, text-gold-soft, …) always win over them. Without this,
+  the bare `a {}` rule overrides every coloured link (e.g. white nav links).
+*/
+@layer base {
+  html {
+    color-scheme: light;
+  }
 
-body {
-  position: relative;
-  background-color: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-body), Georgia, "Times New Roman", serif;
-  font-size: 1.1875rem; /* 19px */
-  line-height: 1.7;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-}
+  body {
+    position: relative;
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body), Georgia, "Times New Roman", serif;
+    font-size: 1.1875rem; /* 19px */
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
 
-/* subtle paper grain overlay for warmth/depth */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.5;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
-}
+  /* subtle paper grain overlay for warmth/depth */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.45;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display), Georgia, serif;
-  color: var(--aubergine);
-  line-height: 1.08;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  text-wrap: balance;
-}
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), Georgia, serif;
+    color: var(--aubergine);
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
 
-a {
-  color: var(--aubergine);
-  text-underline-offset: 0.18em;
-  text-decoration-color: var(--gold-soft);
-}
-a:hover {
-  color: var(--gold-deep);
-}
+  /* default link colour only applies where no text-* utility is set */
+  a {
+    color: var(--aubergine);
+    text-underline-offset: 0.18em;
+    text-decoration-color: var(--gold);
+  }
 
-::selection {
-  background: var(--gold-soft);
-  color: var(--aubergine-deep);
+  ::selection {
+    background: var(--gold-soft);
+    color: var(--aubergine-deep);
+  }
 }
 
 /* Eyebrow / kicker label */

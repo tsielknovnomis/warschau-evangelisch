@@ -3,8 +3,8 @@ import { Fraunces, Spectral } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
-import { getPinnedNews } from "@/lib/seed/news";
+import { NextServiceBar } from "@/components/layout/NextServiceBar";
+import { getNextEvent } from "@/lib/seed/events";
 import "./globals.css";
 
 // Fraunces — characterful "old-style" display serif (headings). Variable + optical sizing.
@@ -46,14 +46,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pinned = getPinnedNews();
+  const nextEvent = getNextEvent();
   return (
     <html
       lang="de"
       className={`${fraunces.variable} ${spectral.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-ink">
-        <AnnouncementBar item={pinned} />
+        <NextServiceBar event={nextEvent} />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
