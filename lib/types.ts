@@ -91,6 +91,7 @@ export interface SiteConfig {
     youtubePlaylist: string
     instagram: string
     facebook: string
+    whatsapp: string
   }
   krs: string
 }
