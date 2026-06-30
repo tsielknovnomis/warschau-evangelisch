@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/*
+  Design tokens — "behutsam klassisch".
+  Brand aubergine #480048 expanded into tints/shades; warm cream sections;
+  coral as a sparing CTA accent. See SPEC.md §6.
+*/
+:root {
+  --bg: #ffffff;
+  --cream: #f6f3ed;
+  --cream-deep: #efe9df;
+
+  --aubergine-900: #2c002c;
+  --aubergine-800: #3a003a;
+  --aubergine: #480048; /* primary brand */
+  --aubergine-600: #5f1a5f;
+  --aubergine-500: #743074;
+  --aubergine-300: #b182b1;
+  --aubergine-100: #ece0ec;
+  --aubergine-50: #f7f1f7;
+
+  --coral: #f3595b;
+  --coral-600: #e0484a;
+
+  --gold: #c9a227; /* Lutherrose accent */
+
+  --ink: #2e2a2e; /* body text — AA on white */
+  --muted: #6b656b; /* secondary text */
+  --line: #e4dfe0; /* hairlines */
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+
+  --color-aubergine-900: var(--aubergine-900);
+  --color-aubergine-800: var(--aubergine-800);
+  --color-aubergine: var(--aubergine);
+  --color-aubergine-600: var(--aubergine-600);
+  --color-aubergine-500: var(--aubergine-500);
+  --color-aubergine-300: var(--aubergine-300);
+  --color-aubergine-100: var(--aubergine-100);
+  --color-aubergine-50: var(--aubergine-50);
+
+  --color-coral: var(--coral);
+  --color-coral-600: var(--coral-600);
+  --color-gold: var(--gold);
+
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+
+  --font-serif: var(--font-spectral);
+  --font-sans: var(--font-open-sans);
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  color: var(--aubergine);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+a {
+  color: var(--aubergine);
+  text-underline-offset: 0.15em;
+}
+a:hover {
+  color: var(--aubergine-600);
+}
+
+::selection {
+  background: var(--aubergine-100);
+}
+
+/* Long-form / MDX content */
+.prose-content {
+  max-width: 42rem;
+}
+.prose-content > * + * {
+  margin-top: 1.1em;
+}
+.prose-content h2 {
+  font-size: 1.7rem;
+  margin-top: 2.2rem;
+}
+.prose-content h3 {
+  font-size: 1.35rem;
+  margin-top: 1.8rem;
+}
+.prose-content p,
+.prose-content li {
+  color: var(--ink);
+}
+.prose-content a {
+  text-decoration: underline;
+}
+.prose-content ul {
+  list-style: disc;
+  padding-left: 1.4em;
+}
+.prose-content ol {
+  list-style: decimal;
+  padding-left: 1.4em;
+}
+.prose-content li + li {
+  margin-top: 0.4em;
+}
+.prose-content blockquote {
+  border-left: 2px solid var(--aubergine-300);
+  padding-left: 1.1rem;
+  font-style: italic;
+  font-family: var(--font-serif), Georgia, serif;
+  color: var(--aubergine-800);
+}
+.prose-content hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2rem 0;
+}
+.prose-content strong {
+  color: var(--aubergine);
+  font-weight: 600;
+}
+
