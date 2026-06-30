@@ -50,7 +50,7 @@ export default function Page() {
               <p className="font-body text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
                 Bleib dabei
               </p>
-              <h3 className="mt-2 font-display text-lg text-aubergine">Immer als Erste(r) informiert</h3>
+              <h3 className="mt-2 font-display text-lg text-aubergine">Immer informiert</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 Neue Termine und kurzfristige Änderungen teilen wir zuerst in unserer
                 WhatsApp-Gruppe — schau einfach rein.
