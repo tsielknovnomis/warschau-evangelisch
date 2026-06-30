@@ -50,7 +50,7 @@ const sermons: Sermon[] = youtubeIds.map((id, i) => {
     preacher: k?.preacher ?? null,
     scripture: k?.scripture ?? null,
     youtubeId: id,
-    summary: k ? null : "TODO(verify): Titel, Datum und Bibelstelle ergänzen.",
+    summary: null,
     audioUrl: null,
   };
 });
