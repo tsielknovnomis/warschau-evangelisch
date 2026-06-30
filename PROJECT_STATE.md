@@ -18,6 +18,14 @@ Relaunch von https://warschau-evangelisch.de/ — komplett neu gebaut & modernis
 ## Autonomie-Auftrag
 Moritz ist abwesend und hat **autonomes Durcharbeiten** autorisiert ("mach einfach alles"): Spec → Plan → Build → Mockups. Offene Fakten in [OPEN_ITEMS.md](OPEN_ITEMS.md) mit `TODO(verify)` markieren, mit Arbeitsannahmen weiterbauen.
 
+## Recently Done (30.06.2026) — Feinschliff Runde 2
+- **Navigation final**: Start · Termine & Aktuelles · Anfahrt · Über uns (Dropdown: Die Gemeinde, Geschichte). Verein/Beitritt/Satzung im Footer. **Anfahrt = /anfahrt** (standalone). Aktuelles in die Termine-Seite gemerged.
+- **Predigten-Seite gelöscht** — Homepage zeigt nur noch die neueste Predigt + Link zum YouTube-Kanal. Archiv & Materialien entfernt.
+- **Über-uns + Anfahrt** als schöne Custom-Seiten neu gebaut.
+- **YouTube-Thumbnails** sichtbar (2-Klick), mit Fallback (YouTubeThumb) für Videos ohne Vorschau.
+- **Komplett auf „du"** umgestellt (Content-Seiten via Workflow + Komponenten).
+- Fixes: Spendenkonto-IBANs einzeilig, Footer-Weißspalt weg, Karten-z-index, NextServiceBar-Sommerpausentext, Hero-Subtext konkreter.
+
 ## Recently Done (30.06.2026) — Storyline-Homepage
 - **Design final abgestimmt** mit Moritz: clean & hell, Aubergine #480048 nur als Akzent (nicht großflächig), warmes Pergament-BG, Fraunces + Spectral. Mehrere Iterationen (zu krass → entsättigt → falsch verstanden → original Aubergine als Akzent).
 - **Homepage als warme Storyline** (kein harter Funnel): Hero (immersiver Altar V1, „Schön, dass du hier bist." + CTA „Zu den Gottesdiensten") → Willkommen → Gemeindeleben → Geschichte (Warschau-Panorama) → Gottesdienst-Einladung → WhatsApp → Aktuelles → Predigten → Spendenblock → Wegweiser. Ton nahbar, „du", einladend statt drängend.
