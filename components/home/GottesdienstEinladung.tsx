@@ -29,7 +29,7 @@ export function GottesdienstEinladung() {
               <Link href="/gottesdienste" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
                 Alle Termine
               </Link>
-              <Link href="/gottesdienste/anfahrt" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
+              <Link href="/anfahrt" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
                 So findest du uns
               </Link>
             </div>

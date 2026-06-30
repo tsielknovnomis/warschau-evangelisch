@@ -35,8 +35,11 @@ export function NextServiceBar({ event }: { event: ChurchEvent | null }) {
 
   if (!event || dismissed) return null;
 
-  const date = dateFmt.format(new Date(event.startsAt));
-  const time = timeFmt.format(new Date(event.startsAt));
+  const start = new Date(event.startsAt);
+  const date = dateFmt.format(start);
+  const time = timeFmt.format(start);
+  // If the next service is more than ~3 weeks out, we're on a break.
+  const onBreak = (start.getTime() - Date.now()) / 86_400_000 > 20;
 
   const Content = () => (
     <>
@@ -45,7 +48,9 @@ export function NextServiceBar({ event }: { event: ChurchEvent | null }) {
       </span>
       <span aria-hidden className="mx-2 text-gold/50">·</span>
       <span className="font-medium text-bg/90">
-        Gottesdienst am {date}, {time} Uhr
+        {onBreak
+          ? `Wir machen gerade Pause — der nächste Gottesdienst ist am ${date}, ${time} Uhr`
+          : `Gottesdienst am ${date}, ${time} Uhr`}
       </span>
     </>
   );

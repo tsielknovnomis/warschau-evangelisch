@@ -6,7 +6,7 @@ description: "Curated Linksammlung der Deutschsprachigen Evangelischen Seelsorge
 
 # Links
 
-Hier finden Sie eine Auswahl an Verweisen zu Partnerkirchen, evangelischen Einrichtungen und weiteren Angeboten, die unserer Gemeinde verbunden sind.
+Hier findest du eine Auswahl an Verweisen zu Partnerkirchen, evangelischen Einrichtungen und weiteren Angeboten, die unserer Gemeinde verbunden sind.
 
 ## Partnerkirchen und Gemeinden in Polen
 

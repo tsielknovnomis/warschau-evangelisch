@@ -22,7 +22,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="mt-24 border-t border-line bg-parchment-deep">
+    <footer className="border-t border-line bg-parchment-deep">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           {/* Brand + social */}

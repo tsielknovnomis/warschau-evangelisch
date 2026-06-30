@@ -3,9 +3,8 @@ import { Container } from "@/components/ui/Container";
 
 const ziele = [
   { href: "/ueber-uns/geschichte", title: "Geschichte", text: "Wie unsere Gemeinde über die Jahre gewachsen ist." },
-  { href: "/predigten", title: "Predigten", text: "Aufgezeichnete Predigten zum Nachhören." },
   { href: "/ueber-uns/verein", title: "Verein & Mitgliedschaft", text: "Wer wir als Verein sind — und wie du Mitglied wirst." },
-  { href: "/gottesdienste/anfahrt", title: "Anfahrt", text: "So findest du den Weg zu uns in die ul. Miodowa." },
+  { href: "/anfahrt", title: "Anfahrt", text: "So findest du den Weg zu uns in die ul. Miodowa." },
   { href: "/links", title: "Links", text: "Partnerkirchen, Bibel-Ressourcen und mehr." },
 ];
 

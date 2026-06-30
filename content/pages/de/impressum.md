@@ -36,7 +36,7 @@ Eingetragen im polnischen Gerichtsregister (Krajowy Rejestr Sądowy, KRS).
 Allgemeine Anfragen: [info@warschau-evangelisch.de](mailto:info@warschau-evangelisch.de)
 Pfarrer: [pfarrer@warschau-evangelisch.de](mailto:pfarrer@warschau-evangelisch.de)
 
-Eine telefonische Erreichbarkeit besteht nicht; bitte kontaktieren Sie uns per E-Mail.
+Eine telefonische Erreichbarkeit besteht nicht; bitte kontaktiere uns per E-Mail.
 
 ## Haftung für Inhalte
 

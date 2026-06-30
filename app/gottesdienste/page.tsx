@@ -58,7 +58,7 @@ export default function Page() {
                 <br />
                 {siteConfig.address.accessNote}
               </p>
-              <Link href="/gottesdienste/anfahrt" className="mt-3 inline-block text-sm font-semibold text-aubergine hover:text-gold-deep">
+              <Link href="/anfahrt" className="mt-3 inline-block text-sm font-semibold text-aubergine hover:text-gold-deep">
                 Anfahrt &amp; Karte →
               </Link>
             </Card>

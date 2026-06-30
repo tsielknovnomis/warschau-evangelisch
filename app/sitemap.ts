@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { getSermons } from "@/lib/seed/sermons";
 import { getNews } from "@/lib/seed/news";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,8 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [
     "",
     "/gottesdienste",
-    "/gottesdienste/anfahrt",
-    "/predigten",
+    "/anfahrt",
     "/ueber-uns",
     "/ueber-uns/geschichte",
     "/ueber-uns/verein",
@@ -26,17 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: p === "" ? 1 : 0.7,
   }));
 
-  const sermonEntries = getSermons().map((s) => ({
-    url: `${base}/predigten/${s.slug}`,
-    changeFrequency: "yearly" as const,
-    priority: 0.5,
-  }));
-
   const newsEntries = getNews().map((n) => ({
     url: `${base}/aktuelles/${n.slug}`,
     changeFrequency: "yearly" as const,
     priority: 0.5,
   }));
 
-  return [...staticEntries, ...sermonEntries, ...newsEntries];
+  return [...staticEntries, ...newsEntries];
 }

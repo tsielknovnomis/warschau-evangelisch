@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { YouTubeLite } from "@/components/sermons/YouTubeLite";
 import { getLatestSermon } from "@/lib/seed/sermons";
+import { siteConfig } from "@/lib/site-config";
 
 export function PredigtenTeaser() {
   const sermon = getLatestSermon();
@@ -25,9 +25,14 @@ export function PredigtenTeaser() {
               zuletzt: „{sermon.title}"
             </p>
             <p className="mt-7">
-              <Link href="/predigten" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
-                Alle Predigten
-              </Link>
+              <a
+                href={siteConfig.social.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep"
+              >
+                Alle Predigten auf YouTube
+              </a>
             </p>
           </div>
           <div>

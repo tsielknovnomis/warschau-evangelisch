@@ -49,7 +49,7 @@ export function AnfahrtMap() {
       ref={ref}
       role="img"
       aria-label={`Karte: ${siteConfig.address.street}, ${siteConfig.address.city}`}
-      className="h-80 w-full overflow-hidden rounded-lg border border-line"
+      className="relative isolate z-0 h-80 w-full overflow-hidden rounded-lg border border-line"
     />
   );
 }

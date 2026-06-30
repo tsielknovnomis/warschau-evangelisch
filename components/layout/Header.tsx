@@ -15,7 +15,7 @@ export function Header() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-gold/40 bg-aubergine-deep">
+    <header className="sticky top-0 z-50 border-b border-gold/40 bg-aubergine-deep">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
         {/* Brand */}
         <Link href="/" className="group flex items-center gap-3 text-white hover:text-white">

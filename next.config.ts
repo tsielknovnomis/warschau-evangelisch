@@ -5,7 +5,9 @@ const nextConfig: NextConfig = {
     return [
       // Legacy WordPress URLs → new canonical paths (301)
       { source: "/gottesdiensttermine", destination: "/gottesdienste", permanent: true },
-      { source: "/gottesdiensttermine/anfahrt", destination: "/gottesdienste/anfahrt", permanent: true },
+      { source: "/gottesdiensttermine/anfahrt", destination: "/anfahrt", permanent: true },
+      // Anfahrt is now top-level
+      { source: "/gottesdienste/anfahrt", destination: "/anfahrt", permanent: true },
       { source: "/uber-uns", destination: "/ueber-uns", permanent: true },
       { source: "/uber-uns/geschichte", destination: "/ueber-uns/geschichte", permanent: true },
       { source: "/uber-uns/verein", destination: "/ueber-uns/verein", permanent: true },
@@ -25,8 +27,6 @@ const nextConfig: NextConfig = {
       { source: "/beitraege", destination: "/gottesdienste", permanent: true },
       // Aktuelles overview merged into the Termine page
       { source: "/aktuelles", destination: "/gottesdienste", permanent: true },
-      // NOTE: the ~112 legacy post slugs get redirected to /archiv/<slug> in Plan 4,
-      // once the archive detail pages exist.
     ];
   },
 };
