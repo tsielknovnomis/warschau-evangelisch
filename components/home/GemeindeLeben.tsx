@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 
 const einblicke = [
@@ -24,6 +25,16 @@ export function GemeindeLeben() {
           <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-aubergine sm:text-[2.6rem]">
             Eine Gemeinschaft, in der man ankommt
           </h2>
+        </div>
+        <div className="reveal mt-10 overflow-hidden rounded-[4px] border border-line shadow-sm">
+          <Image
+            src="/images/trinity-interior.jpg"
+            alt="Gottesdienst in der evangelisch-augsburgischen Heilig-Dreifaltigkeitskirche in Warschau"
+            width={1280}
+            height={960}
+            sizes="(max-width: 1024px) 92vw, 64rem"
+            className="aspect-[16/7] w-full object-cover object-center"
+          />
         </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-3">
           {einblicke.map((e, i) => (

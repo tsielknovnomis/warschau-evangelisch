@@ -49,3 +49,10 @@ Unser Angebot enthält gelegentlich Links zu externen Websites Dritter, auf dere
 ## Urheberrecht
 
 Die auf dieser Website veröffentlichten Inhalte unterliegen dem Urheberrecht. Eine Vervielfältigung oder Verwendung über den privaten Gebrauch hinaus bedarf der vorherigen Zustimmung des Vereins.
+
+## Bildnachweis
+
+Einige Aufnahmen der evangelisch-augsburgischen Heilig-Dreifaltigkeitskirche in Warschau stammen aus Wikimedia Commons und werden unter freier Lizenz verwendet:
+
+- Innenansichten: © Jolanta Dyr, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.de), via Wikimedia Commons
+- Außenansicht: © Adrian Grycuk, [CC BY-SA 3.0 PL](https://creativecommons.org/licenses/by-sa/3.0/pl/deed.de), via Wikimedia Commons

@@ -9,12 +9,12 @@ export function GeschichteTeaser() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="reveal overflow-hidden rounded-[4px] border border-line shadow-sm" style={{ animationDelay: "0.1s" }}>
             <Image
-              src="/images/warszawa-panorama.jpg"
-              alt="Skyline von Warschau mit der Weichsel im Vordergrund"
-              width={1920}
-              height={662}
+              src="/images/trinity-exterior.jpg"
+              alt="Die evangelisch-augsburgische Heilig-Dreifaltigkeitskirche in Warschau"
+              width={1280}
+              height={1632}
               sizes="(max-width: 1024px) 92vw, 36rem"
-              className="h-full w-full object-cover"
+              className="aspect-[4/3] h-full w-full object-cover object-center"
             />
           </div>
           <div>
