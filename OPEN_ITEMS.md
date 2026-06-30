@@ -11,7 +11,8 @@
 | 3 | **Amtierender Pfarrer** | Dr. Grzegorz Olek (aus neuester Alt-Seite). | Ist Dr. Olek Stand 2026 noch im Amt? Sonst Name/Titel korrigieren. | 🟧 zu verifizieren |
 | 4 | **Datenschutz + Impressum** | Nach DDG/DSGVO/TDDDG 2026 finalisiert (UODO als Aufsichtsbehörde, DPF+SCC, Consent). | Anwaltliche/fachliche **Schlussprüfung** vor Go-Live (DSGVO unmittelbar, kein DSG-EKD — Annahme bestätigen). | 🟧 zu prüfen |
 | 5 | **USt-IdNr.** | Annahme: gemeinnützig, keine vorhanden → im Impressum **weggelassen**. | Falls doch eine existiert: nachtragen. | 🟧 zu verifizieren |
-| 6 | **Flickr-Fotos** (2× Dez. 2025) | **Nicht verwendet** (keine Lizenz). | Falls gewünscht: Lizenz/Herkunft klären, dann ggf. einbinden. | 🟩 entschieden (raus) |
+| 6 | **Social-/Kontakt-Links** | Instagram (`instagram.com/`) und WhatsApp-Gruppe (`chat.whatsapp.com/`) sind **Platzhalter**; YouTube + Facebook (`/warschauevangelisch`) sind echt. | Echten **Instagram-Account-Link** und **WhatsApp-Gruppen-Einladungslink** eintragen. | 🟥 offen |
+| 7 | **Flickr-Fotos** (2× Dez. 2025) | **Nicht verwendet** (keine Lizenz). | Falls gewünscht: Lizenz/Herkunft klären, dann ggf. einbinden. | 🟩 entschieden (raus) |
 
 ## Bereits geklärt (während dieser Session)
 
