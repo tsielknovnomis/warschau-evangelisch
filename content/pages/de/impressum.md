@@ -4,10 +4,12 @@ lead: "Rechtliche Angaben zum Verein für Deutschsprachige Evangelische Seelsorg
 description: "Impressum der Deutschsprachigen Evangelischen Seelsorge in Warschau: Verein, Anschrift, Vorstand, KRS-Nummer und Kontakt."
 ---
 
-## Angaben gemäß den gesetzlichen Vorschriften
+## Angaben gemäß § 5 DDG
 
 **Verein für Deutschsprachige Evangelische Seelsorge in Warschau**
 (pl. Ewangelickie Duszpasterstwo Języka Niemieckiego w Warszawie)
+
+Rechtsform: eingetragener Verein nach polnischem Recht (*stowarzyszenie rejestrowe*)
 
 ul. Miodowa 21
 00-246 Warszawa
@@ -27,7 +29,7 @@ Pfarrer: Dr. Grzegorz Olek <!-- TODO(verify): amtierenden Pfarrer 2026 bestätig
 
 ## Registereintrag
 
-Eingetragen im polnischen Gerichtsregister (Krajowy Rejestr Sądowy, KRS).
+Eingetragen im **Krajowy Rejestr Sądowy** (KRS — Polnisches Landesgerichtsregister).
 
 **KRS-Nummer:** 0000590323
 
@@ -36,7 +38,14 @@ Eingetragen im polnischen Gerichtsregister (Krajowy Rejestr Sądowy, KRS).
 Allgemeine Anfragen: [info@warschau-evangelisch.de](mailto:info@warschau-evangelisch.de)
 Pfarrer: [pfarrer@warschau-evangelisch.de](mailto:pfarrer@warschau-evangelisch.de)
 
-Eine telefonische Erreichbarkeit besteht nicht; bitte kontaktiere uns per E-Mail.
+Eine telefonische Erreichbarkeit besteht nicht; bitte kontaktiere uns per E-Mail. Wir antworten in der Regel innerhalb weniger Tage.
+
+## Verantwortlich für den Inhalt
+
+Verantwortlich für die journalistisch-redaktionellen Inhalte (News und Predigten) nach § 18 Abs. 2 MStV:
+
+Jürgen Wandel, c/o ul. Miodowa 21, 00-246 Warszawa, Polen
+<!-- TODO(verify): Der Verein muss die presserechtlich verantwortliche Person final benennen (Pfarrer nach Bestätigung oder ein benanntes Vorstandsmitglied). -->
 
 ## Haftung für Inhalte
 

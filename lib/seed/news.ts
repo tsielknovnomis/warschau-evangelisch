@@ -8,7 +8,7 @@ const news: NewsItem[] = [
     id: "n1",
     slug: "sommerpause-2026",
     title: "Sommerpause — nächster Gottesdienst am 6. September",
-    body: "Während der Sommerferien pausieren unsere Gottesdienste. Nach der Pause feiern wir am 6. September 2026 um 09:30 Uhr den Einschulungsgottesdienst. Auf Anfrage sind wir auch in der Ferienzeit für Sie da — setzen Sie sich gerne mit uns in Verbindung.",
+    body: "Während der Sommerferien pausieren unsere Gottesdienste. Nach der Pause feiern wir am 6. September 2026 um 09:30 Uhr den Einschulungsgottesdienst. Auf Anfrage sind wir auch in der Ferienzeit für dich da — melde dich gerne bei uns.",
     excerpt:
       "Während der Sommerferien pausieren die Gottesdienste. Nächster Termin: 6. September, Einschulungsgottesdienst.",
     coverImage: null,

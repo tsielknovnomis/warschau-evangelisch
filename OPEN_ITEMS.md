@@ -7,9 +7,11 @@
 | # | Thema | Arbeitsannahme (so baue ich es) | Muss bestätigt werden | Status |
 |---|-------|----------------------------------|------------------------|--------|
 | 1 | **Bankkonto** | BNP Paribas — PLN `13 1600 1462 1728 8283 8000 0001`, EUR/IBAN `PL56 1600 1462 1728 8283 8000 0003`, BIC `PPABPLPK`. Altes Pekao-SA-Konto entfernt. | Ist das BNP-Konto aktuell & korrekt? Pekao endgültig raus? | 🟥 offen |
-| 2 | **QR-Code (Spende)** | Wird **erst generiert, wenn Konto bestätigt** (Platzhalter bis dahin). Voreinstellung: 50 PLN auf PLN-Konto. | Konto (#1) zuerst klären. | 🟥 blockiert durch #1 |
+| 2 | **Presserechtlich Verantwortlicher (§ 18 Abs. 2 MStV)** | Vorläufig **Jürgen Wandel** (erster Vorstand) im Impressum eingetragen. | **Go-Live-Blocker:** Verein muss die verantwortliche Person final benennen (Pfarrer nach Bestätigung oder benanntes Vorstandsmitglied). | 🟥 offen |
 | 3 | **Amtierender Pfarrer** | Dr. Grzegorz Olek (aus neuester Alt-Seite). | Ist Dr. Olek Stand 2026 noch im Amt? Sonst Name/Titel korrigieren. | 🟧 zu verifizieren |
-| 4 | **Flickr-Fotos** (2× Dez. 2025) | **Nicht verwendet** (keine Lizenz). | Falls gewünscht: Lizenz/Herkunft klären, dann ggf. einbinden. | 🟩 entschieden (raus) |
+| 4 | **Datenschutz + Impressum** | Nach DDG/DSGVO/TDDDG 2026 finalisiert (UODO als Aufsichtsbehörde, DPF+SCC, Consent). | Anwaltliche/fachliche **Schlussprüfung** vor Go-Live (DSGVO unmittelbar, kein DSG-EKD — Annahme bestätigen). | 🟧 zu prüfen |
+| 5 | **USt-IdNr.** | Annahme: gemeinnützig, keine vorhanden → im Impressum **weggelassen**. | Falls doch eine existiert: nachtragen. | 🟧 zu verifizieren |
+| 6 | **Flickr-Fotos** (2× Dez. 2025) | **Nicht verwendet** (keine Lizenz). | Falls gewünscht: Lizenz/Herkunft klären, dann ggf. einbinden. | 🟩 entschieden (raus) |
 
 ## Bereits geklärt (während dieser Session)
 
@@ -17,6 +19,7 @@
 - ✅ **Telefon:** keine Nummer angeben — Kontakt nur per E-Mail (`info@`, `pfarrer@warschau-evangelisch.de`).
 - ✅ **Vorstand:** Jürgen Wandel / Jens Boysen / Simon von Kleist (bestätigt aktuell).
 - ✅ **Twitter/X `@degwaw`:** raus (toter Feed). Stattdessen YouTube + Instagram/Facebook.
+- ✅ **QR-Code (Spende):** auf Wunsch komplett entfernt — nur die Kontodaten als Liste.
 
 ## Vom Auftraggeber getroffene Richtungsentscheidungen (30.06.2026)
 

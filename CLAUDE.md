@@ -10,7 +10,7 @@ Ersetzt die alte WordPress-Seite. Inhalt & Struktur bleiben im Kern erhalten, Op
 - **Next.js 16** (App Router), **TypeScript strict**, **Tailwind CSS v4** (CSS-first `@theme`)
 - Content: statische Kernseiten als Markdown in `content/pages/de/` (react-markdown + gray-matter)
 - Dynamische Daten (News/Predigten/Termine): aktuell **typed seed** in `lib/seed/` — Plan 2 ersetzt durch **Supabase**
-- Karte: Leaflet/OpenStreetMap (kein Google). Predigt-Videos: 2-Klick-YouTube (DSGVO).
+- Karte: Google Maps (Consent-Banner + 2-Klick-Fallback). Predigt-Videos: 2-Klick-YouTube. Globaler Consent in localStorage (`we-consent-external`), DSGVO.
 - Tests: Vitest. Deploy: Netlify.
 
 ## Commands
