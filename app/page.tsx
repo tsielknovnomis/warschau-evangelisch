@@ -1,65 +1,123 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Hero } from "@/components/content/Hero";
+import { Container } from "@/components/ui/Container";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { SpendenkontoCard } from "@/components/content/SpendenkontoCard";
+import { YouTubeLite } from "@/components/sermons/YouTubeLite";
+import { getNextEvent } from "@/lib/seed/events";
+import { getLatestSermon } from "@/lib/seed/sermons";
+import { getNews } from "@/lib/seed/news";
+import { formatDate, formatTime } from "@/lib/format";
 
-export default function Home() {
+const leitbild = [
+  { title: "Was wir glauben", text: "Wir sind der evangelisch-lutherischen Tradition verbunden, aber offen für alle Menschen — unabhängig von Konfession, Nationalität oder Herkunft." },
+  { title: "Gottesdienste", text: "Im Jahresverlauf alle zwei Wochen, im Advent jeden Sonntag, in der Regel mit Heiligem Abendmahl und anschließendem Gemeindekaffee." },
+  { title: "Gemeinschaft", text: "Kindergottesdienste, Konfirmandenunterricht, Hauskreise und Familiengottesdienste — eine junge Gemeinschaft mit vielen Familien." },
+];
+
+export default function HomePage() {
+  const nextEvent = getNextEvent();
+  const sermon = getLatestSermon();
+  const news = getNews().slice(0, 2);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Hero />
+
+      {/* Next service + latest sermon */}
+      <Container className="py-16">
+        <div className="grid gap-8 lg:grid-cols-2">
+          <Card tone="cream" className="flex flex-col">
+            <p className="font-sans text-sm font-semibold uppercase tracking-wider text-coral">
+              Nächster Gottesdienst
+            </p>
+            {nextEvent ? (
+              <div className="mt-3 flex-1">
+                <h2 className="font-serif text-2xl text-aubergine">{nextEvent.title}</h2>
+                <p className="mt-3 text-lg">{formatDate(nextEvent.startsAt)}</p>
+                <p className="text-muted">
+                  {formatTime(nextEvent.startsAt)} · {nextEvent.location}
+                </p>
+                {nextEvent.withCommunion && (
+                  <p className="mt-2 text-sm text-muted">mit Heiligem Abendmahl</p>
+                )}
+              </div>
+            ) : (
+              <p className="mt-3 flex-1 text-muted">Zurzeit keine Termine angekündigt.</p>
+            )}
+            <div className="mt-5">
+              <Button href="/gottesdienste" variant="secondary">
+                Alle Termine
+              </Button>
+            </div>
+          </Card>
+
+          {sermon && (
+            <div>
+              <p className="font-sans text-sm font-semibold uppercase tracking-wider text-coral">
+                Neueste Predigt
+              </p>
+              <div className="mt-3">
+                <YouTubeLite id={sermon.youtubeId} title={sermon.title} />
+              </div>
+              <p className="mt-3 text-sm text-muted">
+                {sermon.scripture ? `${sermon.scripture} · ` : ""}
+                <Link href="/predigten" className="hover:text-aubergine">
+                  Weitere Predigten ansehen
+                </Link>
+              </p>
+            </div>
+          )}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Container>
+
+      {/* Leitbild */}
+      <section className="bg-cream py-16">
+        <Container>
+          <SectionHeading eyebrow="Unsere Gemeinde" lead="Eine deutschsprachige evangelische Gemeinde im Herzen Warschaus.">
+            Was uns ausmacht
+          </SectionHeading>
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            {leitbild.map((s) => (
+              <div key={s.title}>
+                <h3 className="font-serif text-xl text-aubergine">{s.title}</h3>
+                <p className="mt-2 text-muted">{s.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8">
+            <Button href="/ueber-uns" variant="secondary">
+              Mehr über uns
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* Aktuelles */}
+      <Container className="py-16">
+        <SectionHeading eyebrow="Aktuelles">Neuigkeiten aus der Gemeinde</SectionHeading>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          {news.map((n) => (
+            <Card key={n.id} className="flex flex-col">
+              <h3 className="font-serif text-xl text-aubergine">{n.title}</h3>
+              <p className="mt-2 flex-1 text-muted">{n.excerpt}</p>
+              <Link
+                href={`/aktuelles/${n.slug}`}
+                className="mt-4 text-sm font-semibold text-aubergine hover:underline"
+              >
+                Weiterlesen →
+              </Link>
+            </Card>
+          ))}
         </div>
-      </main>
-    </div>
+      </Container>
+
+      {/* Spendenkonto */}
+      <Container className="pb-20">
+        <SpendenkontoCard />
+      </Container>
+    </>
   );
 }
