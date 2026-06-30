@@ -1,0 +1,20 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="96" fill="#e9b824" stroke="#b8881a" stroke-width="2.5"/>
+  <circle cx="100" cy="100" r="85" fill="#eaf2fa" stroke="#cdd9e6" stroke-width="1"/>
+  <g fill="#3f9140" stroke="#2d6b2e" stroke-width="1">
+    <g transform="rotate(36 100 100)"><ellipse cx="100" cy="52" rx="8" ry="24"/><circle cx="100" cy="30" r="6"/></g>
+    <g transform="rotate(108 100 100)"><ellipse cx="100" cy="52" rx="8" ry="24"/><circle cx="100" cy="30" r="6"/></g>
+    <g transform="rotate(180 100 100)"><ellipse cx="100" cy="52" rx="8" ry="24"/><circle cx="100" cy="30" r="6"/></g>
+    <g transform="rotate(252 100 100)"><ellipse cx="100" cy="52" rx="8" ry="24"/><circle cx="100" cy="30" r="6"/></g>
+    <g transform="rotate(324 100 100)"><ellipse cx="100" cy="52" rx="8" ry="24"/><circle cx="100" cy="30" r="6"/></g>
+  </g>
+  <g fill="#ffffff" stroke="#c7c7c7" stroke-width="1.2">
+    <ellipse cx="100" cy="55" rx="19" ry="31"/>
+    <g transform="rotate(72 100 100)"><ellipse cx="100" cy="55" rx="19" ry="31"/></g>
+    <g transform="rotate(144 100 100)"><ellipse cx="100" cy="55" rx="19" ry="31"/></g>
+    <g transform="rotate(216 100 100)"><ellipse cx="100" cy="55" rx="19" ry="31"/></g>
+    <g transform="rotate(288 100 100)"><ellipse cx="100" cy="55" rx="19" ry="31"/></g>
+  </g>
+  <path d="M100 121 C87 108 77 100 77 91 C77 84 83 81 89 81 C94 81 98 84 100 88 C102 84 106 81 111 81 C117 81 123 84 123 91 C123 100 113 108 100 121 Z" fill="#e0242b" stroke="#a81a20" stroke-width="1"/>
+  <path d="M96 85 h8 v9 h7 v8 h-7 v13 h-8 v-13 h-7 v-8 h7 z" fill="#141414"/>
+</svg>

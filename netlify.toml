@@ -1,0 +1,8 @@
+[build]
+  command = "pnpm build"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# The official Next.js runtime is auto-installed by Netlify and handles
+# publishing, redirects, and SSR/SSG output. No manual publish dir needed.
