@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Lutherrose } from "@/components/content/Lutherrose";
+import { Button } from "@/components/ui/Button";
 
 export function Hero() {
   return (
@@ -53,7 +54,13 @@ export function Hero() {
             trägt.
           </p>
 
-          <div className="reveal mt-10" style={{ animationDelay: "0.42s" }}>
+          <div
+            className="reveal mt-10 flex flex-wrap items-center gap-x-7 gap-y-4"
+            style={{ animationDelay: "0.42s" }}
+          >
+            <Button href="/gottesdienste" variant="primary" size="lg">
+              Zu den Gottesdiensten
+            </Button>
             <a
               href="#willkommen"
               className="group inline-flex items-center gap-2.5 font-body text-base font-semibold text-aubergine transition-colors hover:text-gold-deep"
