@@ -4,6 +4,8 @@ import { siteConfig } from "@/lib/site-config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { NextServiceBar } from "@/components/layout/NextServiceBar";
+import { ConsentProvider } from "@/components/consent/ConsentProvider";
+import { CookieBanner } from "@/components/consent/CookieBanner";
 import { getNextEvent } from "@/lib/seed/events";
 import "./globals.css";
 
@@ -53,10 +55,13 @@ export default function RootLayout({
       className={`${fraunces.variable} ${spectral.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-ink">
-        <NextServiceBar event={nextEvent} />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ConsentProvider>
+          <NextServiceBar event={nextEvent} />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <CookieBanner />
+        </ConsentProvider>
       </body>
     </html>
   );

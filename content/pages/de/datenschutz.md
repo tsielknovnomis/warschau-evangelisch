@@ -1,7 +1,7 @@
 ---
 title: "Datenschutz"
 lead: "Wie wir mit deinen Daten umgehen — kurz, transparent und ohne Tracking."
-description: "Datenschutzerklärung der Evangelisch-Augsburgischen Gemeinde Warschau: kein Tracking, keine Werbe-Cookies, YouTube und Google Maps nur nach Klick."
+description: "Datenschutzerklärung der Evangelisch-Augsburgischen Gemeinde Warschau: kein Tracking, keine Werbe-Cookies, YouTube und Google Maps nur mit deiner Einwilligung."
 ---
 
 <!-- TODO(verify): Datenschutztext vor Go-Live juristisch prüfen lassen -->
@@ -45,17 +45,26 @@ Wenn du uns per E-Mail kontaktierst, verarbeiten wir die von dir mitgeteilten An
 
 Diese Daten geben wir nicht ohne deine Einwilligung weiter und löschen sie, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
 
-## YouTube (Zwei-Klick-Lösung)
+## Einwilligung in externe Dienste (Consent-Banner)
 
-Auf einzelnen Seiten binden wir Videos der Plattform YouTube (Google Ireland Limited) ein. Wir nutzen dabei eine **Zwei-Klick-Lösung**: Es wird zunächst nur eine Vorschau angezeigt, und es findet **keine** Verbindung zu YouTube statt. Erst wenn du das Video durch einen Klick aktiv startest, wird eine Verbindung zu den Servern von YouTube aufgebaut und das Video geladen.
+Diese Website bindet externe Dienste ein — YouTube für Predigtvideos und Google Maps für die Anfahrt (siehe unten). Beim ersten Besuch fragen wir dich über einen Hinweis-Banner, ob diese Inhalte geladen werden dürfen:
 
-Wir verwenden dabei den datenschutzfreundlichen Modus über die Domain `youtube-nocookie.com`. Durch deinen Klick willigst du in die Datenübertragung an YouTube ein (Art. 6 Abs. 1 lit. a DSGVO). Erst ab diesem Zeitpunkt erhält YouTube Informationen wie deine IP-Adresse. Auf die weitere Verarbeitung durch den Anbieter haben wir keinen Einfluss; Einzelheiten entnimmst du der [Datenschutzerklärung von Google](https://policies.google.com/privacy).
+- Wählst du **„Akzeptieren"**, werden eingebettete YouTube-Videos und Google-Maps-Karten beim Aufruf der jeweiligen Seite direkt geladen.
+- Wählst du **„Ablehnen"** oder triffst keine Wahl, werden keine externen Inhalte automatisch geladen. Du kannst ein Video oder die Karte bei Bedarf weiterhin einzeln per Klick laden.
+
+Deine Entscheidung speichern wir ausschließlich lokal in deinem Browser (im `localStorage`), damit der Banner nicht bei jedem Besuch erneut erscheint. Dabei werden keine Daten an uns oder Dritte übertragen, und es findet kein Tracking statt. Du kannst deine Entscheidung jederzeit über den Link **„Cookie-Einstellungen"** im Seitenfuß ändern oder widerrufen (Art. 6 Abs. 1 lit. a, Art. 7 Abs. 3 DSGVO).
+
+## YouTube
+
+Auf einzelnen Seiten binden wir Videos der Plattform YouTube (Google Ireland Limited) ein. Ein Video wird erst geladen, wenn du der Einbindung externer Dienste zugestimmt hast — entweder global über den Consent-Banner oder durch einen Klick auf die jeweilige Vorschau. Solange keine Zustimmung vorliegt, wird lediglich ein Vorschaubild angezeigt; der Videoplayer und etwaige Cookies werden nicht geladen.
+
+Wir verwenden den datenschutzfreundlichen Modus über die Domain `youtube-nocookie.com`. Mit deiner Zustimmung wird eine Verbindung zu den Servern von YouTube aufgebaut; ab diesem Zeitpunkt erhält YouTube Informationen wie deine IP-Adresse (Art. 6 Abs. 1 lit. a DSGVO). Auf die weitere Verarbeitung durch den Anbieter haben wir keinen Einfluss; Einzelheiten entnimmst du der [Datenschutzerklärung von Google](https://policies.google.com/privacy).
 
 ## Kartendienst (Google Maps)
 
-Zur Darstellung des Anfahrtswegs binden wir eine Karte von **Google Maps** ein (Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Die Karte wird erst geladen, wenn du sie aktiv per Klick startest („Karte mit Google Maps laden"). Vor deinem Klick werden keine Daten an Google übertragen.
+Zur Darstellung des Anfahrtswegs binden wir eine Karte von **Google Maps** ein (Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Die Karte wird erst geladen, wenn du der Einbindung externer Dienste zugestimmt hast — entweder global über den Consent-Banner oder durch einen Klick auf „Karte mit Google Maps laden". Vorher werden keine Daten an Google übertragen.
 
-Erst mit deinem Klick wird eine Verbindung zu Servern von Google hergestellt und deine IP-Adresse sowie ggf. weitere Daten an Google übermittelt. Durch deinen Klick willigst du in diese Datenübertragung ein (Art. 6 Abs. 1 lit. a DSGVO). Weitere Informationen findest du in der [Datenschutzerklärung von Google](https://policies.google.com/privacy).
+Mit deiner Zustimmung wird eine Verbindung zu Servern von Google hergestellt und deine IP-Adresse sowie ggf. weitere Daten an Google übermittelt (Art. 6 Abs. 1 lit. a DSGVO). Weitere Informationen findest du in der [Datenschutzerklärung von Google](https://policies.google.com/privacy).
 
 ## Deine Rechte nach DSGVO
 

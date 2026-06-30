@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
+import { useConsent } from "@/components/consent/ConsentProvider";
 
 /**
- * Google Maps embed with a privacy-friendly 2-click consent (DSGVO).
- * Shows a calm placeholder; loads the Google Maps iframe only after a click.
+ * Google Maps embed (DSGVO). Loads the iframe directly when global consent is
+ * "accepted"; otherwise shows a calm placeholder and loads only after a click.
  * Fills its parent's height so it lines up with the address column.
  */
 export function MapEmbed() {
+  const { consent } = useConsent();
   const [active, setActive] = useState(false);
   const { address } = siteConfig;
   const query = encodeURIComponent(
@@ -16,7 +18,7 @@ export function MapEmbed() {
   );
   const src = `https://www.google.com/maps?q=${query}&z=16&hl=de&output=embed`;
 
-  if (active) {
+  if (active || consent === "accepted") {
     return (
       <iframe
         src={src}

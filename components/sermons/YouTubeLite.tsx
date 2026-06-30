@@ -2,17 +2,19 @@
 
 import { useState } from "react";
 import { YouTubeThumb } from "@/components/sermons/YouTubeThumb";
+import { useConsent } from "@/components/consent/ConsentProvider";
 
 /**
- * Privacy-friendly 2-click YouTube embed (DSGVO).
- * Shows the real YouTube thumbnail; loads the iframe (youtube-nocookie) only
- * after a consent click. The thumbnail is a single image request to Google
- * (no cookies/tracking); the player + its cookies load only on click.
+ * Privacy-friendly YouTube embed (DSGVO).
+ * Loads the iframe (youtube-nocookie) directly when global consent is
+ * "accepted"; otherwise shows the real thumbnail and loads only after a
+ * per-embed click. The thumbnail is a single image request (no cookies).
  */
 export function YouTubeLite({ id, title }: { id: string; title: string }) {
+  const { consent } = useConsent();
   const [active, setActive] = useState(false);
 
-  if (active) {
+  if (active || consent === "accepted") {
     return (
       <div className="relative aspect-video overflow-hidden rounded-lg bg-black">
         <iframe

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Lutherrose } from "@/components/content/Lutherrose";
+import { CookieSettingsButton } from "@/components/consent/CookieSettingsButton";
 import { siteConfig } from "@/lib/site-config";
 import { mainNav, footerNav, legalNav } from "@/lib/nav";
 
@@ -106,6 +107,7 @@ export function Footer() {
                 {item.label}
               </Link>
             ))}
+            <CookieSettingsButton />
           </div>
         </div>
       </div>
