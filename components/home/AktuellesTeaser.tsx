@@ -8,7 +8,7 @@ export function AktuellesTeaser() {
   if (news.length === 0) return null;
 
   return (
-    <section className="border-t border-line bg-bg py-20 lg:py-24">
+    <section className="border-t border-line bg-parchment-deep py-20 lg:py-24">
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>

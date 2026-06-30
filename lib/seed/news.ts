@@ -28,14 +28,14 @@ const news: NewsItem[] = [
   },
   {
     id: "n3",
-    slug: "gemeindekaffee",
-    title: "Gemeindekaffee nach den Gottesdiensten",
-    body: "Im Anschluss an unsere Gottesdienste laden wir herzlich zum Gemeindekaffee ein — Gelegenheit zum Kennenlernen und Vertiefen der Gemeinschaft.",
+    slug: "erntedankgottesdienst-2026",
+    title: "Erntedankgottesdienst am 4. Oktober",
+    body: "Am 4. Oktober 2026 feiern wir um 09:30 Uhr unseren Erntedankgottesdienst — ein Familiengottesdienst mit anschließendem Gemeindekaffee. Wir freuen uns auf dich.",
     excerpt:
-      "Im Anschluss an die Gottesdienste laden wir herzlich zum Gemeindekaffee ein.",
+      "Am 4. Oktober feiern wir Erntedank — ein Familiengottesdienst mit anschließendem Gemeindekaffee.",
     coverImage: null,
     pinned: false,
-    publishedAt: "2026-01-10T10:00:00+01:00",
+    publishedAt: "2026-09-10T10:00:00+02:00",
   },
 ];
 

@@ -4,7 +4,7 @@ import { SpendenkontoCard } from "@/components/content/SpendenkontoCard";
 
 export function SpendenBlock() {
   return (
-    <section className="border-t border-line bg-bg py-20 lg:py-24">
+    <section className="border-t border-line bg-parchment-deep py-20 lg:py-24">
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div>

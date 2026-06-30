@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export function GemeinschaftBleiben() {
   return (
-    <section className="border-t border-line bg-parchment-deep py-20 lg:py-24">
+    <section className="border-t border-line bg-bg py-20 lg:py-24">
       <Container width="narrow">
         <div className="rounded-[4px] border border-gold/30 bg-surface p-8 text-center sm:p-12">
           <p className="kicker justify-center" style={{ display: "flex" }}>
