@@ -123,8 +123,9 @@ export default function Page() {
               </p>
               <p className="mt-3 leading-relaxed text-ink/85">
                 Der Eingang liegt auf der <strong>Rückseite</strong> des Gebäudes —
-                du erreichst ihn über die <strong>ul. Leona Schillera</strong>. Der
-                Gottesdienstraum ist im <strong>2. Stock</strong> (Synodalsaal).
+                du erreichst ihn über die <strong>ul. Leona Schillera</strong>. Keine
+                Sorge: Der Weg ist <strong>ausgeschildert</strong> und gut zu finden.
+                Der Gottesdienstraum ist im <strong>2. Stock</strong> (Synodalsaal).
               </p>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Sermon } from "@/lib/types";
 import { formatShortDate } from "@/lib/format";
+import { YouTubeThumb } from "@/components/sermons/YouTubeThumb";
 
 export function SermonCard({ sermon }: { sermon: Sermon }) {
   return (
@@ -8,19 +9,14 @@ export function SermonCard({ sermon }: { sermon: Sermon }) {
       href={`/predigten/${sermon.slug}`}
       className="group flex flex-col overflow-hidden rounded-[4px] border border-line bg-surface transition-all hover:-translate-y-0.5 hover:border-gold/50 hover:shadow-lg"
     >
-      <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-aubergine to-aubergine-deep">
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-[0.13]"
-          style={{
-            background:
-              "repeating-conic-gradient(from 0deg at 50% 50%, var(--gold-soft) 0deg 0.4deg, transparent 0.4deg 9deg)",
-            maskImage: "radial-gradient(circle, black 0%, transparent 65%)",
-            WebkitMaskImage: "radial-gradient(circle, black 0%, transparent 65%)",
-          }}
+      <div className="relative aspect-video overflow-hidden bg-aubergine-deep">
+        <YouTubeThumb
+          id={sermon.youtubeId}
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
-        <span className="relative flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-white/10 transition-transform group-hover:scale-110">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--gold-soft)" aria-hidden>
+        <div aria-hidden className="absolute inset-0 bg-aubergine-deep/15 transition-colors group-hover:bg-aubergine-deep/0" />
+        <span className="absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-aubergine-deep/70 backdrop-blur-sm transition-transform group-hover:scale-110">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden>
             <path d="M8 5v14l11-7z" />
           </svg>
         </span>

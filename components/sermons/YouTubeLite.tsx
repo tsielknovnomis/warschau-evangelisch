@@ -1,19 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { YouTubeThumb } from "@/components/sermons/YouTubeThumb";
 
 /**
  * Privacy-friendly 2-click YouTube embed (DSGVO).
- * Shows a neutral placeholder; loads the iframe (youtube-nocookie) only after consent click.
- * No request reaches Google until the user clicks play.
+ * Shows the real YouTube thumbnail; loads the iframe (youtube-nocookie) only
+ * after a consent click. The thumbnail is a single image request to Google
+ * (no cookies/tracking); the player + its cookies load only on click.
  */
-export function YouTubeLite({
-  id,
-  title,
-}: {
-  id: string;
-  title: string;
-}) {
+export function YouTubeLite({ id, title }: { id: string; title: string }) {
   const [active, setActive] = useState(false);
 
   if (active) {
@@ -33,27 +29,32 @@ export function YouTubeLite({
   return (
     <button
       onClick={() => setActive(true)}
-      className="group relative flex aspect-video w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-[4px] border border-gold/30 bg-gradient-to-br from-aubergine to-aubergine-deep text-white transition-colors"
+      className="group relative block aspect-video w-full overflow-hidden rounded-lg bg-aubergine-deep text-left"
       aria-label={`Video „${title}" abspielen`}
     >
-      <span
-        aria-hidden
-        className="absolute inset-0 opacity-[0.12]"
-        style={{
-          background:
-            "repeating-conic-gradient(from 0deg at 50% 45%, var(--gold-soft) 0deg 0.4deg, transparent 0.4deg 8deg)",
-          maskImage: "radial-gradient(circle at 50% 45%, black 0%, transparent 60%)",
-          WebkitMaskImage: "radial-gradient(circle at 50% 45%, black 0%, transparent 60%)",
-        }}
+      <YouTubeThumb
+        id={id}
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
       />
-      <span className="relative flex h-16 w-16 items-center justify-center rounded-full border border-gold/40 bg-white/10 ring-1 ring-white/20 transition-transform group-hover:scale-110">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--gold-soft)" aria-hidden>
+      {/* subtle gradient for play button + caption legibility */}
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-t from-aubergine-deep/80 via-aubergine-deep/10 to-aubergine-deep/15"
+      />
+
+      {/* play button */}
+      <span className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-aubergine-deep/70 backdrop-blur-sm transition-transform group-hover:scale-110">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden>
           <path d="M8 5v14l11-7z" />
         </svg>
       </span>
-      <span className="relative px-6 text-center font-display text-lg">{title}</span>
-      <span className="relative max-w-xs px-6 text-center text-xs text-white/65">
-        Mit Klick wird das Video von YouTube geladen. Dabei werden Daten an Google übertragen.
+
+      {/* caption */}
+      <span className="absolute inset-x-0 bottom-0 p-4">
+        <span className="block font-display text-base text-white drop-shadow sm:text-lg">{title}</span>
+        <span className="mt-0.5 block text-[11px] text-white/70">
+          Mit Klick wird das Video von YouTube geladen — dabei werden Daten an Google übertragen.
+        </span>
       </span>
     </button>
   );
