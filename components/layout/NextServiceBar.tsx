@@ -40,17 +40,19 @@ export function NextServiceBar({ event }: { event: ChurchEvent | null }) {
 
   const Content = () => (
     <>
-      <span className="font-semibold uppercase tracking-[0.13em]">Nächster Gottesdienst</span>
-      <span aria-hidden className="mx-2 text-aubergine-deep/45">·</span>
-      <span className="font-medium">
+      <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
+        Nächster Gottesdienst
+      </span>
+      <span aria-hidden className="mx-2 text-gold/50">·</span>
+      <span className="font-medium text-bg/90">
         {date} · {time} Uhr
       </span>
     </>
   );
 
   return (
-    <div className="bg-gold text-aubergine-deep">
-      <div className="mx-auto flex max-w-6xl items-center gap-2 px-4 py-1 text-[0.72rem] sm:px-8 sm:py-1.5 sm:text-[0.82rem]">
+    <div className="border-b border-white/10 bg-aubergine-deep">
+      <div className="mx-auto flex max-w-6xl items-center gap-2 px-4 py-1 text-[0.72rem] sm:px-8 sm:py-1.5 sm:text-[0.8rem]">
         <div
           ref={wrapRef}
           className={`relative flex-1 overflow-hidden ${overflow ? "" : "flex justify-center"}`}
@@ -83,7 +85,7 @@ export function NextServiceBar({ event }: { event: ChurchEvent | null }) {
         <button
           onClick={() => setDismissed(true)}
           aria-label="Hinweis schließen"
-          className="shrink-0 rounded p-0.5 text-aubergine-deep/70 transition-colors hover:bg-aubergine-deep/10 hover:text-aubergine-deep"
+          className="shrink-0 rounded p-0.5 text-bg/55 transition-colors hover:bg-white/10 hover:text-bg"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
             <path d="M6 6l12 12M18 6L6 18" />

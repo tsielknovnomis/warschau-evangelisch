@@ -22,21 +22,20 @@ export function Footer() {
   ];
 
   return (
-    <footer className="mt-24 bg-aubergine-deep text-bg/80">
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent" />
+    <footer className="mt-24 border-t border-line bg-parchment-deep">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           {/* Brand + social */}
           <div>
             <div className="flex items-center gap-3">
               <Lutherrose className="h-12 w-12" />
-              <span className="font-display text-lg leading-tight text-white">
+              <span className="font-display text-lg leading-tight text-aubergine">
                 Evangelisch
                 <br />
                 in Warschau
               </span>
             </div>
-            <p className="mt-4 max-w-xs text-sm text-bg/65">
+            <p className="mt-4 max-w-xs text-sm text-muted">
               Deutschsprachige evangelisch-lutherische Gemeinde unter dem Dach der
               Evangelisch-Augsburgischen Kirche in Polen.
             </p>
@@ -48,7 +47,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="rounded-full border border-white/15 p-2 text-bg/80 transition-colors hover:border-gold hover:bg-gold hover:text-aubergine-deep"
+                  className="rounded-full border border-line p-2 text-aubergine transition-colors hover:border-aubergine hover:bg-aubergine hover:text-white"
                 >
                   <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
                     <path d={socialIcons[s.key]} />
@@ -60,13 +59,13 @@ export function Footer() {
 
           {/* Sitemap */}
           <nav aria-label="Seitenübersicht">
-            <h3 className="font-body text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-gold-soft">
+            <h3 className="font-body text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
               Seitenübersicht
             </h3>
             <ul className="mt-4 space-y-2 text-sm">
               {[...mainNav.slice(1), ...footerNav.slice(0, 3)].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-bg/75 transition-colors hover:text-gold-soft">
+                  <Link href={item.href} className="text-ink/80 transition-colors hover:text-aubergine">
                     {item.label}
                   </Link>
                 </li>
@@ -76,17 +75,17 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-body text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-gold-soft">
+            <h3 className="font-body text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
               Kontakt
             </h3>
-            <address className="mt-4 space-y-2 text-sm not-italic text-bg/75">
+            <address className="mt-4 space-y-2 text-sm not-italic text-ink/80">
               <p>
                 {address.street}
                 <br />
                 {address.postalCode} {address.city}
               </p>
               <p>
-                <a href={`mailto:${contact.general}`} className="transition-colors hover:text-gold-soft">
+                <a href={`mailto:${contact.general}`} className="transition-colors hover:text-aubergine">
                   {contact.general}
                 </a>
               </p>
@@ -95,7 +94,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-bg/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-3 border-t border-line pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {siteConfig.legalNameDe}
             <span className="mx-1.5">·</span>
@@ -103,7 +102,7 @@ export function Footer() {
           </p>
           <div className="flex gap-4">
             {footerNav.slice(3).map((item) => (
-              <Link key={item.href} href={item.href} className="transition-colors hover:text-gold-soft">
+              <Link key={item.href} href={item.href} className="transition-colors hover:text-aubergine">
                 {item.label}
               </Link>
             ))}

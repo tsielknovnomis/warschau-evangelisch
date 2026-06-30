@@ -5,27 +5,27 @@
   Warm, dignified, distinctive. See SPEC.md §6 (revised).
 */
 :root {
-  /* surfaces */
-  --bg: #f6f1e7;          /* warm parchment */
-  --surface: #fffdf8;     /* card surface, slightly warm */
-  --parchment-deep: #ece1cf; /* deeper bands */
-  --ink: #25131e;         /* dark warm aubergine-brown text */
-  --muted: #574651;       /* warm muted text — darker for contrast */
-  --line: #d8c9b0;        /* warm hairline */
+  /* surfaces — clean & light, a whisper of warmth */
+  --bg: #faf8f3;          /* near-white, faintly warm */
+  --surface: #ffffff;     /* clean white cards */
+  --parchment-deep: #f2ede3; /* very subtle warm band */
+  --ink: #2a2027;         /* warm near-black text */
+  --muted: #6a5d63;       /* warm muted text */
+  --line: #e7ded0;        /* soft hairline */
 
-  /* brand aubergine */
-  --aubergine-deep: #2c0a29;
+  /* brand aubergine — original, used sparingly as an accent */
+  --aubergine-deep: #2e0a2b;
   --aubergine: #480048;
   --aubergine-700: #5e1a57;
   --aubergine-300: #a878a0;
   --aubergine-100: #ecdfe9;
-  --aubergine-50: #f5eef3;
+  --aubergine-50: #f7f1f6;
 
-  /* antique gold accent */
-  --gold: #b0883c;
-  --gold-deep: #8d6a2c;
-  --gold-soft: #d8c08a;
-  --gold-tint: #efe3c8;
+  /* soft antique gold — secondary accent, used lightly */
+  --gold: #a3854f;
+  --gold-deep: #836a3d;
+  --gold-soft: #cbb486;
+  --gold-tint: #efe6d3;
 }
 
 @theme inline {
