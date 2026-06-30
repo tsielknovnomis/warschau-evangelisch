@@ -45,10 +45,28 @@ export default function Page() {
           </div>
 
           <aside className="space-y-5">
-            <Card tone="cream">
-              <h3 className="font-display text-lg text-aubergine">Gut zu wissen</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{siteConfig.service.summerBreak}</p>
-            </Card>
+            {/* WhatsApp — most prominent: news & schedule changes land here first */}
+            <div className="rounded-[4px] bg-aubergine p-6 text-bg shadow-sm">
+              <p className="font-body text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-gold-soft">
+                Bleib dabei
+              </p>
+              <h3 className="mt-2 font-display text-lg text-bg">Immer als Erste(r) informiert</h3>
+              <p className="mt-2 text-sm leading-relaxed text-bg/85">
+                Neue Termine und kurzfristige Änderungen teilen wir zuerst in unserer
+                WhatsApp-Gruppe — schau einfach rein.
+              </p>
+              <a
+                href={siteConfig.social.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 flex w-full items-center justify-center gap-2 rounded-[3px] bg-bg px-4 py-2.5 font-body text-sm font-semibold text-aubergine shadow-sm transition-colors hover:bg-parchment-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-aubergine"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 shrink-0" aria-hidden>
+                  <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2z" />
+                </svg>
+                Zur WhatsApp-Gruppe
+              </a>
+            </div>
             <Card tone="cream">
               <h3 className="font-display text-lg text-aubergine">Ort</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -88,35 +106,6 @@ export default function Page() {
                 </span>
               </Link>
             ))}
-          </div>
-
-          {/* Stay informed via WhatsApp — news & schedule changes land here first */}
-          <div className="mt-12 flex flex-col gap-5 rounded-[6px] border border-gold/40 bg-surface p-7 sm:flex-row sm:items-center sm:justify-between sm:gap-8 lg:p-9">
-            <div className="flex items-start gap-4">
-              <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-aubergine text-bg">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden>
-                  <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2z" />
-                </svg>
-              </span>
-              <div>
-                <h2 className="font-display text-xl text-aubergine">
-                  Immer als Erste(r) informiert
-                </h2>
-                <p className="mt-1.5 max-w-xl text-muted">
-                  Neue Termine, kurzfristige Änderungen und Neuigkeiten teilen wir zuerst
-                  in unserer WhatsApp-Gruppe. Wenn du auf dem Laufenden bleiben möchtest,
-                  komm einfach dazu.
-                </p>
-              </div>
-            </div>
-            <a
-              href={siteConfig.social.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-[3px] bg-aubergine px-6 py-3 font-body text-base font-semibold tracking-wide text-bg shadow-sm transition-all duration-200 hover:bg-aubergine-deep hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-parchment-deep"
-            >
-              Zur WhatsApp-Gruppe
-            </a>
           </div>
         </Container>
       </section>
