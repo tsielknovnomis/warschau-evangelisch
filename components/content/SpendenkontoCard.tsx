@@ -32,14 +32,14 @@ export function SpendenkontoCard() {
           <p className="mt-1 text-sm text-ink">{bank.holder}</p>
         </div>
 
-        {/* Bank details — full width so IBANs sit on one line */}
+        {/* Bank details — label above value, so long IBANs get the full width */}
         <dl className="mt-5 divide-y divide-line border-t border-line">
           {rows.map((r) => (
-            <div key={r.label} className="flex flex-wrap items-baseline gap-x-4 py-2.5">
-              <dt className="w-24 shrink-0 font-body text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-muted">
+            <div key={r.label} className="py-3">
+              <dt className="font-body text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-gold-deep">
                 {r.label}
               </dt>
-              <dd className={`text-ink ${r.mono ? "font-mono text-[0.95rem] tracking-tight" : "text-sm"}`}>
+              <dd className={`mt-1 text-ink ${r.mono ? "font-mono text-[0.82rem] tracking-tight sm:text-[0.95rem]" : "text-[0.95rem]"}`}>
                 {r.value}
               </dd>
             </div>
