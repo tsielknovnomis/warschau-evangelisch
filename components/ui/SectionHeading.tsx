@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 /**
- * Section heading with optional eyebrow label and lead text.
+ * Section heading with optional gold kicker label and lead text.
  */
 export function SectionHeading({
   eyebrow,
@@ -16,15 +16,19 @@ export function SectionHeading({
   align?: "left" | "center";
   as?: "h1" | "h2" | "h3";
 }) {
-  const alignment = align === "center" ? "text-center mx-auto" : "";
+  const center = align === "center";
   return (
-    <div className={`max-w-2xl ${alignment}`}>
+    <div className={`max-w-2xl ${center ? "mx-auto text-center" : ""}`}>
       {eyebrow && (
-        <p className="mb-2 font-sans text-sm font-semibold uppercase tracking-wider text-coral">
+        <p className="kicker flex items-center gap-3">
+          {center && <span className="h-px w-8 bg-gold/60" />}
           {eyebrow}
+          <span className="h-px w-8 bg-gold/60" />
         </p>
       )}
-      <As className="text-3xl sm:text-4xl font-semibold">{children}</As>
+      <As className="mt-3 font-display text-3xl font-medium text-aubergine sm:text-[2.5rem]">
+        {children}
+      </As>
       {lead && <p className="mt-4 text-lg text-muted">{lead}</p>}
     </div>
   );

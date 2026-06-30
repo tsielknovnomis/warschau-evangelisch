@@ -33,16 +33,26 @@ export function YouTubeLite({
   return (
     <button
       onClick={() => setActive(true)}
-      className="group relative flex aspect-video w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-lg bg-gradient-to-br from-aubergine to-aubergine-900 text-white transition-colors"
+      className="group relative flex aspect-video w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-[4px] border border-gold/30 bg-gradient-to-br from-aubergine to-aubergine-deep text-white transition-colors"
       aria-label={`Video „${title}" abspielen`}
     >
-      <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/30 transition-transform group-hover:scale-110">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <span
+        aria-hidden
+        className="absolute inset-0 opacity-[0.12]"
+        style={{
+          background:
+            "repeating-conic-gradient(from 0deg at 50% 45%, var(--gold-soft) 0deg 0.4deg, transparent 0.4deg 8deg)",
+          maskImage: "radial-gradient(circle at 50% 45%, black 0%, transparent 60%)",
+          WebkitMaskImage: "radial-gradient(circle at 50% 45%, black 0%, transparent 60%)",
+        }}
+      />
+      <span className="relative flex h-16 w-16 items-center justify-center rounded-full border border-gold/40 bg-white/10 ring-1 ring-white/20 transition-transform group-hover:scale-110">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--gold-soft)" aria-hidden>
           <path d="M8 5v14l11-7z" />
         </svg>
       </span>
-      <span className="px-6 text-center font-serif text-lg">{title}</span>
-      <span className="max-w-xs px-6 text-center text-xs text-white/70">
+      <span className="relative px-6 text-center font-display text-lg">{title}</span>
+      <span className="relative max-w-xs px-6 text-center text-xs text-white/65">
         Mit Klick wird das Video von YouTube geladen. Dabei werden Daten an Google übertragen.
       </span>
     </button>

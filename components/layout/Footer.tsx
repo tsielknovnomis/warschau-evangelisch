@@ -22,24 +22,25 @@ export function Footer() {
   ];
 
   return (
-    <footer className="mt-20 border-t border-cream-deep bg-cream">
-      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8">
+    <footer className="mt-24 bg-aubergine-deep text-bg/80">
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent" />
+      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           {/* Brand + social */}
           <div>
             <div className="flex items-center gap-3">
-              <Lutherrose className="h-11 w-11" />
-              <span className="font-serif text-lg leading-tight text-aubergine">
+              <Lutherrose className="h-12 w-12" />
+              <span className="font-display text-lg leading-tight text-white">
                 Evangelisch
                 <br />
                 in Warschau
               </span>
             </div>
-            <p className="mt-4 max-w-xs text-sm text-muted">
+            <p className="mt-4 max-w-xs text-sm text-bg/65">
               Deutschsprachige evangelisch-lutherische Gemeinde unter dem Dach der
               Evangelisch-Augsburgischen Kirche in Polen.
             </p>
-            <div className="mt-4 flex gap-2">
+            <div className="mt-5 flex gap-2">
               {socials.map((s) => (
                 <a
                   key={s.key}
@@ -47,9 +48,9 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="rounded-full p-2 text-aubergine transition-colors hover:bg-aubergine hover:text-white"
+                  className="rounded-full border border-white/15 p-2 text-bg/80 transition-colors hover:border-gold hover:bg-gold hover:text-aubergine-deep"
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
                     <path d={socialIcons[s.key]} />
                   </svg>
                 </a>
@@ -59,11 +60,13 @@ export function Footer() {
 
           {/* Sitemap */}
           <nav aria-label="Seitenübersicht">
-            <h3 className="font-serif text-base font-semibold text-aubergine">Seitenübersicht</h3>
-            <ul className="mt-3 space-y-1.5 text-sm">
+            <h3 className="font-body text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-gold-soft">
+              Seitenübersicht
+            </h3>
+            <ul className="mt-4 space-y-2 text-sm">
               {[...mainNav.slice(1), ...footerNav.slice(0, 3)].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-muted hover:text-aubergine">
+                  <Link href={item.href} className="text-bg/75 transition-colors hover:text-gold-soft">
                     {item.label}
                   </Link>
                 </li>
@@ -73,15 +76,17 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-serif text-base font-semibold text-aubergine">Kontakt</h3>
-            <address className="mt-3 space-y-2 text-sm not-italic text-muted">
+            <h3 className="font-body text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-gold-soft">
+              Kontakt
+            </h3>
+            <address className="mt-4 space-y-2 text-sm not-italic text-bg/75">
               <p>
                 {address.street}
                 <br />
                 {address.postalCode} {address.city}
               </p>
               <p>
-                <a href={`mailto:${contact.general}`} className="hover:text-aubergine">
+                <a href={`mailto:${contact.general}`} className="transition-colors hover:text-gold-soft">
                   {contact.general}
                 </a>
               </p>
@@ -90,15 +95,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-cream-deep pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-bg/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {siteConfig.legalNameDe}
-            <span className="mx-1">·</span>
+            <span className="mx-1.5">·</span>
             KRS {siteConfig.krs}
           </p>
           <div className="flex gap-4">
             {footerNav.slice(3).map((item) => (
-              <Link key={item.href} href={item.href} className="hover:text-aubergine">
+              <Link key={item.href} href={item.href} className="transition-colors hover:text-gold-soft">
                 {item.label}
               </Link>
             ))}

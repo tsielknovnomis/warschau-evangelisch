@@ -20,11 +20,11 @@ export default function Page() {
         <div className="space-y-5">
           {news.map((n) => (
             <Card key={n.id}>
-              <p className="text-xs font-semibold uppercase tracking-wide text-coral">
+              <p className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-gold-deep">
                 {formatShortDate(n.publishedAt)}
                 {n.pinned && <span className="ml-2 text-aubergine">· angepinnt</span>}
               </p>
-              <h2 className="mt-1 font-serif text-2xl text-aubergine">{n.title}</h2>
+              <h2 className="mt-1 font-display text-2xl text-aubergine">{n.title}</h2>
               <p className="mt-2 text-muted">{n.excerpt}</p>
               <Link
                 href={`/aktuelles/${n.slug}`}

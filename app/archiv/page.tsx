@@ -19,7 +19,7 @@ export default function Page() {
         lead="Beiträge und Ankündigungen aus den Jahren 2015 bis 2021 — die Chronik unserer Gemeinde."
       />
       <Container className="py-12">
-        <p className="mb-8 rounded-md border border-line bg-cream px-4 py-3 text-sm text-muted">
+        <p className="mb-8 rounded-[4px] border border-gold/30 bg-aubergine-50 px-4 py-3 text-sm text-muted">
           Die vollständigen Beitragstexte werden derzeit überführt. Bis dahin finden Sie
           hier die durchsuchbare Übersicht aller Beiträge.
         </p>

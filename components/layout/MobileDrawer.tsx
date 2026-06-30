@@ -42,7 +42,7 @@ export function MobileDrawer({
         className={`absolute right-0 top-0 h-full w-80 max-w-[85%] overflow-y-auto bg-white shadow-xl transition-transform ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex items-center justify-between border-b border-line px-5 py-4">
-          <span className="font-serif text-lg text-aubergine">Menü</span>
+          <span className="font-display text-lg text-aubergine">Menü</span>
           <button
             onClick={onClose}
             aria-label="Menü schließen"

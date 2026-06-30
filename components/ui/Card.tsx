@@ -1,7 +1,15 @@
 import type { ReactNode } from "react";
 
+type Tone = "plain" | "cream" | "dark";
+
+const tones: Record<Tone, string> = {
+  plain: "bg-surface border border-line",
+  cream: "bg-aubergine-50 border border-aubergine-100",
+  dark: "bg-aubergine-deep border border-gold/30 text-bg",
+};
+
 /**
- * Calm surface card. `tone="cream"` for the warm section background.
+ * Calm surface card.
  */
 export function Card({
   children,
@@ -9,15 +17,11 @@ export function Card({
   className = "",
 }: {
   children: ReactNode;
-  tone?: "plain" | "cream";
+  tone?: Tone;
   className?: string;
 }) {
-  const tones = {
-    plain: "bg-white border border-line",
-    cream: "bg-cream border border-cream-deep",
-  };
   return (
-    <div className={`rounded-lg ${tones[tone]} p-6 sm:p-7 ${className}`}>
+    <div className={`rounded-[4px] ${tones[tone]} p-6 sm:p-7 ${className}`}>
       {children}
     </div>
   );

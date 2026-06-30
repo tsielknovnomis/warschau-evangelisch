@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Spectral, Open_Sans } from "next/font/google";
+import { Fraunces, Spectral } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -7,17 +7,20 @@ import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { getPinnedNews } from "@/lib/seed/news";
 import "./globals.css";
 
-const spectral = Spectral({
-  variable: "--font-spectral",
+// Fraunces — characterful "old-style" display serif (headings). Variable + optical sizing.
+const fraunces = Fraunces({
+  variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
+  axes: ["opsz"],
 });
 
-const openSans = Open_Sans({
-  variable: "--font-open-sans",
+// Spectral — calm, readable text serif (body), like a printed devotional.
+const spectral = Spectral({
+  variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -47,7 +50,7 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`${spectral.variable} ${openSans.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${spectral.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg text-ink">
         <AnnouncementBar item={pinned} />

@@ -43,7 +43,7 @@ export function ArchiveList({ entries }: { entries: ArchiveEntry[] }) {
       <div className="mt-8 space-y-10">
         {grouped.map(([y, list]) => (
           <section key={y}>
-            <h2 className="font-serif text-2xl text-aubergine">{y}</h2>
+            <h2 className="font-display text-2xl text-aubergine">{y}</h2>
             <ul className="mt-3 divide-y divide-line border-t border-line">
               {list.map((e) => (
                 <li key={e.slug} className="flex flex-col gap-0.5 py-2.5 sm:flex-row sm:items-baseline sm:gap-4">

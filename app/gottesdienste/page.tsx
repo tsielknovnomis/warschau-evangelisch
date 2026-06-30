@@ -24,7 +24,7 @@ export default function Page() {
       <Container className="py-12">
         <div className="grid gap-10 lg:grid-cols-[1fr_18rem]">
           <div>
-            <h2 className="font-serif text-2xl text-aubergine">Kommende Termine</h2>
+            <h2 className="font-display text-2xl text-aubergine">Kommende Termine</h2>
             <div className="mt-5 space-y-4">
               {events.length > 0 ? (
                 events.map((e, i) => <EventCard key={e.id} event={e} highlight={i === 0} />)
@@ -36,11 +36,11 @@ export default function Page() {
 
           <aside className="space-y-5">
             <Card tone="cream">
-              <h3 className="font-serif text-lg text-aubergine">Sommerpause</h3>
+              <h3 className="font-display text-lg text-aubergine">Sommerpause</h3>
               <p className="mt-2 text-sm text-muted">{siteConfig.service.summerBreak}</p>
             </Card>
             <Card tone="cream">
-              <h3 className="font-serif text-lg text-aubergine">Ort</h3>
+              <h3 className="font-display text-lg text-aubergine">Ort</h3>
               <p className="mt-2 text-sm text-muted">
                 {siteConfig.address.street}
                 <br />
