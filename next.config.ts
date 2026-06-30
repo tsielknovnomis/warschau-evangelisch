@@ -22,7 +22,9 @@ const nextConfig: NextConfig = {
       { source: "/beitrittserklaerung", destination: "/ueber-uns/verein/beitritt", permanent: true },
       { source: "/home", destination: "/", permanent: true },
       { source: "/naechster-gottesdienst", destination: "/gottesdienste", permanent: true },
-      { source: "/beitraege", destination: "/aktuelles", permanent: true },
+      { source: "/beitraege", destination: "/gottesdienste", permanent: true },
+      // Aktuelles overview merged into the Termine page
+      { source: "/aktuelles", destination: "/gottesdienste", permanent: true },
       // NOTE: the ~112 legacy post slugs get redirected to /archiv/<slug> in Plan 4,
       // once the archive detail pages exist.
     ];

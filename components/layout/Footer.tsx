@@ -63,7 +63,7 @@ export function Footer() {
               Seitenübersicht
             </h3>
             <ul className="mt-4 space-y-2 text-sm">
-              {[...mainNav.slice(1), ...footerNav.slice(0, 3)].map((item) => (
+              {[...mainNav.slice(1), ...footerNav.slice(0, 4)].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-ink/80 transition-colors hover:text-aubergine">
                     {item.label}
@@ -101,7 +101,7 @@ export function Footer() {
             KRS {siteConfig.krs}
           </p>
           <div className="flex gap-4">
-            {footerNav.slice(3).map((item) => (
+            {footerNav.slice(4).map((item) => (
               <Link key={item.href} href={item.href} className="transition-colors hover:text-aubergine">
                 {item.label}
               </Link>

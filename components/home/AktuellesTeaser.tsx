@@ -17,7 +17,7 @@ export function AktuellesTeaser() {
               Was bei uns gerade passiert
             </h2>
           </div>
-          <Link href="/aktuelles" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
+          <Link href="/gottesdienste#aktuelles" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
             Alle Beiträge
           </Link>
         </div>

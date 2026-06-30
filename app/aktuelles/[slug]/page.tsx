@@ -39,7 +39,7 @@ export default async function Page({
           <Markdown>{item.body}</Markdown>
         </Prose>
         <p className="mt-8">
-          <Link href="/aktuelles" className="text-sm font-semibold text-aubergine hover:underline">
+          <Link href="/gottesdienste#aktuelles" className="text-sm font-semibold text-aubergine hover:underline">
             ← Alle Beiträge
           </Link>
         </p>

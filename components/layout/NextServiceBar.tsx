@@ -41,11 +41,11 @@ export function NextServiceBar({ event }: { event: ChurchEvent | null }) {
   const Content = () => (
     <>
       <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
-        Nächster Gottesdienst
+        Herzlich eingeladen
       </span>
       <span aria-hidden className="mx-2 text-gold/50">·</span>
       <span className="font-medium text-bg/90">
-        {date} · {time} Uhr
+        Gottesdienst am {date}, {time} Uhr
       </span>
     </>
   );
