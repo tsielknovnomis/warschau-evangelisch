@@ -44,12 +44,12 @@ export function NextServiceBar({ event }: { event: ChurchEvent | null }) {
   const Content = () => (
     <>
       <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
-        Herzlich eingeladen
+        {onBreak ? "Sommerpause ☀" : "Herzlich eingeladen"}
       </span>
       <span aria-hidden className="mx-2 text-gold/50">·</span>
       <span className="font-medium text-bg/90">
         {onBreak
-          ? `Wir machen gerade Pause — der nächste Gottesdienst ist am ${date}, ${time} Uhr`
+          ? `Der nächste Gottesdienst ist am ${date}, ${time} Uhr. Du bist herzlich eingeladen!`
           : `Gottesdienst am ${date}, ${time} Uhr`}
       </span>
     </>

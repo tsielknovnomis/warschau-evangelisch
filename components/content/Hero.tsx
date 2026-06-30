@@ -32,7 +32,7 @@ export function Hero() {
             className="kicker reveal flex items-center gap-3"
             style={{ animationDelay: "0.05s" }}
           >
-            <Lutherrose className="h-6 w-6 shrink-0 drop-shadow-sm" aria-hidden />
+            <Lutherrose className="h-6 w-6 shrink-0 drop-shadow-sm" alt="" />
             Evangelisch · auf Deutsch · in Warschau
           </p>
 
