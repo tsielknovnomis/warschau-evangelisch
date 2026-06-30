@@ -1,0 +1,18 @@
+# Scrape working dir (raw API dumps, intermediate JSON) — keep scraped/ as the clean source
+.firecrawl/
+.playwright-mcp/
+
+# Dependencies / build
+node_modules/
+dist/
+.next/
+out/
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+*.log
