@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/content/PageHeader";
-import { AnfahrtMap } from "@/components/map/AnfahrtMap";
+import { MapEmbed } from "@/components/map/MapEmbed";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -90,7 +90,7 @@ export default function Page() {
       />
 
       <Container className="py-14 lg:py-16">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-stretch lg:gap-14">
           {/* Address + access */}
           <div className="space-y-6">
             <div className="rounded-[4px] border border-line bg-surface p-7">
@@ -130,9 +130,11 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Map */}
-          <div>
-            <AnfahrtMap />
+          {/* Map — fills the column height so it lines up with the address blocks */}
+          <div className="flex flex-col">
+            <div className="flex-1 overflow-hidden rounded-lg border border-line">
+              <MapEmbed />
+            </div>
             <p className="mt-3 text-center font-body text-sm italic text-muted">
               Lutherisches Zentrum · {address.street}
             </p>

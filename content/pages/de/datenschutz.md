@@ -1,7 +1,7 @@
 ---
 title: "Datenschutz"
 lead: "Wie wir mit deinen Daten umgehen — kurz, transparent und ohne Tracking."
-description: "Datenschutzerklärung der Evangelisch-Augsburgischen Gemeinde Warschau: kein Tracking, keine Werbe-Cookies, YouTube nur nach Klick, Karte via OpenStreetMap."
+description: "Datenschutzerklärung der Evangelisch-Augsburgischen Gemeinde Warschau: kein Tracking, keine Werbe-Cookies, YouTube und Google Maps nur nach Klick."
 ---
 
 <!-- TODO(verify): Datenschutztext vor Go-Live juristisch prüfen lassen -->
@@ -51,11 +51,11 @@ Auf einzelnen Seiten binden wir Videos der Plattform YouTube (Google Ireland Lim
 
 Wir verwenden dabei den datenschutzfreundlichen Modus über die Domain `youtube-nocookie.com`. Durch deinen Klick willigst du in die Datenübertragung an YouTube ein (Art. 6 Abs. 1 lit. a DSGVO). Erst ab diesem Zeitpunkt erhält YouTube Informationen wie deine IP-Adresse. Auf die weitere Verarbeitung durch den Anbieter haben wir keinen Einfluss; Einzelheiten entnimmst du der [Datenschutzerklärung von Google](https://policies.google.com/privacy).
 
-## Kartendienst (OpenStreetMap)
+## Kartendienst (Google Maps)
 
-Zur Darstellung des Anfahrtswegs verwenden wir eine Karte auf Basis von **OpenStreetMap**, eingebunden über die Bibliothek Leaflet. Die Kartenkacheln werden von Servern der OpenStreetMap Foundation geladen. Dabei wird deine IP-Adresse an diese Server übermittelt, da dies technisch erforderlich ist, um die Kartenausschnitte an deinen Browser auszuliefern.
+Zur Darstellung des Anfahrtswegs binden wir eine Karte von **Google Maps** ein (Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Die Karte wird erst geladen, wenn du sie aktiv per Klick startest („Karte mit Google Maps laden"). Vor deinem Klick werden keine Daten an Google übertragen.
 
-Rechtsgrundlage ist unser berechtigtes Interesse an einer übersichtlichen Wegbeschreibung zu unseren Gottesdiensten und Veranstaltungen (Art. 6 Abs. 1 lit. f DSGVO). Weitere Informationen findest du in der [Datenschutzerklärung der OpenStreetMap Foundation](https://wiki.osmfoundation.org/wiki/Privacy_Policy).
+Erst mit deinem Klick wird eine Verbindung zu Servern von Google hergestellt und deine IP-Adresse sowie ggf. weitere Daten an Google übermittelt. Durch deinen Klick willigst du in diese Datenübertragung ein (Art. 6 Abs. 1 lit. a DSGVO). Weitere Informationen findest du in der [Datenschutzerklärung von Google](https://policies.google.com/privacy).
 
 ## Deine Rechte nach DSGVO
 
