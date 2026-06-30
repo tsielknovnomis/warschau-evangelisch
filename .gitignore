@@ -45,3 +45,6 @@ next-env.d.ts
 .playwright-mcp/
 .gitignore.keep
 mockups/
+
+# Local Netlify folder
+.netlify

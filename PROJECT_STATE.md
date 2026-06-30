@@ -1,6 +1,6 @@
 # PROJECT_STATE — warschau-evangelisch
 
-**Status:** Phase 0 abgeschlossen — Alt-Website gescrapt, analysiert (5 Referenz-Docs), Richtung mit Auftraggeber geklärt. Nächster Schritt: Detail-Spec (brainstorming) vor Build.
+**Status:** ✅ **Plan 1 fertig & live (Preview).** Komplette öffentliche Website gebaut (Next.js, 38 Seiten), deployed auf **https://warschau-evangelisch-relaunch.netlify.app** (Preview-Site, NICHT die echte Domain). Nächster Schritt: Plan 2 (Supabase-Backend) — und offene Fakten bestätigen (OPEN_ITEMS.md) vor echtem Go-Live.
 
 ## Ziel
 Relaunch von https://warschau-evangelisch.de/ — komplett neu gebaut & modernisiert, **Inhalt & Struktur im Kern erhalten, Optik deutliches Redesign**. Alt: WordPress 7.0, Theme "Responsive Brix 4.9.13" (~2015), Inhalte 2015–2026.
@@ -18,13 +18,20 @@ Relaunch von https://warschau-evangelisch.de/ — komplett neu gebaut & modernis
 ## Autonomie-Auftrag
 Moritz ist abwesend und hat **autonomes Durcharbeiten** autorisiert ("mach einfach alles"): Spec → Plan → Build → Mockups. Offene Fakten in [OPEN_ITEMS.md](OPEN_ITEMS.md) mit `TODO(verify)` markieren, mit Arbeitsannahmen weiterbauen.
 
+## Recently Done (30.06.2026)
+- **Spec + Plan** geschrieben (SPEC.md, docs/superpowers/plans/2026-06-30-public-site-foundation.md)
+- **Plan 1 komplett gebaut**: Next.js 16 + Tailwind v4, Design-System (Aubergine, Lutherrose-SVG, Spectral+Open Sans), Layout (Header/Nav/Drawer/Footer/AnnouncementBar), Startseite, alle 10 Kernseiten (Content aus Alt-Seite migriert), Gottesdienste/Termine, Predigten (17, 2-Klick-YouTube), Aktuelles, durchsuchbares Archiv (112 Alt-Beiträge), Impressum/Datenschutz, OSM-Karte, Redirects, sitemap/robots, Favicon
+- **Deployed** → https://warschau-evangelisch-relaunch.netlify.app (Preview)
+- Adresse final geklärt: Miodowa 21, 00-246
+
 ## Next Up
-- `superpowers:brainstorming` → Design-Doc (IA, Seitenbäume, Backend-Datenmodell, Design-Direction, Migrationsplan)
-- `superpowers:writing-plans` → Implementierungsplan
-- Build (scaffold, design system, Kernseiten, Backend, Content-Migration, Mockups)
+- **Plan 2 — Supabase-Backend**: Tabellen (news/sermons/events) + Auth + Admin-CRUD unter /admin. Seed-Module in `lib/seed/` haben bereits das passende Interface → nur Datenquelle tauschen.
+- **Plan 4 — Archiv-Detailseiten**: die 112 Alt-Beiträge als Einzelseiten + Redirects der alten Slugs.
+- **Offene Fakten bestätigen** (OPEN_ITEMS.md): Bankkonto, QR-Code, amtierender Pfarrer.
+- **Echter Go-Live**: Domain warschau-evangelisch.de auf neue Seite umstellen (erst nach Fakten-Freigabe).
 
 ## Offen (siehe OPEN_ITEMS.md)
-Bankkonto, QR-Code, amtierender Pfarrer — vor Go-Live bestätigen.
+Bankkonto, QR-Code, amtierender Pfarrer — vor echtem Go-Live bestätigen. Im Code mit `TODO(verify)` markiert.
 
 ## Recently Done
 - Vollständiger Scrape: 126 Seiten (Markdown), 13 Kern-Seiten (Raw-HTML), 40 Bilder, 2 PDFs, Theme-CSS, 4 Screenshots
