@@ -163,7 +163,15 @@ profiles(id uuid pk -> auth.users, display_name text, role text)  -- role: edito
 
 ---
 
-## 6. Design-System („behutsam klassisch")
+## 6. Design-System
+
+> **Umgesetzte Richtung (30.06.2026, nach Feedback verfeinert): „Sakrales Editorial".**
+> Warmes Pergament `#F6F1E7` + Aubergine `#480048` + **Antikgold `#B0883C`** (Coral verworfen).
+> Fonts: **Fraunces** (Display/Headings) + **Spectral** (Body). Papierkörnung, Gold-Haarlinien,
+> Kirchen-Rundbogen-Hero. Finale Tokens leben in `app/globals.css`. Der Abschnitt unten ist die
+> ursprüngliche, hellere „behutsam klassisch"-Skizze — als Referenz erhalten.
+
+### 6.0 (Original-Skizze „behutsam klassisch")
 
 ### 6.1 Farben (Tokens als CSS-Variablen)
 | Token | Wert | Verwendung |

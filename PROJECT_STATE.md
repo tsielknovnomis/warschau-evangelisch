@@ -18,7 +18,13 @@ Relaunch von https://warschau-evangelisch.de/ — komplett neu gebaut & modernis
 ## Autonomie-Auftrag
 Moritz ist abwesend und hat **autonomes Durcharbeiten** autorisiert ("mach einfach alles"): Spec → Plan → Build → Mockups. Offene Fakten in [OPEN_ITEMS.md](OPEN_ITEMS.md) mit `TODO(verify)` markieren, mit Arbeitsannahmen weiterbauen.
 
-## Recently Done (30.06.2026)
+## Recently Done (30.06.2026) — Redesign
+- **Design komplett überarbeitet** nach Feedback ("top notch, individueller, besser als alt"): neue Ästhetik **„Sakrales Editorial"** — warmes Pergament + Aubergine + Antikgold (Coral raus), **Fraunces** (Display) + **Spectral** (Body), Papierkörnung, Gold-Haarlinien.
+- **Hero neu**: Altar-Bild im Kirchen-Rundbogen + Strahlenkranz + Page-Load-Animation.
+- **Header**: zweistufig, hoher Kontrast, Gold-Underline-Nav.
+- Alle Komponenten + Seiten überarbeitet, dunkler Aubergine-Footer/Spendenkonto. Neu deployed.
+
+## Recently Done (Plan 1)
 - **Spec + Plan** geschrieben (SPEC.md, docs/superpowers/plans/2026-06-30-public-site-foundation.md)
 - **Plan 1 komplett gebaut**: Next.js 16 + Tailwind v4, Design-System (Aubergine, Lutherrose-SVG, Spectral+Open Sans), Layout (Header/Nav/Drawer/Footer/AnnouncementBar), Startseite, alle 10 Kernseiten (Content aus Alt-Seite migriert), Gottesdienste/Termine, Predigten (17, 2-Klick-YouTube), Aktuelles, durchsuchbares Archiv (112 Alt-Beiträge), Impressum/Datenschutz, OSM-Karte, Redirects, sitemap/robots, Favicon
 - **Deployed** → https://warschau-evangelisch-relaunch.netlify.app (Preview)
