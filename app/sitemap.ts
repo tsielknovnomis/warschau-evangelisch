@@ -15,10 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ueber-uns/verein",
     "/ueber-uns/verein/beitritt",
     "/ueber-uns/verein/satzung",
-    "/aktuelles",
-    "/materialien",
     "/links",
-    "/archiv",
     "/impressum",
     "/datenschutz",
   ];

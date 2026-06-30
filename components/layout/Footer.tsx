@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Lutherrose } from "@/components/content/Lutherrose";
 import { siteConfig } from "@/lib/site-config";
-import { mainNav, footerNav } from "@/lib/nav";
+import { mainNav, footerNav, legalNav } from "@/lib/nav";
 
 const socialIcons: Record<string, string> = {
   youtube:
@@ -63,7 +63,7 @@ export function Footer() {
               Seitenübersicht
             </h3>
             <ul className="mt-4 space-y-2 text-sm">
-              {[...mainNav.slice(1), ...footerNav.slice(0, 4)].map((item) => (
+              {[...mainNav.slice(1), ...footerNav].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-ink/80 transition-colors hover:text-aubergine">
                     {item.label}
@@ -101,7 +101,7 @@ export function Footer() {
             KRS {siteConfig.krs}
           </p>
           <div className="flex gap-4">
-            {footerNav.slice(4).map((item) => (
+            {legalNav.map((item) => (
               <Link key={item.href} href={item.href} className="transition-colors hover:text-aubergine">
                 {item.label}
               </Link>

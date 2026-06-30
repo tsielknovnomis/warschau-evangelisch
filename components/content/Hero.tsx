@@ -49,9 +49,9 @@ export function Hero() {
             className="reveal mt-7 max-w-md font-body text-lg leading-relaxed text-ink/90 sm:text-xl"
             style={{ animationDelay: "0.28s" }}
           >
-            Ein offenes Haus, ein bekanntes Lied, ein vertrautes Wort — mitten in
-            der Stadt. Komm vorbei, wie du bist, und nimm dir Zeit für das, was
-            trägt.
+            Wir sind die deutschsprachige evangelisch-lutherische Gemeinde in
+            Warschau — ein offenes Haus für alle, die hier Gottesdienst in ihrer
+            Sprache feiern und Gemeinschaft finden möchten.
           </p>
 
           <div
