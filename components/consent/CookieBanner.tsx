@@ -29,7 +29,7 @@ export function CookieBanner() {
           Daten übertragen. Du kannst das jederzeit ändern. Mehr in der{" "}
           <Link
             href="/datenschutz"
-            className="font-medium underline decoration-gold/60 underline-offset-2 hover:text-white"
+            className="font-medium text-gold-soft underline decoration-gold/60 underline-offset-2 hover:text-white"
           >
             Datenschutzerklärung
           </Link>

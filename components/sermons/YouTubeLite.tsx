@@ -15,11 +15,13 @@ export function YouTubeLite({ id, title }: { id: string; title: string }) {
   const [active, setActive] = useState(false);
 
   if (active || consent === "accepted") {
+    // Autoplay only when the user actively clicked play — not when the embed
+    // loads automatically via global consent.
     return (
       <div className="relative aspect-video overflow-hidden rounded-lg bg-black">
         <iframe
           className="absolute inset-0 h-full w-full"
-          src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`}
+          src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=${active ? 1 : 0}&rel=0`}
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
