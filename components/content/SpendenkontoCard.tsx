@@ -2,7 +2,7 @@ import { siteConfig } from "@/lib/site-config";
 
 /**
  * Donation account block — light, clean card with aubergine accents.
- * QR code is a placeholder until the bank account is confirmed (OPEN_ITEMS.md).
+ * Bank details come from site-config (verify before go-live, see OPEN_ITEMS.md).
  */
 export function SpendenkontoCard() {
   const { bank } = siteConfig;
@@ -45,13 +45,6 @@ export function SpendenkontoCard() {
             </div>
           ))}
         </dl>
-
-        <p className="mt-5 flex items-center gap-2 text-xs text-muted">
-          <span className="flex h-5 w-5 items-center justify-center rounded border border-dashed border-gold/50 text-[8px]">
-            QR
-          </span>
-          Ein QR-Code für die Banking-App folgt, sobald das Konto final bestätigt ist.
-        </p>
       </div>
     </div>
   );
