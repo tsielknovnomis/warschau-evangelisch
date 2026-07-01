@@ -2,9 +2,8 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 /**
- * Refreshes the auth session on every /admin request and gates access:
- * unauthenticated users hitting /admin/* (except /admin/login) are redirected
- * to the login page.
+ * Refreshes the auth session on /admin requests and gates access:
+ * unauthenticated users (except on /admin/login) are redirected to login.
  */
 export async function updateSession(request: NextRequest) {
   let response = NextResponse.next({ request });
@@ -31,17 +30,14 @@ export async function updateSession(request: NextRequest) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
   const { pathname } = request.nextUrl;
   const isLogin = pathname.startsWith("/admin/login");
 
-  if (!user && pathname.startsWith("/admin") && !isLogin) {
+  if (!user && !isLogin) {
     const url = request.nextUrl.clone();
     url.pathname = "/admin/login";
     return NextResponse.redirect(url);
   }
-
-  // Already logged in but on the login page → send to the dashboard.
   if (user && isLogin) {
     const url = request.nextUrl.clone();
     url.pathname = "/admin";
