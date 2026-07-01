@@ -2,18 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ChurchEvent } from "@/lib/types";
-
-const dateFmt = new Intl.DateTimeFormat("de-DE", {
-  weekday: "short",
-  day: "numeric",
-  month: "long",
-  timeZone: "Europe/Warsaw",
-});
-const timeFmt = new Intl.DateTimeFormat("de-DE", {
-  hour: "2-digit",
-  minute: "2-digit",
-  timeZone: "Europe/Warsaw",
-});
+import { autoBarParts } from "@/lib/announcement";
 
 export function NextServiceBar({
   event,
@@ -49,26 +38,20 @@ export function NextServiceBar({
 
   if (!hasContent || dismissed) return null;
 
-  const start = event ? new Date(event.startsAt) : null;
-  const date = start ? dateFmt.format(start) : "";
-  const time = start ? timeFmt.format(start) : "";
+  const auto = autoBarParts(event, onBreak);
 
   const Content = () =>
     announcement ? (
       <span className="font-medium text-bg/90">{announcement}</span>
-    ) : (
+    ) : auto ? (
       <>
         <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
-          {onBreak ? "Sommerpause ☀" : "Herzlich eingeladen"}
+          {auto.label}
         </span>
         <span aria-hidden className="mx-2 text-gold/50">·</span>
-        <span className="font-medium text-bg/90">
-          {onBreak
-            ? `Der nächste Gottesdienst ist am ${date}, ${time} Uhr. Du bist herzlich eingeladen!`
-            : `Gottesdienst am ${date}, ${time} Uhr`}
-        </span>
+        <span className="font-medium text-bg/90">{auto.text}</span>
       </>
-    );
+    ) : null;
 
   return (
     <div className="border-b border-white/10 bg-aubergine-deep">

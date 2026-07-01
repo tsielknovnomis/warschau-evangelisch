@@ -57,14 +57,6 @@ export function EventForm({
         <span className={lbl}>Beschreibung (optional)</span>
         <textarea name="description" rows={3} defaultValue={event?.description ?? ""} className={inp} />
       </label>
-      <label className="block">
-        <span className={lbl}>Sprache</span>
-        <select name="language" defaultValue={event?.language ?? "de"} className={inp}>
-          <option value="de">Deutsch</option>
-          <option value="pl">Polnisch</option>
-          <option value="multi">Mehrsprachig</option>
-        </select>
-      </label>
       <div className="flex flex-wrap gap-6">
         <label className="flex items-center gap-2 text-sm text-ink">
           <input type="checkbox" name="is_special" defaultChecked={event?.isSpecial} /> Besonderer Gottesdienst

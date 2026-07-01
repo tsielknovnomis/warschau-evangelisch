@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/content/PageHeader";
 import { EventCard } from "@/components/events/EventCard";
 import { Card } from "@/components/ui/Card";
+import { ShowMore } from "@/components/ui/ShowMore";
 import { getUpcomingEvents } from "@/lib/data/events";
 import { getNews } from "@/lib/data/news";
 import { siteConfig } from "@/lib/site-config";
@@ -34,7 +35,14 @@ export default async function Page() {
             <h2 className="font-display text-2xl font-medium text-aubergine">Kommende Gottesdienste</h2>
             <div className="mt-5 space-y-4">
               {events.length > 0 ? (
-                events.map((e, i) => <EventCard key={e.id} event={e} highlight={i === 0} />)
+                <ShowMore
+                  initialCount={3}
+                  moreLabel="Alle Termine anzeigen ({n} weitere)"
+                >
+                  {events.map((e, i) => (
+                    <EventCard key={e.id} event={e} highlight={i === 0} />
+                  ))}
+                </ShowMore>
               ) : (
                 <p className="text-muted">
                   Zurzeit ist Sommerpause. Die nächsten Termine kündigen wir hier an — schreib uns
@@ -87,23 +95,32 @@ export default async function Page() {
         <Container>
           <h2 className="font-display text-2xl font-medium text-aubergine">Aktuelles aus der Gemeinde</h2>
           <div className="mt-6 space-y-4">
-            {news.map((n) => (
-              <Link
-                key={n.id}
-                href={`/aktuelles/${n.slug}`}
-                className="group block rounded-[4px] border border-line bg-surface p-6 transition-all hover:-translate-y-0.5 hover:border-gold/50 hover:shadow-md"
+            {news.length > 0 ? (
+              <ShowMore
+                initialCount={3}
+                moreLabel="Ältere Beiträge anzeigen ({n} weitere)"
               >
-                <p className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-gold-deep">
-                  {formatShortDate(n.publishedAt)}
-                  {n.pinned && <span className="ml-2 text-aubergine">· angepinnt</span>}
-                </p>
-                <h3 className="mt-1.5 font-display text-xl text-aubergine">{n.title}</h3>
-                <p className="mt-2 text-muted">{n.excerpt}</p>
-                <span className="mt-3 inline-block font-body text-sm font-semibold text-aubergine group-hover:text-gold-deep">
-                  Weiterlesen →
-                </span>
-              </Link>
-            ))}
+                {news.map((n) => (
+                  <Link
+                    key={n.id}
+                    href={`/aktuelles/${n.slug}`}
+                    className="group block rounded-[4px] border border-line bg-surface p-6 transition-all hover:-translate-y-0.5 hover:border-gold/50 hover:shadow-md"
+                  >
+                    <p className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-gold-deep">
+                      {formatShortDate(n.publishedAt)}
+                      {n.pinned && <span className="ml-2 text-aubergine">· angepinnt</span>}
+                    </p>
+                    <h3 className="mt-1.5 font-display text-xl text-aubergine">{n.title}</h3>
+                    <p className="mt-2 text-muted">{n.excerpt}</p>
+                    <span className="mt-3 inline-block font-body text-sm font-semibold text-aubergine group-hover:text-gold-deep">
+                      Weiterlesen →
+                    </span>
+                  </Link>
+                ))}
+              </ShowMore>
+            ) : (
+              <p className="text-muted">Zurzeit gibt es keine Neuigkeiten.</p>
+            )}
           </div>
         </Container>
       </section>

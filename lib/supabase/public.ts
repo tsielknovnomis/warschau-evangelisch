@@ -10,6 +10,14 @@ export function getSupabasePublic() {
   return createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    { auth: { persistSession: false } },
+    {
+      auth: { persistSession: false },
+      global: {
+        // Never let Next's fetch data cache serve stale rows (a cached empty
+        // response from an early build once hid all news). Pages stay static;
+        // freshness comes from build/revalidatePath.
+        fetch: (url, init) => fetch(url, { ...init, cache: "no-store" }),
+      },
+    },
   );
 }
