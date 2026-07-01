@@ -1,30 +1,115 @@
 import Link from "next/link";
-import { getUpcomingEvents } from "@/lib/data/events";
+import { getAllEvents, getNextEvent } from "@/lib/data/events";
 import { getNews } from "@/lib/data/news";
+import { getSettings } from "@/lib/data/settings";
+import { deleteEvent } from "@/lib/actions/events";
+import { deleteNews } from "@/lib/actions/news";
+import { autoBarParts, isOnBreak } from "@/lib/announcement";
+import { DeleteButton } from "@/components/admin/DeleteButton";
+import { SettingsForm } from "@/components/admin/SettingsForm";
+import { formatDate, formatShortDate, formatTime } from "@/lib/format";
 
-function Card({ label, count, href }: { label: string; count: number; href: string }) {
+function SectionHeader({
+  id,
+  title,
+  newHref,
+  newLabel,
+}: {
+  id: string;
+  title: string;
+  newHref?: string;
+  newLabel?: string;
+}) {
   return (
-    <div className="rounded-[6px] border border-line bg-surface p-6">
-      <p className="text-sm text-muted">{label}</p>
-      <p className="mt-1 font-display text-3xl text-aubergine">{count}</p>
-      <div className="mt-4 flex gap-4 text-sm font-semibold">
-        <Link href={href} className="text-aubergine hover:text-gold-deep">Verwalten →</Link>
-        <Link href={`${href}/neu`} className="text-aubergine hover:text-gold-deep">+ Neu</Link>
-      </div>
+    <div id={id} className="flex scroll-mt-20 items-center justify-between">
+      <h2 className="font-display text-2xl font-medium text-aubergine">{title}</h2>
+      {newHref && (
+        <Link
+          href={newHref}
+          className="rounded-[3px] bg-aubergine px-4 py-2 text-sm font-semibold text-bg hover:bg-aubergine-deep"
+        >
+          {newLabel}
+        </Link>
+      )}
     </div>
   );
 }
 
 export default async function AdminHome() {
-  const [events, news] = await Promise.all([getUpcomingEvents(), getNews()]);
+  const [events, news, settings, nextEvent] = await Promise.all([
+    getAllEvents(),
+    getNews(),
+    getSettings(),
+    getNextEvent(),
+  ]);
+  const autoParts = autoBarParts(nextEvent, isOnBreak(nextEvent));
+
   return (
-    <div>
-      <h1 className="font-display text-2xl font-medium text-aubergine">Übersicht</h1>
-      <p className="mt-1 text-sm text-muted">Hier pflegst du Termine und Aktuelles. Änderungen sind sofort auf der Website sichtbar.</p>
-      <div className="mt-6 grid gap-5 sm:grid-cols-2">
-        <Card label="Kommende Termine" count={events.length} href="/admin/termine" />
-        <Card label="Aktuelles-Beiträge" count={news.length} href="/admin/aktuelles" />
-      </div>
+    <div className="space-y-14">
+      {/* Termine */}
+      <section>
+        <SectionHeader id="termine" title="Termine" newHref="/admin/termine/neu" newLabel="+ Neuer Termin" />
+        {events.length === 0 ? (
+          <p className="mt-6 text-muted">Noch keine Termine angelegt.</p>
+        ) : (
+          <div className="mt-5 divide-y divide-line rounded-[6px] border border-line bg-surface">
+            {events.map((e) => (
+              <div key={e.id} className="flex items-center justify-between gap-4 px-5 py-3">
+                <div>
+                  <p className="font-display text-lg text-aubergine">{e.title}</p>
+                  <p className="text-sm text-muted">
+                    {formatDate(e.startsAt)} · {formatTime(e.startsAt)}
+                    {e.isSpecial && " · besonderer Gottesdienst"}
+                  </p>
+                </div>
+                <div className="flex shrink-0 gap-4">
+                  <Link href={`/admin/termine/${e.id}`} className="text-sm font-semibold text-aubergine hover:text-gold-deep">
+                    Bearbeiten
+                  </Link>
+                  <DeleteButton action={deleteEvent.bind(null, e.id)} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* Aktuelles */}
+      <section>
+        <SectionHeader id="aktuelles" title="Aktuelles" newHref="/admin/aktuelles/neu" newLabel="+ Neuer Beitrag" />
+        {news.length === 0 ? (
+          <p className="mt-6 text-muted">Noch keine Beiträge angelegt.</p>
+        ) : (
+          <div className="mt-5 divide-y divide-line rounded-[6px] border border-line bg-surface">
+            {news.map((n) => (
+              <div key={n.id} className="flex items-center justify-between gap-4 px-5 py-3">
+                <div>
+                  <p className="font-display text-lg text-aubergine">
+                    {n.title}
+                    {n.pinned && <span className="ml-2 text-xs font-semibold text-gold-deep">angepinnt</span>}
+                  </p>
+                  <p className="text-sm text-muted">{formatShortDate(n.publishedAt)}</p>
+                </div>
+                <div className="flex shrink-0 gap-4">
+                  <Link href={`/admin/aktuelles/${n.id}`} className="text-sm font-semibold text-aubergine hover:text-gold-deep">
+                    Bearbeiten
+                  </Link>
+                  <DeleteButton action={deleteNews.bind(null, n.id, n.slug)} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* Info-Leiste */}
+      <section>
+        <SectionHeader id="leiste" title="Info-Leiste" />
+        <p className="mt-1 text-sm text-muted">Die schmale Leiste ganz oben über der Navigation.</p>
+        <div className="mt-5">
+          <SettingsForm settings={settings} autoParts={autoParts} />
+        </div>
+      </section>
     </div>
   );
 }

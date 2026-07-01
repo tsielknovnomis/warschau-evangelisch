@@ -58,7 +58,7 @@ export async function createNews(_prev: FormState, formData: FormData): Promise<
     return { error: error.code === "23505" ? "Dieser Slug ist schon vergeben." : "Speichern fehlgeschlagen: " + error.message };
   }
   revalidateNews(v.slug);
-  redirect("/admin/aktuelles");
+  redirect("/admin#aktuelles");
 }
 
 export async function updateNews(id: string, oldSlug: string, _prev: FormState, formData: FormData): Promise<FormState> {
@@ -79,12 +79,12 @@ export async function updateNews(id: string, oldSlug: string, _prev: FormState, 
   }
   revalidateNews(v.slug);
   if (oldSlug !== v.slug) revalidatePath(`/aktuelles/${oldSlug}`);
-  redirect("/admin/aktuelles");
+  redirect("/admin#aktuelles");
 }
 
 export async function deleteNews(id: string, slug: string) {
   const supabase = await getSupabaseServer();
   await supabase.from("news").delete().eq("id", id);
   revalidateNews(slug);
-  redirect("/admin/aktuelles");
+  redirect("/admin#aktuelles");
 }

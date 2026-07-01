@@ -9,15 +9,14 @@ import { warsawLocalToIso } from "@/lib/datetime";
 const EventSchema = z.object({
   title: z.string().trim().min(1, "Titel fehlt"),
   starts_at: z.string().min(1, "Beginn fehlt"),
-  ends_at: z.string().nullable(),
   location: z.string().trim().min(1, "Ort fehlt"),
   description: z.string().nullable(),
   is_special: z.boolean(),
   with_communion: z.boolean(),
 });
-// Note: `language` is intentionally not part of the form — the parish is
-// German-speaking. Inserts use the DB default ('de'); updates leave the
-// stored value untouched.
+// Note: `language` and `ends_at` are intentionally not part of the form
+// (always German; no end time needed). Inserts use the column defaults/null;
+// updates leave stored values untouched.
 
 export type FormState = { error?: string };
 
@@ -31,7 +30,6 @@ function parse(formData: FormData) {
   return EventSchema.safeParse({
     title: String(formData.get("title") ?? ""),
     starts_at: String(formData.get("starts_at") ?? ""),
-    ends_at: (String(formData.get("ends_at") ?? "") || null),
     location: String(formData.get("location") ?? ""),
     description: (String(formData.get("description") ?? "").trim() || null),
     is_special: formData.get("is_special") === "on",
@@ -43,7 +41,6 @@ function toRow(v: z.infer<typeof EventSchema>) {
   return {
     title: v.title,
     starts_at: toIso(v.starts_at),
-    ends_at: toIso(v.ends_at),
     location: v.location,
     description: v.description,
     is_special: v.is_special,
@@ -64,7 +61,7 @@ export async function createEvent(_prev: FormState, formData: FormData): Promise
   const { error } = await supabase.from("events").insert(toRow(v));
   if (error) return { error: "Speichern fehlgeschlagen: " + error.message };
   revalidateEvents();
-  redirect("/admin/termine");
+  redirect("/admin#termine");
 }
 
 export async function updateEvent(id: string, _prev: FormState, formData: FormData): Promise<FormState> {
@@ -75,12 +72,12 @@ export async function updateEvent(id: string, _prev: FormState, formData: FormDa
   const { error } = await supabase.from("events").update(toRow(v)).eq("id", id);
   if (error) return { error: "Speichern fehlgeschlagen: " + error.message };
   revalidateEvents();
-  redirect("/admin/termine");
+  redirect("/admin#termine");
 }
 
 export async function deleteEvent(id: string) {
   const supabase = await getSupabaseServer();
   await supabase.from("events").delete().eq("id", id);
   revalidateEvents();
-  redirect("/admin/termine");
+  redirect("/admin#termine");
 }

@@ -23,27 +23,16 @@ export function EventForm({
         <span className={lbl}>Titel</span>
         <input name="title" defaultValue={event?.title} required className={inp} />
       </label>
-      <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block">
-          <span className={lbl}>Beginn (Warschauer Zeit)</span>
-          <input
-            name="starts_at"
-            type="datetime-local"
-            defaultValue={event ? isoToWarsawLocal(event.startsAt) : ""}
-            required
-            className={inp}
-          />
-        </label>
-        <label className="block">
-          <span className={lbl}>Ende (optional)</span>
-          <input
-            name="ends_at"
-            type="datetime-local"
-            defaultValue={event?.endsAt ? isoToWarsawLocal(event.endsAt) : ""}
-            className={inp}
-          />
-        </label>
-      </div>
+      <label className="block sm:max-w-xs">
+        <span className={lbl}>Wann? (Warschauer Zeit)</span>
+        <input
+          name="starts_at"
+          type="datetime-local"
+          defaultValue={event ? isoToWarsawLocal(event.startsAt) : ""}
+          required
+          className={inp}
+        />
+      </label>
       <label className="block">
         <span className={lbl}>Ort</span>
         <input

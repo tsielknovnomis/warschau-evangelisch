@@ -25,9 +25,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
               <span className="font-display text-base">Verwaltung</span>
             </Link>
             <nav className="flex gap-4 text-sm">
-              <Link href="/admin/termine" className="text-bg/85 hover:text-bg">Termine</Link>
-              <Link href="/admin/aktuelles" className="text-bg/85 hover:text-bg">Aktuelles</Link>
-              <Link href="/admin/leiste" className="text-bg/85 hover:text-bg">Leiste</Link>
+              <Link href="/admin#termine" className="text-bg/85 hover:text-bg">Termine</Link>
+              <Link href="/admin#aktuelles" className="text-bg/85 hover:text-bg">Aktuelles</Link>
+              <Link href="/admin#leiste" className="text-bg/85 hover:text-bg">Leiste</Link>
             </nav>
           </div>
           <form action={signOut}>
