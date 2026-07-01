@@ -7,10 +7,12 @@ const dateFmt = new Intl.DateTimeFormat("de-DE", {
   weekday: "short",
   day: "numeric",
   month: "long",
+  timeZone: "Europe/Warsaw",
 });
 const timeFmt = new Intl.DateTimeFormat("de-DE", {
   hour: "2-digit",
   minute: "2-digit",
+  timeZone: "Europe/Warsaw",
 });
 
 export function NextServiceBar({

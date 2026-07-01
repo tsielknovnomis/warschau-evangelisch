@@ -32,3 +32,9 @@ export async function getNewsBySlug(slug: string): Promise<NewsItem | null> {
   const { data } = await supabase.from("news").select("*").eq("slug", slug).maybeSingle();
   return data ? rowToNews(data) : null;
 }
+
+export async function getNewsById(id: string): Promise<NewsItem | null> {
+  const supabase = getSupabasePublic();
+  const { data } = await supabase.from("news").select("*").eq("id", id).maybeSingle();
+  return data ? rowToNews(data) : null;
+}
