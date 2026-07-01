@@ -18,17 +18,23 @@ const timeFmt = new Intl.DateTimeFormat("de-DE", {
 export function NextServiceBar({
   event,
   onBreak,
+  announcement = null,
+  barHidden = false,
 }: {
   event: ChurchEvent | null;
   onBreak: boolean;
+  announcement?: string | null;
+  barHidden?: boolean;
 }) {
   const [dismissed, setDismissed] = useState(false);
   const [overflow, setOverflow] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
   const measureRef = useRef<HTMLSpanElement>(null);
 
+  const hasContent = !barHidden && (Boolean(announcement) || Boolean(event));
+
   useEffect(() => {
-    if (!event) return;
+    if (!hasContent) return;
     const check = () => {
       const w = wrapRef.current;
       const m = measureRef.current;
@@ -39,27 +45,30 @@ export function NextServiceBar({
     const ro = new ResizeObserver(check);
     if (wrapRef.current) ro.observe(wrapRef.current);
     return () => ro.disconnect();
-  }, [event, dismissed]);
+  }, [hasContent, announcement, event, dismissed]);
 
-  if (!event || dismissed) return null;
+  if (!hasContent || dismissed) return null;
 
-  const start = new Date(event.startsAt);
-  const date = dateFmt.format(start);
-  const time = timeFmt.format(start);
+  const start = event ? new Date(event.startsAt) : null;
+  const date = start ? dateFmt.format(start) : "";
+  const time = start ? timeFmt.format(start) : "";
 
-  const Content = () => (
-    <>
-      <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
-        {onBreak ? "Sommerpause ☀" : "Herzlich eingeladen"}
-      </span>
-      <span aria-hidden className="mx-2 text-gold/50">·</span>
-      <span className="font-medium text-bg/90">
-        {onBreak
-          ? `Der nächste Gottesdienst ist am ${date}, ${time} Uhr. Du bist herzlich eingeladen!`
-          : `Gottesdienst am ${date}, ${time} Uhr`}
-      </span>
-    </>
-  );
+  const Content = () =>
+    announcement ? (
+      <span className="font-medium text-bg/90">{announcement}</span>
+    ) : (
+      <>
+        <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
+          {onBreak ? "Sommerpause ☀" : "Herzlich eingeladen"}
+        </span>
+        <span aria-hidden className="mx-2 text-gold/50">·</span>
+        <span className="font-medium text-bg/90">
+          {onBreak
+            ? `Der nächste Gottesdienst ist am ${date}, ${time} Uhr. Du bist herzlich eingeladen!`
+            : `Gottesdienst am ${date}, ${time} Uhr`}
+        </span>
+      </>
+    );
 
   return (
     <div className="border-b border-white/10 bg-aubergine-deep">
@@ -68,12 +77,7 @@ export function NextServiceBar({
           ref={wrapRef}
           className={`relative flex-1 overflow-hidden ${overflow ? "" : "flex justify-center"}`}
         >
-          {/* hidden measurer — always rendered to detect overflow */}
-          <span
-            ref={measureRef}
-            aria-hidden
-            className="invisible absolute whitespace-nowrap"
-          >
+          <span ref={measureRef} aria-hidden className="invisible absolute whitespace-nowrap">
             <Content />
           </span>
 
