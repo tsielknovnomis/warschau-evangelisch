@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
-import { getNextEvent } from "@/lib/seed/events";
+import { getNextEvent } from "@/lib/data/events";
 import { siteConfig } from "@/lib/site-config";
 import { formatDate, formatTime } from "@/lib/format";
 
-export function GottesdienstEinladung() {
-  const next = getNextEvent();
+export async function GottesdienstEinladung() {
+  const next = await getNextEvent();
   return (
     <section className="border-t border-line bg-parchment-deep py-20 lg:py-24">
       <Container>

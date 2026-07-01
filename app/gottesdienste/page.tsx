@@ -4,8 +4,8 @@ import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/content/PageHeader";
 import { EventCard } from "@/components/events/EventCard";
 import { Card } from "@/components/ui/Card";
-import { getUpcomingEvents } from "@/lib/seed/events";
-import { getNews } from "@/lib/seed/news";
+import { getUpcomingEvents } from "@/lib/data/events";
+import { getNews } from "@/lib/data/news";
 import { siteConfig } from "@/lib/site-config";
 import { formatShortDate } from "@/lib/format";
 
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     "Kommende Gottesdienste und Neuigkeiten aus unserer deutschsprachigen Gemeinde in Warschau.",
 };
 
-export default function Page() {
-  const events = getUpcomingEvents();
-  const news = getNews();
+export default async function Page() {
+  const events = await getUpcomingEvents();
+  const news = await getNews();
 
   return (
     <>

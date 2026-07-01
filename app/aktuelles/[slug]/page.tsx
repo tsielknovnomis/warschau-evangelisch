@@ -5,11 +5,11 @@ import { Container } from "@/components/ui/Container";
 import { Prose } from "@/components/ui/Prose";
 import { PageHeader } from "@/components/content/PageHeader";
 import { Markdown } from "@/components/content/Markdown";
-import { getNews, getNewsBySlug } from "@/lib/seed/news";
+import { getNews, getNewsBySlug } from "@/lib/data/news";
 import { formatDate } from "@/lib/format";
 
-export function generateStaticParams() {
-  return getNews().map((n) => ({ slug: n.slug }));
+export async function generateStaticParams() {
+  return (await getNews()).map((n) => ({ slug: n.slug }));
 }
 
 export async function generateMetadata({
@@ -18,7 +18,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const item = getNewsBySlug(slug);
+  const item = await getNewsBySlug(slug);
   return { title: item ? item.title : "Aktuelles", description: item?.excerpt };
 }
 
@@ -28,7 +28,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const item = getNewsBySlug(slug);
+  const item = await getNewsBySlug(slug);
   if (!item) notFound();
 
   return (

@@ -7,7 +7,7 @@ import { NextServiceBar } from "@/components/layout/NextServiceBar";
 import { ConsentProvider } from "@/components/consent/ConsentProvider";
 import { CookieBanner } from "@/components/consent/CookieBanner";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
-import { getNextEvent } from "@/lib/seed/events";
+import { getNextEvent } from "@/lib/data/events";
 import "lenis/dist/lenis.css";
 import "./globals.css";
 
@@ -45,12 +45,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const nextEvent = getNextEvent();
+  const nextEvent = await getNextEvent();
   // Compute "on break" on the server so the client never calls Date.now()
   // during render (avoids a hydration mismatch). Frozen at build time.
   const onBreak = nextEvent

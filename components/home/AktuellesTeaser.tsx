@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
-import { getNews } from "@/lib/seed/news";
+import { getNews } from "@/lib/data/news";
 import { formatShortDate } from "@/lib/format";
 
-export function AktuellesTeaser() {
-  const news = getNews().slice(0, 3);
+export async function AktuellesTeaser() {
+  const news = (await getNews()).slice(0, 3);
   if (news.length === 0) return null;
 
   return (

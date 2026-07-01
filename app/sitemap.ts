@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { getNews } from "@/lib/seed/news";
+import { getNews } from "@/lib/data/news";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.url;
   const staticPaths = [
     "",
@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: p === "" ? 1 : 0.7,
   }));
 
-  const newsEntries = getNews().map((n) => ({
+  const newsEntries = (await getNews()).map((n) => ({
     url: `${base}/aktuelles/${n.slug}`,
     changeFrequency: "yearly" as const,
     priority: 0.5,
