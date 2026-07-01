@@ -13,7 +13,13 @@ const timeFmt = new Intl.DateTimeFormat("de-DE", {
   minute: "2-digit",
 });
 
-export function NextServiceBar({ event }: { event: ChurchEvent | null }) {
+export function NextServiceBar({
+  event,
+  onBreak,
+}: {
+  event: ChurchEvent | null;
+  onBreak: boolean;
+}) {
   const [dismissed, setDismissed] = useState(false);
   const [overflow, setOverflow] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -38,8 +44,6 @@ export function NextServiceBar({ event }: { event: ChurchEvent | null }) {
   const start = new Date(event.startsAt);
   const date = dateFmt.format(start);
   const time = timeFmt.format(start);
-  // If the next service is more than ~3 weeks out, we're on a break.
-  const onBreak = (start.getTime() - Date.now()) / 86_400_000 > 20;
 
   const Content = () => (
     <>

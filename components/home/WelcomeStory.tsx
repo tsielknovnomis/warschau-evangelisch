@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/motion/Reveal";
 
 export function WelcomeStory() {
   return (
     <section id="willkommen" className="scroll-mt-24 border-t border-line bg-bg py-20 lg:py-24">
       <Container>
+        <Reveal>
         <div className="mx-auto max-w-3xl text-center">
           <p className="kicker">Willkommen</p>
           <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-aubergine sm:text-[2.6rem]">
@@ -29,6 +31,7 @@ export function WelcomeStory() {
             </Link>
           </p>
         </div>
+        </Reveal>
       </Container>
     </section>
   );

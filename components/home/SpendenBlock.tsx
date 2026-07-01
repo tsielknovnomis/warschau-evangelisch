@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SpendenkontoCard } from "@/components/content/SpendenkontoCard";
+import { Reveal } from "@/components/motion/Reveal";
 
 export function SpendenBlock() {
   return (
     <section className="border-t border-line bg-parchment-deep py-20 lg:py-24">
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <div>
+          <Reveal>
             <p className="kicker">Unterstützen</p>
             <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-aubergine sm:text-[2.6rem]">
               Unsere Arbeit möglich machen
@@ -27,8 +28,10 @@ export function SpendenBlock() {
                 Mitglied werden
               </Link>
             </p>
-          </div>
-          <SpendenkontoCard />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <SpendenkontoCard />
+          </Reveal>
         </div>
       </Container>
     </section>

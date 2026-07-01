@@ -11,6 +11,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "framer-motion": "^12.42.2",
     "gray-matter": "^4.0.3",
     "lite-youtube-embed": "^0.3.4",
     "next": "16.2.9",

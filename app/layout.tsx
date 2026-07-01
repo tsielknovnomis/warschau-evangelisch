@@ -49,6 +49,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const nextEvent = getNextEvent();
+  // Compute "on break" on the server so the client never calls Date.now()
+  // during render (avoids a hydration mismatch). Frozen at build time.
+  const onBreak = nextEvent
+    ? (new Date(nextEvent.startsAt).getTime() - Date.now()) / 86_400_000 > 20
+    : false;
   return (
     <html
       lang="de"
@@ -56,7 +61,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-bg text-ink">
         <ConsentProvider>
-          <NextServiceBar event={nextEvent} />
+          <NextServiceBar event={nextEvent} onBreak={onBreak} />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

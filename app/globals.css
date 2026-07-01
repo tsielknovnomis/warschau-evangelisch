@@ -23,7 +23,7 @@
 
   /* soft antique gold — secondary accent, used lightly */
   --gold: #a3854f;
-  --gold-deep: #836a3d;
+  --gold-deep: #6e5a30; /* darkened for WCAG-AA contrast on parchment-deep (kicker, footer headings) */
   --gold-soft: #cbb486;
   --gold-tint: #efe6d3;
 }
@@ -60,6 +60,10 @@
 @layer base {
   html {
     color-scheme: light;
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
   }
 
   body {
@@ -133,9 +137,8 @@
 .animate-marquee:hover {
   animation-play-state: paused;
 }
-@media (prefers-reduced-motion: reduce) {
-  .animate-marquee { animation: none; }
-}
+/* Intentionally keeps moving even under prefers-reduced-motion: the ticker is
+   functional (it reveals the full service info that would otherwise be clipped). */
 
 /* page-load reveal */
 @keyframes rise {

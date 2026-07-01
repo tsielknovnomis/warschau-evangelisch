@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/motion/Reveal";
 import { YouTubeLite } from "@/components/sermons/YouTubeLite";
 import { getLatestSermon } from "@/lib/seed/sermons";
 import { siteConfig } from "@/lib/site-config";
@@ -11,7 +12,7 @@ export function PredigtenTeaser() {
     <section className="border-t border-line bg-bg py-20 lg:py-24">
       <Container>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <div>
+          <Reveal>
             <p className="kicker">Zum Reinhören</p>
             <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-aubergine sm:text-[2.6rem]">
               Worte, die bleiben
@@ -34,10 +35,10 @@ export function PredigtenTeaser() {
                 Alle Predigten auf YouTube
               </a>
             </p>
-          </div>
-          <div>
+          </Reveal>
+          <Reveal delay={0.1}>
             <YouTubeLite id={sermon.youtubeId} title={sermon.title} />
-          </div>
+          </Reveal>
         </div>
       </Container>
     </section>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/motion/Reveal";
 import { getNextEvent } from "@/lib/seed/events";
 import { siteConfig } from "@/lib/site-config";
 import { formatDate, formatTime } from "@/lib/format";
@@ -11,7 +12,7 @@ export function GottesdienstEinladung() {
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           {/* Invitation copy */}
-          <div>
+          <Reveal>
             <p className="kicker">Unsere Gottesdienste</p>
             <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-aubergine sm:text-[2.6rem]">
               Du bist herzlich eingeladen
@@ -33,10 +34,10 @@ export function GottesdienstEinladung() {
                 So findest du uns
               </Link>
             </div>
-          </div>
+          </Reveal>
 
           {/* Next service card — quiet, informative */}
-          <div className="rounded-[4px] border border-line bg-surface">
+          <Reveal delay={0.1} className="rounded-[4px] border border-line bg-surface">
             <div className="border-l-[3px] border-gold p-7 sm:p-9">
               <p className="font-body text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
                 {next ? "Der nächste Gottesdienst" : "Gottesdienste"}
@@ -61,7 +62,7 @@ export function GottesdienstEinladung() {
                 </p>
               )}
             </div>
-          </div>
+          </Reveal>
         </div>
       </Container>
     </section>
