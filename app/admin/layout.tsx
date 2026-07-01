@@ -19,20 +19,16 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     <div className="min-h-screen bg-bg">
       <header className="border-b border-gold/40 bg-aubergine-deep text-bg">
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-5 py-3">
-          <div className="flex items-center gap-5">
-            <Link href="/admin" className="flex items-center gap-2 text-bg hover:text-bg">
-              <Lutherrose className="h-7 w-7" alt="" />
-              <span className="font-display text-base">Verwaltung</span>
-            </Link>
-            <nav className="flex gap-4 text-sm">
-              <Link href="/admin#termine" className="text-bg/85 hover:text-bg">Termine</Link>
-              <Link href="/admin#aktuelles" className="text-bg/85 hover:text-bg">Aktuelles</Link>
-              <Link href="/admin#leiste" className="text-bg/85 hover:text-bg">Leiste</Link>
-            </nav>
+          <Link href="/admin" className="flex items-center gap-2 text-bg hover:text-bg">
+            <Lutherrose className="h-7 w-7" alt="" />
+            <span className="font-display text-base">Verwaltung</span>
+          </Link>
+          <div className="flex items-center gap-4">
+            <span className="hidden text-xs text-bg/50 sm:inline">{user.email}</span>
+            <form action={signOut}>
+              <button className="text-sm text-bg/70 hover:text-bg">Abmelden</button>
+            </form>
           </div>
-          <form action={signOut}>
-            <button className="text-sm text-bg/70 hover:text-bg">Abmelden</button>
-          </form>
         </div>
       </header>
       <main className="mx-auto max-w-4xl px-5 py-8">{children}</main>

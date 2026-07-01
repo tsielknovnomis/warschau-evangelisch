@@ -11,7 +11,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   return (
     <div>
       <p className="mb-4">
-        <Link href="/admin" className="text-sm font-semibold text-aubergine hover:text-gold-deep">← Zur Übersicht</Link>
+        <Link href="/admin?tab=termine" className="text-sm font-semibold text-aubergine hover:text-gold-deep">← Zur Übersicht</Link>
       </p>
       <h1 className="font-display text-2xl font-medium text-aubergine">Termin bearbeiten</h1>
       <div className="mt-6">

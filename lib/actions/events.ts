@@ -61,7 +61,7 @@ export async function createEvent(_prev: FormState, formData: FormData): Promise
   const { error } = await supabase.from("events").insert(toRow(v));
   if (error) return { error: "Speichern fehlgeschlagen: " + error.message };
   revalidateEvents();
-  redirect("/admin#termine");
+  redirect("/admin?tab=termine");
 }
 
 export async function updateEvent(id: string, _prev: FormState, formData: FormData): Promise<FormState> {
@@ -72,12 +72,12 @@ export async function updateEvent(id: string, _prev: FormState, formData: FormDa
   const { error } = await supabase.from("events").update(toRow(v)).eq("id", id);
   if (error) return { error: "Speichern fehlgeschlagen: " + error.message };
   revalidateEvents();
-  redirect("/admin#termine");
+  redirect("/admin?tab=termine");
 }
 
 export async function deleteEvent(id: string) {
   const supabase = await getSupabaseServer();
   await supabase.from("events").delete().eq("id", id);
   revalidateEvents();
-  redirect("/admin#termine");
+  redirect("/admin?tab=termine");
 }

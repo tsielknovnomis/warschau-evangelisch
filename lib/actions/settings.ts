@@ -18,5 +18,5 @@ export async function updateSettings(_prev: FormState, formData: FormData): Prom
 
   // The bar lives in the (site) layout → revalidate the whole public tree.
   revalidatePath("/", "layout");
-  redirect("/admin#leiste");
+  redirect("/admin?tab=leiste");
 }
