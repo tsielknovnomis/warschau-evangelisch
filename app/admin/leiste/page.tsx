@@ -1,15 +1,11 @@
 import { getSettings } from "@/lib/data/settings";
 import { getNextEvent } from "@/lib/data/events";
-import { autoBarParts } from "@/lib/announcement";
+import { autoBarParts, isOnBreak } from "@/lib/announcement";
 import { SettingsForm } from "@/components/admin/SettingsForm";
 
 export default async function Page() {
   const [settings, nextEvent] = await Promise.all([getSettings(), getNextEvent()]);
-  // Same "on break" rule as the public layout: next service > ~3 weeks out.
-  const onBreak = nextEvent
-    ? (new Date(nextEvent.startsAt).getTime() - Date.now()) / 86_400_000 > 20
-    : false;
-  const autoParts = autoBarParts(nextEvent, onBreak);
+  const autoParts = autoBarParts(nextEvent, isOnBreak(nextEvent));
 
   return (
     <div>

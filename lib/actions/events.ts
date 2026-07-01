@@ -14,8 +14,10 @@ const EventSchema = z.object({
   description: z.string().nullable(),
   is_special: z.boolean(),
   with_communion: z.boolean(),
-  language: z.enum(["de", "pl", "multi"]),
 });
+// Note: `language` is intentionally not part of the form — the parish is
+// German-speaking. Inserts use the DB default ('de'); updates leave the
+// stored value untouched.
 
 export type FormState = { error?: string };
 
@@ -34,8 +36,19 @@ function parse(formData: FormData) {
     description: (String(formData.get("description") ?? "").trim() || null),
     is_special: formData.get("is_special") === "on",
     with_communion: formData.get("with_communion") === "on",
-    language: String(formData.get("language") ?? "de"),
   });
+}
+
+function toRow(v: z.infer<typeof EventSchema>) {
+  return {
+    title: v.title,
+    starts_at: toIso(v.starts_at),
+    ends_at: toIso(v.ends_at),
+    location: v.location,
+    description: v.description,
+    is_special: v.is_special,
+    with_communion: v.with_communion,
+  };
 }
 
 function revalidateEvents() {
@@ -48,16 +61,7 @@ export async function createEvent(_prev: FormState, formData: FormData): Promise
   if (!parsed.success) return { error: parsed.error.issues[0].message };
   const v = parsed.data;
   const supabase = await getSupabaseServer();
-  const { error } = await supabase.from("events").insert({
-    title: v.title,
-    starts_at: toIso(v.starts_at),
-    ends_at: toIso(v.ends_at),
-    location: v.location,
-    description: v.description,
-    is_special: v.is_special,
-    with_communion: v.with_communion,
-    language: v.language,
-  });
+  const { error } = await supabase.from("events").insert(toRow(v));
   if (error) return { error: "Speichern fehlgeschlagen: " + error.message };
   revalidateEvents();
   redirect("/admin/termine");
@@ -68,16 +72,7 @@ export async function updateEvent(id: string, _prev: FormState, formData: FormDa
   if (!parsed.success) return { error: parsed.error.issues[0].message };
   const v = parsed.data;
   const supabase = await getSupabaseServer();
-  const { error } = await supabase.from("events").update({
-    title: v.title,
-    starts_at: toIso(v.starts_at),
-    ends_at: toIso(v.ends_at),
-    location: v.location,
-    description: v.description,
-    is_special: v.is_special,
-    with_communion: v.with_communion,
-    language: v.language,
-  }).eq("id", id);
+  const { error } = await supabase.from("events").update(toRow(v)).eq("id", id);
   if (error) return { error: "Speichern fehlgeschlagen: " + error.message };
   revalidateEvents();
   redirect("/admin/termine");

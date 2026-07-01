@@ -3,8 +3,8 @@
 import { Children, useState, type ReactNode } from "react";
 
 /**
- * Shows the first `initialCount` children; the rest expand on demand.
- * Children are server-rendered — this only toggles visibility.
+ * Shows the first `initialCount` children; the rest render on demand
+ * (conditional rendering — collapsed items are not in the initial HTML).
  */
 export function ShowMore({
   children,
@@ -30,6 +30,7 @@ export function ShowMore({
       {hidden > 0 && (
         <button
           onClick={() => setExpanded((v) => !v)}
+          aria-expanded={expanded}
           className="mt-1 inline-flex items-center gap-2 font-body text-sm font-semibold text-aubergine transition-colors hover:text-gold-deep"
         >
           {expanded ? lessLabel : moreLabel.replace("{n}", String(hidden))}

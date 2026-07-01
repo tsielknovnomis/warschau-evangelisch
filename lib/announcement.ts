@@ -14,6 +14,12 @@ const timeFmt = new Intl.DateTimeFormat("de-DE", {
 
 export type BarParts = { label: string; text: string };
 
+/** On a break when the next service is more than ~3 weeks out. */
+export function isOnBreak(event: ChurchEvent | null): boolean {
+  if (!event) return false;
+  return (new Date(event.startsAt).getTime() - Date.now()) / 86_400_000 > 20;
+}
+
 /**
  * The automatic announcement-bar content derived from the next service.
  * Single source of truth for the public bar AND the admin preview.

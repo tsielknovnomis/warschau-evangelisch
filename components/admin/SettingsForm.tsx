@@ -51,11 +51,15 @@ export function SettingsForm({
             )}
           </div>
         )}
-        <span className="mt-1 block text-xs text-muted">
-          {custom
-            ? "Es wird dein eigener Text angezeigt."
-            : "Es wird automatisch der nächste Gottesdienst angezeigt."}
-        </span>
+        {!hidden && (
+          <span className="mt-1 block text-xs text-muted">
+            {custom
+              ? "Es wird dein eigener Text angezeigt."
+              : autoParts
+                ? "Es wird automatisch der nächste Gottesdienst angezeigt."
+                : "Sobald ein Termin angelegt ist, erscheint er hier automatisch."}
+          </span>
+        )}
       </div>
 
       <label className="block">
