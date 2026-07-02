@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/site-config";
+import { siteUrl } from "@/lib/site-url";
 
 /**
  * schema.org "Church" structured data for search engines.
@@ -11,7 +12,7 @@ export function ChurchJsonLd() {
     "@type": "Church",
     name: siteConfig.name,
     alternateName: siteConfig.shortName,
-    url: siteConfig.url,
+    url: siteUrl,
     email: contact.general,
     address: {
       "@type": "PostalAddress",

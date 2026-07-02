@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Spectral } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
+import { siteUrl } from "@/lib/site-url";
 import "lenis/dist/lenis.css";
 import "./globals.css";
 
@@ -21,7 +22,7 @@ const spectral = Spectral({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(siteUrl),
   title: {
     default: siteConfig.name,
     template: `%s — ${siteConfig.shortName}`,
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     description: "Deutschsprachige evangelisch-lutherische Gemeinde in Warschau.",
     locale: "de_DE",
     type: "website",
-    url: siteConfig.url,
+    url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",

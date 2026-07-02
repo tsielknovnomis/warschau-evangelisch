@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/site-config";
+import { siteUrl } from "@/lib/site-url";
 import { getNews } from "@/lib/data/news";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = siteConfig.url;
+  const base = siteUrl;
   const staticPaths = [
     "",
     "/gottesdienste",
