@@ -28,12 +28,21 @@ export const metadata: Metadata = {
   },
   description:
     "Deutschsprachige evangelisch-lutherische Gemeinde in Warschau. Gottesdienste, Predigten, Gemeindeleben — unter dem Dach der Evangelisch-Augsburgischen Kirche in Polen.",
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
+    siteName: siteConfig.shortName,
     title: siteConfig.name,
     description: "Deutschsprachige evangelisch-lutherische Gemeinde in Warschau.",
     locale: "de_DE",
     type: "website",
     url: siteConfig.url,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: "Deutschsprachige evangelisch-lutherische Gemeinde in Warschau.",
   },
 };
 

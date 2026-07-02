@@ -4,6 +4,7 @@ import { NextServiceBar } from "@/components/layout/NextServiceBar";
 import { ConsentProvider } from "@/components/consent/ConsentProvider";
 import { CookieBanner } from "@/components/consent/CookieBanner";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
+import { ChurchJsonLd } from "@/components/seo/ChurchJsonLd";
 import { getNextEvent } from "@/lib/data/events";
 import { getSettings } from "@/lib/data/settings";
 import { isOnBreak } from "@/lib/announcement";
@@ -16,6 +17,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
 
   return (
     <SmoothScroll>
+      <ChurchJsonLd />
       <ConsentProvider>
         <NextServiceBar
           event={nextEvent}
