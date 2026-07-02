@@ -9,24 +9,29 @@ const nextConfig: NextConfig = {
       // Anfahrt is now top-level
       { source: "/gottesdienste/anfahrt", destination: "/anfahrt", permanent: true },
       { source: "/uber-uns", destination: "/ueber-uns", permanent: true },
-      { source: "/uber-uns/geschichte", destination: "/ueber-uns/geschichte", permanent: true },
-      { source: "/uber-uns/verein", destination: "/ueber-uns/verein", permanent: true },
+      { source: "/uber-uns/geschichte", destination: "/geschichte", permanent: true },
+      { source: "/uber-uns/verein", destination: "/verein", permanent: true },
       {
         source: "/uber-uns/verein/satzung-des-vereins-deutschsprachige-evangelische-seelsorge-inwarschau",
-        destination: "/ueber-uns/verein/satzung",
+        destination: "/satzung",
         permanent: true,
       },
       {
         source: "/satzung-des-vereins-deutschsprachige-evangelische-seelsorge-inwarschau",
-        destination: "/ueber-uns/verein/satzung",
+        destination: "/satzung",
         permanent: true,
       },
-      { source: "/beitrittserklaerung", destination: "/ueber-uns/verein/beitritt", permanent: true },
+      { source: "/beitrittserklaerung", destination: "/beitritt", permanent: true },
       { source: "/home", destination: "/", permanent: true },
       { source: "/naechster-gottesdienst", destination: "/gottesdienste", permanent: true },
       { source: "/beitraege", destination: "/gottesdienste", permanent: true },
       // Aktuelles overview merged into the Termine page
       { source: "/aktuelles", destination: "/gottesdienste", permanent: true },
+      // Verein/Satzung/Beitritt/Geschichte were nested under /ueber-uns, now flat
+      { source: "/ueber-uns/geschichte", destination: "/geschichte", permanent: true },
+      { source: "/ueber-uns/verein", destination: "/verein", permanent: true },
+      { source: "/ueber-uns/verein/beitritt", destination: "/beitritt", permanent: true },
+      { source: "/ueber-uns/verein/satzung", destination: "/satzung", permanent: true },
     ];
   },
 };

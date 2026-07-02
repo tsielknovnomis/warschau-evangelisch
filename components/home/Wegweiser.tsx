@@ -3,8 +3,8 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
 
 const ziele = [
-  { href: "/ueber-uns/geschichte", title: "Geschichte", text: "Wie unsere Gemeinde über die Jahre gewachsen ist." },
-  { href: "/ueber-uns/verein", title: "Verein & Mitgliedschaft", text: "Wer wir als Verein sind — und wie du Mitglied wirst." },
+  { href: "/geschichte", title: "Geschichte", text: "Wie unsere Gemeinde über die Jahre gewachsen ist." },
+  { href: "/verein", title: "Verein & Mitgliedschaft", text: "Wer wir als Verein sind — und wie du Mitglied wirst." },
   { href: "/links", title: "Links", text: "Partnerkirchen, Bibel-Ressourcen und mehr." },
 ];
 

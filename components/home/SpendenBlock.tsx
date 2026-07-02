@@ -24,7 +24,7 @@ export function SpendenBlock() {
               ganz unkompliziert.
             </p>
             <p className="mt-7">
-              <Link href="/ueber-uns/verein/beitritt" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
+              <Link href="/beitritt" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
                 Mitglied werden
               </Link>
             </p>

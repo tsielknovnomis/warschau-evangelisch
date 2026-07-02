@@ -15,16 +15,16 @@ export const mainNav: NavItem[] = [
     href: "/ueber-uns",
     children: [
       { label: "Die Gemeinde", href: "/ueber-uns" },
-      { label: "Geschichte", href: "/ueber-uns/geschichte" },
+      { label: "Geschichte", href: "/geschichte" },
     ],
   },
 ];
 
 // Secondary links shown in the footer's "Mehr"/sitemap column.
 export const footerNav: NavItem[] = [
-  { label: "Verein", href: "/ueber-uns/verein" },
-  { label: "Beitrittserklärung", href: "/ueber-uns/verein/beitritt" },
-  { label: "Satzung", href: "/ueber-uns/verein/satzung" },
+  { label: "Verein", href: "/verein" },
+  { label: "Beitrittserklärung", href: "/beitritt" },
+  { label: "Satzung", href: "/satzung" },
 ];
 
 // Legal links shown in the footer's bottom bar.

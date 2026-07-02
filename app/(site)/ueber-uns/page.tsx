@@ -97,10 +97,10 @@ export default function Page() {
             Heimat finden möchte, ist herzlich willkommen.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <Link href="/ueber-uns/geschichte" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
+            <Link href="/geschichte" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
               Unsere Geschichte
             </Link>
-            <Link href="/ueber-uns/verein" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
+            <Link href="/verein" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
               Verein &amp; Mitgliedschaft
             </Link>
             <Link href="/gottesdienste" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">

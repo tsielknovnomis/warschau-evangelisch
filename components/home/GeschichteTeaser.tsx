@@ -37,7 +37,7 @@ export function GeschichteTeaser() {
                 der Warschauer Trinitatisgemeinde zusammen.
               </p>
               <p className="mt-7">
-                <Link href="/ueber-uns/geschichte" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
+                <Link href="/geschichte" className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 hover:text-gold-deep">
                   Unsere ganze Geschichte
                 </Link>
               </p>

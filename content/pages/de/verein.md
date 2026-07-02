@@ -12,5 +12,5 @@ Wir sind allen an diesem Erfolg Beteiligten und Unterstützern, den Gründungsmi
 
 ## Weitere Informationen
 
-- [Satzung des Vereins](/ueber-uns/verein/satzung)
-- [Beitrittserklärung](/ueber-uns/verein/beitritt)
+- [Satzung des Vereins](/satzung)
+- [Beitrittserklärung](/beitritt)
