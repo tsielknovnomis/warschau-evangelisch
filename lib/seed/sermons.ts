@@ -3,7 +3,7 @@ import type { Sermon } from "@/lib/types";
 // Seed sermons — the 17 YouTube IDs embedded on the legacy site (scraped/ASSET_INVENTORY.md).
 // Only the most recent has a confirmed title/date; the rest carry placeholder
 // titles/dates (TODO(verify)) and exist so the UI is complete before Plan 2
-// wires the real catalogue from Supabase.
+// wires a real, maintained catalogue.
 
 const youtubeIds = [
   "xHjDEox-gTU",

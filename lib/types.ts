@@ -1,6 +1,6 @@
 // Domain types shared across the site.
-// Seed modules (lib/seed/*) and the future Supabase layer both produce these shapes,
-// so swapping the data source in Plan 2 requires no component changes.
+// Storage documents (Netlify Blobs / data/seed) and lib/seed/sermons.ts
+// produce these shapes directly, so components never care about the source.
 
 export interface ChurchEvent {
   id: string

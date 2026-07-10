@@ -1,24 +1,29 @@
 "use server";
 
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { getSupabaseServer } from "@/lib/supabase/server";
+import { createSessionToken, verifyPassword, SESSION_COOKIE } from "@/lib/auth";
 
 export type AuthState = { error?: string };
 
 export async function signIn(_prev: AuthState, formData: FormData): Promise<AuthState> {
-  const email = String(formData.get("email") ?? "").trim();
   const password = String(formData.get("password") ?? "");
-  if (!email || !password) return { error: "Bitte E-Mail und Passwort eingeben." };
+  if (!password) return { error: "Bitte Passwort eingeben." };
+  if (!verifyPassword(password)) return { error: "Das Passwort ist nicht korrekt." };
 
-  const supabase = await getSupabaseServer();
-  const { error } = await supabase.auth.signInWithPassword({ email, password });
-  if (error) return { error: "E-Mail oder Passwort ist nicht korrekt." };
-
+  const cookieStore = await cookies();
+  cookieStore.set(SESSION_COOKIE, await createSessionToken(), {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    path: "/",
+    maxAge: 30 * 86_400,
+  });
   redirect("/admin");
 }
 
 export async function signOut() {
-  const supabase = await getSupabaseServer();
-  await supabase.auth.signOut();
+  const cookieStore = await cookies();
+  cookieStore.delete(SESSION_COOKIE);
   redirect("/admin/login");
 }

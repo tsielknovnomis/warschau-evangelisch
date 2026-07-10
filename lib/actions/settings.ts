@@ -2,19 +2,19 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { getSupabaseServer } from "@/lib/supabase/server";
+import { writeDoc } from "@/lib/storage";
+import { isAdmin } from "@/lib/actions/guard";
+import type { SiteSettings } from "@/lib/data/settings";
 import type { FormState } from "@/lib/actions/events";
 
 export async function updateSettings(_prev: FormState, formData: FormData): Promise<FormState> {
-  const announcement = String(formData.get("announcement") ?? "").trim() || null;
-  const barHidden = formData.get("bar_hidden") === "on";
+  if (!(await isAdmin())) return { error: "Nicht angemeldet — bitte lade die Seite neu und melde dich an." };
 
-  const supabase = await getSupabaseServer();
-  const { error } = await supabase
-    .from("settings")
-    .update({ announcement, bar_hidden: barHidden, updated_at: new Date().toISOString() })
-    .eq("id", true);
-  if (error) return { error: "Speichern fehlgeschlagen: " + error.message };
+  const settings: SiteSettings = {
+    announcement: String(formData.get("announcement") ?? "").trim() || null,
+    barHidden: formData.get("bar_hidden") === "on",
+  };
+  await writeDoc("settings", settings);
 
   // The bar lives in the (site) layout → revalidate the whole public tree.
   revalidatePath("/", "layout");

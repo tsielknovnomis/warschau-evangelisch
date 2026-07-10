@@ -1,19 +1,18 @@
-import { getSupabasePublic } from "@/lib/supabase/public";
+import { readDoc } from "@/lib/storage";
 
 export type SiteSettings = {
   announcement: string | null;
   barHidden: boolean;
 };
 
-/** Global site settings (single row). Controls the announcement bar. */
+const KEY = "settings";
+const DEFAULTS: SiteSettings = { announcement: null, barHidden: false };
+
+/** Global site settings (single document). Controls the announcement bar. */
 export async function getSettings(): Promise<SiteSettings> {
-  const supabase = getSupabasePublic();
-  const { data } = await supabase
-    .from("settings")
-    .select("announcement, bar_hidden")
-    .maybeSingle();
+  const s = await readDoc<SiteSettings>(KEY, DEFAULTS);
   return {
-    announcement: data?.announcement?.trim() || null,
-    barHidden: data?.bar_hidden ?? false,
+    announcement: s.announcement?.trim() || null,
+    barHidden: s.barHidden ?? false,
   };
 }

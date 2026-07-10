@@ -3,8 +3,10 @@
 import { z } from "zod";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { getSupabaseServer } from "@/lib/supabase/server";
+import { readDoc, writeDoc } from "@/lib/storage";
+import { isAdmin } from "@/lib/actions/guard";
 import { warsawLocalToIso } from "@/lib/datetime";
+import type { ChurchEvent } from "@/lib/types";
 
 const EventSchema = z.object({
   title: z.string().trim().min(1, "Titel fehlt"),
@@ -14,17 +16,14 @@ const EventSchema = z.object({
   is_special: z.boolean(),
   with_communion: z.boolean(),
 });
-// Note: `language` and `ends_at` are intentionally not part of the form
-// (always German; no end time needed). Inserts use the column defaults/null;
-// updates leave stored values untouched.
+// Note: `language` and `endsAt` are intentionally not part of the form
+// (always German; no end time needed). New events get 'de'/null; updates
+// leave the stored values untouched.
 
 export type FormState = { error?: string };
 
-/** datetime-local (Warsaw wall time) → UTC ISO, or null. */
-function toIso(v: string | null): string | null {
-  if (!v) return null;
-  return warsawLocalToIso(v);
-}
+const KEY = "events";
+const NOT_ALLOWED = { error: "Nicht angemeldet — bitte lade die Seite neu und melde dich an." };
 
 function parse(formData: FormData) {
   return EventSchema.safeParse({
@@ -37,47 +36,61 @@ function parse(formData: FormData) {
   });
 }
 
-function toRow(v: z.infer<typeof EventSchema>) {
-  return {
-    title: v.title,
-    starts_at: toIso(v.starts_at),
-    location: v.location,
-    description: v.description,
-    is_special: v.is_special,
-    with_communion: v.with_communion,
-  };
-}
-
 function revalidateEvents() {
-  revalidatePath("/");
+  revalidatePath("/", "layout");
   revalidatePath("/gottesdienste");
 }
 
 export async function createEvent(_prev: FormState, formData: FormData): Promise<FormState> {
+  if (!(await isAdmin())) return NOT_ALLOWED;
   const parsed = parse(formData);
   if (!parsed.success) return { error: parsed.error.issues[0].message };
   const v = parsed.data;
-  const supabase = await getSupabaseServer();
-  const { error } = await supabase.from("events").insert(toRow(v));
-  if (error) return { error: "Speichern fehlgeschlagen: " + error.message };
+
+  const events = await readDoc<ChurchEvent[]>(KEY, []);
+  events.push({
+    id: crypto.randomUUID(),
+    title: v.title,
+    startsAt: warsawLocalToIso(v.starts_at),
+    endsAt: null,
+    location: v.location,
+    description: v.description,
+    isSpecial: v.is_special,
+    withCommunion: v.with_communion,
+    language: "de",
+  });
+  await writeDoc(KEY, events);
   revalidateEvents();
   redirect("/admin?tab=termine");
 }
 
 export async function updateEvent(id: string, _prev: FormState, formData: FormData): Promise<FormState> {
+  if (!(await isAdmin())) return NOT_ALLOWED;
   const parsed = parse(formData);
   if (!parsed.success) return { error: parsed.error.issues[0].message };
   const v = parsed.data;
-  const supabase = await getSupabaseServer();
-  const { error } = await supabase.from("events").update(toRow(v)).eq("id", id);
-  if (error) return { error: "Speichern fehlgeschlagen: " + error.message };
+
+  const events = await readDoc<ChurchEvent[]>(KEY, []);
+  const idx = events.findIndex((e) => e.id === id);
+  if (idx === -1) return { error: "Termin nicht gefunden." };
+  events[idx] = {
+    ...events[idx],
+    title: v.title,
+    startsAt: warsawLocalToIso(v.starts_at),
+    location: v.location,
+    description: v.description,
+    isSpecial: v.is_special,
+    withCommunion: v.with_communion,
+  };
+  await writeDoc(KEY, events);
   revalidateEvents();
   redirect("/admin?tab=termine");
 }
 
 export async function deleteEvent(id: string) {
-  const supabase = await getSupabaseServer();
-  await supabase.from("events").delete().eq("id", id);
+  if (!(await isAdmin())) redirect("/admin/login");
+  const events = await readDoc<ChurchEvent[]>(KEY, []);
+  await writeDoc(KEY, events.filter((e) => e.id !== id));
   revalidateEvents();
   redirect("/admin?tab=termine");
 }

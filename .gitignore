@@ -48,3 +48,6 @@ mockups/
 
 # Local Netlify folder
 .netlify
+
+# local dev content storage
+.data/

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "8a9ced6c-d13f-4ce8-a0f3-4f748fce031b",
+    "slug": "sommerpause-2026",
+    "title": "Sommerpause — nächster Gottesdienst am 6. September",
+    "body": "Während der Sommerferien pausieren unsere Gottesdienste. Nach der Pause feiern wir am 6. September 2026 um 09:30 Uhr den Einschulungsgottesdienst. Auf Anfrage sind wir auch in der Ferienzeit für dich da — melde dich gerne bei uns.",
+    "excerpt": "Während der Sommerferien pausieren die Gottesdienste. Nächster Termin: 6. September, Einschulungsgottesdienst.",
+    "coverImage": null,
+    "pinned": true,
+    "publishedAt": "2026-06-21T08:00:00+00:00"
+  },
+  {
+    "id": "76093f53-0601-4f1c-aad1-2593626c2b38",
+    "slug": "erntedankgottesdienst-2026",
+    "title": "Erntedankgottesdienst am 4. Oktober",
+    "body": "Am 4. Oktober 2026 feiern wir um 09:30 Uhr unseren Erntedankgottesdienst — ein Familiengottesdienst mit anschließendem Gemeindekaffee. Wir freuen uns auf dich.",
+    "excerpt": "Am 4. Oktober feiern wir Erntedank — ein Familiengottesdienst mit anschließendem Gemeindekaffee.",
+    "coverImage": null,
+    "pinned": false,
+    "publishedAt": "2026-09-10T08:00:00+00:00"
+  },
+  {
+    "id": "f0933a50-99f9-49f0-99f5-75c76a0ad035",
+    "slug": "konfirmandenunterricht",
+    "title": "Konfirmandenunterricht im neuen Zyklus",
+    "body": "Im Zweijahreszyklus bieten wir wieder Konfirmandenunterricht an. Interessierte Familien melden sich bitte unter info@warschau-evangelisch.de.",
+    "excerpt": "Im Zweijahreszyklus bieten wir wieder Konfirmandenunterricht an — Anmeldung per E-Mail.",
+    "coverImage": null,
+    "pinned": false,
+    "publishedAt": "2026-02-01T09:00:00+00:00"
+  }
+]

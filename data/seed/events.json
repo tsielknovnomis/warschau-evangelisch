@@ -1,0 +1,145 @@
+[
+  {
+    "id": "d6f7eb71-f6ed-43bf-8022-08af470c5269",
+    "title": "Einschulungsgottesdienst nach der Sommerpause",
+    "startsAt": "2026-09-06T07:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": null,
+    "isSpecial": true,
+    "withCommunion": false,
+    "language": "de"
+  },
+  {
+    "id": "95304838-f404-4c28-9d88-4fa2e7c868be",
+    "title": "Gottesdienst mit Heiligem Abendmahl",
+    "startsAt": "2026-09-20T07:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": null,
+    "isSpecial": false,
+    "withCommunion": true,
+    "language": "de"
+  },
+  {
+    "id": "2dd9b194-db76-4115-8f07-0b508f90a149",
+    "title": "Erntedankgottesdienst",
+    "startsAt": "2026-10-04T07:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": "Familiengottesdienst mit anschließendem Gemeindekaffee.",
+    "isSpecial": true,
+    "withCommunion": false,
+    "language": "de"
+  },
+  {
+    "id": "9da14c84-49cc-491a-82f0-388d2de0f13d",
+    "title": "Gottesdienst",
+    "startsAt": "2026-10-18T07:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": null,
+    "isSpecial": false,
+    "withCommunion": false,
+    "language": "de"
+  },
+  {
+    "id": "577e59aa-f73d-4cf8-8ca5-653d28c91e5d",
+    "title": "Gottesdienst zum Reformationsgedenken",
+    "startsAt": "2026-11-01T08:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": null,
+    "isSpecial": true,
+    "withCommunion": false,
+    "language": "de"
+  },
+  {
+    "id": "bf14ea6f-f840-4c17-9ed6-c5517ce96671",
+    "title": "Gottesdienst mit Heiligem Abendmahl",
+    "startsAt": "2026-11-15T08:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": null,
+    "isSpecial": false,
+    "withCommunion": true,
+    "language": "de"
+  },
+  {
+    "id": "ad355f3f-ddf9-47e2-a13f-528fe937d1ca",
+    "title": "Ewigkeitssonntag",
+    "startsAt": "2026-11-22T08:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": "Gedenken an die Verstorbenen des Kirchenjahres.",
+    "isSpecial": true,
+    "withCommunion": false,
+    "language": "de"
+  },
+  {
+    "id": "939c7afc-9cfe-4622-bdfd-3878a9e6a353",
+    "title": "Gottesdienst zum 1. Advent",
+    "startsAt": "2026-11-29T08:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": null,
+    "isSpecial": true,
+    "withCommunion": false,
+    "language": "de"
+  },
+  {
+    "id": "12925f17-6f54-430a-bf26-b209e662972d",
+    "title": "Gottesdienst zum 2. Advent",
+    "startsAt": "2026-12-06T08:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": null,
+    "isSpecial": false,
+    "withCommunion": false,
+    "language": "de"
+  },
+  {
+    "id": "1a788d4d-5002-4eb3-9661-f72cc68affc8",
+    "title": "Gottesdienst zum 3. Advent",
+    "startsAt": "2026-12-13T08:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": null,
+    "isSpecial": false,
+    "withCommunion": false,
+    "language": "de"
+  },
+  {
+    "id": "11e822c9-ae01-4e56-94e2-8f2d520e749c",
+    "title": "Gottesdienst zum 4. Advent",
+    "startsAt": "2026-12-20T08:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": null,
+    "isSpecial": false,
+    "withCommunion": false,
+    "language": "de"
+  },
+  {
+    "id": "25425976-73dd-4007-9d84-f9e8b6d34c1b",
+    "title": "Christvesper mit Krippenspiel",
+    "startsAt": "2026-12-24T15:00:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": "Heiligabend um 16:00 Uhr — mit dem Krippenspiel der Kinder.",
+    "isSpecial": true,
+    "withCommunion": false,
+    "language": "de"
+  },
+  {
+    "id": "b9f23f56-c676-4ca2-9eb0-ba33e71dfbc9",
+    "title": "Christfest — Gottesdienst mit Abendmahl",
+    "startsAt": "2026-12-25T08:30:00+00:00",
+    "endsAt": null,
+    "location": "ul. Miodowa 21, 2. Stock (Synodalsaal)",
+    "description": "Festgottesdienst zum ersten Weihnachtstag.",
+    "isSpecial": true,
+    "withCommunion": true,
+    "language": "de"
+  }
+]
