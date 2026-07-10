@@ -11,9 +11,8 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@netlify/blobs@^10.7.9",
         "npm:@playwright/test@^1.61.1",
-        "npm:@supabase/ssr@0.12",
-        "npm:@supabase/supabase-js@^2.110.0",
         "npm:@tailwindcss/postcss@4",
         "npm:@testing-library/jest-dom@^6.9.1",
         "npm:@testing-library/react@^16.3.2",

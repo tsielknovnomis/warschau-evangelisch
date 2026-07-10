@@ -9,8 +9,8 @@ Ersetzt die alte WordPress-Seite. Inhalt & Struktur bleiben im Kern erhalten, Op
 ## Stack (real)
 - **Next.js 16** (App Router), **TypeScript strict**, **Tailwind CSS v4** (CSS-first `@theme`)
 - Content: statische Kernseiten als Markdown in `content/pages/de/` (react-markdown + gray-matter)
-- **Termine + Aktuelles: Supabase** (Tabellen `events` + `news`, RLS: public read / auth write), gepflegt über **`/admin`** (E-Mail+Passwort-Login, Supabase Auth, Signup aus). Daten-Layer: `lib/data/*` (async). Predigten: weiterhin `lib/seed/sermons.ts`.
-- **Backend/Admin:** Projekt `vypjxqozqeboyalqfzwa` (Org „active"). Server Actions in `lib/actions/*` mit `revalidatePath` (Änderungen sofort live). Struktur: `app/(site)/` = öffentlich (statisch), `app/admin/` = Panel (dynamisch). Zeiten in `Europe/Warsaw` (`lib/datetime.ts`).
+- **Termine + Aktuelles + Leiste: Netlify Blobs** (Store `content`, JSON-Dokumente; lokal `.data/`, Seed-Fallback `data/seed/`), gepflegt über **`/admin`** (Team-Passwort in Netlify-Env `ADMIN_PASSWORD`, signierte Session-Cookies via `lib/auth.ts`). Daten-Layer: `lib/data/*` (async), Storage: `lib/storage.ts`. Predigten: weiterhin `lib/seed/sermons.ts`. **Kein Supabase, keine externen Dienste, 0 €.**
+- **Backend/Admin:** Server Actions in `lib/actions/*` — **jede Mutation prüft `isAdmin()`** (es gibt kein RLS-Sicherheitsnetz mehr!) und ruft `revalidatePath` (Änderungen sofort live). Struktur: `app/(site)/` = öffentlich (statisch), `app/admin/` = Panel (dynamisch). Zeiten in `Europe/Warsaw` (`lib/datetime.ts`).
 - Karte: Google Maps (Consent-Banner + 2-Klick-Fallback). Predigt-Videos: 2-Klick-YouTube. Globaler Consent in localStorage (`we-consent-external`), DSGVO.
 - Tests: Vitest. Deploy: Netlify.
 
