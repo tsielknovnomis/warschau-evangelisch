@@ -9,13 +9,13 @@ export interface NavItem {
 export const mainNav: NavItem[] = [
   { label: "Start", href: "/" },
   { label: "Termine & Aktuelles", href: "/gottesdienste" },
+  { label: "Glaube", href: "/glauben" },
   { label: "Anfahrt", href: "/anfahrt" },
   {
     label: "Über uns",
     href: "/ueber-uns",
     children: [
       { label: "Die Gemeinde", href: "/ueber-uns" },
-      { label: "Was wir wollen und glauben", href: "/glauben" },
       { label: "Geschichte", href: "/geschichte" },
       { label: "Verein", href: "/verein" },
       { label: "Beitrittserklärung", href: "/beitritt" },

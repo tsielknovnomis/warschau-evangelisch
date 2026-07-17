@@ -20,7 +20,7 @@ export async function GottesdienstEinladung() {
             <p className="mt-6 text-lg leading-relaxed text-ink/85">
               Wir feiern alle zwei Wochen sonntags um {siteConfig.service.time} — im
               Advent jeden Sonntag — im Lutherischen Zentrum in der{" "}
-              {siteConfig.address.street} — immer mit Heiligem Abendmahl.
+              {siteConfig.address.street}, meist mit Heiligem Abendmahl.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted">
               Komm einfach vorbei, so wie du bist. Es gibt nichts vorzubereiten — und
@@ -51,7 +51,6 @@ export async function GottesdienstEinladung() {
                     {formatTime(next.startsAt)} · {siteConfig.address.street}
                   </p>
                   <p className="mt-3 text-muted">{next.title}</p>
-                  <p className="mt-1 text-sm italic text-muted">mit Heiligem Abendmahl</p>
                 </>
               ) : (
                 <p className="mt-3 leading-relaxed text-muted">
