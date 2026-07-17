@@ -6,8 +6,8 @@
 
 | # | Thema | Arbeitsannahme (so baue ich es) | Muss bestätigt werden | Status |
 |---|-------|----------------------------------|------------------------|--------|
-| 1 | **Bankkonto** | BNP Paribas — PLN `13 1600 1462 1728 8283 8000 0001`, EUR/IBAN `PL56 1600 1462 1728 8283 8000 0003`, BIC `PPABPLPK`. Altes Pekao-SA-Konto entfernt. | **PLN-Konto bestätigt** (Vorstand lieferte es am 17.07. selbst als QR-Daten). Noch offen: EUR-IBAN + BIC bestätigen. | 🟧 teilw. bestätigt |
-| 2 | **Presserechtlich Verantwortlicher (§ 18 Abs. 2 MStV)** | Vorläufig **Jürgen Wandel** (erster Vorstand) im Impressum eingetragen. | **Go-Live-Blocker:** Verein muss die verantwortliche Person final benennen (Pfarrer nach Bestätigung oder benanntes Vorstandsmitglied). | 🟥 offen |
+| 1 | **Bankkonto** | BNP Paribas — PLN `13 1600 1462 1728 8283 8000 0001`, EUR/IBAN `PL56 1600 1462 1728 8283 8000 0003`, BIC `PPABPLPK`. | — | 🟩 bestätigt (17.07.) |
+| 2 | **Presserechtlich Verantwortlicher (§ 18 Abs. 2 MStV)** | **Simon von Kleist** im Impressum eingetragen (Entscheidung 17.07.). | — | 🟩 erledigt |
 | 3 | **Amtierender Pfarrer** | Dr. Grzegorz Olek (aus neuester Alt-Seite). | Ist Dr. Olek Stand 2026 noch im Amt? Sonst Name/Titel korrigieren. | 🟧 zu verifizieren |
 | 4 | **Datenschutz + Impressum** | Nach DDG/DSGVO/TDDDG 2026 finalisiert (UODO als Aufsichtsbehörde, DPF+SCC, Consent). | Anwaltliche/fachliche **Schlussprüfung** vor Go-Live (DSGVO unmittelbar, kein DSG-EKD — Annahme bestätigen). | 🟧 zu prüfen |
 | 5 | **USt-IdNr.** | Annahme: gemeinnützig, keine vorhanden → im Impressum **weggelassen**. | Falls doch eine existiert: nachtragen. | 🟧 zu verifizieren |

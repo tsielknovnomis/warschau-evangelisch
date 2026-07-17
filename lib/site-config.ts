@@ -22,13 +22,14 @@ export const siteConfig: SiteConfig = {
   },
 
   bank: {
-    // TODO(verify): confirm BNP Paribas account is current; old Pekao SA account removed.
+    // Confirmed by the board (17.07.2026) — PLN account also matches the
+    // board-provided donation QR data.
     name: 'BNP Paribas',
     holder: 'Ewangelickie Duszpasterstwo Języka Niemieckiego w Warszawie',
     pln: '13 1600 1462 1728 8283 8000 0001',
     eurIban: 'PL56 1600 1462 1728 8283 8000 0003',
     bic: 'PPABPLPK',
-    verify: true,
+    verify: false,
   },
 
   contact: {

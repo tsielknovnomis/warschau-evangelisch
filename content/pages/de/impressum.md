@@ -44,7 +44,7 @@ Eine telefonische Erreichbarkeit besteht nicht; bitte kontaktiere uns per E-Mail
 
 Verantwortlich für die journalistisch-redaktionellen Inhalte (News und Predigten) nach § 18 Abs. 2 MStV:
 
-Jürgen Wandel, c/o ul. Miodowa 21, 00-246 Warszawa, Polen
+Simon von Kleist, c/o ul. Miodowa 21, 00-246 Warszawa, Polen
 
 ## Haftung für Inhalte
 
