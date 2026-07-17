@@ -14,6 +14,10 @@ import path from "path";
  */
 
 const onNetlify = Boolean(process.env.NETLIFY || process.env.NETLIFY_BLOBS_CONTEXT);
+// The .data/ file store is a dev convenience only. A production build on this
+// machine (e.g. `netlify deploy --build`) must never bake local test data into
+// the static pages — it falls through to the seed instead.
+const useLocalStore = process.env.NODE_ENV === "development";
 
 function store() {
   return getStore({ name: "content", consistency: "strong" });
@@ -36,7 +40,7 @@ export async function readDoc<T>(key: string, fallback: T): Promise<T> {
     } catch {
       // fall through to seed
     }
-  } else {
+  } else if (useLocalStore) {
     try {
       const raw = await fs.readFile(path.join(process.cwd(), ".data", `${key}.json`), "utf8");
       return JSON.parse(raw) as T;

@@ -29,6 +29,7 @@
         "npm:lite-youtube-embed@~0.3.4",
         "npm:next-intl@^4.13.0",
         "npm:next@16.2.9",
+        "npm:qrcode@^1.5.4",
         "npm:react-dom@19.2.4",
         "npm:react-markdown@^10.1.0",
         "npm:react@19.2.4",
