@@ -24,11 +24,6 @@ export function EventCard({ event, highlight = false }: { event: ChurchEvent; hi
         </h3>
         <p className={`mt-1 text-sm ${highlight ? "text-bg/70" : "text-muted"}`}>{event.location}</p>
         <div className="mt-2.5 flex flex-wrap gap-2">
-          {event.withCommunion && (
-            <span className={`rounded-full px-2.5 py-0.5 text-xs ${highlight ? "bg-white/10 text-gold-soft" : "bg-aubergine-50 text-aubergine-700"}`}>
-              mit Heiligem Abendmahl
-            </span>
-          )}
           {event.isSpecial && (
             <span className={`rounded-full px-2.5 py-0.5 text-xs ${highlight ? "bg-gold/20 text-gold-soft" : "bg-gold-tint text-gold-deep"}`}>
               besonderer Gottesdienst

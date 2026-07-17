@@ -27,6 +27,19 @@ export default async function Page() {
         lead={`Wir feiern in der Regel in der ${siteConfig.address.street}, 2. Stock (Synodalsaal). ${siteConfig.service.rhythm}`}
       />
 
+      {/* Scripture that carries this page (from the legacy site) */}
+      <Container className="pt-10">
+        <figure className="border-l-[3px] border-gold/60 pl-5 sm:pl-6">
+          <blockquote className="font-display text-lg italic leading-snug text-aubergine sm:text-xl">
+            „Denn wo zwei oder drei versammelt sind in meinem Namen, da bin ich
+            mitten unter ihnen."
+          </blockquote>
+          <figcaption className="mt-1.5 font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-deep">
+            Matthäus 18,20
+          </figcaption>
+        </figure>
+      </Container>
+
       {/* Termine */}
       <Container className="py-14 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_18rem]">

@@ -15,7 +15,10 @@ export const mainNav: NavItem[] = [
     href: "/ueber-uns",
     children: [
       { label: "Die Gemeinde", href: "/ueber-uns" },
+      { label: "Was wir wollen und glauben", href: "/glauben" },
       { label: "Geschichte", href: "/geschichte" },
+      { label: "Verein", href: "/verein" },
+      { label: "Beitrittserklärung", href: "/beitritt" },
     ],
   },
 ];

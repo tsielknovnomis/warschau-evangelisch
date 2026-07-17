@@ -14,11 +14,10 @@ const EventSchema = z.object({
   location: z.string().trim().min(1, "Ort fehlt"),
   description: z.string().nullable(),
   is_special: z.boolean(),
-  with_communion: z.boolean(),
 });
-// Note: `language` and `endsAt` are intentionally not part of the form
-// (always German; no end time needed). New events get 'de'/null; updates
-// leave the stored values untouched.
+// Note: `language`, `endsAt` and `withCommunion` are intentionally not part
+// of the form (always German; no end time; every service includes communion).
+// New events get the defaults; updates leave stored values untouched.
 
 export type FormState = { error?: string };
 
@@ -32,7 +31,6 @@ function parse(formData: FormData) {
     location: String(formData.get("location") ?? ""),
     description: (String(formData.get("description") ?? "").trim() || null),
     is_special: formData.get("is_special") === "on",
-    with_communion: formData.get("with_communion") === "on",
   });
 }
 
@@ -56,7 +54,7 @@ export async function createEvent(_prev: FormState, formData: FormData): Promise
     location: v.location,
     description: v.description,
     isSpecial: v.is_special,
-    withCommunion: v.with_communion,
+    withCommunion: false,
     language: "de",
   });
   await writeDoc(KEY, events);
@@ -80,7 +78,6 @@ export async function updateEvent(id: string, _prev: FormState, formData: FormDa
     location: v.location,
     description: v.description,
     isSpecial: v.is_special,
-    withCommunion: v.with_communion,
   };
   await writeDoc(KEY, events);
   revalidateEvents();

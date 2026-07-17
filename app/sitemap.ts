@@ -10,6 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/anfahrt",
     "/ueber-uns",
     "/geschichte",
+    "/glauben",
     "/verein",
     "/beitritt",
     "/satzung",

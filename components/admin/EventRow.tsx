@@ -46,11 +46,6 @@ export function EventRow({ event, isNext = false }: { event: ChurchEvent; isNext
               Besonders
             </span>
           )}
-          {event.withCommunion && (
-            <span className="rounded-full bg-aubergine-50 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-aubergine">
-              Abendmahl
-            </span>
-          )}
         </div>
       </div>
 

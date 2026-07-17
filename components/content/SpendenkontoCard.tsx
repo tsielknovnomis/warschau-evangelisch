@@ -45,6 +45,24 @@ export function SpendenkontoCard() {
             </div>
           ))}
         </dl>
+
+        {/* Polish banking-app QR (regenerate via scripts/generate-donation-qr.mjs) */}
+        <div className="mt-5 flex items-center gap-4 border-t border-line pt-5">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/spenden-qr.svg"
+            alt="QR-Code für die Überweisung mit einer polnischen Banking-App"
+            width={104}
+            height={104}
+            className="h-[104px] w-[104px] shrink-0 rounded-[3px] border border-line bg-white p-1"
+          />
+          <p className="text-sm leading-relaxed text-muted">
+            <span className="font-semibold text-ink">Mit der Banking-App scannen</span>
+            <br />
+            Empfänger und Verwendungszweck werden automatisch ausgefüllt — den
+            Betrag kannst du frei anpassen.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -6,6 +6,9 @@ description: "Mitglied werden im Verein für Deutschsprachige Evangelische Seels
 
 # Beitrittserklärung
 
+> „Gemeinsam bilden wir alle den Leib von Christus, und jeder Einzelne ist auf die anderen angewiesen."
+> — Römer 12,5
+
 In drei Schritten zum Mitglied:
 
 1. [Beitrittserklärung herunterladen (PDF)](/Beitrittserklaerung.pdf)

@@ -12,7 +12,7 @@ export function Hero() {
         fill
         priority
         sizes="100vw"
-        className="-z-10 object-cover object-[68%_center] sm:object-[72%_center]"
+        className="-z-10 object-cover object-[44%_center] sm:object-[30%_center]"
       />
 
       {/* Soft LIGHT gradients — keep the left/bottom legible without a dark wash */}

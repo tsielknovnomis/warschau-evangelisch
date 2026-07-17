@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const themen = [
   {
     title: "Gottesdienst feiern",
-    text: "Wir feiern alle zwei Wochen sonntags, im Advent jeden Sonntag — auf Deutsch und meist mit Heiligem Abendmahl. Kindergottesdienst läuft parallel, zu besonderen Anlässen feiern wir als ganze Familie.",
+    text: "Wir feiern alle zwei Wochen sonntags, im Advent jeden Sonntag — auf Deutsch und immer mit Heiligem Abendmahl. Kindergottesdienst läuft parallel, zu besonderen Anlässen feiern wir als ganze Familie.",
   },
   {
     title: "Gemeinschaft erleben",

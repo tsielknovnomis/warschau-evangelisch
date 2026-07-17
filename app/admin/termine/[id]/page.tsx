@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EventForm } from "@/components/admin/EventForm";
+import { InviteText } from "@/components/admin/InviteText";
 import { getEventById } from "@/lib/data/events";
 import { updateEvent } from "@/lib/actions/events";
 
@@ -17,6 +18,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       <div className="mt-6">
         <EventForm event={event} action={updateEvent.bind(null, id)} />
       </div>
+      <InviteText event={event} />
     </div>
   );
 }

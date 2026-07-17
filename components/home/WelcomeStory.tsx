@@ -22,14 +22,20 @@ export function WelcomeStory() {
             für alle. Ganz gleich, woher du kommst, wie dein Glaube aussieht oder ob
             du einfach nur neugierig bist: Du musst niemanden kennen, um dazuzugehören.
           </p>
-          <p className="mt-8">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-4">
+            <Link
+              href="/glauben"
+              className="rounded-[3px] bg-aubergine px-6 py-3 font-body font-semibold text-bg shadow-sm transition-colors hover:bg-aubergine-deep"
+            >
+              Was wir wollen und glauben
+            </Link>
             <Link
               href="/ueber-uns"
               className="font-body font-semibold text-aubergine underline decoration-gold/60 underline-offset-4 transition-colors hover:text-gold-deep"
             >
               Mehr über unsere Gemeinde
             </Link>
-          </p>
+          </div>
         </div>
         </Reveal>
       </Container>
