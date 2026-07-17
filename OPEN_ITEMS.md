@@ -1,80 +1,99 @@
-# OPEN ITEMS — vom Auftraggeber final zu klären
+# OPEN ITEMS — Deutschsprachige Evangelische Seelsorge in Warschau (DEGWAW)
 
-> Diese Punkte konnte Moritz (Stand 30.06.2026) nicht abschließend beantworten.
-> Ich arbeite mit den unten genannten **Arbeitsannahmen** weiter und markiere die betroffenen
-> Stellen im Code/Content mit `TODO(verify)`. **Vor dem echten Go-Live müssen diese bestätigt werden.**
+> **Dieses Dokument ist bewusst selbsterklärend:** Jeder Punkt enthält alle Infos, um ihn
+> **ohne weiteren Kontext** abzuarbeiten (auch in einer neuen Session).
+> Zuletzt aktualisiert: **17.07.2026**.
 
-| # | Thema | Arbeitsannahme (so baue ich es) | Muss bestätigt werden | Status |
-|---|-------|----------------------------------|------------------------|--------|
-| 1 | **Bankkonto** | BNP Paribas — PLN `13 1600 1462 1728 8283 8000 0001`, EUR/IBAN `PL56 1600 1462 1728 8283 8000 0003`, BIC `PPABPLPK`. | — | 🟩 bestätigt (17.07.) |
-| 2 | **Presserechtlich Verantwortlicher (§ 18 Abs. 2 MStV)** | **Simon von Kleist** im Impressum eingetragen (Entscheidung 17.07.). | — | 🟩 erledigt |
-| 3 | **Amtierender Pfarrer** | Dr. Grzegorz Olek (aus neuester Alt-Seite). | Ist Dr. Olek Stand 2026 noch im Amt? Sonst Name/Titel korrigieren. | 🟧 zu verifizieren |
-| 4 | **Datenschutz + Impressum** | Nach DDG/DSGVO/TDDDG 2026 finalisiert (UODO als Aufsichtsbehörde, DPF+SCC, Consent). | Anwaltliche/fachliche **Schlussprüfung** vor Go-Live (DSGVO unmittelbar, kein DSG-EKD — Annahme bestätigen). | 🟧 zu prüfen |
-| 5 | **USt-IdNr.** | Annahme: gemeinnützig, keine vorhanden → im Impressum **weggelassen**. | Falls doch eine existiert: nachtragen. | 🟧 zu verifizieren |
-| 6 | **Social-/Kontakt-Links** | Instagram (`instagram.com/`) und WhatsApp-Gruppe (`chat.whatsapp.com/`) sind **Platzhalter**; YouTube + Facebook (`/warschauevangelisch`) sind echt. | Echten **Instagram-Account-Link** und **WhatsApp-Gruppen-Einladungslink** eintragen. | 🟥 offen |
-| 7 | **Admin-Login** | **Team-Passwort** (ein gemeinsames für alle, in Netlify-Env `ADMIN_PASSWORD`). | Passwort ändern: `netlify env:set ADMIN_PASSWORD "…"` + Redeploy — alte Sessions werden dabei automatisch ungültig. | 🟧 Passwort ändern |
-| 8 | **Echte Inhalte** | Platzhalter-Termine/-News (über `/admin` pflegbar, gespeichert in Netlify Blobs). | Echte Gottesdienst-Termine + Neuigkeiten eintragen, Platzhalter ersetzen. | 🟥 offen |
-| 9 | **Flickr-Fotos** (2× Dez. 2025) | **Nicht verwendet** (keine Lizenz). | Falls gewünscht: Lizenz/Herkunft klären, dann ggf. einbinden. | 🟩 entschieden (raus) |
-| 10 | **Anrede Du vs. Sie** | Aktuell durchgehend „Du". | Simon klärt im Vorstand. Umstellung auf „Sie" = ~1 h reine Textarbeit (zentrale Inhalte), kein Umbau. | 🟧 Vorstand entscheidet |
-| 11 | **Hosting-Umzug** (Plan unten) | GitHub + Netlify (0 €) + Domain-Transfer zu INWX (~6 €/J.) + Zoho Mail Free (0 €). | Vorstand: Domain-Ablaufdatum prüfen, **Auth-/EPP-Code holen**, 3 Gemeinde-Accounts anlegen, alte Postfächer sichern. Rechnung (282,90 PLN) nur im Notfall zahlen. | 🟥 offen — **Deadline 08./15.08.** |
+**Projekt-Kontext in 5 Zeilen:**
+- Neue Website (Next.js 16 + Netlify Blobs, 0 €/Monat) ist **fertig** und läuft als Preview auf https://warschau-evangelisch-relaunch.netlify.app
+- Produktions-Domain **warschau-evangelisch.de** zeigt noch auf die **alte WordPress-Seite** beim alten polnischen Hoster (Ablösung = Punkt 11).
+- Admin-Panel: https://warschau-evangelisch-relaunch.netlify.app/admin (Team-Passwort; hat Moritz).
+- Ansprechpartner Gemeinde: **Simon von Kleist** (Vorstand, schreibt von vorstand@warschau-evangelisch.de); weitere Vorstände: Jürgen Wandel, Jens Boysen. Gemeinde-Gmail: **degwaw@gmail.com**.
+- Code-Repo: lokal bei Moritz (`~/AI/Tools/warschau-evangelisch/`), noch **nicht** auf GitHub (kommt mit Punkt 11).
 
-## Hosting-, Domain- & Mail-Umzug — Plan (Stand 17.07.2026, Deadline 15.08.)
+| # | Thema | Stand / Arbeitsannahme | Zu tun | Status |
+|---|-------|------------------------|--------|--------|
+| 1 | **Bankkonto** | BNP Paribas — PLN `13 1600 1462 1728 8283 8000 0001`, EUR/IBAN `PL56 1600 1462 1728 8283 8000 0003`, BIC `PPABPLPK`, Kontoinhaber „Ewangelickie Duszpasterstwo Języka Niemieckiego w Warszawie". Steht in `lib/site-config.ts` (`bank`). | — | 🟩 bestätigt (Vorstand, 17.07.) |
+| 2 | **Presserechtlich Verantwortlicher (§ 18 Abs. 2 MStV)** | **Simon von Kleist, c/o ul. Miodowa 21, 00-246 Warszawa** — steht im Impressum (`content/pages/de/impressum.md`, Abschnitt „Verantwortlich für den Inhalt"). | — | 🟩 erledigt (Entscheidung Moritz/Vorstand 17.07.) |
+| 3 | **Amtierender Pfarrer** | **Dr. Grzegorz Olek** (von der Alt-Seite übernommen). Steht in `lib/site-config.ts` (`people.pastor`, mit `verify: true`) und im Impressum. | Vorstand bestätigt: noch im Amt? Falls nein → Name/Titel an beiden Stellen ändern, `verify`-Flag entfernen. | 🟧 zu verifizieren |
+| 4 | **Datenschutz + Impressum Schlussprüfung** | Beide Seiten sind fertig formuliert nach DDG/DSGVO/TDDDG (UODO als Aufsichtsbehörde, EU-US DPF + SCC für YouTube/Google Maps, Consent-Banner). Dateien: `content/pages/de/datenschutz.md` + `impressum.md`. Arbeitsannahme: DSGVO gilt unmittelbar, **kein** DSG-EKD (Verein nach polnischem Recht, KRS 0000590323). | Fachliche/anwaltliche Schlussprüfung vor Go-Live; Annahme „kein DSG-EKD" bestätigen. | 🟧 zu prüfen |
+| 5 | **USt-IdNr.** | Annahme: gemeinnütziger Verein, keine USt-IdNr. → im Impressum **weggelassen**. | Vorstand: Falls doch eine existiert → in `content/pages/de/impressum.md` (Abschnitt Registereintrag) nachtragen. | 🟧 zu verifizieren |
+| 6 | **Instagram- + WhatsApp-Link** | Beides **Platzhalter** in `lib/site-config.ts` (`social.instagram` = `https://www.instagram.com/`, `social.whatsapp` = `https://chat.whatsapp.com/` — beide mit `TODO(verify)`-Kommentar). YouTube (`UCMf4N1R2vUnstAfN1KBxZ6g`) + Facebook (`/warschauevangelisch`) sind echt. WhatsApp-Link steht u. a. auf /gottesdienste (Sidebar „Immer informiert") und /ueber-uns. | Echten Instagram-Profil-Link + WhatsApp-Gruppen-Einladungslink (Format `https://chat.whatsapp.com/XXXX`) von der Gemeinde holen und in site-config eintragen. Hinweis: Fertige Instagram-Bios/Profilbilder liegen in `social/SOCIAL_MEDIA.md` + `social/pfp-*.png`. | 🟥 offen |
+| 7 | **Admin-Team-Passwort ändern** | Login ist EIN gemeinsames Team-Passwort, gespeichert als Netlify-Env-Var `ADMIN_PASSWORD` (Site: warschau-evangelisch-relaunch). Das aktuelle Passwort hat Moritz (im Chat übergeben, bewusst nicht in diesem Repo notiert). | Neues Passwort wählen, dann: `netlify env:set ADMIN_PASSWORD "NEUES-PASSWORT"` + Redeploy (`netlify deploy --build --prod`). Alte Sessions werden dadurch automatisch ungültig (Token sind mit dem Passwort signiert). | 🟧 offen |
+| 8 | **Echte Termine + Neuigkeiten** | Aktuell **Platzhalter-Inhalte** (13 Beispiel-Gottesdienste Sep–Dez 2026, 3 Beispiel-News) aus `data/seed/*.json`. Gepflegt wird über das Admin-Panel (`/admin`, Tabs Termine/Aktuelles/Info-Leiste; Speicherung in Netlify Blobs, sofort live, kein Deploy nötig). | Team ersetzt Platzhalter durch echte Inhalte im Panel. Praktisch: Termin-Vorlagen-Buttons beim Anlegen + „Text zum Kopieren" (WhatsApp/E-Mail-Einladung) auf jeder Termin-Bearbeiten-Seite. | 🟥 offen |
+| 9 | **Flickr-Fotos** (2× Dez. 2025) | Nicht verwendet (keine Lizenz geklärt). | Nur falls gewünscht: Lizenz klären, dann einbinden. | 🟩 entschieden (raus) |
+| 10 | **Anrede Du vs. Sie** | Website ist durchgehend per **„Du"** formuliert. **Simon von Kleist klärt die Frage gerade im Vorstand** (Mail vom 16.07.: „Ich kläre gerade das Du/Sie und melde mich bei Dir, sobald mit Infos"). | Auf Entscheidung warten. Falls „Sie": ~1 h reine Textarbeit (Markdown-Seiten in `content/pages/de/` + Komponenten-Texte + Info-Leiste), kein struktureller Umbau. Moritz macht das in einem Durchgang. | 🟧 wartet auf Vorstand |
+| 11 | **Hosting-/Domain-/Mail-Umzug** | Kompletter Plan unten — **das ist zugleich der Go-Live**. | Siehe Phasen unten. Nächster Schritt: Simon liefert Domain-Ablaufdatum + Auth-Code. | 🟥 offen — **Deadline 08./15.08.2026** |
 
-### Ausgangslage
-- Altes Paket **„Hosting Basic" bei RejestracjaDomen.pl** (Panel: https://rejestracjadomen.pl/site/login) bündelt Hosting + E-Mail + Domain für ~283 PLN/Jahr; läuft **15.08.2026** aus, Proforma zahlbar bis **08.08.**
-- System veraltet (altes PHP/WordPress). **Mailserver (195.128.154.5 / pmg.hostingrd.pl) steht auf Microsofts Sperrliste** — belegt durch Bounce an eine Hotmail-Adresse am 17.07. Gemeinde-Mails an Outlook/Hotmail kommen schon jetzt nicht an.
-- Neue Website ist fertig (Netlify-Preview), Backend = Netlify Blobs, 0 €.
+---
+
+## Punkt 11 im Detail: Hosting-, Domain- & Mail-Umzug (= Go-Live-Plan)
+
+### Ausgangslage (alle Fakten)
+
+- **Alter Anbieter:** RejestracjaDomen.pl Sp. z o.o. (Z. Modzelewskiego 27, 02-679 Warszawa, NIP 5213652634, Tel. +48 22 853 88 86, info@rejestracjadomen.pl). Das Hosting läuft technisch über **hostingrd.pl**.
+  - **Kunden-Panel:** https://rejestracjadomen.pl/site/login
+  - **cPanel der Gemeinde:** https://r1355696.hostingrd.pl:2083/
+- **Paket „Hosting Basic":** bündelt Webhosting (alte WordPress/PHP-Seite), **E-Mail-Postfächer** (u. a. vorstand@warschau-evangelisch.de) und die **Domain warschau-evangelisch.de**. Kostet ~250–283 PLN/Jahr.
+- **Ablauf:** Laut Mail von RejestracjaDomen (16.07.2026, an vorstand@… und degwaw@gmail.com) läuft das Paket am **15.08.2026** aus; Proforma-Rechnung **282,90 PLN**, zahlbar bis **08.08.2026**. Danach sind Website UND Mail offline.
+- **Beweis, dass der alte Mailserver kaputt ist:** Am 17.07. bouncte Moritz' Antwort an den Vorstand-Verteiler: `MAILER-DAEMON@pmg.hostingrd.pl` meldete, dass **Outlook/Hotmail die Server-IP 195.128.154.5 blockt** (Fehler `550 5.7.1 … block list (S3150)`) — Jens Boysen (jens_boysen@hotmail.com) bekommt Gemeinde-Mails deshalb **schon heute nicht**. Der Mail-Umzug ist also unabhängig vom Ablaufdatum nötig.
+- **Wunsch der Gemeinde/Moritz:** So einfach wie möglich. Gemeinde besitzt die Accounts selbst; Code auf GitHub; jede Änderung deployt automatisch.
+- **Simon von Kleist** meldet sich bei Moritz mit weiteren Infos (+ Du/Sie-Entscheidung, siehe Punkt 10).
 
 ### Ziel-Architektur
 
 | Baustein | Lösung | Kosten/Jahr |
 |---|---|---|
-| Website + Backend + Admin-Panel | **Netlify** (Gemeinde-Account) | 0 € |
-| Code + Auto-Deploy | **GitHub** (Gemeinde-Account) — jeder Push deployt automatisch | 0 € |
-| Domain warschau-evangelisch.de | Transfer zu **INWX** (Alternative: Porkbun) | ~6 € |
-| E-Mail (vorstand@, info@, pfarrer@) | **Zoho Mail Free** — 5 Postfächer, Webmail + Mobile-Apps | 0 € |
+| Website + Backend + Admin-Panel | **Netlify** (eigener Gemeinde-Account; Site + Blobs-Store „content" + Env `ADMIN_PASSWORD`) | 0 € |
+| Code + Auto-Deploy | **GitHub** (Gemeinde-Account); Netlify per Git-Integration verbunden → jeder Push auf `main` deployt automatisch | 0 € |
+| Domain warschau-evangelisch.de | **Transfer zu INWX** (deutscher Registrar; Alternative Porkbun). DNS danach: Website → Netlify, Mail → Zoho | ~6 € |
+| E-Mail (vorstand@, info@, pfarrer@) | **Zoho Mail Free** (zoho.eu) — bis 5 Postfächer à 5 GB, Webmail + Mobile-Apps, eigene Domain | 0 € |
 
-**Summe: ~6 €/Jahr statt ~66 €.** Inhalte (Termine/Aktuelles/Leiste) brauchen kein Deploy — pflegt das Team im Panel.
+**Summe: ~6 €/Jahr statt ~66 € (283 PLN).** Termine/Aktuelles/Leiste brauchen kein Deploy — pflegt das Team im Panel (Blobs + Revalidation).
 
 ### Schritte
 
-**Phase 1 — bis Ende Juli (Vorstand, ~30 Min):**
-1. Im alten Panel das **Ablaufdatum der Domain selbst** prüfen (kann vom Hosting-Datum 15.08. abweichen — bestimmt den echten Zeitdruck).
-2. **Auth-/EPP-Code** für warschau-evangelisch.de anfordern.
-3. Drei Gemeinde-Accounts anlegen (Login z. B. degwaw@gmail.com): **github.com**, **netlify.com** („Login mit GitHub"), **zoho.eu** (Mail Free). Moritz liefert Klick-Anleitung.
-4. **Alte Postfächer exportieren/sichern** — nach dem 15.08. unwiederbringlich weg.
-5. Rechnung **nicht** zahlen (nur Notfall, s. Risiken).
+**Phase 1 — bis Ende Juli (Vorstand/Simon, ~30 Min):**
+1. Im Kunden-Panel (https://rejestracjadomen.pl/site/login) das **Ablaufdatum der Domain selbst** prüfen — kann vom Hosting-Datum (15.08.) abweichen und bestimmt den echten Zeitdruck.
+2. Dort den **Auth-/EPP-Code** für warschau-evangelisch.de anfordern (der „Umzugsschlüssel") → an Moritz.
+3. Drei Gemeinde-Accounts anlegen, Login jeweils **degwaw@gmail.com**: **github.com**, **netlify.com** (dort „Sign up with GitHub" wählen), **zoho.eu → Zoho Mail „Forever Free"**. Zugangsdaten sicher ablegen (Passwort-Manager). Moritz liefert bei Bedarf eine Klick-für-Klick-Anleitung.
+4. **Alte Postfächer sichern**: Im cPanel (https://r1355696.hostingrd.pl:2083/) bzw. per IMAP alle Mails exportieren — nach dem 15.08. ist die Historie unwiederbringlich weg.
+5. Die Proforma (282,90 PLN) **erstmal nicht zahlen** — nur Notfall-Fallback (siehe Risiken).
 
 **Phase 2 — Ende Juli (Moritz):**
-6. Repo → Gemeinde-GitHub; Netlify-Site im Gemeinde-Account + GitHub-Verbindung (Auto-Deploy); `ADMIN_PASSWORD` als Env setzen.
-7. Zoho: Domain-Verifizierung + Postfächer anlegen.
+6. Repo in den Gemeinde-GitHub pushen; in deren Netlify-Account neue Site aus dem GitHub-Repo anlegen (Auto-Deploy); Env `ADMIN_PASSWORD` setzen; Blobs-Inhalte (Termine/News/Leiste) aus der bisherigen Preview-Site übernehmen.
+7. Zoho: Domain verifizieren, Postfächer vorstand@/info@/pfarrer@ anlegen.
 
 **Phase 3 — Anfang August (Moritz):**
-8. **Domain-Transfer** mit Auth-Code starten (.de: Stunden bis wenige Tage).
-9. **DNS umstellen**: Website → Netlify; Mail → Zoho (MX, SPF, DKIM, DMARC → löst auch das Blocklisten-Problem).
-10. **Go-Live auf warschau-evangelisch.de** (Redirects von Alt-URLs sind im Code fertig).
-11. Testmails an Gmail **und** Outlook/Hotmail.
+8. **Domain-Transfer** bei INWX mit dem Auth-Code starten (.de-Transfers: Stunden bis wenige Tage).
+9. **DNS umstellen:** Website → Netlify (A/CNAME bzw. Netlify DNS); Mail → Zoho (MX, SPF, DKIM, DMARC) — damit ist auch das Blocklisten-Problem Geschichte.
+10. **Go-Live auf warschau-evangelisch.de** — 301-Redirects von allen alten WordPress-URLs sind in `next.config.ts` fertig.
+11. Testmails an Gmail **und** Outlook/Hotmail (insb. jens_boysen@hotmail.com) zur Bestätigung.
 
-**Phase 4 — 15.08.:** Altes Paket auslaufen lassen (im Panel prüfen, ob aktive Kündigung nötig).
+**Phase 4 — 15.08.:** Alt-Paket auslaufen lassen. Im Panel prüfen, ob der Anbieter eine aktive Kündigung verlangt (polnische Anbieter verlängern teils automatisch).
 
 ### Risiken & Notfallplan
-- **Domain läuft vor Transfer ab → möglicher Domain-Verlust.** Deshalb Transfer früh starten. Wird es bis ~08.08. knapp: lieber einmal 282,90 PLN zahlen als die Domain riskieren.
-- DNS-Umstellung: Mails können übergangsweise Stunden verzögert ankommen — unkritisch.
-- Zoho Free = Webmail + Mobile. Desktop-IMAP (Outlook/Apple Mail) erst im Bezahltarif (~1 €/Postfach/Monat), bei Bedarf zubuchbar.
+- **Größtes Risiko:** Domain läuft ab, bevor der Transfer durch ist → möglicher Domain-Verlust. Darum Transfer **früh** starten. Wird es bis ~08.08. knapp: **lieber einmal 282,90 PLN zahlen** als die Domain riskieren — Geld ärgerlich, Domain unersetzlich.
+- **DNS-Übergang:** Mails können für einige Stunden verzögert ankommen — unkritisch, vorher ankündigen.
+- **Zoho Free** = Webmail + Mobile-Apps. Desktop-IMAP (Outlook/Apple Mail) gibt's erst im Bezahltarif (~1 €/Postfach/Monat) — bei Bedarf später zubuchbar.
 
-## Bereits geklärt (während dieser Session)
+---
+
+## Bereits geklärt (Historie)
 
 - ✅ **Adresse:** `ul. Miodowa 21, 00-246 Warszawa` — offiziell bestätigt (luteranie.pl / Centrum Luterańskie / Wikipedia). Die alte „21B / 00-171" war falsch.
 - ✅ **Telefon:** keine Nummer angeben — Kontakt nur per E-Mail (`info@`, `pfarrer@warschau-evangelisch.de`).
 - ✅ **Vorstand:** Jürgen Wandel / Jens Boysen / Simon von Kleist (bestätigt aktuell).
 - ✅ **Twitter/X `@degwaw`:** raus (toter Feed). Stattdessen YouTube + Instagram/Facebook.
-- ✅ **QR-Code (Spende):** erst entfernt, dann am 17.07. vom Vorstand mit offiziellen Überweisungsdaten (poln. ZBP-Format) geliefert → jetzt in der Spendenkonto-Karte eingebaut. Neu generieren: `node scripts/generate-donation-qr.mjs`.
+- ✅ **QR-Code (Spende):** erst entfernt, dann am 17.07. vom Vorstand mit offiziellen Überweisungsdaten geliefert (poln. ZBP-Format: `|PL|13160014621728828380000001|005000|Ewangelickie Duszpasterstwo Języka Niemieckiego w Warszawie|Darowizna na cele kultu religijnego|||`) → eingebaut in der Spendenkonto-Karte. Neu generieren: `node scripts/generate-donation-qr.mjs`.
+- ✅ **Abendmahl:** Checkbox + Badges entfernt; öffentliche Texte sagen bewusst „**meist** mit Heiligem Abendmahl" (Gemeinde will nicht gebunden sein — Entscheidung 17.07.).
+- ✅ **Bankkonto + Presserechtlich Verantwortlicher:** siehe Punkte 1 + 2 oben (beide 17.07. erledigt).
 
-## Vom Auftraggeber getroffene Richtungsentscheidungen (30.06.2026)
+## Richtungsentscheidungen des Auftraggebers (30.06.2026)
 
-- **Stack:** Next.js + TS + Tailwind, Netlify. *(Backend ursprünglich Supabase, am 10.07. durch Netlify Blobs ersetzt — 0 €/Monat.)*
+- **Stack:** Next.js + TS + Tailwind, Netlify. *(Backend ursprünglich Supabase, am 10.07. durch Netlify Blobs ersetzt — 0 €/Monat; Supabase-Projekt gelöscht.)*
 - **Sprache:** Deutsch, technisch i18n-ready (PL später ergänzbar).
 - **Termine:** eigenes Termin-Modul im Backend (kein Google Calendar mehr).
-- **Backend pflegbar:** Aktuelles/News + Predigt-Archiv + Termine. Kernseiten pflegt Moritz im Code.
-- **Design:** behutsam klassisch — kirchlich-würdevolle Identität bewahren, solide modernisieren.
-- **Archiv:** alle ~113 Alt-Beiträge als durchsuchbares Archiv migrieren.
+- **Backend pflegbar:** Aktuelles/News + Termine + Info-Leiste. Kernseiten pflegt Moritz im Code. Predigten: statische Liste (`lib/seed/sermons.ts`), bleibt vorerst.
+- **Design:** behutsam klassisch — kirchlich-würdevolle Identität bewahren, solide modernisieren (Aubergine #480048, Gold, Lutherrose).
+- **Archiv:** ~~alle ~113 Alt-Beiträge migrieren~~ *(später verworfen — Aktuelles startet frisch; Alt-Inhalte liegen archiviert in `scraped/`).*
