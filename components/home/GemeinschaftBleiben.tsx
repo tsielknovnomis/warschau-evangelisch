@@ -32,6 +32,21 @@ export function GemeinschaftBleiben() {
                 Zur WhatsApp-Gruppe
               </a>
             </div>
+
+            {/* Scan to join — for anyone reading this on a desktop screen */}
+            <div className="mt-7 flex items-center justify-center gap-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/whatsapp-qr.svg"
+                alt="QR-Code: WhatsApp-Gruppe beitreten"
+                width={96}
+                height={96}
+                className="h-24 w-24 shrink-0 rounded-[3px] border border-line bg-white p-1"
+              />
+              <p className="max-w-[13rem] text-left text-sm leading-relaxed text-muted">
+                Am Rechner? Scan den Code einfach mit der Handy-Kamera.
+              </p>
+            </div>
           </div>
         </Reveal>
       </Container>
