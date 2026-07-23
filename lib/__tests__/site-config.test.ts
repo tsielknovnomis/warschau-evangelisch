@@ -8,12 +8,12 @@ describe('siteConfig', () => {
     expect(siteConfig.address.city).toBe('Warszawa')
   })
 
-  it('uses the current BNP Paribas bank account, flagged for verification', () => {
+  it('uses the BNP Paribas bank account confirmed by the board (17.07.2026)', () => {
     expect(siteConfig.bank.name).toBe('BNP Paribas')
     expect(siteConfig.bank.bic).toBe('PPABPLPK')
     expect(siteConfig.bank.pln).toBe('13 1600 1462 1728 8283 8000 0001')
     expect(siteConfig.bank.eurIban).toBe('PL56 1600 1462 1728 8283 8000 0003')
-    expect(siteConfig.bank.verify).toBe(true)
+    expect(siteConfig.bank.verify).toBe(false)
   })
 
   it('exposes contact emails and no phone number', () => {

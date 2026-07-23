@@ -9,6 +9,7 @@ import { getUpcomingEvents } from "@/lib/data/events";
 import { getNews } from "@/lib/data/news";
 import { siteConfig } from "@/lib/site-config";
 import { formatShortDate } from "@/lib/format";
+import { bibleserverUrl } from "@/lib/bible";
 
 export const metadata: Metadata = {
   title: "Termine & Aktuelles",
@@ -29,13 +30,20 @@ export default async function Page() {
 
       {/* Scripture that carries this page (from the legacy site) */}
       <Container className="pt-10">
-        <figure className="border-l-[3px] border-gold/60 pl-5 sm:pl-6">
+        <figure className="ml-auto max-w-2xl border-r-[3px] border-gold/60 pr-5 text-right sm:pr-6">
           <blockquote className="font-display text-lg italic leading-snug text-aubergine sm:text-xl">
             „Denn wo zwei oder drei versammelt sind in meinem Namen, da bin ich
             mitten unter ihnen."
           </blockquote>
           <figcaption className="mt-1.5 font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-deep">
-            Matthäus 18,20
+            <a
+              href={bibleserverUrl("Matthäus 18,20")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-aubergine"
+            >
+              Matthäus 18,20
+            </a>
           </figcaption>
         </figure>
       </Container>
@@ -75,6 +83,20 @@ export default async function Page() {
                 Neue Termine und kurzfristige Änderungen teilen wir zuerst in unserer
                 WhatsApp-Gruppe — schau einfach rein.
               </p>
+              {/* Scan to join — for anyone reading this on a desktop screen */}
+              <div className="mt-4 flex items-center gap-3">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/whatsapp-qr.svg"
+                  alt="QR-Code: WhatsApp-Gruppe beitreten"
+                  width={80}
+                  height={80}
+                  className="h-20 w-20 shrink-0 rounded-[3px] border border-line bg-white p-1"
+                />
+                <p className="text-xs leading-relaxed text-muted">
+                  Am Rechner? Scan den Code einfach mit der Handy-Kamera.
+                </p>
+              </div>
               <a
                 href={siteConfig.social.whatsapp}
                 target="_blank"

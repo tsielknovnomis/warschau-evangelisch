@@ -56,11 +56,9 @@ export const siteConfig: SiteConfig = {
     youtube: 'https://www.youtube.com/channel/UCMf4N1R2vUnstAfN1KBxZ6g',
     youtubePlaylist:
       'https://www.youtube.com/playlist?list=PLoTDnYaedQnt8wxH4n61hMvhb_VbuRqa4',
-    // TODO(verify): echten Instagram-Account-Link eintragen (aktuell Platzhalter)
-    instagram: 'https://www.instagram.com/',
+    instagram: 'https://www.instagram.com/warschau.evangelisch/',
     facebook: 'https://www.facebook.com/warschauevangelisch',
-    // TODO(verify): echten WhatsApp-Gruppen-Einladungslink eintragen
-    whatsapp: 'https://chat.whatsapp.com/',
+    whatsapp: 'https://chat.whatsapp.com/DNeiA39J18v9kVa5ShSQM8',
   },
 
   krs: '0000590323',

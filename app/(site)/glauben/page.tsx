@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/content/PageHeader";
 import { Reveal } from "@/components/motion/Reveal";
-import { Lutherrose } from "@/components/content/Lutherrose";
+import { bibleserverUrl } from "@/lib/bible";
 
 export const metadata: Metadata = {
   title: "Was wir wollen und glauben",
@@ -35,18 +35,24 @@ export default function Page() {
         lead="Woran wir uns orientieren — und wozu wir jeden Menschen herzlich einladen."
       />
 
-      {/* Leading scripture — the heart of the page */}
-      <section className="border-b border-line bg-parchment-deep py-16 lg:py-20">
+      {/* Leading scripture — right-aligned, gold rule on the right (board wish) */}
+      <section className="border-b border-line bg-parchment-deep py-20 lg:py-24">
         <Container>
           <Reveal>
-            <figure className="mx-auto max-w-3xl text-center">
-              <Lutherrose className="mx-auto h-10 w-10" alt="" />
-              <blockquote className="mt-6 font-display text-2xl font-medium italic leading-snug text-aubergine sm:text-[2rem]">
+            <figure className="ml-auto max-w-2xl border-r-[3px] border-gold/60 pr-5 text-right sm:pr-6">
+              <blockquote className="font-display text-lg italic leading-snug text-aubergine sm:text-xl">
                 „Ich bin der Weg und die Wahrheit und das Leben; niemand kommt zum
                 Vater als nur durch mich."
               </blockquote>
-              <figcaption className="mt-4 font-body text-sm font-semibold uppercase tracking-[0.18em] text-gold-deep">
-                Johannes 14,6
+              <figcaption className="mt-1.5 font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-deep">
+                <a
+                  href={bibleserverUrl("Johannes 14,6")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-aubergine"
+                >
+                  Johannes 14,6
+                </a>
               </figcaption>
             </figure>
           </Reveal>

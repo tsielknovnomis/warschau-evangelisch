@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 const themen = [
   {
     title: "Gottesdienst feiern",
-    text: "Wir feiern alle zwei Wochen sonntags, im Advent jeden Sonntag — auf Deutsch und meist mit Heiligem Abendmahl. Kindergottesdienst läuft parallel, zu besonderen Anlässen feiern wir als ganze Familie.",
+    text: "Wir feiern jeden zweiten und vierten Sonntag im Monat Gottesdienst, im Advent jeden Sonntag — auf Deutsch und mit Heiligem Abendmahl. Bitte beachte die aktuellen Infos auf dieser Webseite und in unserer WhatsApp-Gruppe.",
   },
   {
     title: "Gemeinschaft erleben",
-    text: "Nach dem Gottesdienst bleiben wir bei Kaffee zusammen. Dazu kommen Hauskreise und Konfirmandenunterricht im Zweijahreszyklus — viele Gelegenheiten, einander näher kennenzulernen.",
+    text: "Nach dem Gottesdienst gibt es Gelegenheit für weiteren Austausch bei Kaffee und Kuchen. Dazu kommen Hauskreise und Konfirmandenunterricht im Zweijahreszyklus — viele Gelegenheiten, einander näher kennenzulernen.",
   },
   {
-    title: "Durchs Kirchenjahr",
-    text: "Das Krippenspiel an Heiligabend ist jedes Jahr ein Highlight. Wir haben getauft, getraut und Wiedereintritte gefeiert — und freuen uns immer wieder über Gastprediger aus Deutschland.",
+    title: "Gelebtes Kirchenjahr",
+    text: "Krippenspiel am Heiligabend, Ausschnitte aus dem Weihnachtsoratorium, ein Gemeindeausflug oder der Besuch eines Gastpredigers. Taufe, Trauung oder Trauer — wir begleiten dich in den großen Momenten des Lebens.",
   },
 ];
 
@@ -51,9 +51,9 @@ export default function Page() {
               eingetragener Verein in enger Zusammenarbeit mit den polnischen Lutheranern.
             </p>
           </div>
-          <Bibelvers cite="Matthäus 18,20">
-            Wo zwei oder drei in meinem Namen versammelt sind, da bin ich mitten unter
-            ihnen.
+          <Bibelvers cite="Matthäus 11,28">
+            Kommt her zu mir alle, die ihr mühselig und beladen seid. Ich will euch
+            erquicken.
           </Bibelvers>
         </div>
       </Container>
@@ -64,7 +64,7 @@ export default function Page() {
           <div className="max-w-2xl">
             <p className="kicker">Das macht uns aus</p>
             <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-aubergine sm:text-[2.4rem]">
-              Ein Stück Heimat — über den Sonntag hinaus
+              Geistliche Heimat — über die Sprache hinaus
             </h2>
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-3">

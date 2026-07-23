@@ -4,10 +4,8 @@ lead: "In drei einfachen Schritten wirst du Mitglied in unserem Verein."
 description: "Mitglied werden im Verein für Deutschsprachige Evangelische Seelsorge in Warschau – Beitrittserklärung herunterladen, ausfüllen, einsenden."
 ---
 
-# Beitrittserklärung
-
 > „Gemeinsam bilden wir alle den Leib von Christus, und jeder Einzelne ist auf die anderen angewiesen."
-> — Römer 12,5
+> — [Römer 12,5](https://www.bibleserver.com/LUT/R%C3%B6mer12%2C5)
 
 In drei Schritten zum Mitglied:
 

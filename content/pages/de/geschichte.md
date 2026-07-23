@@ -7,6 +7,7 @@ description: "Die Geschichte des Vereins für deutschsprachige evangelische Seel
 ## Zur Geschichte des Vereins für Deutschsprachige Evangelische Seelsorge in Warschau
 
 > „Bittet, so wird euch gegeben, suchet, so werdet ihr finden; klopfet an, so wird euch aufgetan.“
+> — [Matthäus 7,7](https://www.bibleserver.com/LUT/Matth%C3%A4us7%2C7)
 
 – *Simon v. Kleist, Jürgen Wandel, Jens Mattern*
 
