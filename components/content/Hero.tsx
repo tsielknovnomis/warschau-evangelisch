@@ -79,7 +79,7 @@ export function Hero() {
       </div>
 
       {/* Scripture + quiet location caption, lower-right (board-picked spot) */}
-      <figure className="absolute bottom-6 right-5 z-10 hidden max-w-md text-right sm:right-8 sm:block">
+      <figure className="absolute bottom-24 right-5 z-10 hidden max-w-md text-right sm:right-8 sm:block lg:bottom-28">
         <blockquote className="font-display text-lg italic leading-snug text-aubergine">
           „Kommt her zu mir alle, die ihr mühselig und beladen seid. Ich will euch
           erquicken."
