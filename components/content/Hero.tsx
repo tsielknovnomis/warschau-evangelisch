@@ -94,9 +94,6 @@ export function Hero() {
             Matthäus 11,28
           </a>
         </figcaption>
-        <p className="mt-2 font-body text-sm italic text-muted">
-          Lutherisches Zentrum · ul. Miodowa 21
-        </p>
       </figure>
     </section>
   );
