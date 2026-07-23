@@ -51,9 +51,9 @@ export default function Page() {
               eingetragener Verein in enger Zusammenarbeit mit den polnischen Lutheranern.
             </p>
           </div>
-          <Bibelvers cite="Matthäus 11,28">
-            Kommt her zu mir alle, die ihr mühselig und beladen seid. Ich will euch
-            erquicken.
+          <Bibelvers cite="Matthäus 18,20">
+            Wo zwei oder drei in meinem Namen versammelt sind, da bin ich mitten unter
+            ihnen.
           </Bibelvers>
         </div>
       </Container>

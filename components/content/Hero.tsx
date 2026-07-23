@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Lutherrose } from "@/components/content/Lutherrose";
 import { Button } from "@/components/ui/Button";
+import { bibleserverUrl } from "@/lib/bible";
 
 export function Hero() {
   return (
@@ -77,10 +78,26 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Quiet location caption, lower-right */}
-      <p className="absolute bottom-6 right-5 z-10 hidden font-body text-sm italic text-muted sm:right-8 sm:block">
-        Lutherisches Zentrum · ul. Miodowa 21
-      </p>
+      {/* Scripture + quiet location caption, lower-right (board-picked spot) */}
+      <figure className="absolute bottom-6 right-5 z-10 hidden max-w-md text-right sm:right-8 sm:block">
+        <blockquote className="font-display text-lg italic leading-snug text-aubergine">
+          „Kommt her zu mir alle, die ihr mühselig und beladen seid. Ich will euch
+          erquicken."
+        </blockquote>
+        <figcaption className="mt-1 font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-deep">
+          <a
+            href={bibleserverUrl("Matthäus 11,28")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-aubergine"
+          >
+            Matthäus 11,28
+          </a>
+        </figcaption>
+        <p className="mt-2 font-body text-sm italic text-muted">
+          Lutherisches Zentrum · ul. Miodowa 21
+        </p>
+      </figure>
     </section>
   );
 }
