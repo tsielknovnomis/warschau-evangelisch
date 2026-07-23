@@ -60,6 +60,22 @@
 4. **Alte Postfächer sichern**: Im cPanel (https://r1355696.hostingrd.pl:2083/) bzw. per IMAP alle Mails exportieren — nach dem 15.08. ist die Historie unwiederbringlich weg.
 5. Die Proforma (282,90 PLN) **erstmal nicht zahlen** — nur Notfall-Fallback (siehe Risiken).
 
+### Mail-Setup im Detail (Zoho Mail Free, entschieden 23.07.)
+
+**Gewünschte Postfächer:** `vorstand@`, `info@`, `pfarrer@` (3 von 5 im Free-Plan; Webmail unter mail.zoho.eu + Zoho-Mail-App fürs Handy. Desktop-IMAP/Outlook gäbe es erst im Bezahltarif ~1 €/Postfach/Monat).
+
+**Simon JETZT (~10 Min):**
+1. Auf **zoho.eu** (EU-Version — wichtig für DSGVO) → „Zoho Mail" → Preise → ganz unten den **„Forever Free"-Plan** wählen (er ist auf der Seite leicht zu übersehen!).
+2. Konto registrieren mit **degwaw@gmail.com**, Organisation „Deutschsprachige Evangelische Seelsorge in Warschau" anlegen.
+3. Bei „Domain hinzufügen" **warschau-evangelisch.de** eintragen. Die **Domain-Verifizierung dann einfach offen lassen** — die DNS-Einträge dafür kann erst Moritz nach dem Domain-Transfer setzen.
+4. Zugangsdaten sicher notieren. Fertig — mehr geht erst nach dem Transfer.
+
+**Moritz beim Umzug (nach Domain-Transfer):**
+5. TXT-Verifizierung + MX, SPF, DKIM, DMARC bei INWX setzen (behebt auch das Blocklisten-Problem).
+6. Die 3 Postfächer anlegen, Startpasswörter an Simon.
+7. Testmails an Gmail UND Outlook/Hotmail (jens_boysen@hotmail.com!).
+8. Gesicherte Alt-Mails importieren (Zoho Webmail: Einstellungen → Import).
+
 **Phase 2 — Ende Juli (Moritz):**
 6. ~~Repo pushen~~ **Erledigt (23.07.)** — Code liegt in `tsielknovnomis/warschau-evangelisch`, Moritz pusht weiter dorthin. Offen: In Netlify-Account der Gemeinde neue Site aus dem GitHub-Repo anlegen (Auto-Deploy bei jedem Push); Env `ADMIN_PASSWORD` setzen; Blobs-Inhalte (Termine/News/Leiste) aus der bisherigen Preview-Site übernehmen.
 7. Zoho: Domain verifizieren, Postfächer vorstand@/info@/pfarrer@ anlegen.
