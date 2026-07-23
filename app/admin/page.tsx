@@ -7,6 +7,7 @@ import { TabBar, type AdminTab } from "@/components/admin/TabBar";
 import { EventRow } from "@/components/admin/EventRow";
 import { NewsRow } from "@/components/admin/NewsRow";
 import { SettingsForm } from "@/components/admin/SettingsForm";
+import { TemplatePicker } from "@/components/admin/TemplatePicker";
 import { formatDate, formatTime } from "@/lib/format";
 import type { ChurchEvent } from "@/lib/types";
 
@@ -121,12 +122,15 @@ export default async function AdminHome({
         <div className="space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <SearchBox tab="termine" q={params.q ?? ""} placeholder="Termine durchsuchen…" />
-            <Link
-              href="/admin/termine/neu"
-              className="rounded-[3px] bg-aubergine px-4 py-2 text-sm font-semibold text-bg transition-colors hover:bg-aubergine-deep"
-            >
-              + Neuer Termin
-            </Link>
+            <div className="flex items-center gap-2">
+              <TemplatePicker />
+              <Link
+                href="/admin/termine/neu"
+                className="rounded-[3px] bg-aubergine px-4 py-2 text-sm font-semibold text-bg transition-colors hover:bg-aubergine-deep"
+              >
+                + Neuer Termin
+              </Link>
+            </div>
           </div>
 
           {upcoming.length === 0 ? (

@@ -4,85 +4,41 @@ import { useActionState, useState } from "react";
 import type { ChurchEvent } from "@/lib/types";
 import type { FormState } from "@/lib/actions/events";
 import { isoToWarsawLocal } from "@/lib/datetime";
+import {
+  EVENT_TEMPLATES,
+  getTemplate,
+  DEFAULT_LOCATION,
+  type EventTemplate,
+} from "@/lib/event-templates";
 
 const inp =
   "w-full rounded border border-line bg-surface px-3 py-2 text-ink outline-none focus:border-aubergine";
 const lbl = "mb-1 block text-sm font-semibold text-ink";
 
-const DEFAULT_LOCATION = "ul. Miodowa 21, 2. Stock (Synodalsaal)";
-
-function pad(n: number): string {
-  return String(n).padStart(2, "0");
-}
-
-/** Next Sunday (never today) at the given time, as a datetime-local value. */
-function nextSunday(hour: number, minute: number): string {
-  const d = new Date();
-  d.setDate(d.getDate() + (((7 - d.getDay()) % 7) || 7));
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(hour)}:${pad(minute)}`;
-}
-
-/** December 24 of the current (or next, if past) year at 16:00. */
-function nextChristmasEve(): string {
-  const now = new Date();
-  const year = now > new Date(now.getFullYear(), 11, 24, 16) ? now.getFullYear() + 1 : now.getFullYear();
-  return `${year}-12-24T16:00`;
-}
-
-type Template = {
-  label: string;
-  title: string;
-  startsAt: () => string;
-  description: string;
-  isSpecial: boolean;
-};
-
-const TEMPLATES: Template[] = [
-  {
-    label: "Gottesdienst",
-    title: "Gottesdienst",
-    startsAt: () => nextSunday(9, 30),
-    description: "",
-    isSpecial: false,
-  },
-  {
-    label: "Mit Gemeindekaffee",
-    title: "Gottesdienst",
-    startsAt: () => nextSunday(9, 30),
-    description: "Im Anschluss laden wir herzlich zum Gemeindekaffee ein.",
-    isSpecial: false,
-  },
-  {
-    label: "Familiengottesdienst",
-    title: "Familiengottesdienst",
-    startsAt: () => nextSunday(9, 30),
-    description: "Familiengottesdienst — Kinder sind besonders willkommen.",
-    isSpecial: true,
-  },
-  {
-    label: "Christvesper",
-    title: "Christvesper mit Krippenspiel",
-    startsAt: nextChristmasEve,
-    description: "Heiligabend — mit dem Krippenspiel der Kinder.",
-    isSpecial: true,
-  },
-];
-
 export function EventForm({
   event,
   action,
+  initialTemplate,
 }: {
   event?: ChurchEvent;
   action: (prev: FormState, fd: FormData) => Promise<FormState>;
+  /** Template key from ?vorlage= — prefills the form when creating. */
+  initialTemplate?: string;
 }) {
   const [state, formAction, pending] = useActionState(action, {});
-  const [title, setTitle] = useState(event?.title ?? "");
-  const [startsAt, setStartsAt] = useState(event ? isoToWarsawLocal(event.startsAt) : "");
-  const [location, setLocation] = useState(event?.location ?? DEFAULT_LOCATION);
-  const [description, setDescription] = useState(event?.description ?? "");
-  const [isSpecial, setIsSpecial] = useState(event?.isSpecial ?? false);
+  const start = event ? undefined : getTemplate(initialTemplate);
 
-  function applyTemplate(t: Template) {
+  const [templateKey, setTemplateKey] = useState(start?.key ?? "");
+  const [title, setTitle] = useState(event?.title ?? start?.title ?? "");
+  const [startsAt, setStartsAt] = useState(
+    event ? isoToWarsawLocal(event.startsAt) : (start ? start.startsAt() : ""),
+  );
+  const [location, setLocation] = useState(event?.location ?? DEFAULT_LOCATION);
+  const [description, setDescription] = useState(event?.description ?? start?.description ?? "");
+  const [isSpecial, setIsSpecial] = useState(event?.isSpecial ?? start?.isSpecial ?? false);
+
+  function applyTemplate(t: EventTemplate) {
+    setTemplateKey(t.key);
     setTitle(t.title);
     setStartsAt(t.startsAt());
     setLocation(DEFAULT_LOCATION);
@@ -92,28 +48,30 @@ export function EventForm({
 
   return (
     <div className="max-w-xl">
-      {/* Templates — only when creating a new event */}
-      {!event && (
-        <div className="mb-6 rounded-[6px] border border-line bg-parchment-deep/60 p-4">
-          <p className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
-            Vorlage wählen (füllt das Formular aus)
-          </p>
-          <div className="mt-2.5 flex flex-wrap gap-2">
-            {TEMPLATES.map((t) => (
-              <button
-                key={t.label}
-                type="button"
-                onClick={() => applyTemplate(t)}
-                className="rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm font-semibold text-aubergine transition-colors hover:border-aubergine hover:bg-aubergine-50"
-              >
-                {t.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
       <form action={formAction} className="space-y-4">
+        {/* Template dropdown — only when creating a new event */}
+        {!event && (
+          <label className="block sm:max-w-xs">
+            <span className={lbl}>Vorlage</span>
+            <select
+              value={templateKey}
+              onChange={(e) => {
+                const t = getTemplate(e.target.value);
+                if (t) applyTemplate(t);
+                else setTemplateKey("");
+              }}
+              className={inp}
+            >
+              <option value="">Ohne Vorlage</option>
+              {EVENT_TEMPLATES.map((t) => (
+                <option key={t.key} value={t.key}>
+                  {t.label}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
+
         <label className="block">
           <span className={lbl}>Titel</span>
           <input

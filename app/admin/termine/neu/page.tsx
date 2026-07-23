@@ -2,7 +2,12 @@ import Link from "next/link";
 import { EventForm } from "@/components/admin/EventForm";
 import { createEvent } from "@/lib/actions/events";
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ vorlage?: string }>;
+}) {
+  const { vorlage } = await searchParams;
   return (
     <div>
       <p className="mb-4">
@@ -10,7 +15,7 @@ export default function Page() {
       </p>
       <h1 className="font-display text-2xl font-medium text-aubergine">Neuer Termin</h1>
       <div className="mt-6">
-        <EventForm action={createEvent} />
+        <EventForm action={createEvent} initialTemplate={vorlage} />
       </div>
     </div>
   );
