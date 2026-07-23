@@ -20,12 +20,16 @@ function buildText(event: ChurchEvent, channel: Channel, form: Form): string {
 
   if (channel === "whatsapp") {
     return [
-      `🕊️ ${event.title}`,
+      "Herzliche Einladung! 🕊️",
+      "",
+      event.title,
       `📅 ${date}, ${time}`,
       `📍 ${event.location}`,
-      ...(event.description ? [event.description] : []),
+      ...(event.description ? ["", event.description] : []),
       "",
-      du ? "Wir freuen uns auf dich!" : "Wir freuen uns auf Sie!",
+      du
+        ? "Du bist herzlich willkommen — komm einfach vorbei!"
+        : "Sie sind herzlich willkommen — kommen Sie einfach vorbei!",
     ].join("\n");
   }
 
