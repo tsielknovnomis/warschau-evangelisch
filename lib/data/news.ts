@@ -13,10 +13,6 @@ export async function getNews(): Promise<NewsItem[]> {
   );
 }
 
-/** The pinned news item (drives the announcement), or null. */
-export async function getPinnedNews(): Promise<NewsItem | null> {
-  return (await getNews()).find((n) => n.pinned) ?? null;
-}
 
 export async function getNewsBySlug(slug: string): Promise<NewsItem | null> {
   return (await getNews()).find((n) => n.slug === slug) ?? null;

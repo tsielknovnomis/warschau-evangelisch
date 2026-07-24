@@ -47,7 +47,7 @@ export default function Page() {
             <figure className="ml-auto max-w-2xl border-r-[3px] border-gold pr-5 text-right sm:pr-6">
               <blockquote className="font-display text-xl italic leading-snug text-white sm:text-2xl">
                 „Ich bin der Weg und die Wahrheit und das Leben; niemand kommt zum
-                Vater als nur durch mich."
+                Vater als nur durch mich.“
               </blockquote>
               <figcaption className="mt-2 font-body text-xs font-semibold uppercase tracking-[0.18em] text-gold-soft">
                 <a

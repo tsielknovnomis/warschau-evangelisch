@@ -16,7 +16,7 @@ Ersetzt die alte WordPress-Seite. Inhalt & Struktur bleiben im Kern erhalten, Op
 
 ## Commands
 - `pnpm dev` — Dev-Server (Port 3000)
-- `pnpm build` — Production-Build (38 Seiten static/SSG)
+- `pnpm build` — Production-Build
 - `pnpm test` — Vitest
 - `pnpm lint` — ESLint
 

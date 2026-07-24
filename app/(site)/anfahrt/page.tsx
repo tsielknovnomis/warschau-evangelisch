@@ -52,7 +52,7 @@ const optionen = [
         >
           Veturilo-Station
         </a>{" "}
-        „ul. Bonifraterska – Plac Krasińskich" liegt nur drei Gehminuten vom
+        „ul. Bonifraterska – Plac Krasińskich“ liegt nur drei Gehminuten vom
         Gottesdienstraum entfernt.
       </>
     ),

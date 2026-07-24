@@ -1,78 +1,37 @@
 # PROJECT_STATE — warschau-evangelisch
 
-**Status:** ✅ **Plan 1 fertig & live (Preview).** Komplette öffentliche Website gebaut (Next.js, 38 Seiten), deployed auf **https://warschau-evangelisch-relaunch.netlify.app** (Preview-Site, NICHT die echte Domain). Nächster Schritt: Plan 2 (Supabase-Backend) — und offene Fakten bestätigen (OPEN_ITEMS.md) vor echtem Go-Live.
+**Status (23.07.2026):** ✅ **Website + Backend fertig und live auf der Preview.** Alle Vorstands-Feedbackrunden eingearbeitet. Code liegt im privaten Gemeinde-Repo **github.com/tsielknovnomis/warschau-evangelisch**. Es fehlt nur noch der **Hosting-/Domain-/Mail-Umzug = Go-Live** (Deadline 15.08., kompletter Plan in OPEN_ITEMS.md Punkt 11).
 
-## Ziel
-Relaunch von https://warschau-evangelisch.de/ — komplett neu gebaut & modernisiert, **Inhalt & Struktur im Kern erhalten, Optik deutliches Redesign**. Alt: WordPress 7.0, Theme "Responsive Brix 4.9.13" (~2015), Inhalte 2015–2026.
+- Preview: https://warschau-evangelisch-relaunch.netlify.app · Admin: `/admin` (Team-Passwort)
+- Produktions-Domain warschau-evangelisch.de zeigt noch auf die alte WordPress-Seite
 
-## Entscheidungen (30.06.2026 — final mit Auftraggeber)
-- **Stack:** Next.js 15 (App Router) + TS + Tailwind + shadcn/ui. **Supabase** (Auth + DB) als leichtes Backend. Deploy: Netlify.
-- **Sprache:** Deutsch, technisch **i18n-ready** (PL später ergänzbar).
-- **Termine:** **eigenes Termin-Modul im Backend** (kein Google Calendar mehr).
-- **Backend pflegbar:** Aktuelles/News + Predigt-Archiv + Termine. Kernseiten (Über uns, Geschichte, Satzung …) pflegt Moritz im Code.
-- **Design:** **behutsam klassisch** — kirchlich-würdevolle Identität bewahren (Aubergine #480048, Lutherrose), solide modernisieren (Typo-Skala, Spacing, A11y, responsiv).
-- **Archiv:** Alle ~113 Alt-Beiträge (2015–2021) als durchsuchbares Archiv migrieren.
-- **Medien:** YouTube-Predigten (DSGVO-2-Klick) + Instagram/Facebook. Twitter/X raus.
-- **Adresse final geklärt:** ul. Miodowa 21, 00-246 Warszawa (offiziell bestätigt).
-
-## Autonomie-Auftrag
-Moritz ist abwesend und hat **autonomes Durcharbeiten** autorisiert ("mach einfach alles"): Spec → Plan → Build → Mockups. Offene Fakten in [OPEN_ITEMS.md](OPEN_ITEMS.md) mit `TODO(verify)` markieren, mit Arbeitsannahmen weiterbauen.
-
-## Recently Done (30.06.2026) — Feinschliff Runde 2
-- **Navigation final**: Start · Termine & Aktuelles · Anfahrt · Über uns (Dropdown: Die Gemeinde, Geschichte). Verein/Beitritt/Satzung im Footer. **Anfahrt = /anfahrt** (standalone). Aktuelles in die Termine-Seite gemerged.
-- **Predigten-Seite gelöscht** — Homepage zeigt nur noch die neueste Predigt + Link zum YouTube-Kanal. Archiv & Materialien entfernt.
-- **Über-uns + Anfahrt** als schöne Custom-Seiten neu gebaut.
-- **YouTube-Thumbnails** sichtbar (2-Klick), mit Fallback (YouTubeThumb) für Videos ohne Vorschau.
-- **Komplett auf „du"** umgestellt (Content-Seiten via Workflow + Komponenten).
-- Fixes: Spendenkonto-IBANs einzeilig, Footer-Weißspalt weg, Karten-z-index, NextServiceBar-Sommerpausentext, Hero-Subtext konkreter.
-
-## Recently Done (30.06.2026) — Storyline-Homepage
-- **Design final abgestimmt** mit Moritz: clean & hell, Aubergine #480048 nur als Akzent (nicht großflächig), warmes Pergament-BG, Fraunces + Spectral. Mehrere Iterationen (zu krass → entsättigt → falsch verstanden → original Aubergine als Akzent).
-- **Homepage als warme Storyline** (kein harter Funnel): Hero (immersiver Altar V1, „Schön, dass du hier bist." + CTA „Zu den Gottesdiensten") → Willkommen → Gemeindeleben → Geschichte (Warschau-Panorama) → Gottesdienst-Einladung → WhatsApp → Aktuelles → Predigten → Spendenblock → Wegweiser. Ton nahbar, „du", einladend statt drängend.
-- **Ansprechpartner** auf /ueber-uns verschoben. **Mobile NextServiceBar** = einzeiliger Lauftext (Marquee bei Overflow).
-- Hero-Varianten via Workflow generiert & abgestimmt (V1 gewählt). WhatsApp-Link in site-config (Platzhalter, TODO verify).
-
-## Recently Done (30.06.2026) — Redesign
-- **Design komplett überarbeitet** nach Feedback ("top notch, individueller, besser als alt"): neue Ästhetik **„Sakrales Editorial"** — warmes Pergament + Aubergine + Antikgold (Coral raus), **Fraunces** (Display) + **Spectral** (Body), Papierkörnung, Gold-Haarlinien.
-- **Hero neu**: Altar-Bild im Kirchen-Rundbogen + Strahlenkranz + Page-Load-Animation.
-- **Header**: zweistufig, hoher Kontrast, Gold-Underline-Nav.
-- Alle Komponenten + Seiten überarbeitet, dunkler Aubergine-Footer/Spendenkonto. Neu deployed.
-
-## Recently Done (Plan 1)
-- **Spec + Plan** geschrieben (SPEC.md, docs/superpowers/plans/2026-06-30-public-site-foundation.md)
-- **Plan 1 komplett gebaut**: Next.js 16 + Tailwind v4, Design-System (Aubergine, Lutherrose-SVG, Spectral+Open Sans), Layout (Header/Nav/Drawer/Footer/AnnouncementBar), Startseite, alle 10 Kernseiten (Content aus Alt-Seite migriert), Gottesdienste/Termine, Predigten (17, 2-Klick-YouTube), Aktuelles, durchsuchbares Archiv (112 Alt-Beiträge), Impressum/Datenschutz, OSM-Karte, Redirects, sitemap/robots, Favicon
-- **Deployed** → https://warschau-evangelisch-relaunch.netlify.app (Preview)
-- Adresse final geklärt: Miodowa 21, 00-246
+## In Progress
+- **Hosting-Umzug** (OPEN_ITEMS Punkt 11): Simon erledigt Phase 1 (Netlify-Site aus Repo, Domain-Auth-Code, Mail-Sicherung, Zoho-Konto) — Anleitung liegt bei Moritz in `~/Downloads/Anleitung-Simon_Netlify-Domain-Mail.docx`. Danach Moritz: Domain-Transfer (INWX o. a.), DNS, Zoho-Postfächer (vorstand@/info@/pfarrer@), Go-Live.
 
 ## Next Up
-- **Plan 2 — Supabase-Backend**: Tabellen (news/sermons/events) + Auth + Admin-CRUD unter /admin. Seed-Module in `lib/seed/` haben bereits das passende Interface → nur Datenquelle tauschen.
-- **Plan 4 — Archiv-Detailseiten**: die 112 Alt-Beiträge als Einzelseiten + Redirects der alten Slugs.
-- **Offene Fakten bestätigen** (OPEN_ITEMS.md): Bankkonto, QR-Code, amtierender Pfarrer.
-- **Echter Go-Live**: Domain warschau-evangelisch.de auf neue Seite umstellen (erst nach Fakten-Freigabe).
+- Nach Simons Rückmeldung: Domain-Transfer + DNS + Mail (OPEN_ITEMS Phasen 2–4)
+- Admin-Passwort auf finales Team-Passwort rotieren (OPEN_ITEMS Punkt 7)
+- Team trägt echte Termine/News auf der NEUEN Netlify-Site ein (OPEN_ITEMS Punkt 8)
 
-## Offen (siehe OPEN_ITEMS.md)
-Bankkonto, QR-Code, amtierender Pfarrer — vor echtem Go-Live bestätigen. Im Code mit `TODO(verify)` markiert.
+## Known Issues
+- Keine offenen technischen Bugs. Offene **Fakten** (Pfarrer, USt-IdNr., Datenschutz-Schlussprüfung) in OPEN_ITEMS Punkte 3–5.
 
-## Recently Done
-- Vollständiger Scrape: 126 Seiten (Markdown), 13 Kern-Seiten (Raw-HTML), 40 Bilder, 2 PDFs, Theme-CSS, 4 Screenshots
-- Design-Tokens erfasst: Primär #480048 (Aubergine), Akzent #F3595B, Creme #F6F3ED, Open Sans
-- 17 YouTube-Predigt-Videos + externe Links + Twitter @degwaw identifiziert
+## Recent Decisions
+- **23.07.** Vorstands-Notizen (docx) komplett umgesetzt: Du-Form final; Mt 11,28 im Hero unten rechts (ohne Ortszeile, höher positioniert); alle Bibelstellen zu bibleserver.com verlinkt; Zitate rechtsbündig (Goldbalken rechts); neue Texte der „Geistliche Heimat"-Sektion inkl. „Gelebtes Kirchenjahr"; /glauben visuell aufgewertet (dunkles Zitat-Band, Weg-Stationen); scharfes Hero-Bild mit linksverankertem Crop (Kreuz stabil bei ~67–72 %)
+- **23.07.** Admin: Termin-Vorlagen als Dropdown (Liste + Formular, `?vorlage=`), Einladungstext in 4 Varianten (WhatsApp/E-Mail × Du/Sie; E-Mail nach Vorbild der echten Gemeinde-Mails)
+- **23.07.** WhatsApp-Gruppe + Instagram (@warschau.evangelisch) verlinkt; WhatsApp-QR auf Startseite + /gottesdienste
+- **17.07.** Vorstand: Bankdaten bestätigt; Simon von Kleist presserechtlich Verantwortlicher; Spenden-QR (poln. ZBP-Format) in Spendenkonto-Karte; Abendmahl ohne Checkbox, Texte „meist mit Heiligem Abendmahl"; flache URLs (/glauben, /verein, /beitritt, /satzung, /geschichte); „Glaube" als eigener Nav-Punkt
+- **10.07.** **Supabase → Netlify Blobs** (0 €/Monat, Supabase-Projekt gelöscht); Team-Passwort-Auth (HMAC-signierte Cookies, `lib/auth.ts`); jede Mutation prüft `isAdmin()`
+- **Anfang Juli** Admin-Dashboard mit Tabs + Suche + Monatsgruppen (skaliert für viele Einträge); SSR-sichtbare Reveals (Progressive Enhancement) nach Bug-Report des Vorstands; SEO-Paket (OG-Image, Apple-Icon, Twitter-Cards, Canonicals)
 
-## Known Issues / Notizen
-- Alt-Seite hat viel Karteileichen (`/__trashed`, author/category-Archive, 113 historische Gottesdienst-Posts)
-- Predigt-Videos liegen auf YouTube (nicht selbst-gehostet) → Re-Hosting offen
-- Stack für Neubau noch nicht entschieden (Default wäre Next.js, aber ggf. einfacher für nicht-technische Pflege)
+## Recently Done (Auszug Juli)
+- Social-Media-Paket in `social/` (302 ausgearbeitete Content-Ideen als Excel, Bios, Profilbilder, Gruppenbeschreibungen)
+- Simon-Anleitung als Word-Dokument (Netlify + Domain-Alternativen-Vergleich + Mail-Setup)
+- Projekt aufgeräumt: README ergänzt, tote Exporte + deno.lock entfernt, PROJECT_STATE/OPEN_ITEMS aktualisiert
 
-## Verzeichnis
-```
-scraped/
-├── content/       126 Seiten als Markdown (mit Frontmatter url/title/slug)
-├── html/          13 Kern-Seiten als Raw-HTML
-├── assets/
-│   ├── images/    40 Bilder (year/month-Struktur erhalten)
-│   ├── pdfs/      moege_die_strasse.pdf, Beitrittserklaerung.pdf
-│   └── css/       Theme- + Plugin-CSS + Google-Fonts
-├── screenshots/   Home (Desktop+Mobile), Gottesdienste, Über uns
-├── SITE_STRUCTURE.md / DESIGN_SYSTEM.md / ASSET_INVENTORY.md / KEY_FACTS.md / SCRAPE_REPORT.md
-.firecrawl/        Roh-Dumps & Manifeste (gitignored)
-```
+## Doku-Wegweiser
+- **OPEN_ITEMS.md** — selbsterklärendes Übergabe-Dokument: alle offenen Punkte + kompletter Go-Live-Plan
+- **README.md** — Einstieg für Entwickler (Setup, Struktur, Deploy)
+- **CLAUDE.md** — Konventionen für KI-Sessions · **SPEC.md** — ursprüngliche Bauvorlage (30.06.)
+- **scraped/** — Archiv der Alt-Website (Referenz) · **social/** — Social-Media-Paket
+- **docs/superpowers/** — historische Specs & Pläne aus der Bauphase

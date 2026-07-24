@@ -29,8 +29,11 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    // Intentional post-hydration sync from localStorage: the server can't know
+    // the stored consent, so the first client render must adopt it exactly once.
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (stored === "accepted" || stored === "declined") setConsent(stored);
     } catch {
       // localStorage unavailable (private mode etc.) — treat as no decision

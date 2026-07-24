@@ -40,18 +40,17 @@ export function NextServiceBar({
 
   const auto = autoBarParts(event, onBreak);
 
-  const Content = () =>
-    announcement ? (
-      <span className="font-medium text-bg/90">{announcement}</span>
-    ) : auto ? (
-      <>
-        <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
-          {auto.label}
-        </span>
-        <span aria-hidden className="mx-2 text-gold/50">·</span>
-        <span className="font-medium text-bg/90">{auto.text}</span>
-      </>
-    ) : null;
+  const content = announcement ? (
+    <span className="font-medium text-bg/90">{announcement}</span>
+  ) : auto ? (
+    <>
+      <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
+        {auto.label}
+      </span>
+      <span aria-hidden className="mx-2 text-gold/50">·</span>
+      <span className="font-medium text-bg/90">{auto.text}</span>
+    </>
+  ) : null;
 
   return (
     <div className="border-b border-white/10 bg-aubergine-deep">
@@ -61,21 +60,21 @@ export function NextServiceBar({
           className={`relative flex-1 overflow-hidden ${overflow ? "" : "flex justify-center"}`}
         >
           <span ref={measureRef} aria-hidden className="invisible absolute whitespace-nowrap">
-            <Content />
+            {content}
           </span>
 
           {overflow ? (
             <div className="flex w-max animate-marquee whitespace-nowrap">
               <span className="pr-16">
-                <Content />
+                {content}
               </span>
               <span className="pr-16" aria-hidden>
-                <Content />
+                {content}
               </span>
             </div>
           ) : (
             <span className="whitespace-nowrap">
-              <Content />
+              {content}
             </span>
           )}
         </div>

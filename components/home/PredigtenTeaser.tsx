@@ -23,7 +23,7 @@ export function PredigtenTeaser() {
             </p>
             <p className="mt-3 text-base text-muted">
               {sermon.scripture ? <span className="italic">{sermon.scripture} · </span> : null}
-              zuletzt: „{sermon.title}"
+              zuletzt: „{sermon.title}“
             </p>
             <p className="mt-7">
               <a

@@ -51,3 +51,4 @@ mockups/
 
 # local dev content storage
 .data/
+deno.lock

@@ -1,6 +1,7 @@
 {
   "name": "warschau-evangelisch",
   "version": "0.1.0",
+  "description": "Website of the German-speaking Lutheran parish in Warsaw (DEGWAW) — Next.js 16, Netlify Blobs backend, self-service admin panel",
   "private": true,
   "scripts": {
     "dev": "next dev",

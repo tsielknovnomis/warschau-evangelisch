@@ -33,7 +33,7 @@ export default async function Page() {
         <figure className="ml-auto max-w-2xl border-r-[3px] border-gold/60 pr-5 text-right sm:pr-6">
           <blockquote className="font-display text-lg italic leading-snug text-aubergine sm:text-xl">
             „Denn wo zwei oder drei versammelt sind in meinem Namen, da bin ich
-            mitten unter ihnen."
+            mitten unter ihnen.“
           </blockquote>
           <figcaption className="mt-1.5 font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-deep">
             <a

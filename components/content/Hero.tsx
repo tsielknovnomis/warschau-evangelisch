@@ -82,7 +82,7 @@ export function Hero() {
       <figure className="absolute bottom-24 right-5 z-10 hidden max-w-md text-right sm:right-8 sm:block lg:bottom-28">
         <blockquote className="font-display text-lg italic leading-snug text-aubergine">
           „Kommt her zu mir alle, die ihr mühselig und beladen seid. Ich will euch
-          erquicken."
+          erquicken.“
         </blockquote>
         <figcaption className="mt-1 font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-deep">
           <a

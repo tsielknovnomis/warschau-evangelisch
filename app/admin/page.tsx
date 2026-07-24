@@ -78,6 +78,8 @@ export default async function AdminHome({
     getNextEvent(),
   ]);
 
+  // Dynamic route — rendered per request, so "now" is genuinely fresh here.
+  // eslint-disable-next-line react-hooks/purity
   const now = Date.now();
   const upcomingAll = events.filter((e) => new Date(e.startsAt).getTime() >= now);
   const nextId = upcomingAll[0]?.id;

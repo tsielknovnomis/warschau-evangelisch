@@ -64,7 +64,3 @@ export function getSermons(): Sermon[] {
 export function getLatestSermon(): Sermon | null {
   return getSermons()[0] ?? null;
 }
-
-export function getSermonBySlug(slug: string): Sermon | null {
-  return sermons.find((s) => s.slug === slug) ?? null;
-}
