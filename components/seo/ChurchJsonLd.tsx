@@ -3,7 +3,7 @@ import { siteUrl } from "@/lib/site-url";
 
 /**
  * schema.org "Church" structured data for search engines.
- * Only verified facts go in here (no placeholder social links).
+ * Only verified facts go in here.
  */
 export function ChurchJsonLd() {
   const { address, contact, social } = siteConfig;
@@ -26,7 +26,10 @@ export function ChurchJsonLd() {
       latitude: address.coords.lat,
       longitude: address.coords.lng,
     },
-    sameAs: [social.youtube, social.facebook],
+    sameAs: [social.youtube, social.facebook, social.instagram],
+    description:
+      "Deutschsprachige evangelisch-lutherische Gemeinde in Warschau — Gottesdienste auf Deutsch im Lutherischen Zentrum, ul. Miodowa 21.",
+    inLanguage: "de",
     isAccessibleForFree: true,
   };
 

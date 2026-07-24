@@ -24,11 +24,11 @@ const spectral = Spectral({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: siteConfig.name,
+    default: "Evangelische Gemeinde in Warschau — Gottesdienste auf Deutsch",
     template: `%s — ${siteConfig.shortName}`,
   },
   description:
-    "Deutschsprachige evangelisch-lutherische Gemeinde in Warschau. Gottesdienste, Predigten, Gemeindeleben — unter dem Dach der Evangelisch-Augsburgischen Kirche in Polen.",
+    "Deutschsprachige evangelisch-lutherische Kirche und Gemeinde in Warschau: Gottesdienste auf Deutsch in der ul. Miodowa 21, Gemeinschaft und Seelsorge. Komm einfach vorbei — du bist herzlich willkommen.",
   alternates: {
     canonical: "./",
   },
