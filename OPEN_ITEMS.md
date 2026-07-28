@@ -24,7 +24,7 @@
 | 9 | **Flickr-Fotos** (2× Dez. 2025) | Nicht verwendet (keine Lizenz geklärt). | Nur falls gewünscht: Lizenz klären, dann einbinden. | 🟩 entschieden (raus) |
 | 10 | **Anrede Du vs. Sie** | **Vorstand hat entschieden: Du** (Notizen-Dokument, 23.07.). Website ist bereits durchgehend per Du. | — | 🟩 entschieden (Du) |
 | 12 | **Google Business Profile + Search Console** (nach Go-Live) | Technisches SEO ist fertig (Church-Schema mit Adresse/Geo, Titles mit Suchbegriffen, Sitemap, Canonicals). Der **größte Hebel für lokale Suchen** („Kirche Warschau", „Gemeinde Warschau") ist aber ein **Google-Unternehmensprofil** (business.google.com): Kategorie „Evangelische Kirche", Adresse ul. Miodowa 21, Gottesdienstzeiten, Website-Link, Fotos. | Nach Go-Live: Vorstand legt Profil an (Login degwaw@gmail.com); Google verifiziert per Postkarte/Telefon an die Adresse. Zusätzlich Moritz: Search Console einrichten + Sitemap einreichen. | 🟨 nach Go-Live |
-| 11 | **Hosting-/Domain-/Mail-Umzug** | Kompletter Plan unten — **das ist zugleich der Go-Live**. | Siehe Phasen unten. Nächster Schritt: Simon liefert Domain-Ablaufdatum + Auth-Code. | 🟥 offen — **Deadline 08./15.08.2026** |
+| 11 | **Hosting-/Domain-/Mail-Umzug** | Kompletter Plan unten — **das ist zugleich der Go-Live**. | Siehe Phasen unten. Nächster Schritt: Simon liefert Domain-Ablaufdatum + Auth-Code. | 🟥 offen — **Mail + Website-DNS müssen VOR dem 08.08. stehen** (Hosting-Ende); Domain-Transfer etwas entspannter |
 
 ---
 
@@ -36,7 +36,7 @@
   - **Kunden-Panel:** https://rejestracjadomen.pl/site/login
   - **cPanel der Gemeinde:** https://r1355696.hostingrd.pl:2083/
 - **Paket „Hosting Basic":** bündelt Webhosting (alte WordPress/PHP-Seite), **E-Mail-Postfächer** (u. a. vorstand@warschau-evangelisch.de) und die **Domain warschau-evangelisch.de**. Kostet ~250–283 PLN/Jahr.
-- **Ablauf:** Laut Mail von RejestracjaDomen (16.07.2026, an vorstand@… und degwaw@gmail.com) läuft das Paket am **15.08.2026** aus; Proforma-Rechnung **282,90 PLN**, zahlbar bis **08.08.2026**. Danach sind Website UND Mail offline.
+- **Ablauf:** Laut Mail von RejestracjaDomen (16.07.2026, an vorstand@… und degwaw@gmail.com) lief die Zahlungsfrist zum **08.08.2026**; **Simon verlängert NICHT** (Entscheidung 25.07.) → **Hosting inkl. alter Postfächer endet am 08.08.2026.** Die **Domain selbst läuft laut Simon bis über Mitte August hinaus** (genaues Datum noch offen) und kostet dort ~120 PLN/Jahr — Transfer zu INWX (~6–7 €/Jahr) von Simon bestätigt (27.07.).
 - **Beweis, dass der alte Mailserver kaputt ist:** Am 17.07. bouncte Moritz' Antwort an den Vorstand-Verteiler: `MAILER-DAEMON@pmg.hostingrd.pl` meldete, dass **Outlook/Hotmail die Server-IP 195.128.154.5 blockt** (Fehler `550 5.7.1 … block list (S3150)`) — Jens Boysen (jens_boysen@hotmail.com) bekommt Gemeinde-Mails deshalb **schon heute nicht**. Der Mail-Umzug ist also unabhängig vom Ablaufdatum nötig.
 - **Wunsch der Gemeinde/Moritz:** So einfach wie möglich. Gemeinde besitzt die Accounts selbst; Code auf GitHub; jede Änderung deployt automatisch.
 - **Simon von Kleist** meldet sich bei Moritz mit weiteren Infos (+ Du/Sie-Entscheidung, siehe Punkt 10).
@@ -61,21 +61,30 @@
 4. **Alte Postfächer sichern**: Im cPanel (https://r1355696.hostingrd.pl:2083/) bzw. per IMAP alle Mails exportieren — nach dem 15.08. ist die Historie unwiederbringlich weg.
 5. Die Proforma (282,90 PLN) **erstmal nicht zahlen** — nur Notfall-Fallback (siehe Risiken).
 
-### Mail-Setup im Detail (Zoho Mail Free, entschieden 23.07.)
+### Mail-Setup im Detail (ENTSCHIEDEN 28.07.: ImprovMX + Gmail — 0 €)
 
-**Gewünschte Postfächer:** `vorstand@`, `info@`, `pfarrer@` (3 von 5 im Free-Plan; Webmail unter mail.zoho.eu + Zoho-Mail-App fürs Handy. Desktop-IMAP/Outlook gäbe es erst im Bezahltarif ~1 €/Postfach/Monat).
+**Architektur:** Kein eigenes Mail-Hosting. [ImprovMX](https://improvmx.com) (Free: 500 Weiterleitungen/Tag, 25 SMTP-Sends/Tag) leitet die Adressen weiter; gesendet wird aus Gmail heraus per „Senden als" über ImprovMX-SMTP. Zoho wurde verworfen (Free-Plan ohne IMAP/Weiterleitung, regional versteckt). SMTP2GO wird NICHT gebraucht (ImprovMX-SMTP reicht).
 
-**Simon JETZT (~10 Min):**
-1. Auf **zoho.eu** (EU-Version — wichtig für DSGVO) → „Zoho Mail" → Preise → ganz unten den **„Forever Free"-Plan** wählen (er ist auf der Seite leicht zu übersehen!).
-2. Konto registrieren mit **degwaw@gmail.com**, Organisation „Deutschsprachige Evangelische Seelsorge in Warschau" anlegen.
-3. Bei „Domain hinzufügen" **warschau-evangelisch.de** eintragen. Die **Domain-Verifizierung dann einfach offen lassen** — die DNS-Einträge dafür kann erst Moritz nach dem Domain-Transfer setzen.
-4. Zugangsdaten sicher notieren. Fertig — mehr geht erst nach dem Transfer.
+**Adress-Plan:**
+- `vorstand@` → Weiterleitung an **degwaw@gmail.com**
+- `info@` → Weiterleitung an **degwaw@gmail.com**
+- `pfarrer@` → Weiterleitung an die **private Adresse des Pfarrers** (Vertraulichkeit! Seelsorge-Mails gehören nicht in das gemeinsame Gmail-Postfach) — Adresse beim Pfarrer erfragen.
 
-**Moritz beim Umzug (nach Domain-Transfer):**
-5. TXT-Verifizierung + MX, SPF, DKIM, DMARC bei INWX setzen (behebt auch das Blocklisten-Problem).
-6. Die 3 Postfächer anlegen, Startpasswörter an Simon.
-7. Testmails an Gmail UND Outlook/Hotmail (jens_boysen@hotmail.com!).
-8. Gesicherte Alt-Mails importieren (Zoho Webmail: Einstellungen → Import).
+**Simon (~10 Min):**
+1. Auf **improvmx.com** Account anlegen — Login **degwaw@gmail.com** (Gemeinde-Besitz).
+2. Domain **warschau-evangelisch.de** hinzufügen.
+3. Die 3 Aliase mit obigen Zielen anlegen. (DNS zeigt erstmal „pending" — das übernimmt Moritz.)
+
+**Moritz (bei DNS-Zugriff, VOR dem 08.08.):**
+4. DNS setzen: MX `mx1.improvmx.com` (10) + `mx2.improvmx.com` (20); TXT-SPF `v=spf1 include:spf.improvmx.com ~all`; **DKIM** aus dem ImprovMX-Dashboard eintragen (Zustellbarkeit!).
+5. Testmails an Gmail UND Outlook/Hotmail (jens_boysen@hotmail.com).
+
+**Simon danach — „Senden als" in Gmail (~5 Min pro Adresse):**
+6. Im ImprovMX-Dashboard SMTP-Zugangsdaten erzeugen (Benutzer = vorstand@warschau-evangelisch.de).
+7. Gmail (degwaw@gmail.com): Zahnrad → *Alle Einstellungen* → *Konten & Import* → *„Als anderer Absender senden" → E-Mail-Adresse hinzufügen* → vorstand@warschau-evangelisch.de → SMTP-Server **smtp.improvmx.com**, Port **587**, Benutzername = die Adresse, Passwort = aus ImprovMX. Bestätigungscode kommt als weitergeleitete Mail an. Dasselbe für info@.
+8. Beim Antworten in Gmail die Absender-Adresse wählen (oder „Aus derselben Adresse antworten" in den Einstellungen aktivieren).
+
+**Bekannte Einschränkungen (bewusst akzeptiert):** kein IMAP-Postfach (alles lebt in Gmail); 25 gesendete Mails/Tag über ImprovMX-SMTP; US-nahe Datenverarbeitung der Weiterleitung. Falls das später stört → Upgrade-Pfad: Migadu Micro (~18 €/Jahr, echte EU-Postfächer) — Recherche vom 28.07.
 
 **Phase 2 — Ende Juli (Moritz):**
 6. ~~Repo pushen~~ **Erledigt (23.07.)** — Code liegt in `tsielknovnomis/warschau-evangelisch`, Moritz pusht weiter dorthin. Offen: In Netlify-Account der Gemeinde neue Site aus dem GitHub-Repo anlegen (Auto-Deploy bei jedem Push); Env `ADMIN_PASSWORD` setzen; Blobs-Inhalte (Termine/News/Leiste) aus der bisherigen Preview-Site übernehmen.
