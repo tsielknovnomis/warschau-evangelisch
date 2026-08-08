@@ -6,12 +6,13 @@
 - Restarbeiten: Mail-Praxistest + „Senden als" + DKIM; alte Postfächer sichern (vor 08.08.!); echte Termine/News eintragen
 
 ## In Progress
-- **Hosting-Umzug** (OPEN_ITEMS Punkt 11): Simon erledigt Phase 1 (Netlify-Site aus Repo, Domain-Auth-Code, Mail-Sicherung, Zoho-Konto) — Anleitung liegt bei Moritz in `~/Downloads/Anleitung-Simon_Netlify-Domain-Mail.docx`. Danach Moritz: Domain-Transfer (INWX o. a.), DNS, Zoho-Postfächer (vorstand@/info@/pfarrer@), Go-Live.
+- **Mail-Restarbeiten** (OPEN_ITEMS Punkt 11): realer Zustelltest an vorstand@/info@/pfarrer@, „Senden als" in Gmail (SMTP smtp.improvmx.com:587), DKIM-TXT aus dem ImprovMX-Dashboard bei INWX eintragen.
 
 ## Next Up
-- Nach Simons Rückmeldung: Domain-Transfer + DNS + Mail (OPEN_ITEMS Phasen 2–4)
-- Admin-Passwort auf finales Team-Passwort rotieren (OPEN_ITEMS Punkt 7)
-- Team trägt echte Termine/News auf der NEUEN Netlify-Site ein (OPEN_ITEMS Punkt 8)
+- ⚠️ **Vor dem 08.08.:** alte Postfächer sichern (Simon — Hosting-Ende!)
+- Team trägt echte Termine/News im Admin-Panel ein (OPEN_ITEMS Punkt 8 — aktuell Platzhalter auf der LIVE-Seite!)
+- Google Business Profile + Search Console (OPEN_ITEMS Punkt 12)
+- Admin-Passwort final rotieren, falls Simon das Interims-Passwort übernommen hat (Punkt 7)
 
 ## Known Issues
 - Keine offenen technischen Bugs. Offene **Fakten** (Pfarrer, USt-IdNr., Datenschutz-Schlussprüfung) in OPEN_ITEMS Punkte 3–5.
