@@ -39,6 +39,41 @@ Umzug in ein neues Land — neue Sprache, neue Wege, alles fremd. Bei uns triffs
 Sonntags um 9:30 Uhr, Lutherisches Zentrum, ul. Miodowa 21. Komm einfach vorbei — du musst niemanden kennen, um dazuzugehören. 🕊️
 #NeuInWarschau #Warschau #Warszawa #DeutscheInPolen #Expats #Auswandern #evangelisch #Gemeinschaft
 
+## 09 — Monatsübersicht (09-termine-monat.png) — BEISPIELDATEN
+Unsere Termine im September auf einen Blick 🗓️ Alle Details und kurzfristige Änderungen findest du auf warschau-evangelisch.de und in unserer WhatsApp-Gruppe. Wir freuen uns auf dich!
+**Achtung: Die Termine auf der Kachel sind Beispieldaten — vor dem Posten mit dem echten Plan abgleichen.**
+#Warschau #Warszawa #Gottesdienst #Termine #DeutscheInPolen #evangelisch
+
+## 10 — Feiertagsgruß Weihnachten (10-feiertag-weihnachten.png)
+„Fürchtet euch nicht!" — Lukas 2,10 ✨
+Wir wünschen dir und deinen Liebsten ein gesegnetes Weihnachtsfest. Feiere mit uns: Christvesper mit Krippenspiel am 24. Dezember im Lutherischen Zentrum, ul. Miodowa 21.
+#Weihnachten #Christvesper #Krippenspiel #Warschau #DeutscheInPolen #evangelisch
+
+## 11 — Zitat Luther (11-zitat-luther.png)
+„Ein Christenmensch ist ein freier Herr über alle Dinge und niemand untertan." — Martin Luther, 1520 🕊️
+Ein Satz, über den man lange nachdenken kann. Was bedeutet Freiheit für dich?
+#MartinLuther #Zitat #evangelisch #Warschau #ZumNachdenken #Glaube
+
+## 12 — Wusstest du? (12-wusstest-du.png)
+Wusstest du? Deutschsprachige evangelische Gottesdienste gibt es in Warschau schon seit den 1980er Jahren — mit Unterbrechungen. 2011 wurde unsere Gemeinde neu gegründet, heute sind wir ein eingetragener Verein unter dem Dach der Evangelisch-Augsburgischen Kirche in Polen.
+Mehr über unsere Geschichte: warschau-evangelisch.de/geschichte
+#WusstestDu #Geschichte #Warschau #DeutscheInPolen #evangelisch
+
+## 13 — Rückblick (13-rueckblick-vorlage.png) — VORLAGE, Foto einsetzen
+Danke für diesen Sonntag! 🕊️ Ein voller Kirchenraum, vertraute Lieder und danach lange Gespräche beim Gemeindekaffee. Schön, dass ihr da wart — bis zum nächsten Mal!
+#Rückblick #Gemeindeleben #Warschau #Gottesdienst #DeutscheInPolen #evangelisch
+
+## 14 — Heute Gottesdienst (14-heute-gottesdienst.png)
+Heute ist Gottesdienst! ⛪ Um 9:30 Uhr im Lutherischen Zentrum, ul. Miodowa 21 (2. Stock). Komm einfach vorbei — so wie du bist. Wir freuen uns auf dich! 🕊️
+#Gottesdienst #Heute #Warschau #DeutscheInPolen #evangelisch #GottesdienstAufDeutsch
+
+## 15 — Personen-Vorstellung (15-person-vorlage.png) — VORLAGE
+[Name] gehört zu den Menschen, die unsere Gemeinde tragen — als [Aufgabe]. Im Bild verrät er/sie, warum ihm/ihr die Gemeinde am Herzen liegt. 💜
+#WirStellenVor #Gemeindeleben #Warschau #DeutscheInPolen #evangelisch
+
+## 16 + 17 — Stories (16-story-termin.png, 17-story-vers.png)
+Stories brauchen keine Caption — ggf. Link-Sticker zu warschau-evangelisch.de und Standort-Sticker „Warszawa" ergänzen. Termin-Story am besten 1–2 Tage vor dem Gottesdienst posten, Vers-Story sonntagmorgens oder montags.
+
 ---
 
 ## Hinweis: eigene Fotos

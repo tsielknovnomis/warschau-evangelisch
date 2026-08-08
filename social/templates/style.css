@@ -75,3 +75,51 @@ h1.display {
   opacity: 0.08;
   pointer-events: none;
 }
+
+/* ── Story-Format (1080×1920, 9:16) ──
+   Oben/unten je ~220 px freihalten (Instagram-UI überlagert die Ränder). */
+.tile.story { height: 1920px; padding: 220px 96px; }
+
+/* ── Dunkle Akzent-Kachel (seltener Akzent, z. B. Feiertage) ── */
+.tile.dark { background: var(--aubergine-deep); color: #f5eee6; }
+.tile.dark .kicker { color: var(--gold-soft); }
+.tile.dark h1.display { color: #faf8f3; }
+.tile.dark .accent { color: var(--gold-soft); }
+.tile.dark .lead { color: #efe6da; opacity: 0.94; }
+.tile.dark .foot { border-top-color: rgba(217, 196, 145, 0.35); }
+.tile.dark .foot .site { color: var(--gold-soft); }
+.tile.dark .foot .handle { color: rgba(245, 238, 230, 0.7); }
+.tile.dark .ornament { opacity: 0.1; }
+
+/* ── Datums-Chip für Terminlisten ── */
+.datechip {
+  width: 150px;
+  height: 150px;
+  flex: 0 0 150px;
+  background: var(--aubergine);
+  color: #faf8f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.datechip .d { font-family: "Fraunces", serif; font-size: 60px; font-weight: 500; line-height: 1; }
+.datechip .m { font-size: 22px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-soft); margin-top: 10px; }
+
+/* ── Foto-Platzhalter (diagonale Schraffur + Hinweis) ── */
+.placeholder {
+  background: repeating-linear-gradient(45deg, #eee7d9, #eee7d9 14px, #f5f0e6 14px, #f5f0e6 28px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.placeholder .hint {
+  border: 3px dashed var(--gold);
+  color: var(--gold-deep);
+  font-size: 26px;
+  letter-spacing: 0.08em;
+  padding: 20px 36px;
+  background: rgba(255, 253, 249, 0.85);
+  text-align: center;
+}

@@ -48,7 +48,17 @@ Damit jeder Post aussieht wie aus einem Guss — egal ob aus den HTML-Vorlagen
 2. Im Ordner `python3 -m http.server 8321` starten, Seite im Browser bei Fenstergröße 1080×1350 öffnen
 3. Screenshot → fertige Kachel nach `social/posts/`
 
-Vorlagen: `launch.html` (Ankündigung) · `vorstellung.html` (Statement) · `termin.html` (Gottesdienst-Termin) · `vers.html` (Bibelvers) · `foto.html` (Foto + Titel)
+**Feed-Vorlagen (1080×1350):**
+`launch.html` (Ankündigung) · `vorstellung.html` (Statement) · `termin.html` (einzelner Termin) ·
+`termine-monat.html` (Monatsübersicht mit Datums-Chips) · `vers.html` (Bibelvers) ·
+`zitat.html` (Zitat mit Quelle, z. B. Luther/Predigt) · `wusstest-du.html` (Fakten-Kachel) ·
+`heute.html` („Heute ist Gottesdienst"-Reminder) · `feiertag.html` (dunkle Festtags-Kachel — sparsam einsetzen!) ·
+`person.html` (Vorstellung mit rundem Foto-Platzhalter) · `rueckblick.html` (Foto-Platzhalter + Danke-Text) ·
+`foto.html` (Foto + Titel) · `foto-voll.html` (nur Bild) · `vers-foto.html` (Vers + Fotoband) ·
+`neu-in-warschau.html` (Foto oben + Text)
+
+**Story-Vorlagen (1080×1920):** `story-termin.html` (dunkel, große Datumszahl) · `story-vers.html` (hell, Bibelvers).
+Beim Rendern Fenster auf 1080×1920 stellen; oben/unten bleiben ~220 px frei (Instagram-UI).
 
 ## Foto-Layouts (drei Varianten)
 
