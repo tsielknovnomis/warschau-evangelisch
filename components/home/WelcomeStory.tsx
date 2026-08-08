@@ -10,11 +10,13 @@ export function WelcomeStory() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="kicker">Willkommen</p>
           <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-aubergine sm:text-[2.6rem]">
-            Eine geistige Heimat — auf Deutsch, mitten in Warschau
+            Eine geistige Heimat —
+            <br />
+            mitten in Warschau
           </h2>
           <p className="mt-7 text-xl leading-relaxed text-ink/85">
             Ob du seit Jahren hier lebst oder gerade erst angekommen bist: Bei uns
-            feierst du Gottesdienst in deiner Sprache, triffst Menschen, denen es
+            feierst du deutschsprachigen Gottesdienst, triffst Menschen, denen es
             ähnlich geht, und findest ein Stück Zuhause.
           </p>
           <p className="mt-5 text-lg leading-relaxed text-muted">

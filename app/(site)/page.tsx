@@ -1,6 +1,6 @@
 import { Hero } from "@/components/content/Hero";
 import { WelcomeStory } from "@/components/home/WelcomeStory";
-import { GemeindeLeben } from "@/components/home/GemeindeLeben";
+import { GeistlicheHeimat } from "@/components/home/GeistlicheHeimat";
 import { GeschichteTeaser } from "@/components/home/GeschichteTeaser";
 import { GottesdienstEinladung } from "@/components/home/GottesdienstEinladung";
 import { GemeinschaftBleiben } from "@/components/home/GemeinschaftBleiben";
@@ -16,7 +16,7 @@ export default function HomePage() {
     <>
       <Hero />
       <WelcomeStory />
-      <GemeindeLeben />
+      <GeistlicheHeimat />
       <GeschichteTeaser />
       <GottesdienstEinladung />
       <GemeinschaftBleiben />

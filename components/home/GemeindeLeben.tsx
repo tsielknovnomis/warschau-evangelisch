@@ -1,3 +1,5 @@
+// NOTE: Currently not rendered — the board (30.07.2026) replaced this section
+// on the homepage with GeistlicheHeimat. Kept for possible later use.
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
 

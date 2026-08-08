@@ -11,20 +11,6 @@ export const metadata: Metadata = {
     "Wir sind eine junge, internationale evangelisch-lutherische Gemeinde, die in Warschau Gottesdienste in deutscher Sprache feiert — offen für alle.",
 };
 
-const themen = [
-  {
-    title: "Gottesdienst feiern",
-    text: "Wir feiern jeden zweiten und vierten Sonntag im Monat Gottesdienst, im Advent jeden Sonntag — auf Deutsch und mit Heiligem Abendmahl. Bitte beachte die aktuellen Infos auf dieser Webseite und in unserer WhatsApp-Gruppe.",
-  },
-  {
-    title: "Gemeinschaft erleben",
-    text: "Nach dem Gottesdienst gibt es Gelegenheit für weiteren Austausch bei Kaffee und Kuchen. Dazu kommen Hauskreise und Konfirmandenunterricht im Zweijahreszyklus — viele Gelegenheiten, einander näher kennenzulernen.",
-  },
-  {
-    title: "Gelebtes Kirchenjahr",
-    text: "Krippenspiel am Heiligabend, Ausschnitte aus dem Weihnachtsoratorium, ein Gemeindeausflug oder der Besuch eines Gastpredigers. Taufe, Trauung oder Trauer — wir begleiten dich in den großen Momenten des Lebens.",
-  },
-];
 
 export default function Page() {
   return (
@@ -57,29 +43,6 @@ export default function Page() {
           </Bibelvers>
         </div>
       </Container>
-
-      {/* What we're about */}
-      <section className="border-t border-line bg-parchment-deep py-16 lg:py-20">
-        <Container>
-          <div className="max-w-2xl">
-            <p className="kicker">Das macht uns aus</p>
-            <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-aubergine sm:text-[2.4rem]">
-              Geistliche Heimat — über die Sprache hinaus
-            </h2>
-          </div>
-          <div className="mt-12 grid gap-8 sm:grid-cols-3">
-            {themen.map((t, i) => (
-              <div key={t.title} className="border-t border-gold/40 pt-5">
-                <span className="font-display text-2xl italic text-gold-deep">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-2 font-display text-xl text-aubergine">{t.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted">{t.text}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       {/* Open to all */}
       <Container className="py-16 lg:py-20">

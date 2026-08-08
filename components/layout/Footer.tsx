@@ -96,10 +96,10 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-line pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {year} {siteConfig.legalNameDe}
-            <span className="mx-1.5">·</span>
-            KRS {siteConfig.krs}
+          <p className="max-w-3xl leading-relaxed">
+            © {year} Verein für Deutschsprachige Evangelische Seelsorge in Warschau
+            {" | "}
+            Stowarzyszenie Ewangelickie Duszpasterstwo Języka Niemieckiego w Warszawie
           </p>
           <div className="flex gap-4">
             {legalNav.map((item) => (

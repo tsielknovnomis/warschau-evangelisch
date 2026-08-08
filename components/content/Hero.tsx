@@ -51,7 +51,7 @@ export function Hero() {
             style={{ animationDelay: "0.28s" }}
           >
             Wir sind die deutschsprachige evangelisch-lutherische Gemeinde in
-            Warschau — ein offenes Haus für alle, die hier Gottesdienst in ihrer
+            Warschau — ein offenes Haus für alle, die hier Gottesdienst in deutscher
             Sprache feiern und Gemeinschaft finden möchten.
           </p>
 
@@ -66,7 +66,7 @@ export function Hero() {
               href="#willkommen"
               className="group inline-flex items-center gap-2.5 font-body text-base font-semibold text-aubergine transition-colors hover:text-gold-deep"
             >
-              Lern uns kennen
+              Lerne uns kennen
               <span
                 className="transition-transform duration-300 group-hover:translate-y-1"
                 aria-hidden
@@ -84,12 +84,12 @@ export function Hero() {
           „Kommt her zu mir alle, die ihr mühselig und beladen seid. Ich will euch
           erquicken.“
         </blockquote>
-        <figcaption className="mt-1 font-body text-xs font-semibold uppercase tracking-[0.16em] text-gold-deep">
+        <figcaption className="mt-1 font-body text-sm text-muted">
           <a
             href={bibleserverUrl("Matthäus 11,28")}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-aubergine"
+            className="underline underline-offset-2 transition-colors hover:text-aubergine"
           >
             Matthäus 11,28
           </a>
