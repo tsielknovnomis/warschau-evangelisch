@@ -49,3 +49,17 @@ Damit jeder Post aussieht wie aus einem Guss — egal ob aus den HTML-Vorlagen
 3. Screenshot → fertige Kachel nach `social/posts/`
 
 Vorlagen: `launch.html` (Ankündigung) · `vorstellung.html` (Statement) · `termin.html` (Gottesdienst-Termin) · `vers.html` (Bibelvers) · `foto.html` (Foto + Titel)
+
+## Foto-Layouts (drei Varianten)
+
+1. **`foto-voll.html` — „Nur Bild":** Foto füllt die ganze Kachel. Oben links heller Chip
+   (Lutherrose + EVANGELISCH IN WARSCHAU), unten dunkler Verlauf mit Website + Handle.
+   Am besten mit Hochformat-Fotos (z. B. `trinity-exterior`). In Canva: Foto vollflächig,
+   darüber Chip + Verlauf aus der Vorlage nachbauen.
+2. **`vers-foto.html` — Vers + Fotoband:** Kicker oben, Foto als volles Querband
+   (goldene Ränder oben/unten, ~470 px hoch), darunter das Zitat rechtsbündig mit Goldbalken.
+3. **`foto.html` / `neu-in-warschau.html` — Foto oben + Text unten:** Foto als Band oben
+   (~560 px, goldene Linie unten), darunter Kicker, Überschrift, Fließtext, Fußzeile.
+
+**Personen auf Fotos:** nur posten, wenn niemand erkennbar ist oder Einwilligungen vorliegen
+(bei Kindern: Eltern). Details in `posts/CAPTIONS.md`.
