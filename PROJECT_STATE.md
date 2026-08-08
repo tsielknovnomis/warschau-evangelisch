@@ -1,9 +1,9 @@
 # PROJECT_STATE — warschau-evangelisch
 
-**Status (23.07.2026):** ✅ **Website + Backend fertig und live auf der Preview.** Alle Vorstands-Feedbackrunden eingearbeitet. Code liegt im privaten Gemeinde-Repo **github.com/tsielknovnomis/warschau-evangelisch**. Es fehlt nur noch der **Hosting-/Domain-/Mail-Umzug = Go-Live** (Deadline 15.08., kompletter Plan in OPEN_ITEMS.md Punkt 11).
+**Status (30.07.2026):** 🎉 **LIVE auf https://warschau-evangelisch.de!** Go-Live komplett: Domain bei INWX, DNS von Simon gesetzt, Website auf Simons Netlify-Site (Auto-Deploy aus github.com/tsielknovnomis/warschau-evangelisch — jeder Push auf `main` geht live), Mail via ImprovMX. Vollständig verifiziert (SSL, Redirects, Canonicals, MX/SPF, Admin-Schutz). Alte Preview-Site leitet per 301 auf die echte Domain um.
 
-- Preview: https://warschau-evangelisch-relaunch.netlify.app · Admin: `/admin` (Team-Passwort)
-- Produktions-Domain warschau-evangelisch.de zeigt noch auf die alte WordPress-Seite
+- Live: https://warschau-evangelisch.de · Admin: `/admin` (Team-Passwort)
+- Restarbeiten: Mail-Praxistest + „Senden als" + DKIM; alte Postfächer sichern (vor 08.08.!); echte Termine/News eintragen
 
 ## In Progress
 - **Hosting-Umzug** (OPEN_ITEMS Punkt 11): Simon erledigt Phase 1 (Netlify-Site aus Repo, Domain-Auth-Code, Mail-Sicherung, Zoho-Konto) — Anleitung liegt bei Moritz in `~/Downloads/Anleitung-Simon_Netlify-Domain-Mail.docx`. Danach Moritz: Domain-Transfer (INWX o. a.), DNS, Zoho-Postfächer (vorstand@/info@/pfarrer@), Go-Live.

@@ -5,9 +5,8 @@
 > Zuletzt aktualisiert: **17.07.2026**.
 
 **Projekt-Kontext in 5 Zeilen:**
-- Neue Website (Next.js 16 + Netlify Blobs, 0 €/Monat) ist **fertig** und läuft als Preview auf https://warschau-evangelisch-relaunch.netlify.app
-- Produktions-Domain **warschau-evangelisch.de** zeigt noch auf die **alte WordPress-Seite** beim alten polnischen Hoster (Ablösung = Punkt 11).
-- Admin-Panel: https://warschau-evangelisch-relaunch.netlify.app/admin (Team-Passwort; hat Moritz).
+- **🎉 LIVE seit 30.07.2026:** https://warschau-evangelisch.de läuft auf der neuen Website (Simons Netlify-Site `warschau-evangelisch`, Auto-Deploy aus GitHub; DNS bei INWX; Mail via ImprovMX). Alte Preview leitet auf die echte Domain um.
+- Admin-Panel: https://warschau-evangelisch.de/admin (Team-Passwort; haben Moritz + Simon).
 - Ansprechpartner Gemeinde: **Simon von Kleist** (Vorstand, schreibt von vorstand@warschau-evangelisch.de); weitere Vorstände: Jürgen Wandel, Jens Boysen. Gemeinde-Gmail: **degwaw@gmail.com**.
 - Code-Repo: lokal bei Moritz (`~/AI/Tools/warschau-evangelisch/`), noch **nicht** auf GitHub (kommt mit Punkt 11).
 
@@ -24,7 +23,7 @@
 | 9 | **Flickr-Fotos** (2× Dez. 2025) | Nicht verwendet (keine Lizenz geklärt). | Nur falls gewünscht: Lizenz klären, dann einbinden. | 🟩 entschieden (raus) |
 | 10 | **Anrede Du vs. Sie** | **Vorstand hat entschieden: Du** (Notizen-Dokument, 23.07.). Website ist bereits durchgehend per Du. | — | 🟩 entschieden (Du) |
 | 12 | **Google Business Profile + Search Console** (nach Go-Live) | Technisches SEO ist fertig (Church-Schema mit Adresse/Geo, Titles mit Suchbegriffen, Sitemap, Canonicals). Der **größte Hebel für lokale Suchen** („Kirche Warschau", „Gemeinde Warschau") ist aber ein **Google-Unternehmensprofil** (business.google.com): Kategorie „Evangelische Kirche", Adresse ul. Miodowa 21, Gottesdienstzeiten, Website-Link, Fotos. | Nach Go-Live: Vorstand legt Profil an (Login degwaw@gmail.com); Google verifiziert per Postkarte/Telefon an die Adresse. Zusätzlich Moritz: Search Console einrichten + Sitemap einreichen. | 🟨 nach Go-Live |
-| 11 | **Hosting-/Domain-/Mail-Umzug** | Kompletter Plan unten — **das ist zugleich der Go-Live**. | Siehe Phasen unten. Nächster Schritt: Simon liefert Domain-Ablaufdatum + Auth-Code. | 🟥 offen — **Mail + Website-DNS müssen VOR dem 08.08. stehen** (Hosting-Ende); Domain-Transfer etwas entspannter |
+| 11 | **Hosting-/Domain-/Mail-Umzug** | **🟩 GO-LIVE ERFOLGT (30.07.2026).** Simon hat alles gesetzt: INWX-Transfer, DNS (A→Netlify, www-CNAME, MX→ImprovMX, SPF), Netlify-Site aus GitHub-Repo. Von Moritz vollständig verifiziert: SSL ✓, alle Alt-URL-Redirects ✓, Canonicals/Sitemap auf echter Domain ✓, Admin geschützt ✓, Auto-Deploy ✓, alte Preview leitet um ✓. | Restarbeiten: (a) Moritz/Simon: Test-Mails an alle 3 Adressen real prüfen; (b) „Senden als" in Gmail einrichten (SMTP smtp.improvmx.com:587); (c) DKIM-TXT aus ImprovMX-Dashboard bei INWX eintragen; (d) VOR 08.08.: alte Postfächer sichern! | 🟩 live — kleine Restarbeiten |
 
 ---
 
