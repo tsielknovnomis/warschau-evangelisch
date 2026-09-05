@@ -6,7 +6,11 @@
 - Restarbeiten: Mail-Praxistest + „Senden als" + DKIM; alte Postfächer sichern (vor 08.08.!); echte Termine/News eintragen
 
 ## In Progress
+- **Termine/Aktuelles auf der Live-Seite** (Netlify Blobs, nur via `/admin`): Simon hat das Admin-Passwort gesetzt und trägt die neuen Termine selbst ein (13.09. Gottesdienst, 27.09. Ausfall/Einladung Święta Trójca, 11.10. mit Jürgen Wandel; 2 Aktuelles-Kacheln löschen, Konfirmanden-Beitrag neu). Moritz hat ihm die Checkliste geschickt.
 - **Mail-Restarbeiten** (OPEN_ITEMS Punkt 11): realer Zustelltest an vorstand@/info@/pfarrer@, „Senden als" in Gmail (SMTP smtp.improvmx.com:587), DKIM-TXT aus dem ImprovMX-Dashboard bei INWX eintragen.
+
+## Governance-Risiko (offen)
+- **Alle technischen Zugänge hängen an Simons Privat-Accounts** (Netlify-Site inkl. ADMIN_PASSWORD + Blobs-Daten, GitHub-Repo tsielknovnomis/warschau-evangelisch, Domain bei INWX, ImprovMX) — Simon ist nicht mehr im Vorstand. Übergabe an einen Gemeinde-Account planen.
 
 ## Next Up
 - ⚠️ **Vor dem 08.08.:** alte Postfächer sichern (Simon — Hosting-Ende!)
