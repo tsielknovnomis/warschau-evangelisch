@@ -64,8 +64,9 @@ const optionen = [
     ),
     body: (
       <>
-        In der Innenstadt sind Parkplätze begrenzt und kostenpflichtig. Mit dem
-        Routenplaner kommst du direkt ans Ziel:{" "}
+        In der Innenstadt sind Parkplätze am Wochenende gratis. Außerdem gibt es
+        Parkmöglichkeiten direkt vor dem Gemeinderaum, Zufahrt über die ul.
+        Schillera. Mit dem Routenplaner findest du direkt ans Ziel:{" "}
         <a
           href={mapsHref}
           target="_blank"

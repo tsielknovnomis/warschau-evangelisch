@@ -39,8 +39,8 @@ export const siteConfig: SiteConfig = {
   },
 
   people: {
-    // TODO(verify): is Dr. Grzegorz Olek still the acting pastor in 2026?
-    pastor: { name: 'Dr. Grzegorz Olek', title: 'Pfarrer', verify: true },
+    // Confirmed by the board (Sep 2026)
+    pastor: { name: 'Adam Bujok', title: 'Pfarrer', verify: false },
     board: ['Jürgen Wandel', 'Jens Boysen', 'Simon von Kleist'],
   },
 

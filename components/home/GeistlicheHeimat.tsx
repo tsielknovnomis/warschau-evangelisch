@@ -10,11 +10,11 @@ const themen = [
   },
   {
     title: "Gemeinschaft erleben",
-    text: "Nach dem Gottesdienst gibt es Gelegenheit für weiteren Austausch bei Kaffee und Kuchen. Dazu kommen Hauskreise und Konfirmandenunterricht im Zweijahreszyklus — viele Gelegenheiten, einander näher kennenzulernen.",
+    text: "Nach dem Gottesdienst gibt es Gelegenheit für weiteren Austausch bei Kaffee und Kuchen. Dazu kommen Hauskreise und Konfirmandenunterricht bei Bedarf — viele Gelegenheiten, einander näher kennenzulernen.",
   },
   {
-    title: "Gelebtes Kirchenjahr",
-    text: "Krippenspiel am Heiligabend, Ausschnitte aus dem Weihnachtsoratorium, ein Gemeindeausflug oder der Besuch eines Gastpredigers. Taufe, Trauung oder Trauer — wir begleiten dich in den großen Momenten des Lebens.",
+    title: "Besondere Momente",
+    text: "Festliche Weihnachtsgottesdienste, Gastmusiker und Gastprediger sowie gelegentliche Ausflüge. Taufe, Trauung oder Trauer — wir begleiten dich an den Wendepunkten des Lebens.",
   },
 ];
 

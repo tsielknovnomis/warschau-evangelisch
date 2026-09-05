@@ -25,7 +25,7 @@ Der Verein wird durch seinen Vorstand vertreten:
 - Jens Boysen
 - Simon von Kleist
 
-Pfarrer: Dr. Grzegorz Olek
+Pfarrer: Adam Bujok
 
 ## Registereintrag
 

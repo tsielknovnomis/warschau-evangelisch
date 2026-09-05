@@ -28,9 +28,9 @@ export function GeschichteTeaser() {
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ink/85">
                 Schon in den 1980er Jahren gab es deutschsprachige evangelische
-                Seelsorge in Warschau. 2011 wurde die Gemeinde neu gegründet, seit 2015
-                sind wir ein eingetragener Verein — getragen von Menschen, die hier,
-                fern der alten Heimat, eine geistliche Heimat gefunden haben.
+                Gottesdienste in Warschau. 2011 wurde die Gemeinde neu gegründet, seit
+                2015 sind wir ein eingetragener Verein — getragen von Menschen, die
+                hier in Polen eine geistliche Heimat gefunden haben.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-muted">
                 Wir arbeiten eng mit der Evangelisch-Augsburgischen Kirche in Polen und

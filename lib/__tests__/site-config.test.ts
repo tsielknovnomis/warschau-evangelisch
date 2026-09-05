@@ -22,9 +22,9 @@ describe('siteConfig', () => {
     expect(siteConfig.contact.phone).toBeNull()
   })
 
-  it('marks the pastor as to-be-verified and lists the confirmed board', () => {
-    expect(siteConfig.people.pastor.name).toBe('Dr. Grzegorz Olek')
-    expect(siteConfig.people.pastor.verify).toBe(true)
+  it('lists the confirmed pastor and board', () => {
+    expect(siteConfig.people.pastor.name).toBe('Adam Bujok')
+    expect(siteConfig.people.pastor.verify).toBe(false)
     expect(siteConfig.people.board).toEqual([
       'Jürgen Wandel',
       'Jens Boysen',
