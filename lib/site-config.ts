@@ -45,8 +45,9 @@ export const siteConfig: SiteConfig = {
   },
 
   service: {
+    // Wording per board correction (Simon, 06.09.2026)
     rhythm:
-      'Im Jahresverlauf alle zwei Wochen, im Advent jeden Sonntag. Während der Sommerferien finden keine Gottesdienste statt.',
+      'Jeden 2. und 4. Sonntag im Monat. Während der Sommerferien finden keine Gottesdienste statt.',
     time: '09:30 Uhr',
     summerBreak:
       'Während der Sommerferien pausieren die Gottesdienste — auf Anfrage feiern wir aber auch außer der Reihe.',

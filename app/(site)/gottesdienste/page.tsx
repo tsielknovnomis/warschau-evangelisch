@@ -25,7 +25,7 @@ export default async function Page() {
       <PageHeader
         title="Termine & Aktuelles"
         eyebrow="Was bei uns ansteht"
-        lead={`Wir feiern in der Regel in der ${siteConfig.address.street}, 2. Stock (Synodalsaal). ${siteConfig.service.rhythm}`}
+        lead={`Wir feiern in der Regel jeden 2. und 4. Sonntag im Monat Gottesdienst in der ${siteConfig.address.street}, 2. Stock (Synodalsaal). Während der Sommerferien finden keine Gottesdienste statt.`}
       />
 
       {/* Scripture that carries this page (from the legacy site) */}
