@@ -2,17 +2,21 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ChurchEvent } from "@/lib/types";
-import { autoBarParts } from "@/lib/announcement";
+import { barParts, effectiveAnnouncement, serviceStatus } from "@/lib/service-status";
+import { useNow } from "@/lib/use-now";
 
 export function NextServiceBar({
-  event,
-  onBreak,
+  events,
+  serverNow,
   announcement = null,
+  announcementUntil = null,
   barHidden = false,
 }: {
-  event: ChurchEvent | null;
-  onBreak: boolean;
+  /** Upcoming events (incl. cancelled) — re-filtered with the browser clock. */
+  events: ChurchEvent[];
+  serverNow: number;
   announcement?: string | null;
+  announcementUntil?: string | null;
   barHidden?: boolean;
 }) {
   const [dismissed, setDismissed] = useState(false);
@@ -20,7 +24,10 @@ export function NextServiceBar({
   const wrapRef = useRef<HTMLDivElement>(null);
   const measureRef = useRef<HTMLSpanElement>(null);
 
-  const hasContent = !barHidden && (Boolean(announcement) || Boolean(event));
+  const now = useNow(serverNow);
+  const custom = effectiveAnnouncement({ announcement, announcementUntil }, now);
+  const auto = barParts(serviceStatus(events, now));
+  const hasContent = !barHidden;
 
   useEffect(() => {
     if (!hasContent) return;
@@ -34,23 +41,34 @@ export function NextServiceBar({
     const ro = new ResizeObserver(check);
     if (wrapRef.current) ro.observe(wrapRef.current);
     return () => ro.disconnect();
-  }, [hasContent, announcement, event, dismissed]);
+  }, [hasContent, custom, auto.text, dismissed]);
 
   if (!hasContent || dismissed) return null;
 
-  const auto = autoBarParts(event, onBreak);
+  const autoText = auto.href ? (
+    <a
+      href={auto.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-medium text-bg/90 underline decoration-gold/50 underline-offset-2 hover:text-bg"
+    >
+      {auto.text}
+    </a>
+  ) : (
+    <span className="font-medium text-bg/90">{auto.text}</span>
+  );
 
-  const content = announcement ? (
-    <span className="font-medium text-bg/90">{announcement}</span>
-  ) : auto ? (
+  const content = custom ? (
+    <span className="font-medium text-bg/90">{custom}</span>
+  ) : (
     <>
       <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
         {auto.label}
       </span>
       <span aria-hidden className="mx-2 text-gold/50">·</span>
-      <span className="font-medium text-bg/90">{auto.text}</span>
+      {autoText}
     </>
-  ) : null;
+  );
 
   return (
     <div className="border-b border-white/10 bg-aubergine-deep">

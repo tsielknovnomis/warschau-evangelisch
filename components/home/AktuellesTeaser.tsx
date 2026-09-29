@@ -2,10 +2,12 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { getNews } from "@/lib/data/news";
+import { splitNews } from "@/lib/news-visibility";
+import { currentTime } from "@/lib/clock";
 import { formatShortDate } from "@/lib/format";
 
 export async function AktuellesTeaser() {
-  const news = (await getNews()).slice(0, 3);
+  const news = splitNews(await getNews(), currentTime()).current.slice(0, 3);
   if (news.length === 0) return null;
 
   return (

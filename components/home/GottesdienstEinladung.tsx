@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
-import { getNextEvent } from "@/lib/data/events";
+import { NextServiceCard } from "@/components/home/NextServiceCard";
+import { getAllEvents } from "@/lib/data/events";
+import { relevantEvents } from "@/lib/service-status";
 import { siteConfig } from "@/lib/site-config";
-import { formatDate, formatTime } from "@/lib/format";
+import { currentTime } from "@/lib/clock";
 
 export async function GottesdienstEinladung() {
-  const next = await getNextEvent();
+  const events = await getAllEvents();
+  const now = currentTime();
   return (
     <section className="border-t border-line bg-parchment-deep py-20 lg:py-24">
       <Container>
@@ -18,9 +21,9 @@ export async function GottesdienstEinladung() {
               Du bist herzlich eingeladen
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-ink/85">
-              Wir feiern alle zwei Wochen sonntags um {siteConfig.service.time} — im
-              Advent jeden Sonntag — im Lutherischen Zentrum in der{" "}
-              {siteConfig.address.street}, meist mit Heiligem Abendmahl.
+              Wir feiern jeden 2. und 4. Sonntag im Monat um {siteConfig.service.time} im
+              Lutherischen Zentrum in der {siteConfig.address.street}, meist mit
+              Heiligem Abendmahl.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted">
               Komm einfach vorbei, so wie du bist. Es gibt nichts vorzubereiten — und
@@ -38,27 +41,7 @@ export async function GottesdienstEinladung() {
 
           {/* Next service card — quiet, informative */}
           <Reveal delay={0.1} className="rounded-[4px] border border-line bg-surface">
-            <div className="border-l-[3px] border-gold p-7 sm:p-9">
-              <p className="font-body text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
-                {next ? "Der nächste Gottesdienst" : "Gottesdienste"}
-              </p>
-              {next ? (
-                <>
-                  <p className="mt-3 font-display text-2xl leading-snug text-aubergine">
-                    {formatDate(next.startsAt)}
-                  </p>
-                  <p className="mt-1 text-lg text-ink/80">
-                    {formatTime(next.startsAt)} · {siteConfig.address.street}
-                  </p>
-                  <p className="mt-3 text-muted">{next.title}</p>
-                </>
-              ) : (
-                <p className="mt-3 leading-relaxed text-muted">
-                  Gerade ist Sommerpause. Die nächsten Termine kündigen wir hier und in
-                  unserer WhatsApp-Gruppe an — schreib uns gern jederzeit.
-                </p>
-              )}
-            </div>
+            <NextServiceCard events={relevantEvents(events, now).slice(0, 8)} serverNow={now} />
           </Reveal>
         </div>
       </Container>

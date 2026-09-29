@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/content/PageHeader";
-import { EventCard } from "@/components/events/EventCard";
+import { UpcomingEventList } from "@/components/events/UpcomingEventList";
 import { Card } from "@/components/ui/Card";
 import { ShowMore } from "@/components/ui/ShowMore";
-import { getUpcomingEvents } from "@/lib/data/events";
+import { getAllEvents } from "@/lib/data/events";
 import { getNews } from "@/lib/data/news";
+import { relevantEvents } from "@/lib/service-status";
+import { isPinActive, splitNews } from "@/lib/news-visibility";
+import { currentTime } from "@/lib/clock";
 import { siteConfig } from "@/lib/site-config";
 import { formatShortDate } from "@/lib/format";
 import { bibleserverUrl } from "@/lib/bible";
@@ -18,7 +21,11 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const [events, news] = await Promise.all([getUpcomingEvents(), getNews()]);
+  const [allEvents, allNews] = await Promise.all([getAllEvents(), getNews()]);
+  const now = currentTime();
+  const events = relevantEvents(allEvents, now);
+  const { current, expired } = splitNews(allNews, now);
+  const news = [...current, ...expired];
 
   return (
     <>
@@ -54,21 +61,7 @@ export default async function Page() {
           <div>
             <h2 className="font-display text-2xl font-medium text-aubergine">Kommende Gottesdienste</h2>
             <div className="mt-5 space-y-4">
-              {events.length > 0 ? (
-                <ShowMore
-                  initialCount={3}
-                  moreLabel="Alle Termine anzeigen ({n} weitere)"
-                >
-                  {events.map((e, i) => (
-                    <EventCard key={e.id} event={e} highlight={i === 0} />
-                  ))}
-                </ShowMore>
-              ) : (
-                <p className="text-muted">
-                  Zurzeit ist Sommerpause. Die nächsten Termine kündigen wir hier an — schreib uns
-                  gern jederzeit.
-                </p>
-              )}
+              <UpcomingEventList events={events} serverNow={now} />
             </div>
           </div>
 
@@ -129,9 +122,12 @@ export default async function Page() {
         <Container>
           <h2 className="font-display text-2xl font-medium text-aubergine">Aktuelles aus der Gemeinde</h2>
           <div className="mt-6 space-y-4">
-            {news.length > 0 ? (
+            {current.length === 0 && (
+              <p className="text-muted">Zurzeit gibt es keine neuen Beiträge.</p>
+            )}
+            {news.length > 0 && (
               <ShowMore
-                initialCount={3}
+                initialCount={Math.min(3, current.length)}
                 moreLabel="Ältere Beiträge anzeigen ({n} weitere)"
               >
                 {news.map((n) => (
@@ -142,7 +138,7 @@ export default async function Page() {
                   >
                     <p className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-gold-deep">
                       {formatShortDate(n.publishedAt)}
-                      {n.pinned && <span className="ml-2 text-aubergine">· angepinnt</span>}
+                      {isPinActive(n, now) && <span className="ml-2 text-aubergine">· angepinnt</span>}
                     </p>
                     <h3 className="mt-1.5 font-display text-xl text-aubergine">{n.title}</h3>
                     <p className="mt-2 text-muted">{n.excerpt}</p>
@@ -152,8 +148,6 @@ export default async function Page() {
                   </Link>
                 ))}
               </ShowMore>
-            ) : (
-              <p className="text-muted">Zurzeit gibt es keine Neuigkeiten.</p>
             )}
           </div>
         </Container>

@@ -5,24 +5,29 @@ import { ConsentProvider } from "@/components/consent/ConsentProvider";
 import { CookieBanner } from "@/components/consent/CookieBanner";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { ChurchJsonLd } from "@/components/seo/ChurchJsonLd";
-import { getNextEvent } from "@/lib/data/events";
+import { getAllEvents } from "@/lib/data/events";
 import { getSettings } from "@/lib/data/settings";
-import { isOnBreak } from "@/lib/announcement";
+import { relevantEvents } from "@/lib/service-status";
+import { currentTime } from "@/lib/clock";
+
+// Public pages are static but regenerate at most hourly (ISR), so anything
+// derived from "now" can never freeze. Time-critical UI additionally
+// re-checks with the visitor's clock (see lib/use-now.ts).
+export const revalidate = 3600;
 
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
-  const [nextEvent, settings] = await Promise.all([getNextEvent(), getSettings()]);
-  // Computed on the server so the client never calls Date.now() during render
-  // (avoids a hydration mismatch). Frozen at build/revalidate time.
-  const onBreak = isOnBreak(nextEvent);
+  const [events, settings] = await Promise.all([getAllEvents(), getSettings()]);
+  const serverNow = currentTime();
 
   return (
     <SmoothScroll>
       <ChurchJsonLd />
       <ConsentProvider>
         <NextServiceBar
-          event={nextEvent}
-          onBreak={onBreak}
+          events={relevantEvents(events, serverNow).slice(0, 8)}
+          serverNow={serverNow}
           announcement={settings.announcement}
+          announcementUntil={settings.announcementUntil}
           barHidden={settings.barHidden}
         />
         <Header />
