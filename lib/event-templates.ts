@@ -29,6 +29,8 @@ export type EventTemplate = {
   startsAt: () => string;
   description: string;
   isSpecial: boolean;
+  cancelled?: boolean;
+  cancelNote?: string;
 };
 
 export const EVENT_TEMPLATES: EventTemplate[] = [
@@ -55,6 +57,17 @@ export const EVENT_TEMPLATES: EventTemplate[] = [
     startsAt: () => nextSunday(9, 30),
     description: "Familiengottesdienst — Kinder sind besonders willkommen.",
     isSpecial: true,
+  },
+  {
+    key: "ausfall",
+    label: "Ausfall (Gottesdienst entfällt)",
+    title: "Gottesdienst entfällt",
+    startsAt: () => nextSunday(9, 30),
+    description: "",
+    isSpecial: false,
+    cancelled: true,
+    cancelNote:
+      "Wir laden herzlich ein, den polnischen Gottesdienst in der Dreifaltigkeitskirche (Kościół Świętej Trójcy, pl. Małachowskiego) mitzufeiern.",
   },
   {
     key: "christvesper",

@@ -10,8 +10,10 @@ import type { FormState } from "@/lib/actions/events";
 export async function updateSettings(_prev: FormState, formData: FormData): Promise<FormState> {
   if (!(await isAdmin())) return { error: "Nicht angemeldet — bitte lade die Seite neu und melde dich an." };
 
+  const until = String(formData.get("announcement_until") ?? "").trim();
   const settings: SiteSettings = {
     announcement: String(formData.get("announcement") ?? "").trim() || null,
+    announcementUntil: /^\d{4}-\d{2}-\d{2}$/.test(until) ? until : null,
     barHidden: formData.get("bar_hidden") === "on",
   };
   await writeDoc("settings", settings);

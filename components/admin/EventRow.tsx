@@ -31,7 +31,11 @@ export function EventRow({ event, isNext = false }: { event: ChurchEvent; isNext
 
       {/* title + meta */}
       <div className="min-w-0 flex-1">
-        <p className="truncate font-display text-lg leading-snug text-aubergine">
+        <p
+          className={`truncate font-display text-lg leading-snug ${
+            event.cancelled ? "text-muted line-through decoration-1" : "text-aubergine"
+          }`}
+        >
           {event.title}
         </p>
         <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
@@ -39,6 +43,11 @@ export function EventRow({ event, isNext = false }: { event: ChurchEvent; isNext
           {isNext && (
             <span className="rounded-full bg-aubergine px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-bg">
               Als Nächstes
+            </span>
+          )}
+          {event.cancelled && (
+            <span className="rounded-full bg-red-50 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-red-800">
+              Fällt aus
             </span>
           )}
           {event.isSpecial && (

@@ -18,7 +18,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       <div className="mt-6">
         <EventForm event={event} action={updateEvent.bind(null, id)} />
       </div>
-      <InviteText event={event} />
+      {!event.cancelled && <InviteText event={event} />}
     </div>
   );
 }

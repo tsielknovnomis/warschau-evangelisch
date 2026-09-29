@@ -19,6 +19,7 @@ const NewsSchema = z.object({
   body: z.string().trim().min(1, "Inhalt fehlt"),
   pinned: z.boolean(),
   published_at: z.string().min(1, "Datum fehlt"),
+  show_until: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "„Anzeigen bis“: Datum ungültig").nullable(),
 });
 
 const KEY = "news";
@@ -32,6 +33,7 @@ function parse(formData: FormData) {
     body: String(formData.get("body") ?? ""),
     pinned: formData.get("pinned") === "on",
     published_at: String(formData.get("published_at") ?? ""),
+    show_until: String(formData.get("show_until") ?? "").trim() || null,
   });
 }
 
@@ -59,6 +61,7 @@ export async function createNews(_prev: FormState, formData: FormData): Promise<
     coverImage: null,
     pinned: v.pinned,
     publishedAt: warsawLocalToIso(v.published_at),
+    showUntil: v.show_until,
   });
   await writeDoc(KEY, news);
   revalidateNews(v.slug);
@@ -85,6 +88,7 @@ export async function updateNews(id: string, oldSlug: string, _prev: FormState, 
     excerpt: v.excerpt,
     pinned: v.pinned,
     publishedAt: warsawLocalToIso(v.published_at),
+    showUntil: v.show_until,
   };
   await writeDoc(KEY, news);
   revalidateNews(v.slug);

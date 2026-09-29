@@ -14,6 +14,8 @@ const EventSchema = z.object({
   location: z.string().trim().min(1, "Ort fehlt"),
   description: z.string().nullable(),
   is_special: z.boolean(),
+  cancelled: z.boolean(),
+  cancel_note: z.string().nullable(),
 });
 // Note: `language`, `endsAt` and `withCommunion` are intentionally not part
 // of the form (always German; no end time; every service includes communion).
@@ -31,6 +33,8 @@ function parse(formData: FormData) {
     location: String(formData.get("location") ?? ""),
     description: (String(formData.get("description") ?? "").trim() || null),
     is_special: formData.get("is_special") === "on",
+    cancelled: formData.get("cancelled") === "on",
+    cancel_note: String(formData.get("cancel_note") ?? "").trim() || null,
   });
 }
 
@@ -56,6 +60,8 @@ export async function createEvent(_prev: FormState, formData: FormData): Promise
     isSpecial: v.is_special,
     withCommunion: false,
     language: "de",
+    cancelled: v.cancelled,
+    cancelNote: v.cancelled ? v.cancel_note : null,
   });
   await writeDoc(KEY, events);
   revalidateEvents();
@@ -78,6 +84,8 @@ export async function updateEvent(id: string, _prev: FormState, formData: FormDa
     location: v.location,
     description: v.description,
     isSpecial: v.is_special,
+    cancelled: v.cancelled,
+    cancelNote: v.cancelled ? v.cancel_note : null,
   };
   await writeDoc(KEY, events);
   revalidateEvents();

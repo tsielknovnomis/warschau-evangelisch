@@ -1,8 +1,11 @@
 import Link from "next/link";
-import { getAllEvents, getNextEvent } from "@/lib/data/events";
+import { getAllEvents } from "@/lib/data/events";
 import { getNews } from "@/lib/data/news";
 import { getSettings } from "@/lib/data/settings";
-import { autoBarParts, isOnBreak } from "@/lib/announcement";
+import { barParts, relevantEvents, serviceStatus } from "@/lib/service-status";
+import { adminWarnings } from "@/lib/admin-warnings";
+import { warsawDay } from "@/lib/datetime";
+import { currentTime } from "@/lib/clock";
 import { TabBar, type AdminTab } from "@/components/admin/TabBar";
 import { EventRow } from "@/components/admin/EventRow";
 import { NewsRow } from "@/components/admin/NewsRow";
@@ -71,23 +74,21 @@ export default async function AdminHome({
   const tab: AdminTab = params.tab === "aktuelles" || params.tab === "leiste" ? params.tab : "termine";
   const q = (params.q ?? "").trim().toLowerCase();
 
-  const [events, news, settings, nextEvent] = await Promise.all([
-    getAllEvents(),
-    getNews(),
-    getSettings(),
-    getNextEvent(),
-  ]);
+  const [events, news, settings] = await Promise.all([getAllEvents(), getNews(), getSettings()]);
 
   // Dynamic route — rendered per request, so "now" is genuinely fresh here.
-  // eslint-disable-next-line react-hooks/purity
-  const now = Date.now();
-  const upcomingAll = events.filter((e) => new Date(e.startsAt).getTime() >= now);
-  const nextId = upcomingAll[0]?.id;
+  const now = currentTime();
+  const status = serviceStatus(events, now);
+  const nextEvent = status.kind === "next" ? status.next : null;
+  const nextId = nextEvent?.id;
+  const warnings = adminWarnings({ events, news, settings, now });
+  const upcomingAll = relevantEvents(events, now);
+  const upcomingIds = new Set(upcomingAll.map((e) => e.id));
 
   const matchEvent = (e: ChurchEvent) => !q || e.title.toLowerCase().includes(q);
   const upcoming = upcomingAll.filter(matchEvent);
   const past = events
-    .filter((e) => new Date(e.startsAt).getTime() < now)
+    .filter((e) => !upcomingIds.has(e.id))
     .filter(matchEvent)
     .reverse();
   const filteredNews = news.filter(
@@ -115,6 +116,18 @@ export default async function AdminHome({
           Zur Website <span aria-hidden>↗</span>
         </a>
       </div>
+
+      {/* Staleness warnings — catch outdated content before visitors do */}
+      {warnings.length > 0 && (
+        <div className="rounded-[8px] border border-amber-300 bg-amber-50 px-5 py-4">
+          <p className="font-semibold text-amber-900">Bitte kurz prüfen</p>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-amber-900">
+            {warnings.map((w) => (
+              <li key={w}>{w}</li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Tabs */}
       <TabBar active={tab} counts={{ termine: upcomingAll.length, aktuelles: news.length }} />
@@ -193,12 +206,13 @@ export default async function AdminHome({
           ) : (
             <div className="divide-y divide-line overflow-hidden rounded-[8px] border border-line bg-surface shadow-sm">
               {filteredNews.map((n) => (
-                <NewsRow key={n.id} item={n} />
+                <NewsRow key={n.id} item={n} now={now} />
               ))}
             </div>
           )}
           <p className="text-xs text-muted">
-            Die drei neuesten Beiträge erscheinen auch auf der Startseite. Angepinnte stehen immer oben.
+            Die drei neuesten Beiträge erscheinen auch auf der Startseite. Angepinnte stehen oben —
+            ohne „Anzeigen bis“-Datum höchstens 30 Tage.
           </p>
         </div>
       )}
@@ -208,9 +222,9 @@ export default async function AdminHome({
         <div className="rounded-[8px] border border-line bg-surface p-5 shadow-sm sm:p-6">
           <p className="mb-5 text-sm text-muted">
             Die schmale Leiste ganz oben auf der Website. Ohne eigenen Text zeigt sie automatisch den
-            nächsten Gottesdienst an.
+            nächsten Gottesdienst an — inklusive Hinweis, wenn ein Gottesdienst ausfällt.
           </p>
-          <SettingsForm settings={settings} autoParts={autoBarParts(nextEvent, isOnBreak(nextEvent))} />
+          <SettingsForm settings={settings} autoParts={barParts(status)} today={warsawDay(now)} />
         </div>
       )}
     </div>

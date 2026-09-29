@@ -36,6 +36,8 @@ export function EventForm({
   const [location, setLocation] = useState(event?.location ?? DEFAULT_LOCATION);
   const [description, setDescription] = useState(event?.description ?? start?.description ?? "");
   const [isSpecial, setIsSpecial] = useState(event?.isSpecial ?? start?.isSpecial ?? false);
+  const [cancelled, setCancelled] = useState(event?.cancelled ?? start?.cancelled ?? false);
+  const [cancelNote, setCancelNote] = useState(event?.cancelNote ?? start?.cancelNote ?? "");
 
   function applyTemplate(t: EventTemplate) {
     setTemplateKey(t.key);
@@ -44,6 +46,8 @@ export function EventForm({
     setLocation(DEFAULT_LOCATION);
     setDescription(t.description);
     setIsSpecial(t.isSpecial);
+    setCancelled(t.cancelled ?? false);
+    setCancelNote(t.cancelNote ?? "");
   }
 
   return (
@@ -122,6 +126,34 @@ export function EventForm({
           />{" "}
           Besonderer Gottesdienst
         </label>
+        <div className="rounded-[4px] border border-line bg-parchment-deep/60 p-3">
+          <label className="flex items-center gap-2 text-sm font-semibold text-ink">
+            <input
+              type="checkbox"
+              name="cancelled"
+              checked={cancelled}
+              onChange={(e) => setCancelled(e.target.checked)}
+            />{" "}
+            Fällt aus
+          </label>
+          <span className="mt-1 block text-xs text-muted">
+            Der Termin bleibt sichtbar, wird aber durchgestrichen mit „Entfällt“ angezeigt.
+            Leiste und Startseite weisen darauf hin und nennen den nächsten Gottesdienst.
+          </span>
+          {cancelled && (
+            <label className="mt-3 block">
+              <span className={lbl}>Hinweis zum Ausfall (optional)</span>
+              <textarea
+                name="cancel_note"
+                rows={2}
+                value={cancelNote}
+                onChange={(e) => setCancelNote(e.target.value)}
+                placeholder="z. B. Einladung zum polnischen Gottesdienst in Święta Trójca"
+                className={inp}
+              />
+            </label>
+          )}
+        </div>
         {state.error && <p className="text-sm text-red-700">{state.error}</p>}
         <button
           type="submit"

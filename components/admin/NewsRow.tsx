@@ -3,18 +3,22 @@ import type { NewsItem } from "@/lib/types";
 import { deleteNews } from "@/lib/actions/news";
 import { DeleteButton } from "@/components/admin/DeleteButton";
 import { formatShortDate } from "@/lib/format";
+import { isNewsExpired, isPinActive } from "@/lib/news-visibility";
+
+const badge = "rounded-full px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide";
 
 /** One news item in the dashboard list. */
-export function NewsRow({ item }: { item: NewsItem }) {
+export function NewsRow({ item, now }: { item: NewsItem; now: number }) {
+  const expired = isNewsExpired(item, now);
   return (
     <div className="flex items-center gap-4 px-4 py-3 sm:px-5">
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
           <p className="truncate font-display text-lg leading-snug text-aubergine">{item.title}</p>
-          {item.pinned && (
-            <span className="rounded-full bg-gold-tint px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-gold-deep">
-              📌 Angepinnt
-            </span>
+          {expired && <span className={`${badge} bg-parchment-deep text-muted`}>Abgelaufen</span>}
+          {isPinActive(item, now) && <span className={`${badge} bg-gold-tint text-gold-deep`}>📌 Angepinnt</span>}
+          {item.pinned && !expired && !isPinActive(item, now) && (
+            <span className={`${badge} bg-parchment-deep text-muted`}>📌 Anpinnung beendet</span>
           )}
         </div>
         <p className="mt-0.5 truncate text-sm text-muted">

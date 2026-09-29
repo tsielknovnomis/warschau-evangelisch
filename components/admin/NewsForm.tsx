@@ -68,6 +68,19 @@ export function NewsForm({
           className={inp}
         />
       </label>
+      <label className="block sm:max-w-xs">
+        <span className={lbl}>Anzeigen bis (optional)</span>
+        <input
+          name="show_until"
+          type="date"
+          defaultValue={item?.showUntil ?? ""}
+          className={inp}
+        />
+      </label>
+      <p className="-mt-2 text-xs text-muted">
+        Danach verschwindet der Beitrag von der Startseite und wandert unter „Ältere Beiträge“ —
+        ideal für Hinweise mit Datum. Angepinnte Beiträge ohne Datum bleiben höchstens 30 Tage oben.
+      </p>
       <label className="block">
         <span className={lbl}>Kurztext (Vorschau in der Liste)</span>
         <textarea name="excerpt" rows={2} defaultValue={item?.excerpt} required className={inp} />
