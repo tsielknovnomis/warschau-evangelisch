@@ -32,3 +32,20 @@ export function isoToWarsawLocal(iso: string): string {
   const hour = get("hour") === "24" ? "00" : get("hour");
   return `${get("year")}-${get("month")}-${get("day")}T${hour}:${get("minute")}`;
 }
+
+const dayFmt = new Intl.DateTimeFormat("en-CA", {
+  timeZone: TZ,
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+
+/** Warsaw calendar day of an instant, as "YYYY-MM-DD" (sortable string). */
+export function warsawDay(ms: number): string {
+  return dayFmt.format(new Date(ms));
+}
+
+/** Warsaw calendar month (1–12) of an instant. */
+export function warsawMonth(ms: number): number {
+  return Number(warsawDay(ms).slice(5, 7));
+}

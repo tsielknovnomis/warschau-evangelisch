@@ -12,6 +12,8 @@ export interface ChurchEvent {
   isSpecial: boolean // e.g. Easter, ecumenical
   withCommunion: boolean
   language: 'de' | 'pl' | 'multi'
+  cancelled?: boolean // service does not take place — shown struck through
+  cancelNote?: string | null // e.g. invitation to another service instead
 }
 
 export interface Sermon {
