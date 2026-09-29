@@ -6,7 +6,6 @@
 - Restarbeiten: Mail-Praxistest + „Senden als" + DKIM; alte Postfächer sichern (vor 08.08.!); echte Termine/News eintragen
 
 ## In Progress
-- **Branch `feat/always-current`** (29.09.) fertig + verifiziert, wartet auf Moritz' OK zum Merge in `main` (= Production-Deploy). Behebt: Seite war seit 24.09. eingefroren (Leiste/Karte zeigten am 29.09. noch den 27.09.).
 - **Simon (Admin-Passwort) muss im Panel noch:** alten „Sommerpause"-Beitrag löschen, 11.10. auf „Gottesdienst mit Jürgen Wandel" umbenennen, künftige Ausfälle per „Fällt aus" markieren.
 - **Mail-Restarbeiten** (OPEN_ITEMS Punkt 11): realer Zustelltest an vorstand@/info@/pfarrer@, „Senden als" in Gmail (SMTP smtp.improvmx.com:587), DKIM-TXT aus dem ImprovMX-Dashboard bei INWX eintragen.
 
@@ -31,7 +30,8 @@
 - **10.07.** **Supabase → Netlify Blobs** (0 €/Monat, Supabase-Projekt gelöscht); Team-Passwort-Auth (HMAC-signierte Cookies, `lib/auth.ts`); jede Mutation prüft `isAdmin()`
 - **Anfang Juli** Admin-Dashboard mit Tabs + Suche + Monatsgruppen (skaliert für viele Einträge); SSR-sichtbare Reveals (Progressive Enhancement) nach Bug-Report des Vorstands; SEO-Paket (OG-Image, Apple-Icon, Twitter-Cards, Canonicals)
 
-## Recently Done (Auszug Juli)
+## Recently Done
+- **29.09.** „Immer aktuell" live: ISR stündlich + Client-Uhr, Ausfälle, Ablaufdaten, Admin-Warnungen; Fix: „Über uns"-Dropdown verursachte horizontales Scrollen bei ~1024 px
 - Social-Media-Paket in `social/` (302 ausgearbeitete Content-Ideen als Excel, Bios, Profilbilder, Gruppenbeschreibungen)
 - Simon-Anleitung als Word-Dokument (Netlify + Domain-Alternativen-Vergleich + Mail-Setup)
 - Projekt aufgeräumt: README ergänzt, tote Exporte + deno.lock entfernt, PROJECT_STATE/OPEN_ITEMS aktualisiert
