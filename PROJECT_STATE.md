@@ -6,7 +6,8 @@
 - Restarbeiten: Mail-Praxistest + „Senden als" + DKIM; alte Postfächer sichern (vor 08.08.!); echte Termine/News eintragen
 
 ## In Progress
-- **Termine/Aktuelles auf der Live-Seite** (Netlify Blobs, nur via `/admin`): Simon hat das Admin-Passwort gesetzt und trägt die neuen Termine selbst ein (13.09. Gottesdienst, 27.09. Ausfall/Einladung Święta Trójca, 11.10. mit Jürgen Wandel; 2 Aktuelles-Kacheln löschen, Konfirmanden-Beitrag neu). Moritz hat ihm die Checkliste geschickt.
+- **Branch `feat/always-current`** (29.09.) fertig + verifiziert, wartet auf Moritz' OK zum Merge in `main` (= Production-Deploy). Behebt: Seite war seit 24.09. eingefroren (Leiste/Karte zeigten am 29.09. noch den 27.09.).
+- **Simon (Admin-Passwort) muss im Panel noch:** alten „Sommerpause"-Beitrag löschen, 11.10. auf „Gottesdienst mit Jürgen Wandel" umbenennen, künftige Ausfälle per „Fällt aus" markieren.
 - **Mail-Restarbeiten** (OPEN_ITEMS Punkt 11): realer Zustelltest an vorstand@/info@/pfarrer@, „Senden als" in Gmail (SMTP smtp.improvmx.com:587), DKIM-TXT aus dem ImprovMX-Dashboard bei INWX eintragen.
 
 ## Hinweis (kein akuter Handlungsbedarf)
@@ -22,6 +23,7 @@
 - Keine offenen technischen Bugs. Offene **Fakten** (Pfarrer, USt-IdNr., Datenschutz-Schlussprüfung) in OPEN_ITEMS Punkte 3–5.
 
 ## Recent Decisions
+- **29.09.** „Immer aktuell": ISR stündlich + Client-Uhr-Absicherung; Ausfälle sichtbar (durchgestrichen, „Entfällt"); ohne Termin neutraler Hinweis, „Sommerpause" nur Juni–August; News/Leisten-Text mit „Anzeigen bis", Anpinnen ohne Datum max. 30 Tage; Warnungen im Admin. Spec: `docs/superpowers/specs/2026-09-29-always-current-design.md`
 - **23.07.** Vorstands-Notizen (docx) komplett umgesetzt: Du-Form final; Mt 11,28 im Hero unten rechts (ohne Ortszeile, höher positioniert); alle Bibelstellen zu bibleserver.com verlinkt; Zitate rechtsbündig (Goldbalken rechts); neue Texte der „Geistliche Heimat"-Sektion inkl. „Gelebtes Kirchenjahr"; /glauben visuell aufgewertet (dunkles Zitat-Band, Weg-Stationen); scharfes Hero-Bild mit linksverankertem Crop (Kreuz stabil bei ~67–72 %)
 - **23.07.** Admin: Termin-Vorlagen als Dropdown (Liste + Formular, `?vorlage=`), Einladungstext in 4 Varianten (WhatsApp/E-Mail × Du/Sie; E-Mail nach Vorbild der echten Gemeinde-Mails)
 - **23.07.** WhatsApp-Gruppe + Instagram (@warschau.evangelisch) verlinkt; WhatsApp-QR auf Startseite + /gottesdienste
