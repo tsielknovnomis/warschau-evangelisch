@@ -37,6 +37,7 @@ export interface NewsItem {
   coverImage: string | null
   pinned: boolean // drives the AnnouncementBar
   publishedAt: string // ISO 8601
+  showUntil?: string | null // YYYY-MM-DD (Warsaw), inclusive — afterwards archived
 }
 
 export interface ArchiveEntry {
