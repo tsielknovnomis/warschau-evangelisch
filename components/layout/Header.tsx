@@ -59,7 +59,7 @@ export function Header() {
                   )}
                 </Link>
                 {item.children && (
-                  <ul className="invisible absolute left-0 top-full z-40 w-60 overflow-hidden rounded-b-[4px] border border-t-0 border-gold/40 bg-surface py-1.5 text-ink opacity-0 shadow-2xl transition-all group-hover/item:visible group-hover/item:opacity-100 group-focus-within/item:visible group-focus-within/item:opacity-100">
+                  <ul className="invisible absolute right-0 top-full z-40 w-60 overflow-hidden rounded-b-[4px] border border-t-0 border-gold/40 bg-surface py-1.5 text-ink opacity-0 shadow-2xl transition-all group-hover/item:visible group-hover/item:opacity-100 group-focus-within/item:visible group-focus-within/item:opacity-100">
                     {item.children.map((child) => (
                       <li key={child.href}>
                         <Link
