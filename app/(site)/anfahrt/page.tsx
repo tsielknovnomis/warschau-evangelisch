@@ -11,8 +11,12 @@ export const metadata: Metadata = {
     "So findest du zu unseren deutschsprachigen Gottesdiensten: ul. Miodowa 21, Warschau — mit Karte, ÖPNV, Fahrrad und Zugang zum Synodalsaal.",
 };
 
-const { address, coords } = { address: siteConfig.address, coords: siteConfig.address.coords };
-const mapsHref = `https://www.google.com/maps/dir/?api=1&destination=${coords.lat},${coords.lng}`;
+const { address } = siteConfig;
+// Route by address, not coordinates — Google snaps coordinates to the nearest
+// house number (Miodowa 22C across the street) instead of Miodowa 21.
+const mapsHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+  `${address.street}, ${address.postalCode} ${address.city}`,
+)}`;
 
 const optionen = [
   {
