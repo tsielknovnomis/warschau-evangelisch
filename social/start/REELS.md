@@ -1,4 +1,4 @@
-# Die 10 Start-Reels
+# Die 14 Reels
 
 Format: hochkant 9:16, 25–40 Sekunden. Grundidee: **ruhige Bilder + Simons Stimme + Untertitel**.
 Bei Reel 4, 7, 8 und 9 sprechen die Menschen selbst (Originalton), Simon nur Ein- und Ausleitung.
@@ -7,15 +7,8 @@ Bei Reel 4, 7, 8 und 9 sprechen die Menschen selbst (Originalton), Simon nur Ein
 - **Platzhalter** in `[ECKIGEN KLAMMERN]` werden nach dem Fakten-Check (Dreh-Briefing, Teil A) ersetzt. Simon bekommt nur die **finale** Fassung.
 - **Sprechtexte sind fürs Vorlesen geschrieben** (Zahlen als Wörter, kurze Sätze).
 - **Endkarte** (letzte 3 Sekunden, jedes Reel, immer gleich): „Wann wir uns das nächste Mal treffen? **Das steht in unserer WhatsApp-Gruppe.**" + „Link im Profil". Kein Datum im Video — so veraltet nichts.
-- **Caption:** gleich für Instagram und Facebook. Jede Caption endet mit dem **Caption-Abschluss** (unten). Auf Instagram steht „Link in der Bio", auf Facebook wird der WhatsApp-Link direkt eingefügt (dort klickbar).
+- **Captions** (Instagram + Facebook, fertig zum Kopieren): `CAPTIONS.md`.
 
-**Caption-Abschluss — unter jede Caption, vor die Hashtags:**
-> ⛪ Gottesdienst jeden 2. und 4. Sonntag, 09:30 Uhr · ul. Miodowa 21 (2. Stock, Eingang über ul. Leona Schillera)
-> 💬 Ob er stattfindet und was sonst ansteht, erfährst du zuerst in unserer WhatsApp-Gruppe → Link in der Bio
-> *(Facebook: statt „Link in der Bio" → https://chat.whatsapp.com/DNeiA39J18v9kVa5ShSQM8)*
-
-Standard-Hashtags (Instagram, unter jede Caption): `#Warschau #Warszawa #DeutscheInPolen #evangelisch #GottesdienstAufDeutsch #NeuInWarschau #Kirche`
-Auf Facebook nur 2–3 davon: `#Warschau #DeutscheInPolen #evangelisch`
 
 ---
 
@@ -42,9 +35,6 @@ Auf Facebook nur 2–3 davon: `#Warschau #DeutscheInPolen #evangelisch`
 
 **Text im Bild:** S1 „Gottesdienst auf Deutsch" · S2 „mitten in Warschau" · S5 „Komm, wie du bist."
 
-**Caption:**
-> Wusstest du, dass es mitten in Warschau Gottesdienst auf Deutsch gibt? 🕊️
-> Wir sind eine kleine, offene evangelische Gemeinde — und freuen uns über jedes neue Gesicht.
 
 ---
 
@@ -70,10 +60,6 @@ Auf Facebook nur 2–3 davon: `#Warschau #DeutscheInPolen #evangelisch`
 
 **Text im Bild:** S1 „ul. Miodowa 21" · S2 „Eingang hinten: ul. Leona Schillera" · S5 „2. Stock" · S6 „Synodalsaal"
 
-**Caption:**
-> So findest du zu uns 📍
-> Der Eingang zum Lutherischen Zentrum liegt auf der Rückseite — über die ul. Leona Schillera. Dann in den 2. Stock, in den Synodalsaal.
-> Speicher dir das Video für deinen ersten Besuch. Karte und Anfahrt: warschau-evangelisch.de/anfahrt
 
 ---
 
@@ -101,9 +87,6 @@ Auf Facebook nur 2–3 davon: `#Warschau #DeutscheInPolen #evangelisch`
 
 **Text im Bild:** S1 „Dein erster Besuch" · S2 „keine Anmeldung" · S3 „kein Dresscode" · S6 „danach: Kaffee ☕"
 
-**Caption:**
-> Dein erster Gottesdienst bei uns — so läuft er ab. 🕊️
-> Keine Anmeldung, kein Dresscode, kein Vorwissen nötig. Komm einfach, so wie du bist.
 
 ---
 
@@ -126,9 +109,6 @@ Auf Facebook nur 2–3 davon: `#Warschau #DeutscheInPolen #evangelisch`
 **Voice-Over (Simon), nur am Anfang:**
 > Das ist Adam Bujok, unser Pfarrer. Wir haben ihm drei Fragen gestellt.
 
-**Caption:**
-> Darf ich vorstellen: Adam Bujok, unser Pfarrer. 🙌
-> Drei Fragen, drei ehrliche Antworten. Und am Sonntag kannst du ihn persönlich kennenlernen.
 
 ---
 
@@ -152,9 +132,6 @@ Auf Facebook nur 2–3 davon: `#Warschau #DeutscheInPolen #evangelisch`
 > Hier lernt man sich kennen. Und aus einem fremden Sonntag wird ein Stück Zuhause.
 > Komm vorbei — und bleib ein bisschen.
 
-**Caption:**
-> Das Beste kommt danach. ☕
-> Nach jedem Gottesdienst bleiben wir noch zusammen — bei Kaffee und guten Gesprächen. Gerade wenn du neu in Warschau bist: Hier findest du Anschluss.
 
 ---
 
@@ -172,9 +149,6 @@ Auf Facebook nur 2–3 davon: `#Warschau #DeutscheInPolen #evangelisch`
 
 *Quelle: Luthers Brief an Lazarus Spengler, 1530.*
 
-**Caption:**
-> Kreuz, Herz, Rose, Himmel, Ring — was die Lutherrose bedeutet. 🌹
-> Martin Luther hat sein Siegel 1530 selbst erklärt. Bis heute ist es das Zeichen evangelisch-lutherischer Kirchen — und unser Logo.
 
 ---
 
@@ -193,9 +167,6 @@ Claude wählt aus der Tonaufnahme einen Ausschnitt von 15–25 Sekunden; **Morit
 **Voice-Over (Simon), nur am Anfang:**
 > Ein Gedanke aus unserer letzten Predigt.
 
-**Caption:**
-> Ein Gedanke zum Mitnehmen — aus unserer Predigt. 🕊️
-> Wenn du mehr hören willst: Bei uns wird jeden Gottesdienst auf Deutsch gepredigt.
 
 ---
 
@@ -214,9 +185,6 @@ Claude wählt aus der Tonaufnahme einen Ausschnitt von 15–25 Sekunden; **Morit
 **Voice-Over (Simon), nur am Anfang:**
 > Wir haben gefragt: Warum kommst du hierher?
 
-**Caption:**
-> Warum kommst du hierher? Drei Antworten aus unserer Gemeinde. 💛
-> Und was wäre deine? Vielleicht findest du sie am Sonntag.
 
 ---
 
@@ -236,9 +204,6 @@ Claude wählt aus der Tonaufnahme einen Ausschnitt von 15–25 Sekunden; **Morit
 **Voice-Over (Simon), nur am Anfang:**
 > Hinter unserer Gemeinde stehen Menschen, die sich für sie einsetzen. Das ist unser Vorstand.
 
-**Caption:**
-> Das ist unser Vorstand: Jürgen, Jens und Simon. 👋
-> Sie kümmern sich darum, dass bei uns Gottesdienst, Gemeinschaft und vieles mehr möglich sind. Sprich sie am Sonntag gern an.
 
 ---
 
@@ -263,6 +228,87 @@ Claude wählt aus der Tonaufnahme einen Ausschnitt von 15–25 Sekunden; **Morit
 
 **Text im Bild:** S1 „Muss ich glauben, um zu kommen?" · S2 „Nein." · S4 „Du bist eingeladen."
 
-**Caption:**
-> Muss ich glauben, um zu kommen? Nein. 🕊️
-> Fragen, Zweifel und Neugier sind bei uns willkommen. Du musst niemanden kennen und nichts mitbringen.
+
+---
+
+## Reel 11 — „Sonntagmorgen in 20 Sekunden"
+**Ziel:** Stimmung statt Worte — man spürt, wie sich ein Sonntag bei uns anfühlt. **Länge:** ca. 20 s
+**Kein Voice-Over.** Ton: der Gemeindegesang aus R11-S5, leise darunter der Raumklang.
+
+**Szenen:**
+| Nr. | Bild | Dauer |
+|---|---|---|
+| R11-S1 | Licht fällt durchs Fenster in den Saal | 4 s |
+| R11-S2 | Eine Kerze wird angezündet, ganz nah | 4 s |
+| R11-S3 | Hände schlagen ein Gesangbuch / Liedblatt auf | 3 s |
+| R11-S4 | Saaltür geht auf, Menschen kommen herein (von hinten) | 4 s |
+| R11-S5 | Gemeinde singt, von hinten — **10 s mit gutem Ton** | 10 s |
+| R11-S6 | Dampfende Kaffeetasse, nah | 3 s |
+
+**Text im Bild:** „Sonntag, 09:30." · „ul. Miodowa 21." · „Komm, wie du bist."
+
+---
+
+## Reel 12 — „Bevor du kommst"
+**Ziel:** Hinter die Kulissen — Menschen, die für andere da sind. **Länge:** ca. 30 s
+
+**Szenen:** *beim Vorbereiten vor dem Gottesdienst (Dreh-Briefing, Block 0)*
+| Nr. | Bild | Dauer |
+|---|---|---|
+| R12-S1 | Die Tür wird aufgeschlossen | 4 s |
+| R12-S2 | Stühle werden gestellt | 5 s |
+| R12-S3 | Liedblätter / Gesangbücher werden ausgelegt | 4 s |
+| R12-S4 | Kerzen am Altar werden angezündet | 4 s |
+| R12-S5 | Kaffee wird aufgesetzt (Maschine/Wasserkocher) | 4 s |
+| R12-S6 | Tassen werden hingestellt | 4 s |
+| R12-S7 | Der fertige, noch leere Saal | 5 s |
+
+**Voice-Over (Simon):**
+> Bevor du kommst, ist schon einiges passiert.
+> Die Tür wird aufgeschlossen, Stühle werden gestellt, Kerzen angezündet, der Kaffee aufgesetzt. [VORBEREITUNG-DETAIL]
+> Menschen aus unserer Gemeinde machen das gern — damit du einfach ankommen kannst.
+
+**Text im Bild:** S1 „Sonntag, kurz vor halb zehn" · S7 „Jetzt fehlst nur noch du."
+
+---
+
+## Reel 13 — „Ein Wort, das dir in Warschau hilft"
+**Ziel:** Leicht, sympathisch, gut teilbar — und eine Brücke zum Glauben. **Länge:** ca. 30 s
+
+**Szenen:**
+| Nr. | Bild | Dauer |
+|---|---|---|
+| R13-S1 | Straßenbahn oder Bus fährt vorbei (in der Nähe) | 4 s |
+| R13-S2 | Bäckerei-Schaufenster oder Café, von außen | 4 s |
+| R13-S3 | Straßenszene Plac Zamkowy / Altstadt, ruhig | 5 s |
+| R13-S4 | Gefaltete Hände auf einem Gesangbuch, im Saal | 4 s |
+| R13-S5 | Beim Kaffee wird eine Tasse weitergereicht | 4 s |
+
+**Voice-Over (Simon):**
+> Ein Wort, das du in Warschau jeden Tag brauchst: Dziękuję. Das heißt: Danke.
+> Du sagst es beim Bäcker, in der Straßenbahn, an der Kasse.
+> Und sonntags sagen wir es bei uns auf Deutsch: Danke für diese Woche. Danke für die Menschen um uns herum. Danke, Gott.
+
+*Aussprache für Simon: „Dziękuję" ≈ „dschjen-KU-je".*
+
+**Text im Bild:** groß „Dziękuję" · darunter „sprich: dschjen-KU-je · = Danke"
+
+---
+
+## Reel 14 — „Advent bei uns" *(Festtags-Joker)*
+**Ziel:** Einladung zur Adventszeit. **Wird nur im Advent gepostet** (ersetzt dann das Reel dieser Woche). **Länge:** ca. 25 s
+**Eigener kleiner Dreh** an einem Gottesdienst im Advent (Dreh-Briefing, Teil H).
+
+**Szenen:**
+| Nr. | Bild | Dauer |
+|---|---|---|
+| R14-S1 | Adventskranz mit brennenden Kerzen, nah | 5 s |
+| R14-S2 | Eine Kerze wird angezündet | 4 s |
+| R14-S3 | Gemeinde singt ein Adventslied, von hinten — mit Ton | 8 s |
+| R14-S4 | Kaffee/Tee mit Plätzchen oder Stollen (falls es welche gibt) | 4 s |
+| R14-S5 | Saal weit, warmes Licht | 4 s |
+
+**Voice-Over (Simon):**
+> Advent bei uns: Kerzen, vertraute Lieder und die Vorfreude auf Weihnachten.
+> Gottesdienst auf Deutsch — mitten in Warschau.
+> Komm dazu. Und bring gern jemanden mit.

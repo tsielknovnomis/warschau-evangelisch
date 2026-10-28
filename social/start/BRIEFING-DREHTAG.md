@@ -1,9 +1,9 @@
 # Dreh-Briefing — Videos für Instagram & Facebook
 
-Danke, dass ihr das übernehmt! An einem Gottesdienst-Sonntag filmt ihr kurze Szenen für **10 Videos (Reels)** und macht ein paar Fotos.
+Danke, dass ihr das übernehmt! An einem Gottesdienst-Sonntag filmt ihr kurze Szenen für **13 Videos (Reels)** und macht **11 Fotos** für die Feedposts.
 Ihr braucht **kein Vorwissen** — haltet euch einfach an diese Liste. Den Schnitt, die Texte und die Untertitel macht Moritz.
 
-**Ihr braucht:** 2 Personen (eine filmt, eine hilft und organisiert die Interviews) · 2 Handys · ca. 1 Stunde verteilt über den Vormittag.
+**Ihr braucht:** 2 Personen (eine filmt, eine hilft und organisiert die Interviews) · 2 Handys · ca. 1,5 Stunden verteilt über den Vormittag — ihr kommt **so früh wie die Vorbereitung beginnt**.
 
 ---
 
@@ -19,6 +19,7 @@ Die Sprechtexte sollen **genau** stimmen. Bitte beantwortet diese Fragen kurz:
 6. **Nach dem Gottesdienst:** Gibt es Kaffee, Tee, Kuchen? Wo — im Saal oder in einem anderen Raum?
 7. **Lutherrose im Raum:** Ist das Zeichen irgendwo zu sehen (Fenster, Wand, Kanzel)?
 8. **Namen:** Vornamen der drei Gemeindemitglieder aus Teil D, Block 4 (für die Einblendung) — bitte nach dem Dreh schicken.
+9. **Vorbereitung:** Wer bereitet den Gottesdienst vor (Tür, Stühle, Kerzen, Kaffee), ab wann, und was wird genau gemacht?
 
 ---
 
@@ -37,6 +38,7 @@ Die Sprechtexte sollen **genau** stimmen. Bitte beantwortet diese Fragen kurz:
 **Kurz absprechen:**
 - **Pfarrer Bujok** vorher informieren, dass während des Gottesdienstes dezent von hinten gefilmt und die Predigt als Ton aufgenommen wird — und um 10 Minuten für das Interview nach dem Gottesdienst bitten.
 - **Jürgen, Jens und Simon** um je 3 Minuten nach dem Gottesdienst bitten (Reel 9).
+- **Die Leute, die vorbereiten** (Stühle, Kerzen, Kaffee): Bescheid geben, dass ihr sie dabei filmt (Reel 12), und die Uhrzeit absprechen.
 - **Drei Gemeindemitglieder** fragen, ob sie einen Satz in die Kamera sagen (Reel 8). Gut wäre eine Mischung: jemand Neues, jemand, der schon lange dabei ist.
 
 ---
@@ -59,7 +61,18 @@ Die Sprechtexte sollen **genau** stimmen. Bitte beantwortet diese Fragen kurz:
 
 Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören zu den Videos — nicht ändern.
 
-### Block 1 — Vor dem Gottesdienst, draußen und im leeren Saal (ca. 30 Minuten, so früh wie möglich)
+### Block 0 — Beim Vorbereiten (sobald die ersten kommen und aufbauen)
+
+Hier filmt ihr die Menschen, die alles vorbereiten — **ganz natürlich, sie sollen nicht posieren**. Von der Seite oder von hinten, Hände und Tätigkeiten.
+- [ ] **R12-S1** die Tür wird aufgeschlossen, 4 s
+- [ ] **R12-S2** Stühle werden gestellt, 5 s
+- [ ] **R12-S3** Liedblätter / Gesangbücher werden ausgelegt, 4 s
+- [ ] **R12-S4** Kerzen am Altar werden angezündet, 4 s
+- [ ] **R12-S5** Kaffee wird aufgesetzt (Maschine oder Wasserkocher), 4 s
+- [ ] **R12-S6** Tassen werden hingestellt, 4 s
+- [ ] **R12-S7** der fertige, noch leere Saal, 5 s
+
+### Block 1 — Vor dem Gottesdienst, draußen und im leeren Saal (ca. 40 Minuten)
 
 **Draußen:**
 - [ ] **R1-S1** Straßenschild „ul. Miodowa", Nahaufnahme, 5 s
@@ -74,6 +87,12 @@ Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören z
   - [ ] **R2-S5** Treppe hoch (oder Aufzug) bis in den 2. Stock
   - [ ] **R2-S6** Tür zum Synodalsaal öffnen, Blick in den Raum, 3 s stehen bleiben
 
+**In der Nähe (Reel 13 — kurz, 5 Minuten):**
+- [ ] **R13-S1** eine Straßenbahn oder ein Bus fährt vorbei, 4 s
+- [ ] **R13-S2** Bäckerei-Schaufenster oder Café, von außen, 4 s
+- [ ] **R13-S3** ruhige Straßenszene am Plac Zamkowy / in der Altstadt, 5 s
+- [ ] **Foto F11:** Straßenszene in der Nähe, gern mit Altstadt oder Schlossplatz (Teil F)
+
 **Im leeren Saal:**
 - [ ] **R1-S3** langsamer Schwenk über den ganzen Saal, links nach rechts, 6 s
 - [ ] **R3-S1** leerer Saal von hinten, ruhig, 5 s
@@ -85,6 +104,11 @@ Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören z
 - [ ] **R10-S3** eine Person sitzt allein im Saal, von hinten gefilmt, 5 s (die helfende Person setzt sich hin)
 - [ ] **R10-S4** Saaltür öffnet sich, von innen gefilmt, 5 s
 - [ ] **R10-S5** Fenster mit Licht, 5 s
+- [ ] **R11-S1** Licht fällt durchs Fenster in den Saal, 5 s
+- [ ] **R11-S2** eine Kerze wird angezündet, **ganz nah**, 5 s
+- [ ] **R11-S3** Hände schlagen ein Gesangbuch / Liedblatt auf, 4 s
+- [ ] **R13-S4** gefaltete Hände auf einem Gesangbuch, 4 s
+- [ ] **Foto F9:** Altar mit brennenden Kerzen (Teil F)
 - [ ] **R6-S1** *nur falls vorhanden:* Lutherrose im Raum, Nahaufnahme, 5 s
 - [ ] **Foto F7:** offene Bibel, ganz nah (Teil F)
 - [ ] **Foto F5:** eine Hand hält ein Handy, im Hintergrund der Saal (Teil F)
@@ -92,6 +116,7 @@ Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören z
 ### Block 2 — Ankommen (ca. 10 Minuten vor Beginn)
 
 - [ ] **R1-S5** Menschen kommen an, hängen Jacken auf, setzen sich — **von hinten** filmen, 5–10 s
+- [ ] **R11-S4** die Saaltür geht auf, Menschen kommen herein, von hinten, 5 s
 - [ ] **Foto F1:** Saal mit Menschen kurz vor Beginn, von hinten (Teil F)
 
 ### Block 3 — Während des Gottesdienstes
@@ -100,6 +125,7 @@ Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören z
 
 - [ ] **R7-S1 Predigt-Ton:** Kurz vor der Predigt das **zweite Handy** mit Sprachmemo starten und **vorne nah am Prediger** ablegen (z. B. auf dem Rand der Kanzel, dem Lesepult oder in der ersten Reihe — mit dem Pfarrer vorher abgesprochen). Erst nach der Predigt stoppen.
 - [ ] **R3-S3** Gemeinde singt, von hinten, 5–10 s
+- [ ] **R11-S5** Gemeinde singt — diesmal **10 Sekunden, Handy ganz ruhig, guter Ton** (der Gesang wird die Musik von Reel 11)
 - [ ] **R3-S4** Lesung oder Predigt, von hinten oder von der Seite, 5–10 s
 - [ ] **R7-S2** Prediger von der Seite oder von hinten, **2–3 Clips** à 10 s
 - [ ] **R7-S3** Zuhörende von hinten, 5 s
@@ -115,6 +141,8 @@ Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören z
 - [ ] **R5-S5** Hände, Tassen, Gesten — nah, 5 s
 - [ ] **R5-S6** der ganze Raum, weit, 5 s
 - [ ] **R1-S6** Kaffeetassen und Gespräche (ruhig, nah), 5 s
+- [ ] **R11-S6** dampfende Kaffeetasse, ganz nah, 4 s
+- [ ] **R13-S5** eine Tasse wird jemandem weitergereicht (Hände), 4 s
 - [ ] **R5-S7 Raumklang:** Handy **10 Sekunden still auf einen Tisch legen** und Video laufen lassen — dabei selbst nicht reden
 - [ ] **Foto F2:** Kaffeetisch mit Menschen im Gespräch (für einen Feedpost)
 
@@ -131,6 +159,10 @@ Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören z
   - [ ] **R8-S3** Person 3 · Vorname notieren: ________
 - [ ] **Foto F3:** Pfarrer Bujok, Porträt (Teil F)
 - [ ] **Foto F4:** Vorstand, alle drei zusammen (Teil F)
+
+### Block 5 — Optional, nur wenn noch Zeit ist (ca. 30 Minuten)
+
+- [ ] **Foto F10:** Evangelische Dreifaltigkeitskirche (Kościół Świętej Trójcy) am **pl. Małachowskiego** — ca. 15 Minuten zu Fuß. Ganze Kirche im Bild, hochkant **und** quer. *Wenn das nicht klappt: kein Problem, dann nehmen wir ein vorhandenes Foto.*
 
 ---
 
@@ -153,19 +185,22 @@ Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören z
 
 ## Teil F — Fotos (für die Feedposts)
 
-Fast jeder Feedpost bekommt ein echtes Foto — darum sind die Fotos genauso wichtig wie die Videos.
+**Jeder Feedpost bekommt ein eigenes Foto** — darum sind die Fotos genauso wichtig wie die Videos.
 Normale Foto-Funktion (nicht „Porträt"-Modus), **querformat** (Handy seitlich halten) — außer F3. Von jedem Motiv **3–5 Fotos**, gern leicht unterschiedlich.
 
-| Foto | Motiv | Format | Für |
-|---|---|---|---|
-| **F1** | Saal mit Menschen kurz vor Beginn, von hinten | quer | Post 1 |
-| **F2** | Kaffeetisch mit Menschen im Gespräch | quer | Post 7 |
-| **F3** | Pfarrer Bujok: Kopf und Schultern, ruhiger Hintergrund, leichtes Lächeln, schaut in die Kamera, **viel Platz um den Kopf** | **hochkant** | Post 4 |
-| **F4** | Vorstand: Jürgen, Jens und Simon nebeneinander | quer | Reserve |
-| **F5** | Eine Hand hält ein Handy, im Hintergrund unscharf der Saal (**Bildschirm darf nicht lesbar sein**) | quer | Post 3 |
-| **F6** | Fassade Lutherisches Zentrum, Miodowa 21, von der anderen Straßenseite | quer | Post 6 |
-| **F7** | Offene Bibel, ganz nah (gern mit Kerzenlicht) | quer | Post 8 |
-| **F8** | Eingangstür auf der Rückseite mit Schild | quer | Post 10 |
+| Foto | Motiv | Format | Für | Wann (Teil D) |
+|---|---|---|---|---|
+| **F1** | Saal mit Menschen kurz vor Beginn, von hinten | quer | Post 1 | Block 2 |
+| **F2** | Kaffeetisch mit Menschen im Gespräch | quer | Post 7 | Block 4 |
+| **F3** | Pfarrer Bujok: Kopf und Schultern, ruhiger Hintergrund, leichtes Lächeln, schaut in die Kamera, **viel Platz um den Kopf** | **hochkant** | Post 4 | Block 4 |
+| **F4** | Vorstand: Jürgen, Jens und Simon nebeneinander | quer | Reserve | Block 4 |
+| **F5** | Eine Hand hält ein Handy, im Hintergrund unscharf der Saal (**Bildschirm darf nicht lesbar sein**) | quer | Post 3 | Block 1 |
+| **F6** | Fassade Lutherisches Zentrum, Miodowa 21, von der anderen Straßenseite | quer | Post 6 | Block 1 |
+| **F7** | Offene Bibel, ganz nah (gern mit Kerzenlicht) | quer | Post 8 | Block 1 |
+| **F8** | Eingangstür auf der Rückseite mit Schild | quer | Post 10 | Block 1 |
+| **F9** | Altar mit brennenden Kerzen | quer | Post 5 | Block 1 |
+| **F10** | Dreifaltigkeitskirche am pl. Małachowskiego *(optional)* | quer + hochkant | Post 9 | Block 5 |
+| **F11** | Straßenszene in der Nähe (Schlossplatz / Altstadt) | quer | Post 2 | Block 1 |
 
 **Tipp:** Wichtiges in die **Bildmitte** — oben und unten wird etwas abgeschnitten.
 
@@ -182,8 +217,19 @@ So geht es richtig (eine der beiden Möglichkeiten):
 **Bitte schicken:**
 - [ ] alle Videos von Block 1–4 (Reihenfolge egal — die Ansagen ordnen sie)
 - [ ] die **Predigt-Tonaufnahme** (Sprachmemo → Teilen → als Datei)
-- [ ] die Fotos F1–F8
+- [ ] die Fotos F1–F11
 - [ ] den Zettel mit Szenen aus Block 3 (Foto vom Zettel reicht)
 - [ ] die **Antworten aus Teil A** und die **drei Vornamen** aus Reel 8
+
+---
+
+## Teil H — Zusatz-Dreh im Advent (Reel 14)
+
+An **einem Gottesdienst im Advent** (Ende November / Dezember) noch einmal 10 Minuten — gleiche Regeln wie oben (Teil C):
+- [ ] **R14-S1** Adventskranz mit brennenden Kerzen, nah, 5 s
+- [ ] **R14-S2** eine Kerze wird angezündet, 4 s
+- [ ] **R14-S3** Gemeinde singt ein Adventslied, von hinten — 10 s, guter Ton
+- [ ] **R14-S4** Kaffee/Tee mit Plätzchen oder Stollen (falls es welche gibt), 4 s
+- [ ] **R14-S5** der Saal weit, warmes Licht, 5 s
 
 **Danke euch! 🙏**

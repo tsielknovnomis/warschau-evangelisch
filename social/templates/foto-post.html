@@ -37,6 +37,15 @@
   .frame .ph { margin:96px auto 0; width:880px; height:620px; border:22px solid #fffdf9; box-shadow:0 18px 40px rgba(44,34,48,.18); transform:rotate(-1.6deg); }
   .frame .body { flex:1; display:flex; flex-direction:column; padding:56px 84px 64px; }
 
+  /* mid — kicker on top, photo band in the middle, quote below */
+  .mid .top { padding:72px 84px 40px; }
+  .mid .ph { width:100%; height:480px; border-top:4px solid var(--gold); border-bottom:4px solid var(--gold); }
+  .mid .body { flex:1; display:flex; flex-direction:column; padding:44px 84px 64px; }
+
+  /* person — round portrait, centred */
+  .person .body { flex:1; display:flex; flex-direction:column; padding:84px; }
+  .person .ph { width:440px; height:440px; border-radius:50%; border:5px solid var(--gold); margin:40px auto 0; }
+
   /* band — wide photo band on top */
   .band .ph { width:100%; height:600px; border-bottom:5px solid var(--gold); }
   .band .body { flex:1; display:flex; flex-direction:column; padding:52px 84px 64px; }
@@ -68,6 +77,19 @@ const POSTS = {
        kicker: "Zum Nachdenken",
        quote: "„Ein Christenmensch ist ein freier Herr über alle Dinge und niemand untertan.<br><br>Ein Christenmensch ist ein dienstbarer Knecht aller Dinge und jedermann untertan.“",
        cite: "Martin Luther, 1520" },
+  2: { layout: "band", foto: "F11", hint: "F11 — Straßenszene ganz in der Nähe (Plac Zamkowy / Miodowa)",
+       kicker: "Ankommen",
+       h: 'Neu in Warschau? <span class="accent">Du bist nicht allein.</span>',
+       t: "Bei uns triffst du Menschen, die deine Sprache sprechen — und die wissen, wie sich Ankommen anfühlt." },
+  4: { layout: "person", foto: "F3", hint: "F3 — Porträt Pfarrer Bujok (hochkant)",
+       kicker: "Wir stellen vor", name: "Adam Bujok", role: "Pfarrer",
+       say: "„[Ein Satz aus seinem Interview — wörtlich, mit seinem Okay]“" },
+  5: { layout: "mid", foto: "F9", hint: "F9 — Altar mit brennenden Kerzen",
+       kicker: "Wort für die Woche",
+       quote: "„Denn wo zwei oder drei versammelt sind in meinem Namen, da bin ich mitten unter ihnen.“",
+       cite: "Matthäus 18,20" },
+  9: { layout: "fullchip", foto: "F10", hint: "F10 — Dreifaltigkeitskirche am pl. Małachowskiego (optional)",
+       kicker: "Evangelisch in Warschau" },
   10: { layout: "band", foto: "F8", hint: "F8 — Eingangstür auf der Rückseite mit Schild",
        kicker: "Gottesdienst auf Deutsch",
        h: 'Jeden 2. und 4. <span class="accent">Sonntag.</span>',
@@ -76,7 +98,7 @@ const POSTS = {
 
 const p = POSTS[new URLSearchParams(location.search).get("post")];
 const tile = document.getElementById("tile");
-const dark = p.layout === "full" || p.layout === "dark";
+
 tile.className = `tile ${p.layout}${p.layout === "dark" ? " dark" : ""}`;
 
 const head = `<div class="head"><img src="lutherrose.png" alt=""><span class="kicker">${p.kicker}</span></div>`;
@@ -84,6 +106,11 @@ const foot = `<div class="foot" style="padding-top:26px;"><span class="site">war
 const hSize = p.layout.startsWith("split") ? 58 : 66;
 
 function content() {
+  if (p.layout === "person") {
+    return `<div style="text-align:center;"><h1 class="display" style="font-size:72px; margin-top:44px;">${p.name}</h1>
+      <p style="margin-top:14px; font-size:27px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--gold-deep);">${p.role}</p>
+      <p class="lead" style="font-size:31px; font-style:italic; margin:34px auto 0; max-width:820px;">${p.say}</p></div>`;
+  }
   if (p.quote) {
     return `<div style="flex:1; display:flex; align-items:center;"><figure style="border-right:5px solid var(--gold); padding-right:32px; text-align:right;">
       <blockquote style="font-family:'Fraunces'; font-size:38px; font-style:italic; font-weight:450; line-height:1.35; color:var(--aubergine);">${p.quote}</blockquote>
@@ -97,7 +124,16 @@ function content() {
 }
 
 const photo = `<div class="ph" id="ph"></div>`;
-if (p.layout === "full") {
+if (p.layout === "fullchip") {
+  tile.className = "tile full";
+  tile.innerHTML = `${photo}<div class="shade" style="background:linear-gradient(to top, rgba(54,1,58,.72) 0%, rgba(54,1,58,0) 22%);"></div>
+    <div class="chip"><img src="lutherrose.png" alt=""><span>${p.kicker}</span></div>
+    <div class="text" style="bottom:48px;"><div class="foot" style="border-top:none; padding-top:0;"><span class="site">warschau-evangelisch.de</span><span class="handle">@warschau.evangelisch</span></div></div>`;
+} else if (p.layout === "mid") {
+  tile.innerHTML = `<div class="top">${head}</div>${photo}<div class="body">${content()}<div style="margin-top:auto;">${foot}</div></div>`;
+} else if (p.layout === "person") {
+  tile.innerHTML = `<img class="ornament" src="lutherrose.png" style="width:760px; left:-260px; top:-200px;" alt=""><div class="body">${head}${photo}${content()}<div style="margin-top:auto;">${foot}</div></div>`;
+} else if (p.layout === "full") {
   tile.innerHTML = `${photo}<div class="shade"></div>
     <div class="chip"><img src="lutherrose.png" alt=""><span>${p.kicker}</span></div>
     <div class="text">${content()}<div style="margin-top:40px;">${foot}</div></div>`;

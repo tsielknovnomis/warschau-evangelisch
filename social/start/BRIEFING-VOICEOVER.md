@@ -1,10 +1,11 @@
 # Voice-Over-Briefing für Simon
 
-Lieber Simon, danke, dass du unsere Stimme bist! Du sprichst die Texte für 10 kurze Videos ein.
+Lieber Simon, danke, dass du unsere Stimme bist! Du sprichst die Texte für unsere kurzen Videos ein.
 Ein Handy reicht völlig — wichtig ist nur ein **ruhiger Raum**.
 
-**Jetzt aufnehmen:** Reel 1, 4, 6, 7, 8, 9, 10 (Texte unten sind final).
-**Später:** Reel 2, 3 und 5 — die Texte bekommst du nach dem Drehtag, weil dort noch Details vom Ort hineinkommen.
+**Jetzt aufnehmen:** Reel 1, 4, 6, 7, 8, 9, 10, 13, 14 (Texte unten sind final).
+**Später:** Reel 2, 3, 5 und 12 — die Texte bekommst du nach dem Drehtag, weil dort noch Details vom Ort hineinkommen.
+*(Reel 11 hat keine Stimme — dort hört man nur den Gesang.)*
 
 ---
 
@@ -82,11 +83,27 @@ Sprachmemo → **Teilen → WhatsApp → an Moritz** (als **Datei**, nicht als S
 >
 > Glaube ist kein Eintrittsticket. Er ist eine Einladung.
 
+### Reel 13 — „Ein Wort, das dir in Warschau hilft"
+*Aussprache: „Dziękuję" ≈ „dschjen-KU-je".*
+> Ein Wort, das du in Warschau jeden Tag brauchst: Dziękuję. Das heißt: Danke.
+>
+> Du sagst es beim Bäcker, in der Straßenbahn, an der Kasse.
+>
+> Und sonntags sagen wir es bei uns auf Deutsch: Danke für diese Woche. Danke für die Menschen um uns herum. Danke, Gott.
+
+### Reel 14 — „Advent bei uns"
+> Advent bei uns: Kerzen, vertraute Lieder und die Vorfreude auf Weihnachten.
+>
+> Gottesdienst auf Deutsch — mitten in Warschau.
+>
+> Komm dazu. Und bring gern jemanden mit.
+
 ---
 
 ### Kommt nach dem Drehtag
 - **Reel 2 — „Der Weg zu uns"** (Weg zum Eingang, Treppe/Aufzug)
 - **Reel 3 — „Dein erster Gottesdienst"** (Dauer, Liedblatt)
 - **Reel 5 — „Das Beste kommt danach"** (Kaffee, Kuchen)
+- **Reel 12 — „Bevor du kommst"** (was genau vorbereitet wird)
 
 Danke dir! 🙏

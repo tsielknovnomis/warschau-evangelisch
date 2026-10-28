@@ -8,13 +8,13 @@ Jeder Beitrag geht **gleichzeitig auf Instagram und Facebook** (über die Meta B
 | Wer | Aufgabe | Unterlage |
 |---|---|---|
 | **Moritz** (nicht vor Ort) | Plant, gibt Briefings raus, schneidet mit Claude, veröffentlicht | dieser Ordner |
-| **Team vor Ort** (1 Person filmt, 1 Person hilft) | Filmt am Drehtag nach Liste, prüft die Fakten, schickt alles an Moritz | `BRIEFING-DREHTAG.md` |
+| **Team vor Ort** (1 Person filmt, 1 Person hilft) | Filmt am Drehtag nach Liste, fotografiert für die Feedposts, prüft die Fakten, schickt alles an Moritz | `BRIEFING-DREHTAG.md` |
 | **Simon** (Vorstand) | Spricht alle Voice-Overs ein, schickt sie an Moritz | `BRIEFING-VOICEOVER.md` |
 | **Wer die Facebook-Seite verwaltet** | Bestehende Seite neu gestalten, Instagram verknüpfen | `SETUP-INSTAGRAM-FACEBOOK.md` |
 
 ## Ablauf in vier Schritten
 
-1. **Drehtag** — ein Gottesdienst-Sonntag (2. oder 4. Sonntag im Monat). Das Team filmt alles für alle 10 Reels und macht die Fotos für die Feedposts. Dazu beantwortet es den **Fakten-Check** (Teil A im Dreh-Briefing).
+1. **Drehtag** — ein Gottesdienst-Sonntag (2. oder 4. Sonntag im Monat). Das Team filmt alles für die Reels 1–13 und macht die 11 Fotos für die Feedposts. Reel 14 (Advent) wird später im Advent gedreht. Dazu beantwortet es den **Fakten-Check** (Teil A im Dreh-Briefing).
 2. **Texte final** — Moritz gibt Claude die Fakten-Antworten; die Voice-Over-Texte werden angepasst (Platzhalter wie `[DAUER]` werden ersetzt). Erst dann bekommt Simon die finalen Texte.
 3. **Voice-Over + Schnitt** — Simon nimmt auf und schickt die Dateien. Claude schneidet: Untertitel im Gemeinde-Look, Endkarte mit dem nächsten Gottesdienst.
 4. **Start = Tag 0** — frühestens **10 Tage nach dem Drehtag**, damit die ersten 4 Reels fertig im Vorrat liegen. **Tag 0 ist ein Montag.**
@@ -41,12 +41,17 @@ Reels **donnerstags 18:00**, Feedposts **montags 18:00**. Tag 0 = Montag → Tag
 | 59 | Do | Reel 9 | Unser Vorstand |
 | 66 | Do | Reel 10 | Muss ich glauben, um zu kommen? |
 | 70 | Mo | Feedpost 6 | Wusstest du? Unsere Geschichte |
+| 73 | Do | Reel 11 | Sonntagmorgen in 20 Sekunden |
+| 80 | Do | Reel 12 | Bevor du kommst |
 | 84 | Mo | Feedpost 7 | Danke für diesen Sonntag (Rückblick-Foto) |
+| 87 | Do | Reel 13 | Ein Wort, das dir in Warschau hilft |
 | 98 | Mo | Feedpost 8 | Zitat Martin Luther |
 | 112 | Mo | Feedpost 9 | Mitten in Warschau (Kirchenbild) |
 | 126 | Mo | Feedpost 10 | Jeden 2. und 4. Sonntag (Gottesdienst-Rhythmus) |
 
-Details: `REELS.md` (Texte, Szenen, Captions) und `FEEDPOSTS.md`.
+**Reel 14 „Advent bei uns"** ist ein Joker: Er ersetzt im Advent das Reel der jeweiligen Woche.
+
+Details: `REELS.md` (Szenen, Sprechtexte), `FEEDPOSTS.md` (Fotos, Layouts), `CAPTIONS.md` (alle Captions fertig zum Kopieren).
 
 ## Regeln, die immer gelten
 
