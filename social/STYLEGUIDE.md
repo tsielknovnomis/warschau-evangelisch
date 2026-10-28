@@ -57,7 +57,15 @@ Damit jeder Post aussieht wie aus einem Guss — egal ob aus den HTML-Vorlagen
 `foto.html` (Foto + Titel) · `foto-voll.html` (nur Bild) · `vers-foto.html` (Vers + Fotoband) ·
 `neu-in-warschau.html` (Foto oben + Text)
 
-**Story-Vorlagen (1080×1920):** `story-termin.html` (dunkel, große Datumszahl) · `story-vers.html` (hell, Bibelvers).
+`whatsapp.html` (Einladung in die WhatsApp-Gruppe mit QR-Code) · `rhythmus.html` („Jeden 2. und 4. Sonntag", zeitlos)
+
+**Story-Vorlagen (1080×1920):** `story-termin.html` (dunkel, große Datumszahl) · `story-vers.html` (hell, Bibelvers) ·
+`story-gottesdienst.html` · `story-anfahrt.html` · `story-ueber-uns.html` (Highlight-Storys) · `endkarte.html` (Schlusskarte jedes Reels)
+
+**Profil-Grafiken:** `fb-cover.html` (Facebook-Titelbild 1640×624, Inhalt in der mittleren Zone) · `highlight.html?i=gottesdienst|anfahrt|ueber-uns` (Highlight-Cover)
+
+Rendern ohne Browser-Klicks (Mac): im Ordner `templates/` `python3 -m http.server 8321` starten, dann
+`"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --force-device-scale-factor=1 --virtual-time-budget=6000 --window-size=1080,1350 --screenshot=out.png http://localhost:8321/<vorlage>.html`
 Beim Rendern Fenster auf 1080×1920 stellen; oben/unten bleiben ~220 px frei (Instagram-UI).
 
 ## Foto-Layouts (drei Varianten)

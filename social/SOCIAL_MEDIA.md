@@ -1,5 +1,7 @@
 # Social Media — Deutschsprachige Evangelische Gemeinde Warschau
 
+> **Aktueller Plan für Instagram + Facebook (Reels, Feedposts, Briefings, Setup): `social/start/`.** Die finale Instagram-Bio und das komplette Facebook-Setup stehen in `start/SETUP-INSTAGRAM-FACEBOOK.md`. Dieses Dokument bleibt für WhatsApp-Texte und Bio-Ideen.
+
 Alle Bausteine für Instagram & WhatsApp an einem Ort. Ziel aller CTAs: Menschen
 in die **WhatsApp-Gruppe** holen (niedrigschwelliger erster Schritt) und zum
 **Gottesdienst** einladen. Ton: nahbar, würdevoll, „du".

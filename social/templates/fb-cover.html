@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css">
+<style>
+  body{margin:0}
+  .cover{width:1640px;height:624px;position:relative;overflow:hidden;background:var(--bg);font-family:"Spectral",serif;color:var(--ink)}
+  .photo{position:absolute;right:0;top:0;width:520px;height:624px;object-fit:cover;object-position:60% 45%;
+         -webkit-mask-image:linear-gradient(to right,transparent,#000 45%);mask-image:linear-gradient(to right,transparent,#000 45%)}
+  .orn{position:absolute;left:-120px;top:-90px;width:520px;opacity:.07}
+  /* safe zone: centre 1110px is visible on phones and desktop */
+  .safe{position:absolute;left:265px;width:1110px;top:0;height:624px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .safe img{width:86px;height:86px}
+  .t{font-family:"Fraunces",serif;font-weight:500;font-size:92px;line-height:1;color:var(--aubergine);margin-top:24px;letter-spacing:-.01em}
+  .t em{color:var(--gold-deep)}
+  .k{margin-top:26px;font-size:28px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
+  .r{margin-top:16px;font-size:30px;color:var(--ink);opacity:.85}
+</style></head><body>
+<div class="cover">
+  <img class="orn" src="lutherrose.png" alt="">
+  <img class="photo" src="foto-altar.png" alt="">
+  <div class="safe">
+    <img src="lutherrose.png" alt="">
+    <div class="t">Evangelisch <em>in Warschau</em></div>
+    <div class="k">Gottesdienst auf Deutsch</div>
+    <div class="r">jeden 2. und 4. Sonntag · 09:30 Uhr · ul. Miodowa 21</div>
+  </div>
+</div>
+</body></html>

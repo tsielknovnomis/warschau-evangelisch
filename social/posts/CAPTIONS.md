@@ -24,8 +24,8 @@ Ein Wort für alle, deren Woche schwer war. Du bist eingeladen — sonntags um 9
 #WortFürDieWoche #Bibelvers #evangelisch #Warschau #DeutscheInPolen #Glaube #Ermutigung
 
 ## 06 — Nur Bild: Trinitatiskirche (06-kirche-bild.png)
-Mitten in Warschau: die Dreifaltigkeitskirche der Evangelisch-Augsburgischen Kirche — unter deren Dach wir als deutschsprachige Gemeinde zu Hause sind. 🕊️
-Unsere Gottesdienste feiern wir gleich nebenan im Lutherischen Zentrum, ul. Miodowa 21 — sonntags um 9:30 Uhr, auf Deutsch.
+Mitten in Warschau steht die evangelische Dreifaltigkeitskirche (Kościół Świętej Trójcy) am pl. Małachowskiego — eines der Wahrzeichen der Evangelisch-Augsburgischen Kirche in Polen, zu der auch wir gehören. ⛪
+Unsere deutschsprachigen Gottesdienste feiern wir im Lutherischen Zentrum in der ul. Miodowa 21 — jeden 2. und 4. Sonntag um 9:30 Uhr.
 #Warschau #Warszawa #evangelisch #Kirche #Architektur #DeutscheInPolen #GottesdienstAufDeutsch
 
 ## 07 — Vers + Altarfoto (07-vers-altar.png)
