@@ -67,6 +67,14 @@ Zur Darstellung des Anfahrtswegs binden wir eine Karte von **Google Maps** ein (
 
 Mit deiner Zustimmung wird eine Verbindung zu Servern von Google hergestellt und deine IP-Adresse sowie ggf. weitere Daten an Google übermittelt. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO i. V. m. § 25 Abs. 1 TDDDG). Weitere Informationen findest du in der [Datenschutzerklärung von Google](https://policies.google.com/privacy).
 
+## Unsere Social-Media-Auftritte (Instagram, Facebook) und WhatsApp-Gruppe
+
+Wir sind mit eigenen Auftritten auf **Instagram** und **Facebook** vertreten (Anbieter: Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland) und betreiben eine **WhatsApp-Gruppe** (Anbieter: WhatsApp Ireland Limited, Merrion Road, Dublin 4, Irland). Auf dieser Website sind diese Dienste nur als einfache Links eingebunden — beim Besuch unserer Website werden keine Daten an Meta oder WhatsApp übertragen.
+
+Wenn du unsere Auftritte besuchst, ihnen folgst, kommentierst, uns Nachrichten schreibst oder der WhatsApp-Gruppe beitrittst, verarbeitet der jeweilige Anbieter deine Daten nach seinen eigenen Bestimmungen; darauf haben wir nur begrenzten Einfluss. Für die statistischen Auswertungen unserer Facebook- und Instagram-Seite („Insights") sind wir gemeinsam mit Meta verantwortlich (Art. 26 DSGVO); die Vereinbarung dazu findest du unter [facebook.com/legal/terms/page_controller_addendum](https://www.facebook.com/legal/terms/page_controller_addendum). Wir selbst sehen dabei nur zusammengefasste Zahlen, keine Daten einzelner Personen.
+
+Was du uns dort schreibst, nutzen wir nur, um mit dir in Kontakt zu treten und deine Fragen zu beantworten (Art. 6 Abs. 1 lit. f DSGVO — unser berechtigtes Interesse an der Kommunikation mit Interessierten). In der WhatsApp-Gruppe sind deine Telefonnummer und dein Profilname für die anderen Mitglieder sichtbar; du kannst die Gruppe jederzeit verlassen. Weitere Informationen: [Datenschutzrichtlinie von Meta](https://www.facebook.com/privacy/policy) und [Datenschutzrichtlinie von WhatsApp](https://www.whatsapp.com/legal/privacy-policy-eea). Deine Rechte kannst du sowohl uns gegenüber als auch direkt gegenüber Meta bzw. WhatsApp geltend machen.
+
 ## Keine automatisierte Entscheidungsfindung
 
 Eine automatisierte Entscheidungsfindung oder ein Profiling nach Art. 22 DSGVO findet nicht statt.
