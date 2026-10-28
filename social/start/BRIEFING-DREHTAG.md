@@ -64,6 +64,8 @@ Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören z
 **Draußen:**
 - [ ] **R1-S1** Straßenschild „ul. Miodowa", Nahaufnahme, 5 s
 - [ ] **R1-S2** Fassade Miodowa 21 von der anderen Straßenseite, 5 s still
+- [ ] **Foto F6:** Fassade Lutherisches Zentrum, Miodowa 21 (Teil F)
+- [ ] **Foto F8:** Eingangstür auf der Rückseite mit Schild (Teil F) — am besten, wenn ihr bei R2-S3 seid
 - [ ] **R2 — der Weg (in Ich-Perspektive).** Handy auf Brusthöhe, langsam gehen, so wie jemand, der zum ersten Mal kommt. In Teilstücken filmen, jedes Stück neu starten und ansagen:
   - [ ] **R2-S1** vor der Hausnummer 21 an der Miodowa beginnen, Hausnummer kurz ins Bild
   - [ ] **R2-S2** gehen bis zur Abzweigung in die ul. Leona Schillera — Straßenschild kurz zeigen
@@ -84,11 +86,13 @@ Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören z
 - [ ] **R10-S4** Saaltür öffnet sich, von innen gefilmt, 5 s
 - [ ] **R10-S5** Fenster mit Licht, 5 s
 - [ ] **R6-S1** *nur falls vorhanden:* Lutherrose im Raum, Nahaufnahme, 5 s
-- [ ] **Foto F1:** der Saal, weit, hochkant (für einen Feedpost)
+- [ ] **Foto F7:** offene Bibel, ganz nah (Teil F)
+- [ ] **Foto F5:** eine Hand hält ein Handy, im Hintergrund der Saal (Teil F)
 
 ### Block 2 — Ankommen (ca. 10 Minuten vor Beginn)
 
 - [ ] **R1-S5** Menschen kommen an, hängen Jacken auf, setzen sich — **von hinten** filmen, 5–10 s
+- [ ] **Foto F1:** Saal mit Menschen kurz vor Beginn, von hinten (Teil F)
 
 ### Block 3 — Während des Gottesdienstes
 
@@ -147,13 +151,23 @@ Hakt jede Szene ab, wenn sie im Kasten ist. Die Nummern (z. B. R2-S3) gehören z
 
 ---
 
-## Teil F — Fotos
+## Teil F — Fotos (für die Feedposts)
 
-Mit der normalen Foto-Funktion (nicht „Porträt"-Modus), **hochkant**, je **3 Fotos** von jedem Motiv:
-- **F1** — Saal, weit, möglichst mit Licht von den Fenstern
-- **F2** — Kaffeetisch mit Menschen im Gespräch
-- **F3** — Pfarrer Bujok: Kopf und Schultern, ruhiger Hintergrund, er lächelt leicht, schaut in die Kamera. **Viel Platz um den Kopf** lassen (wird rund zugeschnitten).
-- **F4** — Vorstand: Jürgen, Jens und Simon nebeneinander, Brusthöhe
+Fast jeder Feedpost bekommt ein echtes Foto — darum sind die Fotos genauso wichtig wie die Videos.
+Normale Foto-Funktion (nicht „Porträt"-Modus), **querformat** (Handy seitlich halten) — außer F3. Von jedem Motiv **3–5 Fotos**, gern leicht unterschiedlich.
+
+| Foto | Motiv | Format | Für |
+|---|---|---|---|
+| **F1** | Saal mit Menschen kurz vor Beginn, von hinten | quer | Post 1 |
+| **F2** | Kaffeetisch mit Menschen im Gespräch | quer | Post 7 |
+| **F3** | Pfarrer Bujok: Kopf und Schultern, ruhiger Hintergrund, leichtes Lächeln, schaut in die Kamera, **viel Platz um den Kopf** | **hochkant** | Post 4 |
+| **F4** | Vorstand: Jürgen, Jens und Simon nebeneinander | quer | Reserve |
+| **F5** | Eine Hand hält ein Handy, im Hintergrund unscharf der Saal (**Bildschirm darf nicht lesbar sein**) | quer | Post 3 |
+| **F6** | Fassade Lutherisches Zentrum, Miodowa 21, von der anderen Straßenseite | quer | Post 6 |
+| **F7** | Offene Bibel, ganz nah (gern mit Kerzenlicht) | quer | Post 8 |
+| **F8** | Eingangstür auf der Rückseite mit Schild | quer | Post 10 |
+
+**Tipp:** Wichtiges in die **Bildmitte** — oben und unten wird etwas abgeschnitten.
 
 ---
 
@@ -168,7 +182,7 @@ So geht es richtig (eine der beiden Möglichkeiten):
 **Bitte schicken:**
 - [ ] alle Videos von Block 1–4 (Reihenfolge egal — die Ansagen ordnen sie)
 - [ ] die **Predigt-Tonaufnahme** (Sprachmemo → Teilen → als Datei)
-- [ ] die Fotos F1–F4
+- [ ] die Fotos F1–F8
 - [ ] den Zettel mit Szenen aus Block 3 (Foto vom Zettel reicht)
 - [ ] die **Antworten aus Teil A** und die **drei Vornamen** aus Reel 8
 

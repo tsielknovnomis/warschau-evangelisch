@@ -8,8 +8,24 @@ Jede Caption endet mit dem **Caption-Abschluss** (siehe `REELS.md`) und den Hash
 > ⛪ Gottesdienst jeden 2. und 4. Sonntag, 09:30 Uhr · ul. Miodowa 21 (2. Stock, Eingang über ul. Leona Schillera)
 > 💬 Ob er stattfindet und was sonst ansteht, erfährst du zuerst in unserer WhatsApp-Gruppe → Link in der Bio
 
-| # | Tag | Bild | Status |
+Fast jeder Post hat ein **echtes Foto**. Drei Posts nutzen schon vorhandene Fotos, sieben bekommen ihr Foto vom Drehtag.
+**Ein Look, wechselnde Layouts** (nie zwei gleiche nacheinander): 1 Vollbild · 2 Fotoband oben · 3 dunkel mit Foto-Fenster · 4 rundes Porträt · 5 Foto + Bibelvers · 6 Foto-Spalte links · 7 Bilderrahmen · 8 Foto-Spalte rechts · 9 Vollbild · 10 Fotoband oben.
+Vorlage für die Foto-Posts: `templates/foto-post.html?post=<Nr>`. Fotos vom Drehtag als `templates/fotos/F1.jpg` … `F8.jpg` ablegen, dann neu rendern.
+
+| # | Tag | Foto | Status |
 |---|---|---|---|
+| 1 | 0 | F1 — Saal mit Menschen, von hinten | ⏳ Foto vom Drehtag |
+| 2 | 14 | Warschau-Panorama (vorhanden) | ✅ fertig |
+| 3 | 28 | F5 — Hand mit Handy im Saal | ⏳ Foto vom Drehtag |
+| 4 | 42 | F3 — Porträt Pfarrer Bujok | ⏳ Foto vom Drehtag |
+| 5 | 56 | Altar mit Kreuz und Bibel (vorhanden) | ✅ fertig |
+| 6 | 70 | F6 — Fassade Miodowa 21 | ⏳ Foto vom Drehtag |
+| 7 | 84 | F2 — Kaffeetisch mit Menschen | ⏳ Foto vom Drehtag |
+| 8 | 98 | F7 — offene Bibel | ⏳ Foto vom Drehtag |
+| 9 | 112 | Dreifaltigkeitskirche (vorhanden) | ✅ fertig |
+| 10 | 126 | F8 — Eingangstür mit Schild | ⏳ Foto vom Drehtag |
+
+---|---|---|---|
 | 1 | 0 | `posts/02-vorstellung.png` | ✅ fertig |
 | 2 | 14 | `posts/08-neu-in-warschau.png` | ✅ fertig |
 | 3 | 28 | `posts/18-whatsapp.png` | ✅ fertig |

@@ -9,20 +9,20 @@ Profilbild, Facebook-Titelbild und die 3 Highlights liegen im Ordner „1 Profil
 
 ## 2 — Feedposts
 
-**8 von 10 sind fertig. Für 2 fehlt noch je ein Foto.**
+**Fast jeder Post hat jetzt ein echtes Foto.** 3 sind fertig, für 7 fehlt noch ein Foto vom Drehtag. Texte und Layout stehen schon — das Foto kommt nur noch hinein.
 
-| Post | Wann | Thema | Status |
-|---|---|---|---|
-| 1 | Tag 0 | Schön, dass du hier bist | ✅ fertig |
-| 2 | Tag 14 | Neu in Warschau? | ✅ fertig |
-| 3 | Tag 28 | WhatsApp-Gruppe | ✅ fertig |
-| 4 | Tag 42 | Unser Pfarrer | ⏳ **Foto fehlt:** Porträt von Pfarrer Bujok |
-| 5 | Tag 56 | Wort für die Woche | ✅ fertig |
-| 6 | Tag 70 | Wusstest du? | ✅ fertig |
-| 7 | Tag 84 | Danke für diesen Sonntag | ⏳ **Foto fehlt:** Kaffeetisch mit Menschen |
-| 8 | Tag 98 | Luther-Zitat | ✅ fertig |
-| 9 | Tag 112 | Mitten in Warschau | ✅ fertig |
-| 10 | Tag 126 | Jeden 2. und 4. Sonntag | ✅ fertig |
+| Post | Wann | Thema | Foto | Status |
+|---|---|---|---|---|
+| 1 | Tag 0 | Schön, dass du hier bist | Saal mit Menschen, von hinten | ⏳ fehlt |
+| 2 | Tag 14 | Neu in Warschau? | Warschau-Panorama | ✅ fertig |
+| 3 | Tag 28 | WhatsApp-Gruppe | Hand mit Handy im Saal | ⏳ fehlt |
+| 4 | Tag 42 | Unser Pfarrer | Porträt Pfarrer Bujok | ⏳ fehlt |
+| 5 | Tag 56 | Wort für die Woche | Altar mit Kreuz | ✅ fertig |
+| 6 | Tag 70 | Wusstest du? | Fassade Miodowa 21 | ⏳ fehlt |
+| 7 | Tag 84 | Danke für diesen Sonntag | Kaffeetisch mit Menschen | ⏳ fehlt |
+| 8 | Tag 98 | Luther-Zitat | Offene Bibel | ⏳ fehlt |
+| 9 | Tag 112 | Mitten in Warschau | Dreifaltigkeitskirche | ✅ fertig |
+| 10 | Tag 126 | Jeden 2. und 4. Sonntag | Eingangstür mit Schild | ⏳ fehlt |
 
 ---
 
@@ -52,7 +52,7 @@ Wann = Tage nach dem Start (Tag 0 ist ein Montag, frühestens 10 Tage nach dem D
 **Vom Team vor Ort (alles an einem Gottesdienst-Sonntag, genaue Liste im Dreh-Briefing):**
 - [ ] **rund 45 kurze Videos** für die Reels (jedes nur 5–10 Sekunden)
 - [ ] **1 Tonaufnahme** der Predigt
-- [ ] **4 Fotos:** Saal · Kaffeetisch mit Menschen · Pfarrer-Porträt · Vorstand zu dritt
+- [ ] **8 Fotos** (querformat, außer Pfarrer-Porträt): Saal mit Menschen · Kaffeetisch · Pfarrer-Porträt · Vorstand · Hand mit Handy · Fassade · offene Bibel · Eingangstür
 - [ ] **Antworten auf 8 kurze Fragen** zum Ort (Weg zum Eingang, Treppe/Aufzug, Dauer usw.)
 - [ ] **3 Vornamen** der Gemeindemitglieder aus Reel 8
 
