@@ -6,7 +6,7 @@
 - Restarbeiten: Mail-Praxistest + „Senden als" + DKIM; alte Postfächer sichern (vor 08.08.!); echte Termine/News eintragen
 
 ## In Progress
-- **Social-Media-Start (Instagram + Facebook)** — Plan, 10 Reels, 10 Feedposts, Dreh- und Voice-Over-Briefing, Setup in `social/start/`. Nächster Schritt: Drehtag an einem Gottesdienst-Sonntag; Simon spricht die Voice-Overs; danach Schnitt hier im Chat. Start (Tag 0) frühestens 10 Tage nach dem Drehtag.
+- **Social-Media-Start (Instagram + Facebook)** — alles vorbereitet in `social/start/` (10 Feedposts mit Foto-Platzhaltern, 13 Reels + Advents-Joker, Captions IG/FB, Briefings, Setup). **Wartet auf Material vom Drehtag** (Videos, 11 Fotos, Predigt-Ton, Fakten-Antworten) und Simons Voice-Overs. Danach: Sprechtexte 2/3/5/12 finalisieren, Reels schneiden, Posts rendern (`templates/fotos/F1–F11.jpg`), Planungsliste für die Meta Business Suite.
 - **Simon (Admin-Passwort) muss im Panel noch:** alten „Sommerpause"-Beitrag löschen, 11.10. auf „Gottesdienst mit Jürgen Wandel" umbenennen, künftige Ausfälle per „Fällt aus" markieren.
 - **Mail-Restarbeiten** (OPEN_ITEMS Punkt 11): realer Zustelltest an vorstand@/info@/pfarrer@, „Senden als" in Gmail (SMTP smtp.improvmx.com:587), DKIM-TXT aus dem ImprovMX-Dashboard bei INWX eintragen.
 
