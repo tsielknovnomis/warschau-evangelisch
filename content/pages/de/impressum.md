@@ -15,7 +15,7 @@ Der Verein wird durch seinen Vorstand vertreten.
 
 ## Kontakt
 
-[info@warschau-evangelisch.de](mailto:info@warschau-evangelisch.de)
+info [klammeraffe] warschau [minus] evangelisch [punkt] de
 
 Eine telefonische Erreichbarkeit besteht nicht; bitte kontaktiere uns per E-Mail. Wir antworten in der Regel innerhalb weniger Tage.
 
