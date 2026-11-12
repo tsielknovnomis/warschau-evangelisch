@@ -18,7 +18,7 @@ Polen
 
 Vertreten durch den Vorstand: Jürgen Wandel, Jens Boysen, Simon von Kleist
 Register: KRS Nr. [0000590323](https://wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=oKYwl7ame6hteym8noHq8g%3D%3D;typ=S)
-E-Mail: [info@warschau-evangelisch.de](mailto:info@warschau-evangelisch.de)
+E-Mail: info [klammeraffe] warschau [minus] evangelisch [punkt] de
 
 Ein Telefonkontakt besteht nicht; die Kontaktaufnahme erfolgt per E-Mail. Ein Datenschutzbeauftragter ist gesetzlich nicht erforderlich und nicht benannt; deine Anliegen richtest du bitte an die oben genannte E-Mail-Adresse.
 
@@ -91,7 +91,7 @@ Dir stehen hinsichtlich deiner personenbezogenen Daten folgende Rechte zu:
 - **Widerspruch** gegen die Verarbeitung (Art. 21 DSGVO)
 - **Widerruf** einer erteilten Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)
 
-Zur Ausübung deiner Rechte genügt eine formlose E-Mail an [info@warschau-evangelisch.de](mailto:info@warschau-evangelisch.de).
+Zur Ausübung deiner Rechte genügt eine formlose E-Mail an info [klammeraffe] warschau [minus] evangelisch [punkt] de.
 
 ## Beschwerderecht
 
