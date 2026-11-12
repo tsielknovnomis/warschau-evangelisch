@@ -224,7 +224,18 @@ export default async function AdminHome({
             Die schmale Leiste ganz oben auf der Website. Ohne eigenen Text zeigt sie automatisch den
             nächsten Gottesdienst an — inklusive Hinweis, wenn ein Gottesdienst ausfällt.
           </p>
-          <SettingsForm settings={settings} autoParts={barParts(status)} today={warsawDay(now)} />
+          <SettingsForm
+            settings={settings}
+            autoParts={barParts(status)}
+            today={warsawDay(now)}
+            linkOptions={[
+              { href: "/aktuelles", label: "Aktuelles (Übersicht)" },
+              ...news.map((n) => ({
+                href: `/aktuelles/${n.slug}`,
+                label: `Beitrag: ${n.title} (${formatDate(n.publishedAt)})`,
+              })),
+            ]}
+          />
         </div>
       )}
     </div>

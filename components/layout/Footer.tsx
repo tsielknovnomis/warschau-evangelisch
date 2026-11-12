@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Lutherrose } from "@/components/content/Lutherrose";
 import { CookieSettingsButton } from "@/components/consent/CookieSettingsButton";
 import { siteConfig } from "@/lib/site-config";
+import { ProtectedEmail } from "@/components/ui/ProtectedEmail";
 import { mainNav, footerNav, legalNav } from "@/lib/nav";
 
 const socialIcons: Record<string, string> = {
@@ -86,9 +87,7 @@ export function Footer() {
                 {address.postalCode} {address.city}
               </p>
               <p>
-                <a href={`mailto:${contact.general}`} className="transition-colors hover:text-aubergine">
-                  {contact.general}
-                </a>
+                <ProtectedEmail obfuscated={contact.general} className="transition-colors hover:text-aubergine" />
               </p>
               <p>Gottesdienst: {siteConfig.service.time}, zweiter &amp; vierter Sonntag im Monat</p>
             </address>

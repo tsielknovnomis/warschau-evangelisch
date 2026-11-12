@@ -94,3 +94,24 @@ describe("effectiveAnnouncement", () => {
     expect(effectiveAnnouncement({ announcement: "X", announcementUntil: null }, t("2030-01-01T00:00:00Z"))).toBe("X");
   });
 });
+
+describe("announcement link", () => {
+  it("accepts only the news overview or a news item", async () => {
+    const { sanitizeAnnouncementLink } = await import("@/lib/service-status");
+    expect(sanitizeAnnouncementLink("/aktuelles")).toBe("/aktuelles");
+    expect(sanitizeAnnouncementLink(" /aktuelles/vollversammlung-2026 ")).toBe(
+      "/aktuelles/vollversammlung-2026",
+    );
+    for (const bad of ["", null, 42, "https://evil.example", "//evil.example", "/admin", "/aktuelles/../admin", "/aktuelles/Ä"]) {
+      expect(sanitizeAnnouncementLink(bad)).toBeNull();
+    }
+  });
+
+  it("drops the link when the news item no longer exists", async () => {
+    const { liveAnnouncementLink } = await import("@/lib/service-status");
+    expect(liveAnnouncementLink("/aktuelles/a", ["a", "b"])).toBe("/aktuelles/a");
+    expect(liveAnnouncementLink("/aktuelles/gone", ["a"])).toBeNull();
+    expect(liveAnnouncementLink("/aktuelles", [])).toBe("/aktuelles");
+    expect(liveAnnouncementLink(null, ["a"])).toBeNull();
+  });
+});

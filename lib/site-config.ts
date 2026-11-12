@@ -32,9 +32,11 @@ export const siteConfig: SiteConfig = {
     verify: false,
   },
 
+  // Spam protection (board, Nov 2026): addresses are stored and shown only in
+  // this written-out form — never as plain text. See lib/email-obfuscation.ts.
   contact: {
-    general: 'info@warschau-evangelisch.de',
-    pastor: 'pfarrer@warschau-evangelisch.de',
+    general: 'info [klammeraffe] warschau [minus] evangelisch [punkt] de',
+    pastor: 'pfarrer [klammeraffe] warschau [minus] evangelisch [punkt] de',
     phone: null, // no phone number — contact by email only
   },
 
@@ -63,4 +65,6 @@ export const siteConfig: SiteConfig = {
   },
 
   krs: '0000590323',
+  krsUrl:
+    'https://wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=oKYwl7ame6hteym8noHq8g%3D%3D;typ=S',
 }

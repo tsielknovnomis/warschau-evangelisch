@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { writeDoc } from "@/lib/storage";
 import { isAdmin } from "@/lib/actions/guard";
+import { sanitizeAnnouncementLink } from "@/lib/service-status";
 import type { SiteSettings } from "@/lib/data/settings";
 import type { FormState } from "@/lib/actions/events";
 
@@ -14,6 +15,7 @@ export async function updateSettings(_prev: FormState, formData: FormData): Prom
   const settings: SiteSettings = {
     announcement: String(formData.get("announcement") ?? "").trim() || null,
     announcementUntil: /^\d{4}-\d{2}-\d{2}$/.test(until) ? until : null,
+    announcementLink: sanitizeAnnouncementLink(formData.get("announcement_link")),
     barHidden: formData.get("bar_hidden") === "on",
   };
   await writeDoc("settings", settings);

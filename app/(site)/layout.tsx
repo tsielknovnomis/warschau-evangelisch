@@ -7,7 +7,8 @@ import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { ChurchJsonLd } from "@/components/seo/ChurchJsonLd";
 import { getAllEvents } from "@/lib/data/events";
 import { getSettings } from "@/lib/data/settings";
-import { relevantEvents } from "@/lib/service-status";
+import { getNews } from "@/lib/data/news";
+import { liveAnnouncementLink, relevantEvents } from "@/lib/service-status";
 import { currentTime } from "@/lib/clock";
 
 // Public pages are static but regenerate at most hourly (ISR), so anything
@@ -16,7 +17,7 @@ import { currentTime } from "@/lib/clock";
 export const revalidate = 3600;
 
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
-  const [events, settings] = await Promise.all([getAllEvents(), getSettings()]);
+  const [events, settings, news] = await Promise.all([getAllEvents(), getSettings(), getNews()]);
   const serverNow = currentTime();
 
   return (
@@ -28,6 +29,10 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
           serverNow={serverNow}
           announcement={settings.announcement}
           announcementUntil={settings.announcementUntil}
+          announcementLink={liveAnnouncementLink(
+            settings.announcementLink,
+            news.map((n) => n.slug),
+          )}
           barHidden={settings.barHidden}
         />
         <Header />

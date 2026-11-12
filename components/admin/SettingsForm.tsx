@@ -14,8 +14,11 @@ export function SettingsForm({
   settings,
   autoParts,
   today,
+  linkOptions,
 }: {
   settings: SiteSettings;
+  /** Targets for the custom text's link: news overview + current news items. */
+  linkOptions: { href: string; label: string }[];
   autoParts: BarParts;
   /** Today in Warsaw ("YYYY-MM-DD") — to preview whether the custom text has expired. */
   today: string;
@@ -24,6 +27,9 @@ export function SettingsForm({
   const [announcement, setAnnouncement] = useState(settings.announcement ?? "");
   const [hidden, setHidden] = useState(settings.barHidden);
   const [until, setUntil] = useState(settings.announcementUntil ?? "");
+  const [link, setLink] = useState(
+    linkOptions.some((o) => o.href === settings.announcementLink) ? settings.announcementLink! : "",
+  );
 
   const expired = Boolean(until) && today > until;
   const custom = expired ? "" : announcement.trim();
@@ -40,7 +46,18 @@ export function SettingsForm({
         ) : (
           <div className="rounded border-b border-white/10 bg-aubergine-deep px-4 py-1.5 text-center text-[0.8rem]">
             {custom ? (
-              <span className="font-medium text-bg/90">{custom}</span>
+              <span className="font-medium text-bg/90">
+                {custom}
+                {link && (
+                  <>
+                    {" ("}
+                    <span className="underline decoration-gold/50 underline-offset-2">
+                      → weitere Infos
+                    </span>
+                    {")"}
+                  </>
+                )}
+              </span>
             ) : (
               <>
                 <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
@@ -77,6 +94,27 @@ export function SettingsForm({
         />
         <span className="mt-1 block text-xs text-muted">
           Leer lassen, um automatisch den nächsten Gottesdienst-Termin anzuzeigen.
+        </span>
+      </label>
+
+      <label className="block">
+        <span className={lbl}>Verlinken auf (optional)</span>
+        <select
+          name="announcement_link"
+          value={link}
+          onChange={(e) => setLink(e.target.value)}
+          className={inp}
+        >
+          <option value="">— kein Link —</option>
+          {linkOptions.map((o) => (
+            <option key={o.href} value={o.href}>
+              {o.label}
+            </option>
+          ))}
+        </select>
+        <span className="mt-1 block text-xs text-muted">
+          Hinter deinem Text erscheint dann „(→ weitere Infos)“ und führt direkt zum Beitrag.
+          Schreib den Hinweis auf Aktuelles also nicht mehr selbst in den Text.
         </span>
       </label>
 

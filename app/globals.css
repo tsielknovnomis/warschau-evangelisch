@@ -175,12 +175,14 @@
 .prose-content li {
   color: var(--ink);
 }
-.prose-content a {
+.prose-content a,
+.prose-content .protected-email {
   text-decoration: underline;
   text-decoration-color: var(--gold-soft);
   text-decoration-thickness: 1.5px;
 }
-.prose-content a:hover {
+.prose-content a:hover,
+.prose-content .protected-email:hover {
   color: var(--gold-deep);
 }
 .prose-content ul {

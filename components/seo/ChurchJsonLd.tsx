@@ -6,14 +6,13 @@ import { siteUrl } from "@/lib/site-url";
  * Only verified facts go in here.
  */
 export function ChurchJsonLd() {
-  const { address, contact, social } = siteConfig;
+  const { address, social } = siteConfig;
   const data = {
     "@context": "https://schema.org",
     "@type": "Church",
     name: siteConfig.name,
     alternateName: siteConfig.shortName,
     url: siteUrl,
-    email: contact.general,
     address: {
       "@type": "PostalAddress",
       streetAddress: address.street,

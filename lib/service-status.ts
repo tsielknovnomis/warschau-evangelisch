@@ -98,6 +98,22 @@ export function barParts(status: ServiceStatus): BarParts {
   return { label: "Herzlich eingeladen", text: `Gottesdienst am ${when(next)}` };
 }
 
+/**
+ * Optional link behind the custom bar text: the news overview or one news item.
+ * Anything else (external URLs, other paths, junk) is rejected → null.
+ */
+export function sanitizeAnnouncementLink(raw: unknown): string | null {
+  const s = typeof raw === "string" ? raw.trim() : "";
+  return /^\/aktuelles(?:\/[a-z0-9]+(?:-[a-z0-9]+)*)?$/.test(s) ? s : null;
+}
+
+/** Keeps the link only while its target exists (a deleted news item must not 404). */
+export function liveAnnouncementLink(link: string | null, newsSlugs: string[]): string | null {
+  if (!link) return null;
+  if (link === "/aktuelles") return link;
+  return newsSlugs.includes(link.slice("/aktuelles/".length)) ? link : null;
+}
+
 /** The custom bar text, or null once its last day (inclusive, Warsaw) is over. */
 export function effectiveAnnouncement(
   s: { announcement: string | null; announcementUntil: string | null },

@@ -17,7 +17,7 @@ ul. Miodowa 21
 Polen
 
 Vertreten durch den Vorstand: Jürgen Wandel, Jens Boysen, Simon von Kleist
-Register: KRS Nr. 0000590323
+Register: KRS Nr. [0000590323](https://wyszukiwarka-krs.ms.gov.pl/dane-szczegolowe-podmiotu;numerKRS=oKYwl7ame6hteym8noHq8g%3D%3D;typ=S)
 E-Mail: [info@warschau-evangelisch.de](mailto:info@warschau-evangelisch.de)
 
 Ein Telefonkontakt besteht nicht; die Kontaktaufnahme erfolgt per E-Mail. Ein Datenschutzbeauftragter ist gesetzlich nicht erforderlich und nicht benannt; deine Anliegen richtest du bitte an die oben genannte E-Mail-Adresse.

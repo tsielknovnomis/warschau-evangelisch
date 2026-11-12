@@ -15,7 +15,7 @@ const ev = (startsAt: string, cancelled = false): ChurchEvent => ({
   language: "de",
   cancelled,
 });
-const noBar = { announcement: null, announcementUntil: null, barHidden: false };
+const noBar = { announcement: null, announcementUntil: null, announcementLink: null, barHidden: false };
 
 describe("adminWarnings", () => {
   it("warns when no service is planned in the next 4 weeks (outside summer)", () => {

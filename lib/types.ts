@@ -76,8 +76,8 @@ export interface SiteConfig {
     verify: boolean
   }
   contact: {
-    general: string
-    pastor: string
+    general: string // obfuscated, e.g. "info [klammeraffe] …"
+    pastor: string // obfuscated
     phone: string | null
   }
   people: {
@@ -97,4 +97,5 @@ export interface SiteConfig {
     whatsapp: string
   }
   krs: string
+  krsUrl: string // entry in the official KRS search
 }

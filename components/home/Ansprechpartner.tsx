@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site-config";
+import { ProtectedEmail } from "@/components/ui/ProtectedEmail";
 
 export function Ansprechpartner() {
   const { people, contact, social } = siteConfig;
@@ -26,9 +27,7 @@ export function Ansprechpartner() {
                 Pfarrer
               </p>
               <p className="mt-2 font-display text-xl text-aubergine">{people.pastor.name}</p>
-              <a href={`mailto:${contact.pastor}`} className="mt-3 inline-block text-sm text-aubergine underline decoration-gold/50 underline-offset-2 hover:text-gold-deep">
-                {contact.pastor}
-              </a>
+              <ProtectedEmail obfuscated={contact.pastor} className="mt-3 inline-block text-sm text-aubergine underline decoration-gold/50 underline-offset-2 hover:text-gold-deep" />
             </div>
             <div className="rounded-[4px] border border-line bg-surface p-6">
               <p className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
@@ -39,9 +38,7 @@ export function Ansprechpartner() {
                   <li key={name} className="font-display text-lg">{name}</li>
                 ))}
               </ul>
-              <a href={`mailto:${contact.general}`} className="mt-3 inline-block text-sm text-aubergine underline decoration-gold/50 underline-offset-2 hover:text-gold-deep">
-                {contact.general}
-              </a>
+              <ProtectedEmail obfuscated={contact.general} className="mt-3 inline-block text-sm text-aubergine underline decoration-gold/50 underline-offset-2 hover:text-gold-deep" />
             </div>
           </div>
         </div>

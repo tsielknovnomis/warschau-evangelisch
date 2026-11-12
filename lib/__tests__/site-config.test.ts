@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { siteConfig } from '@/lib/site-config'
+import { deobfuscateEmail } from '@/lib/email-obfuscation'
 
 describe('siteConfig', () => {
   it('uses the verified address (Miodowa 21, 00-246)', () => {
@@ -16,9 +17,10 @@ describe('siteConfig', () => {
     expect(siteConfig.bank.verify).toBe(false)
   })
 
-  it('exposes contact emails and no phone number', () => {
-    expect(siteConfig.contact.general).toBe('info@warschau-evangelisch.de')
-    expect(siteConfig.contact.pastor).toBe('pfarrer@warschau-evangelisch.de')
+  it('exposes contact emails only in spam-protected form, and no phone number', () => {
+    expect(deobfuscateEmail(siteConfig.contact.general)).toBe('info@warschau-evangelisch.de')
+    expect(deobfuscateEmail(siteConfig.contact.pastor)).toBe('pfarrer@warschau-evangelisch.de')
+    expect(JSON.stringify(siteConfig)).not.toMatch(/[a-z]@[a-z]/)
     expect(siteConfig.contact.phone).toBeNull()
   })
 

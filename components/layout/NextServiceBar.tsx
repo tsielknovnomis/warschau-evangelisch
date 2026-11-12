@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import type { ChurchEvent } from "@/lib/types";
 import { barParts, effectiveAnnouncement, serviceStatus } from "@/lib/service-status";
 import { useNow } from "@/lib/use-now";
@@ -10,6 +11,7 @@ export function NextServiceBar({
   serverNow,
   announcement = null,
   announcementUntil = null,
+  announcementLink = null,
   barHidden = false,
 }: {
   /** Upcoming events (incl. cancelled) — re-filtered with the browser clock. */
@@ -17,6 +19,8 @@ export function NextServiceBar({
   serverNow: number;
   announcement?: string | null;
   announcementUntil?: string | null;
+  /** Internal link shown as "(→ weitere Infos)" after the custom text. */
+  announcementLink?: string | null;
   barHidden?: boolean;
 }) {
   const [dismissed, setDismissed] = useState(false);
@@ -41,7 +45,7 @@ export function NextServiceBar({
     const ro = new ResizeObserver(check);
     if (wrapRef.current) ro.observe(wrapRef.current);
     return () => ro.disconnect();
-  }, [hasContent, custom, auto.text, dismissed]);
+  }, [hasContent, custom, announcementLink, auto.text, dismissed]);
 
   if (!hasContent || dismissed) return null;
 
@@ -59,7 +63,21 @@ export function NextServiceBar({
   );
 
   const content = custom ? (
-    <span className="font-medium text-bg/90">{custom}</span>
+    <span className="font-medium text-bg/90">
+      {custom}
+      {announcementLink && (
+        <>
+          {" ("}
+          <Link
+            href={announcementLink}
+            className="text-bg/90 underline decoration-gold/50 underline-offset-2 hover:text-bg"
+          >
+            → weitere Infos
+          </Link>
+          {")"}
+        </>
+      )}
+    </span>
   ) : (
     <>
       <span className="font-semibold uppercase tracking-[0.13em] text-gold-soft">
