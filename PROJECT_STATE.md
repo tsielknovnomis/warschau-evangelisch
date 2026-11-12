@@ -7,6 +7,7 @@
 
 ## In Progress
 - **Social-Media-Start (Instagram + Facebook)** — alles vorbereitet in `social/start/` (10 Feedposts mit Foto-Platzhaltern, 13 Reels + Advents-Joker, Captions IG/FB, Briefings, Setup). **Wartet auf Material vom Drehtag** (Videos, 11 Fotos, Predigt-Ton, Fakten-Antworten) und Simons Voice-Overs. Danach: Sprechtexte 2/3/5/12 finalisieren, Reels schneiden, Posts rendern (`templates/fotos/F1–F11.jpg`), Planungsliste für die Meta Business Suite.
+- **Simon (Admin-Passwort):** nach dem Deploy im Tab „Info-Leiste“ beim Vollversammlungs-Text das handgeschriebene „(→ Aktuelles)“ löschen und unter „Verlinken auf“ den Beitrag wählen.
 - **Simon (Admin-Passwort) muss im Panel noch:** alten „Sommerpause"-Beitrag löschen, 11.10. auf „Gottesdienst mit Jürgen Wandel" umbenennen, künftige Ausfälle per „Fällt aus" markieren.
 - **Mail-Restarbeiten** (OPEN_ITEMS Punkt 11): realer Zustelltest an vorstand@/info@/pfarrer@, „Senden als" in Gmail (SMTP smtp.improvmx.com:587), DKIM-TXT aus dem ImprovMX-Dashboard bei INWX eintragen.
 
@@ -23,6 +24,7 @@
 - Keine offenen technischen Bugs. Offene **Fakten** (Pfarrer, USt-IdNr., Datenschutz-Schlussprüfung) in OPEN_ITEMS Punkte 3–5.
 
 ## Recent Decisions
+- **12.11.** Vorstands-Feedback (Simon, docx „relaunch_3“): Impressum nach polnischem Recht gekürzt (kein § 5 DDG/MStV, keine Haftungsabschnitte, nur info@); E-Mail-Adressen überall nur als „info [klammeraffe] warschau [minus] evangelisch [punkt] de“ (echte Adresse weder im HTML noch im JS, Klick öffnet trotzdem das Mailprogramm; JSON-LD ohne E-Mail); KRS-Nummer verlinkt auf den Registereintrag; eigener Leisten-Text kann im Admin auf einen Aktuelles-Beitrag verlinken („(→ weitere Infos)“)
 - **29.09.** „Immer aktuell": ISR stündlich + Client-Uhr-Absicherung; Ausfälle sichtbar (durchgestrichen, „Entfällt"); ohne Termin neutraler Hinweis, „Sommerpause" nur Juni–August; News/Leisten-Text mit „Anzeigen bis", Anpinnen ohne Datum max. 30 Tage; Warnungen im Admin. Spec: `docs/superpowers/specs/2026-09-29-always-current-design.md`
 - **23.07.** Vorstands-Notizen (docx) komplett umgesetzt: Du-Form final; Mt 11,28 im Hero unten rechts (ohne Ortszeile, höher positioniert); alle Bibelstellen zu bibleserver.com verlinkt; Zitate rechtsbündig (Goldbalken rechts); neue Texte der „Geistliche Heimat"-Sektion inkl. „Gelebtes Kirchenjahr"; /glauben visuell aufgewertet (dunkles Zitat-Band, Weg-Stationen); scharfes Hero-Bild mit linksverankertem Crop (Kreuz stabil bei ~67–72 %)
 - **23.07.** Admin: Termin-Vorlagen als Dropdown (Liste + Formular, `?vorlage=`), Einladungstext in 4 Varianten (WhatsApp/E-Mail × Du/Sie; E-Mail nach Vorbild der echten Gemeinde-Mails)
